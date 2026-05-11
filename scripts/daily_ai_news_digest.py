@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import json
 import os
 import re
 import smtplib
@@ -141,8 +142,10 @@ def translate_to_japanese(text: str) -> str:
     )
     try:
         payload = fetch_text(url)
-        matches = re.findall(r'\[\s*"((?:[^"\\]|\\.)*)"', payload)
-        translated = "".join(bytes(match, "utf-8").decode("unicode_escape") for match in matches[:4]).strip()
+        data = json.loads(payload)
+        translated = "".join(
+            part[0] for part in data[0] if isinstance(part, list) and part and isinstance(part[0], str)
+        ).strip()
         return translated or text
     except Exception:
         return text
