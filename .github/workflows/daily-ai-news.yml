@@ -1,8 +1,6 @@
-name: Daily AI News Digest
+name: Daily AI News Digest Legacy
 
 on:
-  schedule:
-    - cron: "0 23 * * *"
   workflow_dispatch:
     inputs:
       target_date_jst:
@@ -12,7 +10,7 @@ on:
       send_email:
         description: "Send email"
         required: false
-        default: true
+        default: false
         type: boolean
 
 jobs:
@@ -37,12 +35,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run digest
+      - name: Run legacy digest generator
         run: python scripts/daily_ai_news_digest.py
 
       - name: Upload digest artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: daily-ai-news-digest
+          name: daily-ai-news-digest-legacy
           path: out/digest.html
