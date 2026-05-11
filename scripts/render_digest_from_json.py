@@ -182,9 +182,9 @@ IMPORTANCE = {
 }
 
 COPILOT = {
-    "直接使える": ("badge-direct", "✅ 直接使える"),
-    "間接的に有用": ("badge-indirect", "🟣 間接的に有用"),
-    "関係なし": ("badge-na", "⚪ 関係なし"),
+    "直接使える": ("badge-direct", "✅ GitHub Copilot: 直接使える"),
+    "間接的に有用": ("badge-indirect", "🟣 GitHub Copilot: 間接的に有用"),
+    "関係なし": ("badge-na", "⚪ GitHub Copilot: 関係なし"),
 }
 
 
@@ -256,7 +256,7 @@ def card_html(item: dict[str, Any], fallback_num: str) -> str:
     ]
 
     if copilot != "関係なし" and copilot_tip:
-        parts.append(f'      <div class="copilot-tip">💡 {esc(copilot_tip)}</div>')
+        parts.append(f'      <div class="copilot-tip">💡 GitHub Copilotでの活用方法: {esc(copilot_tip)}</div>')
     if community:
         parts.append(f'      <p class="community">📣 {esc(community)}</p>')
 
@@ -350,9 +350,9 @@ def render_text(data: dict[str, Any]) -> str:
         for item in items:
             lines.append(f"{item.get('num', '')} {item.get('headline', '')}".strip())
             lines.append(str(item.get("why", "")))
-            lines.append(f"重要度: {item.get('business_importance', '')} / Copilot: {item.get('copilot_applicability', '')}")
+            lines.append(f"重要度: {item.get('business_importance', '')} / GitHub Copilot適用度: {item.get('copilot_applicability', '')}")
             if item.get("copilot_tip"):
-                lines.append(f"活用: {item.get('copilot_tip')}")
+                lines.append(f"GitHub Copilotでの活用方法: {item.get('copilot_tip')}")
             sources = item.get("sources") or []
             if sources:
                 lines.append("Source: " + " / ".join(f"{s.get('label')}: {s.get('url')}" for s in sources))
