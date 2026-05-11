@@ -210,7 +210,8 @@ def source_html(sources: list[dict[str, str]]) -> str:
         links.append(f'<a href="{url}">{label}</a>')
     if not links:
         return '<div class="source">📎 ソース未設定</div>'
-    return f'<div class="source">📎 {' · '.join(links)}</div>'
+    joined_links = " · ".join(links)
+    return f'<div class="source">📎 {joined_links}</div>'
 
 
 def badges_html(item: dict[str, Any]) -> str:
