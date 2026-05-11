@@ -1,0 +1,75 @@
+name: Send AI Digest From JSON
+
+on:
+  push:
+    paths:
+      - "inbox/*.json"
+  workflow_dispatch:
+    inputs:
+      digest_json_path:
+        description: "Digest JSON path, for example inbox/2026-05-11.json"
+        required: true
+        type: string
+      send_email:
+        description: "Send email"
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
+      GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_SMTP_APP_PASSWORD }}
+      DIGEST_TO_EMAIL: ${{ secrets.DIGEST_TO_EMAIL }}
+      SEND_EMAIL: ${{ github.event_name == 'workflow_dispatch' && inputs.send_email || 'true' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve digest JSON path
+        id: resolve
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            DIGEST_JSON_PATH="${{ inputs.digest_json_path }}"
+          else
+            DIGEST_JSON_PATH="$(git diff-tree --no-commit-id --name-only -r "${{ github.sha }}" | grep '^inbox/.*\.json$' | head -n 1 || true)"
+          fi
+
+          if [ -z "${DIGEST_JSON_PATH}" ]; then
+            echo "No inbox/*.json file found in this change." >&2
+            exit 1
+          fi
+
+          if [ ! -f "${DIGEST_JSON_PATH}" ]; then
+            echo "Digest JSON not found: ${DIGEST_JSON_PATH}" >&2
+            exit 1
+          fi
+
+          echo "digest_json_path=${DIGEST_JSON_PATH}" >> "$GITHUB_OUTPUT"
+          echo "Resolved digest JSON: ${DIGEST_JSON_PATH}"
+
+      - name: Render and send HTML digest
+        run: python scripts/render_digest_from_json.py "${{ steps.resolve.outputs.digest_json_path }}"
+
+      - name: Upload rendered digest artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-ai-news-digest
+          path: |
+            out/digest.html
+            out/digest.txt
