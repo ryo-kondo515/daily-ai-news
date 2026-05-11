@@ -7,6 +7,7 @@ import smtplib
 import ssl
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -40,6 +41,7 @@ class Item:
     source_type: str
     published_at: datetime
     summary: str
+    display_title: str = ""
     importance: str = "Low"
     applicability: str = LABEL_NONE
     copilot_tip: str = ""
@@ -101,6 +103,10 @@ def fetch(url: str) -> bytes:
         return response.read()
 
 
+def fetch_text(url: str) -> str:
+    return fetch(url).decode("utf-8")
+
+
 def text_content(element: ET.Element | None) -> str:
     if element is None:
         return ""
@@ -115,6 +121,31 @@ def strip_html(raw: str) -> str:
     raw = re.sub(r"<[^>]+>", " ", raw)
     raw = html.unescape(raw)
     return re.sub(r"\s+", " ", raw).strip()
+
+
+def looks_mostly_english(text: str) -> bool:
+    if not text:
+        return False
+    letters = re.findall(r"[A-Za-z]", text)
+    if len(letters) < 8:
+        return False
+    japanese = re.findall(r"[\u3040-\u30ff\u4e00-\u9fff]", text)
+    return len(japanese) == 0
+
+
+def translate_to_japanese(text: str) -> str:
+    query = urllib.parse.quote(text)
+    url = (
+        "https://translate.googleapis.com/translate_a/single"
+        f"?client=gtx&sl=auto&tl=ja&dt=t&q={query}"
+    )
+    try:
+        payload = fetch_text(url)
+        matches = re.findall(r'\[\s*"((?:[^"\\]|\\.)*)"', payload)
+        translated = "".join(bytes(match, "utf-8").decode("unicode_escape") for match in matches[:4]).strip()
+        return translated or text
+    except Exception:
+        return text
 
 
 def parse_datetime(value: str) -> datetime | None:
@@ -234,6 +265,7 @@ def summarize(item: Item) -> None:
 
     item.why = build_why(item)
     item.community = build_community(item)
+    item.display_title = translate_to_japanese(item.title) if looks_mostly_english(item.title) else item.title
 
 
 def target_date() -> datetime.date:
@@ -327,7 +359,7 @@ def item_html(label: str, item: Item) -> str:
         '    <div class="card-row">',
         f'      <span class="card-num">{html.escape(label)}</span>',
         '      <div class="card-body">',
-        f'        <div class="headline">{html.escape(item.title)}{deadline_html}</div>',
+        f'        <div class="headline">{html.escape(item.display_title or item.title)}{deadline_html}</div>',
         f'        <p class="why">{html.escape(item.why)}</p>',
         f"        {badge_html(item)}",
     ]
