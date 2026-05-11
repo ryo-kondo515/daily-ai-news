@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-11",
+  "generated_at_jst": "2026-05-11T16:50:00+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Copilotコードレビュー、指摘種別メトリクスをAPIで取得可能に",
+        "why": "Copilot Code Reviewの提案を security / bug_risk などの種別ごとに集計できます。AIレビューの導入効果を、品質・セキュリティ改善の数字として説明しやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "組織別に指摘カテゴリと採用率を集計し、PRレビュー工数削減や品質改善のROI資料に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-08-copilot-code-review-comment-types-now-in-usage-metrics-api"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAI、GPT-5.5-Cyberで防御側セキュリティ支援を拡大",
+        "why": "Trusted Access for Cyberにより、検証済み防御者が脆弱性調査、マルウェア分析、検知設計、パッチ検証などに高度モデルを使いやすくなります。企業AI利用では、能力だけでなく本人確認・監査・制限設計が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "社内AI利用規程に、セキュリティ関連プロンプトの承認、ログ、禁止操作、強化認証を追加する材料にできます。",
+        "deadline": "06/01 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Microsoft、AI時代の業務モデル『Frontier Firm』を提示",
+        "why": "Author / Editor / Director / Orchestrator の4段階で、人とエージェントの協働を整理しています。Copilot導入を個人利用から業務プロセス設計へ広げる説明材料になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "自部署の仕事を4分類し、まずDirector化できる定型業務を1つ選ぶと導入計画に落とし込みやすくなります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Microsoft Official Blog",
+            "url": "https://blogs.microsoft.com/blog/2026/05/05/how-frontier-firms-are-rebuilding-the-operating-model-for-the-age-of-ai/"
+          },
+          {
+            "label": "Microsoft 365 Blog",
+            "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/05/microsoft-365-copilot-human-agency-and-the-opportunity-for-every-organization/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "NVIDIA、NCCL InspectorとPrometheusでGPU通信の監視・デバッグを高速化",
+        "why": "分散学習のGPU間通信をリアルタイムに可視化し、遅延やボトルネックの調査をしやすくします。AI基盤運用では、モデル性能だけでなく学習・推論インフラの観測性が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "学習ジョブの障害調査手順やPrometheusメトリクス確認手順をCopilotでRunbook化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "OpenAI、GPT-5.5 Instantのシステムカードを公開",
+        "why": "GPT-5.5 InstantはCybersecurityおよびBiological & Chemical PreparednessでHigh capabilityとして扱われ、追加の安全対策が説明されています。企業利用では、モデル選定時に性能だけでなく安全評価と制御設計を確認する必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "社内モデル評価表に、用途別リスク、禁止用途、監査ログ、追加認証の項目を追加できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI System Card",
+            "url": "https://openai.com/index/gpt-5-5-instant-system-card/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilot、Grok Code Fast 1を廃止予定",
+        "why": "Copilot Chat、inline edits、ask、agent mode、補完など全体でGrok Code Fast 1が廃止予定です。Enterprise管理者は代替モデルの有効化とチーム周知が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Copilotモデルポリシーを確認し、GPT-5 miniやClaude Haiku 4.5への切替案内を作ります。",
+        "deadline": "05/15 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-08-upcoming-deprecation-of-grok-code-fast-1"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub Copilot、GPT-4.1を廃止予定",
+        "why": "GitHub Copilot全体でGPT-4.1が廃止され、代替モデルへの移行が必要になります。モデル固定の運用をしているチームは、IDEと管理ポリシーの確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "VS Code、github.com、組織ポリシーでGPT-4.1依存がないか確認し、移行対象チームを洗い出します。",
+        "deadline": "06/01 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-07-upcoming-deprecation-of-gpt-4-1/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "GitHub、CopilotクラウドエージェントのSecrets/Variablesを柔軟化",
+        "why": "Copilotクラウドエージェントに渡す設定やシークレットの扱いが柔軟になり、エンタープライズ開発ワークフローに組み込みやすくなります。安全な権限分離と環境別設定が実務上の焦点です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "開発・検証・本番の環境ごとにエージェントへ渡すSecretsを分け、最小権限の設定案を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          }
+        ]
+      },
+      {
+        "num": "B4",
+        "headline": "Microsoft、CAISI/AISIとAI評価で協力を拡大",
+        "why": "Microsoftは米国CAISIと英国AISIとの協力により、フロンティアモデルのテスト、安全策評価、国家安全保障・公共安全リスクの評価を進めます。企業のAI調達でも、第三者評価や安全テストの有無が比較軸になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "AI導入チェックリストに、安全評価、レッドチーム、外部評価、モデル更新時の再評価を追加します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Microsoft On the Issues",
+            "url": "https://blogs.microsoft.com/on-the-issues/2026/05/05/advancing-ai-evaluation-with-the-center-for-ai-standards-us-and-innovation-and-the-ai-security-institute-uk/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "GitHub MCP Server連携でSecret Scanningが一般提供",
+        "why": "GitHub MCP Serverを通じたSecret Scanning連携が一般提供され、AIエージェントや開発ツールからセキュリティ検知を扱いやすくなります。MCP利用が広がるほど、接続先ツールの権限管理が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "リポジトリのSecret Scanning結果を確認し、修正PRや再発防止チェックリストをCopilotで作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "NVIDIA、車載AIエージェント構築のクラウドから車内までの設計を解説",
+        "why": "車内インターフェースがルールベースから、推論・計画・ツール実行を行うマルチモーダルAIへ移る流れを示しています。産業用途のエージェント設計にも応用できる論点です。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "オンデバイスAIとクラウドAIの役割分担、ログ、フェイルセーフ設計を整理する材料になります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/how-to-build-in-vehicle-ai-agents-with-nvidia-from-cloud-to-car/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "NVIDIA、複雑化するエージェントシステムにExtreme Co-Designを提案",
+        "why": "エージェント時代は単発応答ではなく、複数モデル、ツール、記憶、インフラをまたぐ設計が必要になります。社内AI基盤では、アプリとインフラを一体で最適化する視点が重要です。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "社内エージェント基盤の構成図を作り、モデル、ツール、権限、監視、キャッシュの責任分界を整理します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/building-for-the-rising-complexity-of-agentic-systems-with-extreme-co-design/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Copilot導入は、利用者数ではなくレビュー品質、セキュリティ指摘、採用率のような成果指標で説明する段階に移っています。",
+      "高度なAI機能は、本人確認、強化認証、監査ログ、危険操作の制限とセットで運用することが前提になりつつあります。",
+      "エージェント活用は個人の作業補助から、業務設計、インフラ監視、シークレット管理、MCP連携を含む運用設計へ広がっています。"
+    ]
+  },
+  "notes": "テスト実行のため、2026-05-11時点で確認できた直近の一次ソースを中心に構成しています。対象日単日で高信頼な公式発表が少ないため、一部は直近数日の公式発表を含みます。"
+}
