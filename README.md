@@ -59,14 +59,20 @@ Required GitHub Actions secrets:
 - `GMAIL_SMTP_USER`
 - `GMAIL_SMTP_APP_PASSWORD`
 - `DIGEST_TO_EMAIL`
+- `OPENAI_API_KEY` (recommended for source-grounded summaries)
+
+Optional GitHub Actions variable:
+
+- `OPENAI_MODEL` default: `gpt-5.2`
 
 What it does:
 
 1. Fetches yesterday's AI-related items from a set of RSS/Atom feeds.
 2. Filters by JST date.
-3. Scores and groups items into `Top 5`, `Business Picks`, `Watchlist`, and `Themes`.
-4. Renders the mobile HTML digest template.
-5. Sends the digest by Gmail SMTP.
+3. Fetches article excerpts and, when `OPENAI_API_KEY` is present, generates source-grounded Japanese summaries.
+4. Scores and groups items into `Top 5`, `Business Picks`, `Watchlist`, and `Themes`.
+5. Renders the mobile HTML digest template.
+6. Sends the digest by Gmail SMTP.
 
 Manual run:
 
@@ -77,3 +83,4 @@ Manual run:
 Caveat:
 
 - Feed coverage depends on the upstream RSS/Atom sources. The workflow intentionally prefers high-confidence feeds and sends a shorter digest rather than padding weak items.
+- Without `OPENAI_API_KEY`, the workflow falls back to deterministic template summaries, which are less accurate than source-grounded AI summaries.

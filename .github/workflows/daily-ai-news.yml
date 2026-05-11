@@ -24,6 +24,8 @@ jobs:
       GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
       GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_SMTP_APP_PASSWORD }}
       DIGEST_TO_EMAIL: ${{ secrets.DIGEST_TO_EMAIL }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.2' }}
       TARGET_DATE_JST: ${{ inputs.target_date_jst }}
       SEND_EMAIL: ${{ inputs.send_email }}
     steps:

@@ -16,6 +16,7 @@ from datetime import UTC, datetime, timedelta, timezone
 from email.message import EmailMessage
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from typing import Any
 
 JST = timezone(timedelta(hours=9), "JST")
 OUT_DIR = Path("out")
@@ -151,6 +152,109 @@ def translate_to_japanese(text: str) -> str:
         return text
 
 
+def extract_article_text(url: str) -> str:
+    try:
+        raw = fetch_text(url)
+    except Exception:
+        return ""
+    raw = re.sub(r"(?is)<script.*?>.*?</script>", " ", raw)
+    raw = re.sub(r"(?is)<style.*?>.*?</style>", " ", raw)
+    meta_parts = re.findall(
+        r'(?is)<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\'](.*?)["\']',
+        raw,
+    )
+    paragraph_parts = re.findall(r"(?is)<p[^>]*>(.*?)</p>", raw)
+    text = " ".join(meta_parts + paragraph_parts[:20])
+    text = strip_html(text)
+    return text[:6000]
+
+
+def extract_response_text(payload: dict[str, Any]) -> str:
+    if isinstance(payload.get("output_text"), str) and payload["output_text"].strip():
+        return payload["output_text"].strip()
+    for output in payload.get("output", []):
+        for content in output.get("content", []):
+            text_value = content.get("text")
+            if isinstance(text_value, str) and text_value.strip():
+                return text_value.strip()
+    return ""
+
+
+def summarize_with_openai(item: Item, article_text: str) -> None:
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key or not article_text:
+        return
+
+    prompt = {
+        "title": item.title,
+        "source_name": item.source_name,
+        "source_type": item.source_type,
+        "published_at_jst": item.published_at.isoformat(),
+        "rss_summary": item.summary,
+        "article_excerpt": article_text,
+    }
+    request_body = {
+        "model": os.getenv("OPENAI_MODEL", "gpt-5.2"),
+        "input": [
+            {
+                "role": "developer",
+                "content": (
+                    "Return valid JSON only. Summarize only facts supported by the provided source text. "
+                    "If evidence is weak, be conservative. Translate the headline into natural Japanese. "
+                    "Keep the Japanese summary compact and business-oriented."
+                ),
+            },
+            {
+                "role": "user",
+                "content": json.dumps(prompt, ensure_ascii=False),
+            },
+        ],
+        "text": {
+            "format": {
+                "type": "json_object"
+            }
+        },
+    }
+    request = urllib.request.Request(
+        "https://api.openai.com/v1/responses",
+        data=json.dumps(request_body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+        text_output = extract_response_text(payload)
+        if not text_output:
+            return
+        data = json.loads(text_output)
+    except Exception:
+        return
+
+    display_title = data.get("display_title_ja")
+    why = data.get("why_ja")
+    importance = data.get("business_importance")
+    applicability = data.get("copilot_applicability")
+    copilot_tip = data.get("copilot_tip_ja")
+    community = data.get("community_note_ja")
+
+    if isinstance(display_title, str) and display_title.strip():
+        item.display_title = display_title.strip()
+    if isinstance(why, str) and why.strip():
+        item.why = why.strip()
+    if importance in {"High", "Medium", "Low"}:
+        item.importance = importance
+    if applicability in {LABEL_DIRECT, LABEL_INDIRECT, LABEL_NONE}:
+        item.applicability = applicability
+    if isinstance(copilot_tip, str) and copilot_tip.strip():
+        item.copilot_tip = copilot_tip.strip()
+    if isinstance(community, str) and community.strip():
+        item.community = community.strip()
+
+
 def parse_datetime(value: str) -> datetime | None:
     if not value:
         return None
@@ -269,6 +373,8 @@ def summarize(item: Item) -> None:
     item.why = build_why(item)
     item.community = build_community(item)
     item.display_title = translate_to_japanese(item.title) if looks_mostly_english(item.title) else item.title
+    article_text = extract_article_text(item.link)
+    summarize_with_openai(item, article_text)
 
 
 def target_date() -> datetime.date:
