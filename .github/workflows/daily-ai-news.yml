@@ -1,0 +1,46 @@
+name: Daily AI News Digest
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+    inputs:
+      target_date_jst:
+        description: "Override target date in JST (YYYY-MM-DD)"
+        required: false
+        type: string
+      send_email:
+        description: "Send email"
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
+      GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_SMTP_APP_PASSWORD }}
+      DIGEST_TO_EMAIL: ${{ secrets.DIGEST_TO_EMAIL }}
+      TARGET_DATE_JST: ${{ inputs.target_date_jst }}
+      SEND_EMAIL: ${{ inputs.send_email }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run digest
+        run: python scripts/daily_ai_news_digest.py
+
+      - name: Upload digest artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-ai-news-digest
+          path: out/digest.html
