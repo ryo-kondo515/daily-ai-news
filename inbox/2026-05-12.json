@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-12",
+  "generated_at_jst": "2026-05-13T07:58:59+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot Code Review、重要度ラベルとコメント集約でレビューが見やすく",
+        "why": "GitHub Copilot Code ReviewのコメントにHigh/Medium/Lowの重要度が付き、類似コメントもまとめられるようになりました。大きなPRでも優先度を判断しやすくなり、レビュー運用のノイズ削減に効きます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewの指摘を重要度別に確認し、Highだけ先に修正するPR運用ルールやレビュー手順を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-copilot-code-review-comment-experience-improvements/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot、従量課金に備える4月利用レポートを提供開始",
+        "why": "GitHub Copilotの4月利用状況をAI credits換算で確認できるレポートが提供されました。6月1日からのAI credits導入に向け、企業管理者は利用量・モデル・利用面ごとのコスト感を事前に把握できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの利用レポートをもとに、上位利用者、利用サーフェス、モデル別消費を整理し、部門別の予算見積もりや利用ガイドラインを作れます。",
+        "deadline": "06/01 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-april-reports-are-now-available-to-prepare-for-usage-based-billing/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "CodeQL 2.25.4、Swift 6.3.1対応とVercel serverless関数の検出強化",
+        "why": "CodeQL 2.25.4ではSwift 6.3.1対応、C#解析精度向上、Vercel serverless関数へのJavaScript/TypeScriptセキュリティ解析拡張が追加されました。WebアプリやAPIの脆弱性検出範囲が広がります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub code scanningの結果をGitHub Copilot Chatに要約させ、修正方針、影響範囲、PR説明文、再発防止チェックリストを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-codeql-2-25-4-adds-swift-6-3-1-support-improvements-to-c-and-java-and-more/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub、同期SBOM APIを非推奨化し非同期APIへの移行を案内",
+        "why": "従来の同期SBOM APIが非推奨となり、6か月後に削除予定です。SBOM取得を自動化している企業は、非同期REST APIへの移行とCI/CDスクリプトの更新が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatで既存スクリプト内のSBOMエンドポイント利用箇所を洗い出し、非同期APIのポーリング処理へ置き換える修正案を作れます。",
+        "deadline": "11/13 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-synchronous-sbom-api-deprecated/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "NVIDIA、AIモデル配備のパイプライン摩擦を減らす実践手順を公開",
+        "why": "NVIDIAは、ONNXエクスポート、TensorRT最適化、動的入力、バージョン不整合、Dynamo-Triton運用など、AIモデル serving の失敗要因を減らす手順を整理しました。AI本番運用では、モデル精度だけでなく配備の再現性と性能監視が重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、モデル変換・性能測定・依存バージョン固定・リリース前検証を含むMLOps用CI/CDチェックリストを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/how-to-eliminate-pipeline-friction-in-ai-model-serving/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilotのコスト管理は、利用者数ではなくAI credits単位へ",
+        "why": "4月レポートでは、モデルや利用面ごとの消費傾向を見られるため、Copilot導入の管理指標が席数中心から利用量・価値・予算管理へ移ります。日本企業でも部門別の利用ルールと予算枠設定が必要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの利用データをもとに、チーム別の利用状況レビュー、予算超過時の対応、推奨モデル選択ルールを文書化できます。",
+        "deadline": "06/01 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-april-reports-are-now-available-to-prepare-for-usage-based-billing/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "CodeQLのVercel対応で、フロントエンド寄りのサーバーレスAPIも管理対象に",
+        "why": "Vercel serverless関数でXSS、リクエストフォージェリ、SQLインジェクション、コマンドインジェクションなどの標準クエリが効きやすくなります。モダンWeb開発チームのセキュリティレビュー範囲を広げる材料になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotで、Vercel API route向けの安全な入力検証、ログ出力、エラーハンドリングの修正PRを作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-codeql-2-25-4-adds-swift-6-3-1-support-improvements-to-c-and-java-and-more/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "SBOM取得の自動化は非同期前提へ移行",
+        "why": "SBOM生成は同期APIから非同期APIへ移るため、依存関係管理や監査レポート生成のジョブ設計を見直す必要があります。大規模リポジトリでは待ち時間や再試行設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotで、非同期SBOM生成、完了確認、失敗時リトライ、成果物保存までのGitHub Actionsワークフロー案を作れます。",
+        "deadline": "11/13 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-12-synchronous-sbom-api-deprecated/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "AIモデル配備の失敗要因はCI/CDで早期検出する流れに",
+        "why": "NVIDIAは、モデルエクスポート検証、依存関係固定、性能測定、プロファイリングを早期に組み込む重要性を示しています。AIアプリの本番化では、学習と推論基盤の境界をまたぐ運用設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、ONNX変換テスト、TensorRTベンチマーク、コンテナ固定、リリース判定を含むCI/CDワークフローを設計できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/how-to-eliminate-pipeline-friction-in-ai-model-serving/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは、レビュー品質と開発速度だけでなく、利用量とコストを管理する段階に入っています。",
+      "セキュリティとサプライチェーン管理では、CodeQL、SBOM、Dependabotなどの自動化を前提にした運用更新が続いています。",
+      "AIモデルの本番運用では、モデル性能だけでなく、変換、配備、依存関係、監視まで含むMLOps設計が重要になっています。"
+    ]
+  },
+  "notes": ""
+}
