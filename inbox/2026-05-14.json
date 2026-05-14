@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-14",
+  "generated_at_jst": "2026-05-15T07:58:47+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "AnthropicとGates Foundation、医療・教育AIに2億ドル規模で提携",
+        "why": "AnthropicとGates Foundationは、Claude利用クレジット、技術支援、助成を組み合わせた4年間・2億ドル規模の取り組みを発表しました。医療、教育、経済的機会、低リソース言語対応など、公共性の高いAI活用が焦点です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、公共・教育・医療向けAI導入時のデータ管理、言語対応、利用規約、監査観点を整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/retail-consumer/anthropic-gates-foundation-launch-200-million-partnership-ai-health-education-2026-05-14/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropicの企業・コーディング領域での勢いに注目集まる",
+        "why": "WSJは、Anthropicが企業導入やコーディング用途でOpenAIに迫る存在になっていると報じました。Claude Codeなどの開発者向けAIが、企業向けAI市場の競争軸になっています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入検討時に、Claude Codeなど競合コーディングエージェントとの比較表、評価観点、PoC計画を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/anthropic-was-behind-now-its-the-ai-booms-front-runner-5020f621"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AI公益利用では、モデル性能だけでなくデータ公開・言語対応が論点に",
+        "why": "AnthropicとGates Foundationの提携では、アフリカ言語のデータ整備や教育向け知識グラフなどが検討されています。日本企業でも、海外展開や公共領域では言語・地域データの不足がAI活用の制約になり得ます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、多言語対応AIサービスのデータ要件、評価指標、リスク整理、運用Runbookを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/retail-consumer/anthropic-gates-foundation-launch-200-million-partnership-ai-health-education-2026-05-14/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "AIコーディング市場は、GitHub Copilot単体から複数エージェント比較へ",
+        "why": "企業の開発現場では、GitHub Copilot、Claude Code、Codex系ツールなどを用途別に評価する流れが強まっています。費用、セキュリティ、リポジトリ権限、PR品質の比較が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code ReviewやCopilot Chatを基準に、PR品質、レビュー負荷削減、セキュリティ指摘、開発速度を評価するPoC設計を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/anthropic-was-behind-now-its-the-ai-booms-front-runner-5020f621"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "前日に確認できた高信頼の新規AIニュースは少なめでした。特に公式一次発表より、ReutersやWSJなど報道ベースの情報が中心でした。",
+      "AIの焦点は、単なるチャット利用から、医療・教育・開発ワークフローなど業務領域への組み込みに移っています。",
+      "開発者向けAIでは、GitHub Copilotを軸にしつつ、Claude CodeやCodex系ツールを比較評価する必要性が高まっています。"
+    ]
+  },
+  "notes": "2026-05-14 JSTは、主要AI企業の公式一次発表が限られていたため短縮版です。低品質な転載や噂は除外し、信頼できる報道ベースの項目のみ採用しました。"
+}
