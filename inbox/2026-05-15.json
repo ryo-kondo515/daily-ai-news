@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-15",
+  "generated_at_jst": "2026-05-16T07:58:45+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、300億ドル規模の追加調達で評価額9000億ドルとの報道",
+        "why": "AI基盤モデル企業への資金集中がさらに進み、企業向けAI・開発者向けAI市場の競争が激化する可能性があります。Claude Codeなどの開発者向けAI投資にも波及し得ます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入検討時に、Claude Codeなど競合AIコーディングツールとの評価軸、PoC項目、セキュリティ比較表を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847"
+          },
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/anthropic-raising-30-billion-more-as-ai-labs-absorb-majority-of-vc-funding-d26128d7"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "米中AI競争で、AIチップ輸出管理と安全性協議が引き続き焦点に",
+        "why": "Reutersは、米中協議でAI安全性には触れられた一方、NVIDIA H200など先端AIチップ輸出の進展は限定的だったと報じました。日本企業にとっても、GPU調達、クラウド利用、規制リスクの見通しに関わります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI基盤の調達リスク、クラウド依存、輸出規制影響を整理した社内向けリスクメモやチェックリストを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/chip-export-controls-not-major-topic-china-talks-us-trade-rep-greer-tells-2026-05-15/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AI投資の集中により、企業向けAIの勝ち筋は資金力と導入実績へ",
+        "why": "Anthropicの大型調達報道は、AIモデル企業が研究開発、計算資源、企業導入支援に巨額投資を続ける局面を示しています。日本企業は単体モデル性能だけでなく、契約条件、データ保護、運用支援を比較する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、GitHub Copilot、Claude Code、Codex系ツールの費用、安全性、権限管理、開発ワークフロー適合性を比較する表を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/anthropic-raising-30-billion-more-as-ai-labs-absorb-majority-of-vc-funding-d26128d7"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIチップ規制は、生成AI導入計画のインフラ前提を左右",
+        "why": "先端AIチップの輸出管理は、モデル提供価格、クラウド供給、リージョン選択に影響する可能性があります。AIを業務基盤に組み込む企業は、供給制約と代替手段を設計に入れる必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、GPU依存のAIサービスに対する代替アーキテクチャ、障害時Runbook、ベンダーロックイン対策を整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/chip-export-controls-not-major-topic-china-talks-us-trade-rep-greer-tells-2026-05-15/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "AIコーディング市場は、GitHub Copilot単独評価から複数エージェント比較へ",
+        "why": "Anthropicの資金調達報道は、Claude Codeを含む開発者向けAI競争の継続投資を示唆します。企業では、GitHub Copilotを軸にしつつ、タスク委譲型エージェントとの使い分け評価が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Review、GitHub Copilot Chat、Copilot coding agentを基準に、PR品質、レビュー負荷、セキュリティ指摘、リポジトリ権限を評価するPoC設計を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "米中AI政策の変化は、日本企業のAIガバナンスにも波及",
+        "why": "AI安全性、輸出管理、計算資源の扱いは、今後のAI規制・調達・監査の前提になり得ます。グローバル展開する企業は、利用モデルとクラウド基盤の説明責任を準備する必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI利用ガイドライン、モデル選定基準、サプライチェーンリスク確認項目を日本語でドラフトできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/chip-export-controls-not-major-topic-china-talks-us-trade-rep-greer-tells-2026-05-15/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "前日は、OpenAI、Google DeepMind、GitHubなどの大きな公式発表は確認できず、信頼できる報道ベースの項目が中心でした。",
+      "AI企業の競争軸は、モデル性能だけでなく、資金力、企業導入、開発者ワークフローへの深い統合に移っています。",
+      "日本企業にとっては、GitHub Copilotを含むAI開発支援ツールの比較評価と、AI基盤の調達・規制リスク管理が重要になります。"
+    ]
+  },
+  "notes": "2026-05-15 JSTは、主要AI企業の公式一次発表が限られていたため短縮版です。低品質な転載や噂は除外し、信頼できる報道ベースの項目のみ採用しました。"
+}
