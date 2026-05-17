@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-17",
+  "generated_at_jst": "2026-05-18T08:01:50+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [],
+    "themes": [
+      "2026-05-17 JSTは日曜日で、主要AI企業の公式発表・研究ブログ・製品更新は確認できませんでした。",
+      "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの一次情報を優先して確認しましたが、信頼度の高い新規項目は限定的でした。",
+      "弱い転載記事や日付が不明確な二次情報は除外し、今回は空配信に近い短縮版としています。"
+    ]
+  },
+  "notes": "2026-05-17 JSTに公開された高信頼なAI公式ニュースは確認できなかったため、短縮版です。重複報道、低品質な転載、対象日外の記事は除外しました。"
+}
