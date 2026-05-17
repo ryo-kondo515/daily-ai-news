@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-16",
+  "generated_at_jst": "2026-05-17T08:00:50+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、大型資金調達でAI開発競争の資金力が再び焦点に",
+        "why": "Financial Timesは、Anthropicが300億ドル規模の追加調達で評価額9000億ドルに達する条件に合意したと報じました。AIモデル、AIエージェント、開発者向けAIへの投資競争がさらに強まる可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時に、Claude CodeやCodex系ツールとの比較表、PoC評価項目、開発ワークフロー別の使い分け案を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIベンダー選定は、モデル性能だけでなく継続投資力の比較へ",
+        "why": "巨額調達により、モデル開発、計算資源、企業導入支援への投資余力が競争軸になります。日本企業は価格、データ保護、契約条件、サポート体制を含めた比較が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AIツール選定のRFI項目、セキュリティ確認表、社内説明用の比較資料を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "開発者向けAIは、補完ツールから業務委任型エージェントへ移行中",
+        "why": "資金力のあるAI企業は、コード補完だけでなく、リポジトリ単位の修正、レビュー、テスト実行まで担うエージェント領域に投資を続けています。GitHub Copilotも、PRレビューやcoding agentを含む開発フロー全体での活用が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Review、GitHub Copilot Chat、GitHub Copilot coding agentを使い、PR作成、レビュー、テスト観点の洗い出しを標準フロー化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-16 JSTは、主要AI企業の公式発表が少ない日でした。信頼できる一次情報・大手報道に絞ると、採用できる項目は限定的でした。",
+      "AI市場では、モデル性能だけでなく、計算資源と企業導入を支える資金力が重要になっています。",
+      "日本企業にとっては、GitHub Copilotを軸にしつつ、競合AIコーディングエージェントとの比較評価を準備する重要性が増しています。"
+    ]
+  },
+  "notes": "2026-05-16 JSTは週末で、OpenAI、Google DeepMind、GitHub、Microsoft AI、NVIDIAなどの高信頼な公式発表は確認できませんでした。低品質な転載や重複報道は除外し、短縮版にしています。"
+}
