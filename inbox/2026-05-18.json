@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-18",
+  "generated_at_jst": "2026-05-19T08:00:01+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "ローマ教皇のAI回勅発表にAnthropic共同創業者が参加予定",
+        "why": "AIの軍事利用や人間の尊厳をめぐる国際的なガバナンス議論として注視対象です。企業のAI利用ポリシーや倫理レビューの文脈でも参考になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで社内AI利用ガイドライン、AI倫理レビュー項目、開発現場向けチェックリストのたたき台作成に活用できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "AP News",
+            "url": "https://apnews.com/article/9cf3e07fd691f6af510c4a6f9c8ba353"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-18 JSTは、主要AI企業の公式発表・研究ブログ・製品更新が非常に少ない日でした。",
+      "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの一次情報を優先確認しましたが、対象日付の高信頼な新規リリースは限定的でした。",
+      "開発ワークフローやGitHub Copilotに直結する新情報は確認できなかったため、今回はAIガバナンス関連の注視項目のみを掲載しています。"
+    ]
+  },
+  "notes": "信頼できる公式ニュースが少ない日のため短縮版です。低品質な転載、対象日外の記事、重複報道は除外しました。"
+}
