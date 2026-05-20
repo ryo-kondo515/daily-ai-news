@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-20",
+  "generated_at_jst": "2026-05-21T07:59:49+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Google、I/O 2026でGemini 3.5 Flashを一般提供",
+        "why": "Gemini 3.5 Flashはエージェント処理とコーディングを重視したモデルで、Google Antigravity、Gemini API、Google AI Studio、Android Studioで利用できます。開発ワークフローのAIエージェント化がさらに進みます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotと同じIssue修正、テスト生成、リファクタリング課題を比較し、速度・品質・コストを評価できます。",
+        "deadline": "",
+        "community": "Google I/O 2026の中心発表として、開発者向けAIツール文脈で注目度が高いです。",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+          },
+          {
+            "label": "Google DeepMind",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Google Antigravity 2.0、CLI、SDK、Managed Agentsを発表",
+        "why": "Antigravity 2.0は複数エージェントの並列実行、スケジュールタスク、CLI、SDKを備え、開発者がAIエージェントを運用する基盤に近づいています。企業ではGitHub Copilot coding agentやClaude Codeなどとの比較対象になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Actionsと比較し、Issue起点の実装、PR作成、テスト実行、レビューまでの自動化範囲を整理できます。",
+        "deadline": "",
+        "community": "AIコーディングエージェント競争の主要トピックとして、Copilot、Codex、Claude Codeとの比較が起きやすい領域です。",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+          },
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Google Searchに情報エージェントとAntigravityベースの生成UIを導入へ",
+        "why": "検索が単なる回答表示から、継続監視、情報収集、ミニアプリ生成に拡張されます。業務調査、競合監視、社内レポート作成の体験が大きく変わる可能性があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、検索エージェントの業務利用ルール、調査テンプレート、生成UIを社内システムに取り込む場合の設計レビューに活用できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Google AI StudioでAndroidアプリ生成・Play Console連携を強化",
+        "why": "自然言語からAndroidアプリを作り、テストトラック公開までつなげる流れが強化されました。モバイルPoCや業務アプリ試作のハードルが下がります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "生成されたAndroidコードをGitHubに取り込み、GitHub Copilotでテスト追加、リファクタリング、PRレビューを行う流れを作れます。",
+        "deadline": "",
+        "community": "The Vergeなどでも「vibe codingがスマホに来る」として取り上げられ、非エンジニアの試作用途が注目されています。",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/"
+          },
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/934628/google-io-2026-android-ai-studio-widgets-shortcuts"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Texas州司法長官、MetaのAIグラスをプライバシー懸念で調査",
+        "why": "AIグラスの録音・録画・顔データ収集をめぐる規制リスクが顕在化しています。日本企業がウェアラブルAIや業務用カメラAIを扱う際も、同意、表示、保存、監査の設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AIグラスや画像AIを使う社内PoCのプライバシーチェックリスト、データ保持方針、利用規約ドラフトを作成できます。",
+        "deadline": "",
+        "community": "Meta AIグラスは便利さと監視リスクの両面で議論が続いています。",
+        "sources": [
+          {
+            "label": "Houston Chronicle",
+            "url": "https://www.houstonchronicle.com/news/houston-texas/trending/article/ken-paxton-texas-meta-22269031.php"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Google、AI Ultraの100ドルプランとAntigravity向けクレジットを発表",
+        "why": "開発者・企業向けに高性能AIエージェント利用の価格帯が広がります。AIコーディングツールの費用対効果比較に影響します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotのプレミアムリクエストや他社AIエージェント料金と比較する社内導入資料を作れます。",
+        "deadline": "05/25 期限",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Build with Gemini XPRIZE Hackathon、賞金総額200万ドルで開始",
+        "why": "Geminiエコシステム上で実アプリを作る開発者獲得施策です。企業のPoC、採用広報、社内ハッカソンの参考になります。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotでハッカソン用の要件定義、README、GitHub Actions、テスト雛形を短時間で整備できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "Gemini APIのManaged Agentsで隔離Linux環境つきエージェントを提供",
+        "why": "単一API呼び出しで、推論、ツール利用、コード実行を行うエージェントを起動できます。社内AIエージェント基盤を作る企業にとって、実行環境の分離と状態管理が重要論点になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub ActionsやGitHub Copilot coding agentと比較し、リポジトリ操作、テスト実行、権限境界、監査ログの設計観点を整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：OpenAIがIPO準備を進めているとの報道",
+        "why": "公式発表ではありませんが、OpenAIの資金調達・上場観測はAI基盤コスト、API価格、企業向け販売戦略に影響し得ます。一次ソースまたは正式発表が出るまでWatchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "Financial Timesなどが報じていますが、OpenAI公式発表ではありません。",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/028a169f-cd1c-438b-b50d-df4af6297318"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "OpenClawとCodexを使ったロボット制御の実験が話題",
+        "why": "AIコーディングエージェントがソフトウェアだけでなくロボット制御にも使われる事例です。現時点では個別実験として追跡対象に留めます。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotでロボット制御コードの安全確認、テスト、ログ解析、README整備に活用できます。",
+        "deadline": "",
+        "community": "Wiredが実験記事として取り上げており、AIエージェントの実世界応用例として注目です。",
+        "sources": [
+          {
+            "label": "Wired",
+            "url": "https://www.wired.com/story/i-gave-my-openclaw-agent-physical-body-robot"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Google I/O 2026関連が中心で、Gemini 3.5 Flash、Antigravity、Managed Agentsが開発者向けAIの主要トピックでした。",
+      "AIコーディング支援は、補完やチャットから、複数エージェントの並列実行、隔離環境でのコード実行、継続監視へ広がっています。",
+      "AIグラスや検索エージェントなど、常時稼働・個人データ連携型AIでは、利便性とプライバシー・ガバナンスの両立が重要になっています。"
+    ]
+  },
+  "notes": "対象日はGoogle I/O 2026関連の発表が多く、重複するGoogle発表は公式ソースを優先して統合しました。OpenAIのIPO報道は公式発表ではないためWatchlistに留めました。X、はてなブックマーク、Zenn、Qiita、HN、Reddit系の強い一次ソース付き話題は限定的でした。"
+}
