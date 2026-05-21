@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-21",
+  "generated_at_jst": "2026-05-22T08:00:54+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Google Play、AI時代のアプリ発見・配信機能を強化",
+        "why": "Google Playに短尺紹介、会話型検索、Geminiアプリ上でのアプリ露出などが追加され、Androidアプリの発見経路がAI中心に変わり始めています。日本のモバイル開発・マーケティングにも影響があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Play Store向け説明文、リリースノート、テスト観点、Google Play Console公開手順のチェックリストを作成できます。",
+        "deadline": "",
+        "community": "Google I/O 2026関連の開発者向け発表として、Android開発者・アプリ事業者向けに注目される内容です。",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/feed/google-play-updates-google-io-2026/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "川崎重工とNVIDIA、シリコンバレーにロボティクス開発拠点を計画との報道",
+        "why": "日本企業のロボティクスとNVIDIAの物理AI・シミュレーション技術が結びつく動きです。医療・モビリティ領域で、AIロボット開発の産業化が進む可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、ロボット制御コード、シミュレーション環境、ログ解析、CI上のテスト自動化、技術調査メモ作成に活用できます。",
+        "deadline": "",
+        "community": "日本企業とNVIDIAの協業報道として、日本の製造業・ロボティクス文脈で追跡価値があります。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/asia-pacific/kawasaki-heavy-nvidia-plan-silicon-valley-robotics-center-nikkei-reports-2026-05-21/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Google AI StudioのAndroidアプリ生成が実利用レビューで注目",
+        "why": "自然言語からAndroidアプリを短時間で作る体験が実利用レビューとして広がっています。一方で品質やロジックの粗さも指摘されており、PoCと本番開発の線引きが重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "AI Studioで生成したコードをGitHubに取り込み、GitHub Copilot Code ReviewやCopilot Chatでテスト追加、リファクタリング、例外処理確認を行えます。",
+        "deadline": "",
+        "community": "The Vergeの実体験記事では、生成速度の高さと品質面の課題がセットで語られています。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/935056/google-vibe-coding-first-android-app-gemini-ai-studio"
+          },
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Meta、AI投資のため大規模な人員削減・AI部門再配置を進めるとの報道",
+        "why": "AI投資の原資確保として人員構成を大きく組み替える動きです。AI導入が単なるツール導入ではなく、組織設計や人材ポートフォリオに直結する段階に入っています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI導入に伴う開発組織の役割定義、スキル移行計画、社内説明資料、リスク整理を作成できます。",
+        "deadline": "",
+        "community": "AI投資と雇用再編をめぐる議論が強く、企業のAI導入時の説明責任が問われやすいテーマです。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "中国AIエージェント企業Manus、Meta買収の巻き戻しに向け資金調達を模索との報道",
+        "why": "AIエージェント企業をめぐり、米中規制・投資審査リスクが顕在化しています。AIエージェント技術のM&Aや海外展開では、技術だけでなく地政学・規制対応が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "ManusはAIエージェント領域の象徴的企業として扱われており、規制面の動向も注目されています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/chinas-manus-founders-seek-1-billion-undo-meta-takeover-bloomberg-news-reports-2026-05-21/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Google I/O 2026の開発者向け発表、Antigravity・Managed Agents・AI Studioが中心",
+        "why": "発表日は5月19日ですが、5月21日も関連レビューや派生ニュースが継続しています。AI開発環境が、補完ツールからエージェント運用基盤へ移行している点が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agent、GitHub Actions、Copilot Code Reviewと比較し、Issue起点の実装、PR作成、レビュー、テスト自動化の適用範囲を整理できます。",
+        "deadline": "05/25 締切",
+        "community": "AIコーディングエージェント競争の主要比較対象として、Copilot、Codex、Claude Codeとの比較が起きやすい内容です。",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Gemini APIのManaged Agents、隔離Linux環境つきエージェント実行を提供",
+        "why": "単一API呼び出しで、推論、ツール利用、コード実行、状態保持を行える設計です。企業がAIエージェント基盤を作る際の権限分離・監査・再現性の論点に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotやGitHub Actionsと比較し、リポジトリ操作、サンドボックス実行、権限境界、監査ログの設計観点をまとめられます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "Google AI Ultraの100ドルプランとAntigravity向けクレジット提供",
+        "why": "高性能AIエージェントを使う料金帯が広がり、企業のAI開発ツール選定でコスト比較が重要になります。GitHub Copilot、Claude、Gemini系ツールの費用対効果比較が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotのプラン・プレミアムリクエスト・他社AIエージェント料金を比較する社内導入資料を作成できます。",
+        "deadline": "05/25 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：Metaの大規模AI再編の詳細",
+        "why": "報道ベースでは大規模な人員削減とAI部門への再配置が示されていますが、公式発表ではないため詳細は要確認です。AI投資が組織再編を加速する事例として追跡します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI導入時の組織影響、開発者教育、リスキリング計画、社内FAQを作成できます。",
+        "deadline": "",
+        "community": "AI投資と雇用削減をめぐる反応が強く、企業のAI導入説明に影響するテーマです。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：Manus買収巻き戻しと中国当局の規制対応",
+        "why": "AIエージェント企業の越境M&Aに対し、国家レベルの規制が強まる可能性があります。現時点では報道ベースのため、公式発表や当局文書の確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "AIエージェント企業の資本政策・地政学リスクとして継続監視対象です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/chinas-manus-founders-seek-1-billion-undo-meta-takeover-bloomberg-news-reports-2026-05-21/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Google I/O 2026後の話題が継続し、AI開発ツールは補完からエージェント運用・アプリ生成へ広がっています。",
+      "AI投資は、モデルやGPUだけでなく、人員配置、M&A、規制対応、料金設計まで含む経営課題になっています。",
+      "日本企業では、川崎重工とNVIDIAのロボティクス協業報道のように、物理AI・シミュレーション・産業応用の接点が重要になりそうです。"
+    ]
+  },
+  "notes": "5月21日単日では、主要AI企業の新規公式発表はGoogle I/O関連の派生情報が中心でした。X、はてなブックマーク、Zenn、Qiita、HN、Redditで一次ソース付きの強い新規トレンドは限定的だったため、未確認・報道ベースの話題はWatchlistに留めました。"
+}
