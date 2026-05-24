@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-24",
+  "generated_at_jst": "2026-05-25T08:01:12+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "AIコーディングの過信による「vibe slop」懸念が再注目",
+        "why": "AIに自然言語で実装を任せる開発が広がる一方、品質・保守性・セキュリティの劣化リスクが改めて議論されています。GitHub Copilot coding agentなどを企業導入する際も、人間のレビュー設計が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Review、Branch Protection、CI必須化を組み合わせ、AI生成PRを人間レビュー前提で運用するルール作りに使えます。",
+        "deadline": "",
+        "community": "AIエージェントによる大量PRやレビュー責任の所在について、開発者コミュニティで継続的に議論されています。",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/vibe-coding-slop-ai-tools-e6a99394"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIエージェント時代のPR品質・CI信頼性が企業導入の論点に",
+        "why": "AI coding agentの導入効果は速度だけでなく、CI成功率、レビュー負荷、変更の粒度で評価する必要があります。企業ではPoC段階からメトリクス設計が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentのPRに対し、GitHub Actionsの成功率、レビュー指摘数、差し戻し率を集計する運用設計を作れます。",
+        "deadline": "",
+        "community": "GitHub上のAI生成PR研究やCI/CD信頼性に関する議論が増えています。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2604.18334"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：VS Code拡張機能経由の開発環境リスク報道",
+        "why": "AI開発支援ツールやエディタ拡張の利用が増えるほど、拡張機能の権限・サプライチェーンリスクが重要になります。一次ソースでの確認が必要ですが、企業の開発端末管理には影響が大きい論点です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、許可済みVS Code拡張リスト、開発端末ポリシー、シークレット管理、インシデント対応手順の草案を作れます。",
+        "deadline": "",
+        "community": "開発者向け拡張機能の安全性と、AIツール導入時の端末ガバナンスが話題になっています。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/cyber-security/hacker-group-hits-3-800-internal-github-repositories-via-poisoned-developer-plugin-teampcp-claims-source-code-theft-and-attempts-usd50-000-sale-employee-installed-malicious-vs-code-extension"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：Google系AIエージェント基盤の開発者利用拡大",
+        "why": "Googleのエージェント基盤やAI coding toolの更新は、GitHub CopilotやCodex、Claude Codeとの比較対象になります。日本企業でも開発者AIツールの標準化検討に影響します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを標準にする場合でも、他社エージェントとの比較表、利用範囲、権限、監査ログ、料金の整理に活用できます。",
+        "deadline": "",
+        "community": "Google I/O後のAIエージェント関連機能について、開発者向けメディアで継続的に取り上げられています。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/932996/google-gemini-spark-antigravity-io-2026"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIコーディング支援は、単なる補完からPR作成・CI連携・レビュー前提の開発フローへ移っています。",
+      "企業導入では、生成速度よりもレビュー責任、監査ログ、CI成功率、セキュリティ統制が重要になっています。",
+      "GitHub Copilot活用では、コード生成だけでなく、開発ガバナンス文書、PR運用ルール、メトリクス設計まで含めると実務価値が出やすいです。"
+    ]
+  },
+  "notes": "2026-05-24 JST単日では、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの強い一次ソース付き大型発表は確認できませんでした。そのため短縮版とし、AIコーディング品質、開発環境セキュリティ、AIエージェント比較に関する確認可能な話題を中心に構成しています。"
+}
