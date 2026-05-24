@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-22",
+  "generated_at_jst": "2026-05-23T08:00:25+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Meta、Facebook Groups系の新アプリ「Forum」をAI検索付きでテスト",
+        "why": "グループ投稿を参照して回答するAIチャットが組み込まれており、SNS内検索・コミュニティ発見がAI要約型に寄っていく動きです。社内ナレッジ検索やコミュニティ運営にも応用可能な方向性です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、社内フォーラムやFAQ検索機能の要件定義、RAG構成、権限管理、監査ログ設計のたたき台を作成できます。",
+        "deadline": "",
+        "community": "The Vergeのハンズオン記事ベースで、現時点ではMeta公式の詳細発表は確認できていません。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/936290/meta-forum-facebook-groups-app-hands-on"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "NVIDIA決算後、AIインフラ投資の電力・資金制約に注目集まる",
+        "why": "NVIDIAのAI需要は強い一方、電力網、冷却、資金調達、地政学リスクがAIインフラ拡大の制約として意識されています。日本企業のAI導入でも、GPU確保だけでなく運用コストとインフラ計画が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI基盤導入時のコスト試算、GPU利用方針、クラウド/オンプレ比較、運用リスクのチェックリストを作れます。",
+        "deadline": "",
+        "community": "決算そのものより、AIデータセンター投資の持続性を問う論調が強まっています。",
+        "sources": [
+          {
+            "label": "MarketWatch",
+            "url": "https://www.marketwatch.com/story/nvidia-can-deliver-chips-but-it-cant-buy-big-tech-out-of-its-credit-and-power-grid-crisis-9c114e62"
+          },
+          {
+            "label": "NVIDIA",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Meta、AI投資に合わせた大規模な人員再配置が続くとの報道",
+        "why": "AI活用がツール導入に留まらず、職種・組織・評価制度の再設計に直結していることを示す動きです。日本企業でもAI導入時のリスキリングと説明責任が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI導入に伴う開発組織の役割定義、教育計画、社内FAQ、移行ロードマップを作成できます。",
+        "deadline": "",
+        "community": "報道ベースのため、Meta公式資料での確認が必要です。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/meta-ai-task-force-workers-2026-5"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI投資期待でDellなどAIサーバー関連銘柄に注目",
+        "why": "AIサーバー需要がGPU企業だけでなく、サーバー、ネットワーク、電源、運用基盤の企業価値にも波及しています。企業のAI導入では、モデル選定より先に基盤設計と調達戦略が問われます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AIサーバー調達時の比較表、PoC要件、運用監視項目、ベンダー評価基準を作れます。",
+        "deadline": "",
+        "community": "投資家向け報道が中心で、技術仕様の一次情報とは分けて見る必要があります。",
+        "sources": [
+          {
+            "label": "Barron's",
+            "url": "https://www.barrons.com/articles/dell-technologies-stock-ai-earnings-8273e154"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：Meta ForumのAI回答品質とプライバシー設計",
+        "why": "グループ投稿をAIが参照する設計は便利な一方、投稿者の意図しない文脈利用や誤要約のリスクがあります。公式仕様やデータ利用ポリシーの確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、RAG型検索のプライバシー影響評価、アクセス権限チェック、禁止事項、ユーザー向け説明文を作成できます。",
+        "deadline": "",
+        "community": "ハンズオン記事では利便性が紹介されていますが、企業利用に必要な権限・監査面はまだ不明です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/936290/meta-forum-facebook-groups-app-hands-on"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：MetaのAI人員再配置と従業員データ利用への懸念",
+        "why": "AI活用のために従業員の作業データをどこまで使うかは、企業のガバナンス上の重要論点です。公式方針と従業員側の反応を継続確認する必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、開発者データ利用ポリシー、AI利用ガイドライン、社内説明資料、同意プロセスのドラフトを作れます。",
+        "deadline": "",
+        "community": "報道ベースでは従業員側の不安も示されており、公式発表だけでなく労務・コンプライアンス面の確認が必要です。",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/ef46bd8f-51ee-4c06-b5ab-1de23114f81a"
+          },
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/meta-ai-task-force-workers-2026-5"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIプロダクトは、検索・SNS・社内ナレッジの体験を「一覧から探す」から「AIに聞く」へ変えつつあります。",
+      "AIインフラの論点は、モデル性能だけでなく、電力、冷却、資金調達、地政学リスクまで広がっています。",
+      "GitHub Copilot活用では、コード生成そのものに加えて、AI導入時の設計レビュー、ガバナンス文書、運用チェックリスト作成が実務価値になりやすいです。"
+    ]
+  },
+  "notes": "2026-05-22 JST単日では、OpenAI、Anthropic、Google DeepMind、GitHub、Microsoft AIの強い一次ソース付き新規発表は限定的でした。公式一次ソースを確認できない話題はWatchlist寄りに扱い、短縮版にしています。"
+}
