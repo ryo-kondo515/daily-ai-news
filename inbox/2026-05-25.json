@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-25",
+  "generated_at_jst": "2026-05-26T07:59:26+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：AIコーディング過信による「vibe slop」懸念が継続話題",
+        "why": "AIエージェントやAIコーディング支援の導入が進む一方、生成コードの品質、保守性、レビュー責任が企業導入の主要論点になっています。2026-05-25 JST単日の一次ソース発表としては確認できないため、Watchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Copilot Chatで生成した変更に対し、GitHub Copilot Code Review、CI必須化、Branch Protectionを組み合わせる運用ルールの見直しに使えます。",
+        "deadline": "",
+        "community": "AI生成PRのレビュー責任、技術的負債、開発者の過信について、開発者コミュニティで継続的に議論されています。",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/vibe-coding-slop-ai-tools-e6a99394"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：VS Code拡張機能経由の開発環境リスク報道",
+        "why": "AI開発支援ツールやエディタ拡張の利用拡大に伴い、拡張機能の権限、サプライチェーン、シークレット流出リスクが重要になっています。一次ソースでの確認が必要なため、Watchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、許可済みVS Code拡張リスト、開発端末ポリシー、シークレット管理、インシデント対応手順の草案作成に活用できます。",
+        "deadline": "",
+        "community": "開発者向け拡張機能の安全性と、AIツール導入時の端末ガバナンスが話題になっています。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/cyber-security/hacker-group-hits-3-800-internal-github-repositories-via-poisoned-developer-plugin-teampcp-claims-source-code-theft-and-attempts-usd50-000-sale-employee-installed-malicious-vs-code-extension"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "未確認 / 要一次ソース確認：Google系AIエージェント / Antigravity関連の移行話題",
+        "why": "GoogleのAIエージェント基盤やAI coding toolの更新は、GitHub Copilot、Codex、Claude Codeとの比較検討に影響します。2026-05-25 JST単日の公式発表としては確認できないため、Watchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを標準ツールにする場合でも、他社AI coding agentとの比較表、権限、監査ログ、料金、社内利用範囲の整理に活用できます。",
+        "deadline": "",
+        "community": "Google I/O後のAIエージェント関連機能について、開発者向けメディアで継続的に取り上げられています。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/932996/google-gemini-spark-antigravity-io-2026"
+          },
+          {
+            "label": "TechRadar",
+            "url": "https://www.techradar.com/pro/google-is-making-gemini-cli-users-switch-to-its-new-antigravity-2-0-so-what-will-it-mean-for-you"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-25 JST単日では、主要AI企業の強い一次ソース付き大型発表は確認できませんでした。",
+      "開発者向けAIでは、生成速度よりもレビュー責任、権限管理、CI連携、サプライチェーン対策が重要論点になっています。",
+      "GitHub Copilot活用では、コード生成そのものだけでなく、PRレビュー、開発ルール整備、端末・拡張機能ガバナンスまで含めた運用設計が有効です。"
+    ]
+  },
+  "notes": "短縮版です。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表・研究/製品ブログを優先して確認しましたが、2026-05-25 JSTに公開された高信頼の大型AIニュースは確認できませんでした。周辺日付のGoogle I/O関連、AIコーディング品質、VS Code拡張機能リスクなどは、一次ソース確認が必要なためWatchlistに限定しました。"
+}
