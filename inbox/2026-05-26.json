@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-26",
+  "generated_at_jst": "2026-05-27T08:00:27+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot Memoryに削除・スコープ・CLI制御が追加",
+        "why": "Copilot Memoryの保存範囲が明確化され、リポジトリ単位で無効化できるようになりました。企業導入時のプライバシー・知識共有・ガバナンス設計に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Memoryを有効にするリポジトリ、禁止するリポジトリ、保存してよい情報のルールをCopilot Chatで社内規約化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Copilotの利用可能モデルを組織単位で制御できるModel Rulesがプレビュー",
+        "why": "Enterprise管理者が、組織ごとに利用可能なGitHub Copilotモデルを細かく制御できます。コスト、品質、情報管理の観点で大企業の導入判断に重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Business / Enterpriseで、部署ごとの利用モデル、禁止モデル、承認フローを整理する導入計画に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-26-target-copilot-models-to-organizations-with-model-rules/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Code Qualityをリポジトリ単位でAPI有効化可能に",
+        "why": "GitHub Code Qualityの設定をAPIで自動化できるようになりました。多数リポジトリを持つ組織で、品質チェックの標準化と展開が進めやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatで、対象リポジトリ一覧、言語、runner種別、適用除外条件を含むCode Quality展開スクリプトの草案を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-26-github-code-quality-repository-enablement-api/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Pull Request上のコードカバレッジ表示がパブリックプレビュー",
+        "why": "PR上でテスト網羅率を確認でき、レビュー時に別ツールへ移動する手間が減ります。品質ゲートやレビュー基準の明文化にも使いやすい更新です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewと組み合わせ、カバレッジ低下時の追加テスト案やレビュー観点をCopilot Chatで作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-26-code-coverage-in-pull-requests-is-now-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Secret Scanningの承認リクエスト管理とAPIフィルタが改善",
+        "why": "Push Protectionのバイパスやアラート却下リクエストを、UIとREST APIで管理しやすくなりました。大規模組織のセキュリティ運用に効く改善です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Secret Scanningのバイパス監査、期限切れ確認、週次レポート作成用のREST API利用手順を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-26-filter-secret-scanning-approval-requests-by-sort-order-and-bypass-status/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Dependabotがsbtエコシステムのバージョン更新に対応",
+        "why": "Scala / sbt利用プロジェクトでも、Dependabotによる依存関係更新PRを自動化できます。金融・データ基盤などScala利用企業では保守運用の改善余地があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatでdependabot.ymlのsbt設定、更新頻度、レビュー担当、CI条件のテンプレートを作成できます。",
+        "deadline": "",
+        "community": "GitHubのsbt対応は、Dependabotの対応範囲拡大を待っていたScala利用者にとって実務的な改善です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-26-dependabot-version-updates-now-support-the-sbt-ecosystem/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：AIエージェントとAGI準備に関するDeepMind CEO発言が報道",
+        "why": "AIエージェントをAGIへの準備段階と見る議論は、企業のAI導入・ガバナンス・人材計画に影響します。ただし、対象日の一次ソース発表ではなく報道ベースのためWatchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時の権限管理、レビュー責任、AIエージェント利用範囲の社内ポリシー作成に活用できます。",
+        "deadline": "",
+        "community": "AIエージェントの自律性と監督責任は、開発者・経営層の双方で継続的な論点になっています。",
+        "sources": [
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-26は、GitHubの開発ワークフロー、品質管理、セキュリティ運用に関する公式更新が中心でした。",
+      "GitHub Copilotは、単なるコード補完から、Memory、モデル制御、CLI、レビュー、品質ゲートを含む企業向け開発基盤へ広がっています。",
+      "日本企業での導入では、利用モデルの制御、リポジトリ単位の設定、保存される記憶の範囲、Secret Scanning運用をセットで設計することが重要です。"
+    ]
+  },
+  "notes": "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、NVIDIAの公式発表も確認しましたが、2026-05-26 JST対象として強い一次ソース付きの大型発表は限定的でした。そのため、GitHub公式Changelogの開発者向け更新を中心に構成しています。"
+}
