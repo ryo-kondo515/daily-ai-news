@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-27",
+  "generated_at_jst": "2026-05-28T08:00:42+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、Codexで「自己改善する業務エージェント」を構築する実例を公開",
+        "why": "税務AIの本番利用データ、専門家の修正、評価基盤をつなぎ、Codexで継続的に改善する設計が示されました。AIエージェントをPoCで終わらせず、運用で育てるための実務パターンとして重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、自社プロダクトの失敗ログ、評価データ、再現手順、PRレビュー基準を整理し、エージェント改善ループの設計案を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：AI軍事利用とAnthropicの利用制限をめぐる議論が再燃",
+        "why": "AIエージェントや基盤モデルの利用制限、政府・軍事用途、企業ポリシーの境界に関する論点です。一次発表ではなく報道ベースのため、Watchlist扱いにします。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI利用規約、禁止用途、監査ログ、承認フローを含む社内AIガバナンス文書の草案作成に活用できます。",
+        "deadline": "",
+        "community": "開発者向けAIツールの企業導入では、機能比較だけでなく利用制限・監査・説明責任が重要な評価軸になります。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：DeepMind CEOがAIエージェントをAGIへの「予行演習」と位置づけ",
+        "why": "AIエージェントの急速な進化を、AGI準備や社会制度設計の文脈で捉える発言として注目されます。ただし対象日の一次ソース発表ではなく報道ベースです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Copilot Chatを導入する際の権限設計、レビュー責任、人間の承認ポイントを整理する材料になります。",
+        "deadline": "",
+        "community": "AIエージェントの自律性をどこまで許容するかは、開発現場と経営層の両方で継続的な論点です。",
+        "sources": [
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-27は、主要AI企業の大規模な公式発表は限定的でした。",
+      "OpenAIのCodex事例は、AIエージェントを本番運用のフィードバックで継続改善する設計に焦点があります。",
+      "企業導入では、AIエージェントの性能だけでなく、評価基盤、監査、利用制限、レビュー責任の設計が重要になっています。"
+    ]
+  },
+  "notes": "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表・ブログを確認しましたが、2026-05-27 JST対象として高信頼の一次ソース付きニュースはOpenAIのCodex事例が中心でした。GitHub Changelogは最新掲載がMay.26で、May.27の新規項目は確認できませんでした。"
+}
