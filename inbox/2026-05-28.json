@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-28",
+  "generated_at_jst": "2026-05-29T08:00:29+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Opus 4.8がGitHub Copilotで一般提供開始",
+        "why": "GitHub Copilotのモデル選択肢にAnthropicの最新Opusモデルが加わり、VS Code、Copilot CLI、GitHub Copilot cloud agent、github.comなど幅広い開発面で利用可能になります。Business / Enterprise管理者はポリシー有効化が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "大規模コードベース調査、複雑な修正、GitHub Copilot cloud agentでの実装タスクにOpus 4.8を選択し、既存モデルとの出力品質・コストを比較できます。",
+        "deadline": "06/01 締切",
+        "community": "6/1のUsage Based Billing開始までは15倍のpremium request multiplierが設定されるため、企業利用ではコスト確認が重要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、Claude Opus 4.8を発表。Claude Codeに大規模タスク向けdynamic workflows",
+        "why": "Opus 4.8はコーディング、エージェント作業、専門業務で改善され、Claude Codeでは数百の並列サブエージェントを使うdynamic workflowsが研究プレビューとして追加されました。コードベース規模の移行作業や長時間タスクの競争がさらに進みます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Copilot Chatで同様の大規模移行を行う場合の分割方針、テスト基準、レビュー観点を設計する参考になります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://www.anthropic.com/news/claude-opus-4-8"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Advanced Securityにハード予算上限が追加",
+        "why": "GHASのライセンス予算を超えた追加利用をブロックできるようになり、IdPグループ連携などで意図せずセキュリティ費用が増えるリスクを抑えられます。エンタープライズ導入時のコスト統制に直結します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、GHASの組織別予算設計、オンボーディング時のライセンス付与ルール、運用Runbookの草案を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-28-hard-budget-limits-now-available-for-github-advanced-security/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "CodeQL 2.25.5、GitHub ActionsやC/C++・Java/Kotlinの検出精度を改善",
+        "why": "GitHub Actionsのpoisonable_steps検出拡張や、C/C++・Java/Kotlinの誤検知削減が入りました。CI/CDとサプライチェーン防御の静的解析精度が上がる実務的な更新です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code ReviewやCopilot Chatと組み合わせ、CodeQLアラートの原因説明、修正案、ワークフロー内の危険なパターン確認に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-28-codeql-2-25-5-improves-query-accuracy-for-github-actions/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Anthropic、650億ドル調達。Claude需要増に向け計算資源と企業展開を拡大",
+        "why": "AnthropicはSeries Hで650億ドルを調達し、評価額は9650億ドルに到達しました。Claude CodeやCoworkを含む企業利用拡大、計算資源確保、AI安全性研究への投資が進みます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入比較の際、Claude Codeなど競合ツールの企業導入状況、費用、ガバナンス、モデル選択方針を整理する材料になります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://www.anthropic.com/news/series-h"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Opus 4.8、Messages APIでタスク途中のsystem entries更新に対応",
+        "why": "開発者はエージェント実行中に権限、トークン予算、環境コンテキストを更新しやすくなります。長時間エージェントや社内ツール連携の制御設計に影響します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、エージェント実行中の権限変更、承認フロー、監査ログ設計の仕様書を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://www.anthropic.com/news/claude-opus-4-8"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：MicrosoftがGitHub Copilot向け新コーディングモデルを発表予定との報道",
+        "why": "Reutersは、Microsoftが開発者会議でGitHub Copilot強化を狙う独自コーディングモデルを発表予定と報じました。ただしMicrosoftの公式発表前の報道ベースのため、Watchlist扱いにします。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "正式発表後、GitHub Copilotのモデル選択、利用料金、Business / Enterpriseでの管理ポリシー変更を確認してください。",
+        "deadline": "",
+        "community": "GitHub Copilotのモデル戦略に関わる可能性があるため、開発者・企業管理者向けに継続確認が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/microsoft-release-new-coding-model-next-week-information-reports-2026-05-28/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Microsoft 365 Copilotの高速化・UI刷新が報道",
+        "why": "Microsoft 365 Copilotの表示速度改善とUI整理が報じられていますが、確認できた範囲では公式一次ソースより報道が中心です。業務AIのUI/UX改善トレンドとして追跡します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "業務ツール内AIは機能追加だけでなく、邪魔にならない導線設計が導入率に影響します。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/939273/microsoft-365-copilot-redesign"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotはモデル選択肢を広げ、Claude Opus 4.8を開発ワークフローに取り込み始めました。",
+      "AIエージェント競争は、大規模コードベース移行、長時間タスク、並列サブエージェントなど実務寄りの機能に移っています。",
+      "企業導入では、AI機能そのものに加えて、Usage Based Billing、予算上限、管理者ポリシー、セキュリティ解析の運用設計が重要です。"
+    ]
+  },
+  "notes": "OpenAI、Google DeepMind、Meta AI、Microsoft AI、NVIDIAの公式発表も確認しましたが、2026-05-28 JST対象で一次ソース確認できた主要項目はAnthropicとGitHub中心でした。Microsoft関連の一部は公式一次ソース未確認のためWatchlistに留めています。"
+}
