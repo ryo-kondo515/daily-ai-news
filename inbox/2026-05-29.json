@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-29",
+  "generated_at_jst": "2026-05-30T08:00:03+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot利用メトリクスAPIにAI導入フェーズ別のコホート分類が追加",
+        "why": "企業・組織単位で、GitHub Copilotを単に使っているかではなく、コード補完中心、エージェント利用、複数エージェント活用へ進んでいるかを追跡できるようになりました。導入効果の説明、教育施策、展開計画の優先順位付けに直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot usage metrics APIのai_adoption_phaseを使い、チーム別にCode first / Agent first / Multi-agentの推移を可視化し、GitHub Copilot Chat、Copilot Code Review、Copilot coding agentの展開計画に反映できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-05-29-copilot-usage-metrics-api-adds-cohorts-for-ai-adoption/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：OpenAIがGPT-Rosalindを生物防御向けに限定提供するプログラムを開始との報道",
+        "why": "WSJは、OpenAIが政府機関や信頼された公衆衛生組織向けにGPT-Rosalindを使うRosalind Biodefense Programを開始したと報じました。生物・医療領域の高リスクAI利用とガバナンスに関わるため重要ですが、確認できた範囲ではOpenAI公式一次ソースを特定できなかったためWatchlist扱いにします。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、高リスク領域のAI利用ポリシー、アクセス制御、監査ログ、利用者審査フローのドラフト作成に活用できます。",
+        "deadline": "",
+        "community": "報道ベースでは、バイオセキュリティ用途のAI提供における安全策と限定アクセス設計が主な論点です。",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-05-29-2026/card/openai-opens-up-use-of-ai-model-to-address-biological-risks-bRcAyBPWSl13DmHkvjH2"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは、個人の利用量計測から、組織全体のAI導入成熟度を測る段階に進んでいます。",
+      "企業導入では、GitHub Copilotの利用有無だけでなく、コード補完、コードレビュー、CLI、coding agentなど利用面ごとの定着状況が重要になります。",
+      "高リスク領域のAI活用では、モデル性能だけでなく、限定提供、信頼済み利用者、監査可能性といったガバナンス設計が引き続き焦点です。"
+    ]
+  },
+  "notes": "2026-05-29 JST対象では、一次ソースで確認できた主要な開発者向けAIニュースはGitHub Copilot利用メトリクスAPIの更新が中心でした。OpenAIのGPT-Rosalind生物防御プログラムは報道を確認しましたが、公式一次ソースを特定できなかったためWatchlistに留めています。Anthropic Claude Opus 4.8関連は前日公開分と重複するためTop 5には含めていません。"
+}
