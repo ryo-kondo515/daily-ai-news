@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-31",
+  "generated_at_jst": "2026-06-01T08:00:04+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "米国、国外子会社経由の中国向けAI半導体出荷を制限へ",
+        "why": "米商務省が、中国企業の国外子会社を通じたNVIDIAやAMDの先端AIチップ取得を防ぐ新ガイダンスを出したと報じられました。AIインフラ、クラウド、半導体サプライチェーンの調達リスクに直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI基盤調達リスク、輸出規制チェックリスト、クラウド/半導体依存のリスク整理をドラフト化できます。",
+        "deadline": "",
+        "community": "開発者向け機能ではなく、AIインフラ・供給網リスクとして注視が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/us-takes-step-halt-nvidia-ai-chip-shipments-chinese-firms-outside-china-2026-05-31/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "NVIDIAのComputex基調講演に注目、AI PCとMicrosoft連携の観測",
+        "why": "NVIDIAのComputex基調講演を前に、Microsoftとの新たな協業やWindows on Arm向けプロセッサの観測が出ています。AI PCやローカルAI実行環境の選択肢が広がる可能性があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Windows on Arm対応、ローカルAI推論、開発環境の互換性確認項目を整理できます。",
+        "deadline": "",
+        "community": "正式発表前の観測を含むため、基調講演後の一次情報確認が必要です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/940540/how-to-watch-nvidias-computex-keynote"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：Anthropicの未承認株式取引リスト更新",
+        "why": "Anthropicが未承認の株式取引に関する注意喚起リストを更新したと報じられました。AI企業の高騰する未公開株評価と二次流通リスクを示す話題ですが、開発者向けの直接影響は限定的です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "投資・未公開株市場の話題であり、AI開発ワークフローへの直接影響は確認できていません。",
+        "sources": [
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/anthropic-updates-list-of-firms-accused-of-unauthorized-share-transactions/articleshow/131418390.cms"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-31 JST対象では、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表として確認できる高信頼の新規ニュースは限定的でした。",
+      "AIニュースの中心は、モデル発表よりもAI半導体の輸出規制、調達、サプライチェーンリスクに寄っています。",
+      "GitHub CopilotやAI coding agentの直接アップデートは確認できず、開発組織では規制・調達・ローカルAI実行環境の影響確認が主な論点になります。"
+    ]
+  },
+  "notes": "短縮版です。公式一次ソース、主要AI企業ブログ、GitHub Changelog、開発者コミュニティ系の話題を確認しましたが、2026-05-31 JSTに公開された高信頼の公式AI開発者向けニュースは限定的でした。正式発表前の観測や投資関連の話題はWatchlistまたはBusiness Picksに留めています。"
+}
