@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-05-30",
+  "generated_at_jst": "2026-05-31T08:00:00+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：OpenAIのGPT-Rosalind生物防御プログラム報道",
+        "why": "OpenAIが生物リスク対策向けに限定アクセスのAIモデルを提供するとの報道がありました。ただし、対象日内に確認できた範囲ではOpenAI公式の一次ソースを特定できなかったため、Watchlist扱いにします。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、高リスク領域のAI利用ポリシー、アクセス制御、監査ログ、利用者審査フローのドラフト作成に活用できます。",
+        "deadline": "",
+        "community": "報道ベースのため、開発者向け実装・料金・利用条件の一次情報確認が必要です。",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-05-29-2026/card/openai-opens-up-use-of-ai-model-to-address-biological-risks-bRcAyBPWSl13DmHkvjH2"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-05-30 JST対象では、主要AI企業の公式発表・研究ブログ・GitHub Changelogで高信頼の新規ニュースは限定的でした。",
+      "開発者向けAIでは、GitHub CopilotやAI coding agentの実運用・ガバナンス・メトリクス活用が引き続き重要テーマです。",
+      "高リスク領域のAI活用では、モデル性能だけでなく、限定提供、信頼済み利用者、監査可能性の設計が焦点になります。"
+    ]
+  },
+  "notes": "短縮版です。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表・研究/製品ブログ、GitHub Changelog、開発者コミュニティ系の話題を確認しましたが、2026-05-30 JSTに公開された高信頼の公式ニュースは確認できませんでした。GPT-Rosalind関連は報道を確認しましたが、公式一次ソースを特定できなかったためWatchlistに留めています。"
+}
