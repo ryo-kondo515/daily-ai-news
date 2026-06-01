@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-01",
+  "generated_at_jst": "2026-06-02T07:59:25+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropicが米IPOを秘密申請と報道、AI企業の資本市場入りが加速",
+        "why": "Claude Codeなど開発者向けAIでも存在感を高めるAnthropicが、米国IPOを秘密申請したとReutersが報じました。AI企業の開示、収益性、企業導入リスクの見られ方が変わる可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Codeや他AI coding agentとの比較表、導入リスク、社内AIツール選定基準を整理できます。",
+        "deadline": "",
+        "community": "開発者向け機能発表ではありませんが、Claude Codeの企業導入・競合環境を見るうえで重要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/ai-giant-anthropic-confidentially-files-us-ipo-2026-06-01/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "NVIDIA、PC向けAI処理を強化する新チップを発表と報道",
+        "why": "NVIDIAがAI処理をPCやノートPC側に寄せる新チップを発表したと報じられました。ローカルAI、AI PC、開発環境のオンデバイス化に影響する可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、ローカルAI推論を前提にした開発環境、セキュリティ要件、クラウド依存低減の検討メモを作れます。",
+        "deadline": "",
+        "community": "正式な仕様・提供時期はNVIDIAやPCメーカーの一次情報確認が必要です。",
+        "sources": [
+          {
+            "label": "The Guardian",
+            "url": "https://www.theguardian.com/technology/2026/jun/01/nvidia-launches-chip-ai-laptops-pc-rtx-spark-microsoft-windows"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Microsoft Build 2026直前、AIモデルと開発者向けWindows改善に注目",
+        "why": "Microsoft BuildでAIモデル、Windows開発環境、Copilot関連の更新が見込まれると報じられました。GitHubや開発者体験の再強化が焦点になりそうです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot関連の発表が出た場合、既存CI/CD、PRレビュー、Visual Studio/VS Code運用への影響をGitHub Copilot Chatで整理できます。",
+        "deadline": "",
+        "community": "現時点では事前報道であり、Build本番後に公式発表で確認する必要があります。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/report/940861/microsoft-build-ai-models-windows-dev-mode-what-to-expect"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：AIコーディング利用で開発速度と安定性のトレードオフが再注目",
+        "why": "AIコーディングで実装速度は上がる一方、デプロイ安定性や運用負荷が悪化する可能性を指摘する記事が出ています。一次調査・元データの確認が必要ですが、企業導入時のKPI設計に関係します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Review、テスト自動化、ブランチ保護、ロールバック手順を組み合わせた導入ガイドをGitHub Copilot Chatで作成できます。",
+        "deadline": "",
+        "community": "AI導入効果を単純な生成速度だけで測らず、品質・運用・レビュー負荷も見るべきという論点です。",
+        "sources": [
+          {
+            "label": "TechRadar",
+            "url": "https://www.techradar.com/pro/ai-has-slashed-coding-time-in-2026-but-its-sacrificed-software-stability"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026-06-01 JST対象では、主要AI企業の公式ブログ・GitHub Changelogで高信頼の新規開発者向け発表は限定的でした。",
+      "話題の中心は、AIモデルそのものよりもAI企業の資本市場、AI PC、ローカルAI実行環境に寄っています。",
+      "GitHub CopilotやAI coding agentの導入では、生成速度だけでなくレビュー、テスト、セキュリティ、運用品質の設計が重要になります。"
+    ]
+  },
+  "notes": "短縮版です。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表・GitHub Changelog・主要コミュニティ話題を確認しましたが、2026-06-01 JSTに公開された高信頼の公式AI開発者向けニュースは限定的でした。事前報道や二次報道はBusiness PicksまたはWatchlistに留めています。"
+}
