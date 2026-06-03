@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-02",
+  "generated_at_jst": "2026-06-03T08:00:26+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Microsoft Build 2026でAIエージェント中心の新戦略、Project SolaraとRTX Spark Dev Boxを発表",
+        "why": "MicrosoftがAIエージェント、専用デバイス、Windows PC、独自モデルを含むAIスタックを一気に拡張しました。企業のAI導入がクラウドだけでなくPC・端末側にも広がる流れです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI PC導入、ローカル推論、社内AIエージェント運用、セキュリティ要件を整理する移行メモを作れます。",
+        "deadline": "",
+        "community": "Build発表群は開発者向けWindows、AI PC、エージェント運用の観点で継続確認が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/microsoft-expected-showcase-new-pc-cloud-ai-tools-developer-conference-2026-06-02/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Microsoft、GitHub CopilotとVS Codeに統合される新コーディングモデル MAI-Code-1-Flash を発表",
+        "why": "Microsoftの独自AIモデル群の中に、GitHub CopilotとVisual Studio Code向けの軽量・高効率なコーディングモデルが含まれました。GitHub Copilotのモデル選択や企業導入時の性能・コスト評価に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotで利用可能になった場合、既存リポジトリで補完精度、PR作成、テスト生成、レビュー支援の差分を小さなPoCで比較できます。",
+        "deadline": "",
+        "community": "正式な提供範囲、利用条件、企業プランでのモデル選択可否はGitHub/Microsoftの公式情報で追跡が必要です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Cisco、AIエージェント時代のIT防御ツール Cloud Control を発表",
+        "why": "AIエージェントを使った攻撃に対抗するため、企業側もAIエージェントで防御する方向が明確になっています。セキュリティ運用、SOC、自動修復、ガバナンス設計に影響します。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AIエージェント利用時の脅威モデル、権限設計、監査ログ、インシデント対応Runbookを作成できます。",
+        "deadline": "",
+        "community": "CiscoはOpenAI CodexをCloud Control内のマーケットプレイスに組み込む方針も示しており、AI coding agentの企業配布モデルとして注目です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/media-telecom/cisco-rolls-out-software-tools-protect-it-systems-ai-agents-2026-06-02/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "ChatGPTアプリが月間10億ユーザー到達との推計、Claudeも急成長",
+        "why": "Sensor Tower推計として、ChatGPTアプリが月間10億ユーザーに到達したと報じられました。AIツールの大衆化が進む一方、Claudeなど競合の伸びも企業選定に影響します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、ChatGPT、Claude、GitHub Copilot、Codexなどを用途別に比較する社内AIツール選定表を作れます。",
+        "deadline": "",
+        "community": "利用者数は第三者推計であり、OpenAI公式発表ではない点に注意が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/chatgpt-app-hits-1-billion-monthly-active-users-record-time-data-shows-2026-06-02/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Microsoft Scout、Microsoft 365にまたがる常駐型AIアシスタントとして発表",
+        "why": "メール、Teams、予定表、ファイルを横断する常駐型AIエージェントは、企業内AIの権限・監査・プライバシー設計を大きく変えます。日本企業でもM365前提の業務自動化の検討材料になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、M365連携エージェント導入時の権限分離、データ分類、監査ログ、禁止操作リストを整理できます。",
+        "deadline": "",
+        "community": "OpenClawを未信頼としてサンドボックス化する設計が示されており、エージェント導入の実務論点として重要です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/news/939713/microsoft-scout-assistant-openclaw"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Microsoft、AIエージェント向け端末 Project Solara を披露",
+        "why": "スマートスピーカー型やバッジ型の端末でAIエージェントを動かす構想が示されました。AIがPCやスマホのアプリ内から、業務現場の常時接続デバイスへ広がる可能性があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、現場デバイス向けAIエージェントのプロトタイプ要件、API設計、ログ収集、セキュリティレビュー観点を洗い出せます。",
+        "deadline": "",
+        "community": "現時点ではプロトタイプ色が強く、製品化時期や日本展開は要確認です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/microsoft-expected-showcase-new-pc-cloud-ai-tools-developer-conference-2026-06-02/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：Microsoft Build関連の発表はGitHub Copilotの料金・提供範囲に影響する可能性",
+        "why": "MAI-Code-1-FlashがGitHub CopilotとVS Codeに統合されると報じられていますが、企業プランでの提供条件や日本での利用可否は一次情報確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの管理者設定、モデル選択、利用ログ、Code Review連携への影響を確認するチェックリストを作れます。",
+        "deadline": "",
+        "community": "開発者コミュニティでは、モデル選択、コスト、社内データ保護の論点が出やすい領域です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：OpenClaw系エージェントの企業利用でサンドボックスと権限管理が焦点に",
+        "why": "Microsoft ScoutやWindows上のOpenClaw対応が報じられ、OSS系エージェントを企業環境でどう安全に動かすかが重要テーマになっています。公式ドキュメントや実装詳細の確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、OSSエージェント導入時のサプライチェーンリスク、秘密情報アクセス、操作権限、監査設計をレビューできます。",
+        "deadline": "",
+        "community": "OpenClawの拡張機能やスキル管理は、利便性とセキュリティのトレードオフが議論になりやすい領域です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/news/939713/microsoft-scout-assistant-openclaw"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月2日はMicrosoft Build 2026関連のAI発表が中心でした。AIモデル、AI PC、エージェント、企業セキュリティがまとめて進展しています。",
+      "GitHub Copilot視点では、MAI-Code-1-Flashの統合報道が最重要です。実際の提供条件、モデル選択、企業プランでの扱いは継続確認が必要です。",
+      "AIエージェントの普及に伴い、生成速度よりも権限管理、サンドボックス、監査ログ、セキュリティレビューが導入判断の中心になりつつあります。"
+    ]
+  },
+  "notes": "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表・GitHub Changelog・主要メディアを確認しました。2026-06-02 JST対象ではMicrosoft Build関連が中心で、GitHub Copilotに直接関係する一次公式情報は限定的だったため、MAI-Code-1-Flashなどは報道ベースとして扱っています。X、はてなブックマーク、Zenn、Qiita、HN、Redditについては強い一次ソース付きの独立トレンドは確認できなかったため、Watchlistは要一次ソース確認として記載しています。"
+}
