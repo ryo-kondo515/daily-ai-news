@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-03",
+  "generated_at_jst": "2026-06-04T08:01:10+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub CopilotのAI Credits移行で、利用コストへの反発が顕在化",
+        "why": "6月1日からの使用量ベース課金により、重いエージェント利用や高性能モデル利用のコスト管理が企業導入の重要論点になりました。日本企業でもGitHub Copilot導入時の予算上限、モデル選択、利用ログ管理が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatで、チーム別の利用ルール、AI Credits予算上限、重いモデルを使う判断基準、PRレビュー時の利用ガイドを作成できます。",
+        "deadline": "",
+        "community": "RedditやSNSで、月初数日でAI Creditsを大きく消費したというユーザー反応が報じられています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
+          },
+          {
+            "label": "ITPro",
+            "url": "https://www.itpro.com/software/development/github-copilot-pricing-changes-usage-based-billing-explained"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAIのAltman氏、米議会にモデル公開前承認の義務化へ反対を表明へ",
+        "why": "AIモデル公開に政府承認を求める規制案は、モデル提供速度や企業のAI活用計画に影響します。OpenAIは政府によるAIテスト強化には賛成しつつ、事前承認義務には反対する姿勢です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI利用規程、モデル更新時のリスク評価、社内承認フロー、規制変更時の対応チェックリストを作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/openais-altman-urge-us-lawmakers-not-require-ai-model-approvals-2026-06-03/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Microsoft Build後、MicrosoftとOpenAIの競争関係がより鮮明に",
+        "why": "MicrosoftはBuild 2026で自社モデル、AIエージェント、セキュリティ、デバイスをまとめて発表し、OpenAI依存からの脱却を強めています。GitHub Copilotの裏側のモデル戦略にも影響し得ます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotのモデル選択、社内標準モデル、Claude/Codex/Copilotの使い分け、ベンダーロックイン回避方針を整理する比較表を作れます。",
+        "deadline": "",
+        "community": "Build発表群は、AIエージェント、OpenClaw、企業向けセキュリティの観点で開発者向けメディアが継続的に整理しています。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/942242/microsoft-build-ai-agents-openai-competition"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/microsoft-expected-showcase-new-pc-cloud-ai-tools-developer-conference-2026-06-02/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Anthropic、IPO準備を背景にClaude Partner Networkを拡充",
+        "why": "Claudeの企業導入をSIerやコンサル経由で広げる動きが強まっています。日本企業でも、AIエージェント導入支援やClaude Code周辺のパートナー選定が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、GitHub Copilot、Claude Code、Codexを含む開発者AIツールの導入比較、セキュリティ要件、委託先評価項目を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/cio-journal/anthropic-bulks-up-its-enterprise-partner-program-amid-ipo-plans-560a9b82"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "自己改善型AIへの懸念が再浮上、AIエージェント安全性が焦点に",
+        "why": "AIが自らモデルやシステムを改善する方向に進むと、セキュリティ、監査、制御可能性がより重要になります。企業のAIエージェント導入では、権限設計と実行ログが必須論点です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI coding agentに許可する操作、禁止操作、ブランチ保護、Secretsアクセス制御、監査ログ確認手順をRunbook化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/7cc7800f-18ed-47d8-9539-221ae3e16182"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Microsoft IQとWork IQで、AIエージェントに企業データ文脈を接続",
+        "why": "AIエージェントがメール、予定、業務データ、Web情報を横断して動くには、文脈接続と権限管理が不可欠です。GitHub Copilotや開発ワークフローでも、リポジトリ外の業務文脈をどう安全に扱うかが論点になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、リポジトリ情報、Issue、設計書、Teams/Outlook情報を扱う際のデータ分類とアクセス権限表を作れます。",
+        "deadline": "06/16",
+        "community": "Work IQ APIはプレビュー、一般提供は6月16日と報じられており、企業導入タイミングの確認が必要です。",
+        "sources": [
+          {
+            "label": "Windows Central",
+            "url": "https://www.windowscentral.com/microsoft/windows-11/agents-are-only-as-good-as-the-context-we-give-them-microsoft-iq-connects-ai-agents-to-your-workspace-data-and-the-web"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub Copilotデスクトップアプリで、複数AIエージェント管理へ",
+        "why": "GitHub Copilotが補完ツールから、複数エージェントを束ねる開発作業の管理画面へ進化する流れです。非同期の実装、レビュー、テスト、PR作成をどう統制するかが重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentに任せるIssueの粒度、レビュー担当、CI必須条件、失敗時の戻し方をテンプレート化できます。",
+        "deadline": "",
+        "community": "Build関連発表として開発者向けメディアで取り上げられていますが、正式な提供範囲はGitHub公式情報の確認が必要です。",
+        "sources": [
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/microsoft-launches-github-copilot-desktop-app-to-manage-multiple-ai-agents/articleshow/131488147.cms"
+          },
+          {
+            "label": "Tom's Guide",
+            "url": "https://www.tomsguide.com/news/live/microsoft-build-2026"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "MicrosoftのProject Solara、アプリ中心からAIエージェント中心の端末構想へ",
+        "why": "AIエージェントがOSやアプリの前面に出ると、業務アプリ開発はUI単体ではなく、エージェントから呼ばれるAPIや権限設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、既存WebアプリをAIエージェントから安全に操作できるAPI設計、監査ログ、認可設計を洗い出せます。",
+        "deadline": "",
+        "community": "現時点ではコンセプト色が強く、日本展開や開発者向けSDKの詳細は要確認です。",
+        "sources": [
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/build-2026-microsoft-unveils-project-solara-platform-for-ai-agent-devices/articleshow/131475343.cms"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/microsoft-expected-showcase-new-pc-cloud-ai-tools-developer-conference-2026-06-02/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：GitHub Copilot AI Creditsの実コスト上振れ事例",
+        "why": "SNSやReddit上のスクリーンショット由来の反応が中心で、個別事例の条件は検証が必要です。ただし企業管理者にとっては、月初から予算消費を監視する必要性を示す重要シグナルです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの利用モデル、AI Credits消費、Copilot Code Review、coding agent利用を分けて、チーム別の上限と例外申請フローを作れます。",
+        "deadline": "",
+        "community": "RedditやSNSで反発が出ていると報じられていますが、公式の追加説明や管理機能アップデートを追跡する必要があります。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：Microsoft社内でClaude CodeからGitHub Copilot CLIへの移行圧力",
+        "why": "報道ベースでは、Microsoftが社内のClaude Codeライセンスを減らしGitHub Copilot CLIへ寄せているとされています。競合AI coding agentの企業内標準化やコスト削減の動きとして注目です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot CLI、Claude Code、CodexをPoCで比較し、費用、ログ、Secrets保護、既存GitHubワークフロー連携の評価表を作れます。",
+        "deadline": "06/30",
+        "community": "二次報道中心のため、MicrosoftまたはGitHubの一次情報が出るまではWatchlist扱いが妥当です。",
+        "sources": [
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/microsoft-tells-engineers-to-stop-using-anthropics-claude-as-canceling-claude-code-licenses-becomes-an-easy-way-to/articleshow/131456474.cms"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "未確認 / 要一次ソース確認：Build 2026発表のMAI-Code系モデルのGitHub Copilot統合範囲",
+        "why": "Microsoftの新しいコーディングモデルがGitHub Copilotの性能やコスト構造に影響する可能性があります。どのプランで使えるか、企業管理者がモデル選択を制御できるかが未確認です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotでモデル別に補完、チャット、テスト生成、PRレビューの精度とAI Credits消費を比較するPoC計画を作れます。",
+        "deadline": "",
+        "community": "Build関連の報道は多いものの、GitHub公式Changelogでの具体的な提供条件確認が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/microsoft-release-new-coding-model-next-week-information-reports-2026-05-28/"
+          },
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/942242/microsoft-build-ai-agents-openai-competition"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは、機能拡張よりもコスト管理とガバナンスが導入判断の中心に移っています。",
+      "MicrosoftはOpenAI依存を下げ、自社モデル、エージェント、端末、セキュリティをまとめて押し出しています。",
+      "AIエージェントの普及により、権限管理、監査ログ、サンドボックス、モデル選択の統制が開発組織の必須テーマになっています。"
+    ]
+  },
+  "notes": "2026-06-03 JST対象では、OpenAI、GitHub、Microsoft関連の報道が中心でした。一次公式発表だけで確認できる新規ニュースは限定的だったため、GitHub CopilotのAI Credits反応、Microsoft Build後の整理、Anthropic企業展開などは主要メディア報道をもとに構成しています。X、はてなブックマーク、Zenn、Qiita、HN、Redditの独立した強い一次ソース付きトレンドは確認できなかったため、未確認要素はWatchlistに限定しました。"
+}
