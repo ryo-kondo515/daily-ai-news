@@ -1,86 +1,112 @@
 # Daily AI News Digest
 
-This workspace contains both:
+This repository renders reviewed AI news JSON into a mobile-friendly HTML email.
 
-- a local SMTP mail transport for manual tests
-- a GitHub Actions workflow for scheduled delivery while the PC is off
+Current operation model:
 
-## HTML mail delivery
+1. ChatGPT researches the previous day's AI news and prepares a structured JSON payload.
+2. The user reviews the JSON in chat.
+3. After the user replies `pushして`, the JSON is committed to `inbox/YYYY-MM-DD.json`.
+4. GitHub Actions renders the JSON into HTML and sends the HTML email through SMTP.
 
-The automation should send HTML mail through the local PowerShell script:
+The repository should not contain email addresses, API keys, SMTP credentials, or other secrets in digest JSON files.
 
-- `scripts/send_html_email.ps1`
+## Input JSON
 
-Required environment variables:
+Reviewed digest files live under:
 
-- `GMAIL_SMTP_USER`
-- `GMAIL_SMTP_APP_PASSWORD`
-
-For detached worktree automations that must run while the PC is off:
-
-- setup config: `.codex/environments/automation-mail.toml`
-- setup script: `scripts/setup_automation_env.ps1`
-- secrets file: `.codex/environments/automation-mail-secrets.ps1`
-
-Expected behavior:
-
-1. Render the digest HTML to a local UTF-8 `.html` file.
-2. Send it with:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\send_html_email.ps1 `
-  -To "fact.facter@gmail.com" `
-  -Subject "[AI News] YYYY-MM-DD Daily Digest" `
-  -HtmlFilePath ".\out\digest.html"
+```text
+inbox/YYYY-MM-DD.json
 ```
 
-Notes:
+`YYYY-MM-DD` is the target news date in JST, not the generation date.
 
-- Use a Gmail App Password, not the normal account password.
-- The script sends a multipart message with both `text/plain` and `text/html`.
-- The secrets file is gitignored and is intended for the automation setup path.
+Required high-level fields:
+
+```json
+{
+  "schema_version": "1.0",
+  "target_date_jst": "YYYY-MM-DD",
+  "generated_at_jst": "YYYY-MM-DDTHH:mm:ss+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [],
+    "themes": []
+  },
+  "notes": ""
+}
+```
+
+Each news item may include these fields:
+
+```json
+{
+  "num": "#1",
+  "headline": "日本語の見出し",
+  "why": "なぜ重要か。",
+  "business_importance": "High | Medium | Low",
+  "copilot_applicability": "直接使える | 間接的に有用 | 関係なし",
+  "copilot_tip": "GitHub Copilotでの活用方法。",
+  "claude_code_relevance": "High | Medium | Low | None",
+  "claude_code_tip": "Claude Codeでの活用方法。",
+  "deadline": "",
+  "community": "",
+  "sources": [
+    {"label": "一次ソース名", "url": "https://..."}
+  ]
+}
+```
+
+`claude_code_relevance` and `claude_code_tip` are optional. Existing JSON without these fields still renders normally.
 
 ## GitHub Actions
 
 Workflow:
 
-- `.github/workflows/daily-ai-news.yml`
+```text
+.github/workflows/daily-ai-news.yml
+```
 
-Digest generator:
+Renderer:
 
-- `scripts/daily_ai_news_digest.py`
+```text
+scripts/render_digest_from_json.py
+```
 
-Schedule:
+Triggers:
 
-- `0 23 * * *` UTC = `08:00 JST`
+- `push` to `inbox/*.json`
+- manual `workflow_dispatch`
+
+On push, the workflow resolves the changed `inbox/*.json`, validates the minimum JSON shape, renders:
+
+```text
+out/digest.html
+out/digest.txt
+```
+
+and uploads them as an artifact. If SMTP secrets are configured and `SEND_EMAIL` is true, it sends the HTML email.
 
 Required GitHub Actions secrets:
 
 - `GMAIL_SMTP_USER`
 - `GMAIL_SMTP_APP_PASSWORD`
 - `DIGEST_TO_EMAIL`
-- `OPENAI_API_KEY` (recommended for source-grounded summaries)
 
-Optional GitHub Actions variable:
+Manual run options:
 
-- `OPENAI_MODEL` default: `gpt-5.2`
+- `target_date_jst`: render `inbox/YYYY-MM-DD.json`
+- `send_email`: send or only render/upload artifact
 
-What it does:
+## Legacy RSS generator
 
-1. Fetches yesterday's AI-related items from a set of RSS/Atom feeds.
-2. Filters by JST date.
-3. Fetches article excerpts and, when `OPENAI_API_KEY` is present, generates source-grounded Japanese summaries.
-4. Scores and groups items into `Top 5`, `Business Picks`, `Watchlist`, and `Themes`.
-5. Renders the mobile HTML digest template.
-6. Sends the digest by Gmail SMTP.
+The old RSS-based generator is kept for reference:
 
-Manual run:
+```text
+scripts/daily_ai_news_digest.py
+```
 
-- Use `workflow_dispatch`
-- Optionally set `target_date_jst`
-- Optionally disable send with `send_email=false`
-
-Caveat:
-
-- Feed coverage depends on the upstream RSS/Atom sources. The workflow intentionally prefers high-confidence feeds and sends a shorter digest rather than padding weak items.
-- Without `OPENAI_API_KEY`, the workflow falls back to deterministic template summaries, which are less accurate than source-grounded AI summaries.
+The reviewed JSON workflow is the primary path. This keeps research and editorial judgment in ChatGPT, while GitHub Actions focuses on validation, HTML rendering, artifact upload, and SMTP delivery.
