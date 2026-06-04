@@ -1,80 +1,106 @@
 {
   "schema_version": "1.0",
   "target_date_jst": "2026-06-04",
-  "generated_at_jst": "2026-06-05T08:00:05+09:00",
+  "generated_at_jst": "2026-06-05T09:20:00+09:00",
   "edition": "Japan Edition",
   "title": "Daily Digest",
   "sections": {
     "top5": [
       {
         "num": "#1",
-        "headline": "OpenAI・Anthropic・Google DeepMindなどのAI首脳、AI悪用による生物兵器リスク対策を米議会に要請",
-        "why": "主要AI企業が競争関係を越えて、合成DNA/RNA注文のスクリーニング義務化を求めました。生成AIの安全性議論が、モデル単体ではなくバイオ・サプライチェーン規制へ広がっています。",
+        "headline": "Claude Code利用拡大で“tokenmaxxing”議論、AIコーディング費用の統制が実務課題に",
+        "why": "Anthropic幹部が、Claude Codeを含む高トークン消費型AIツールの使い方について、強制利用ではなく実務に自然に組み込む考えを示しました。企業導入では、生産性だけでなく費用上限、利用ログ、成果測定が重要になります。",
         "business_importance": "High",
-        "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、AI利用規程にバイオ・化学・医療領域の禁止用途、リスクレビュー、利用ログ確認手順を追加するドラフトを作れます。",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatで、Claude CodeとGitHub Copilotの利用ルール、月次コスト確認、PR単位の成果測定、禁止操作を比較する社内ガイドを作れます。",
+        "claude_code_relevance": "High",
+        "claude_code_tip": "Claude Codeでは、長時間タスクを投げる前に作業範囲、許可コマンド、完了条件、予算上限をCLAUDE.mdやプロンプトに明記すると、tokenmaxxing対策になります。",
         "deadline": "",
-        "community": "米テック系メディアで、OpenAIとAnthropicなど競合各社が共同署名した点が大きく取り上げられています。",
+        "community": "Claude Codeの高トークン利用は開発者コミュニティでも費用対効果の論点になっています。",
         "sources": [
           {
-            "label": "WIRED",
-            "url": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons"
-          },
-          {
-            "label": "The Verge",
-            "url": "https://www.theverge.com/ai-artificial-intelligence/942956/ai-biological-weapons-open-letter-congress"
-          },
-          {
-            "label": "Wall Street Journal",
-            "url": "https://www.wsj.com/politics/policy/top-ai-ceos-call-for-law-protecting-against-biological-weapons-88f2f99f"
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-president-daniela-amodei-tokenmaxxing-ai-coding-claude-code-2026-6"
           }
         ]
       },
       {
         "num": "#2",
-        "headline": "EUがテック主権パッケージを提示、クラウド・AI基盤の米国依存低減を狙う",
-        "why": "EUはクラウド調達やデータセンター、半導体などで域内技術の利用を促す方向を示しました。日本企業にとっても、AI基盤の調達先、データ所在、クラウド依存リスクを見直す材料になります。",
+        "headline": "GitHub Copilotの新課金に反発、AI Credits消費の見える化が必須に",
+        "why": "GitHub Copilotの課金変更後、ヘビーユーザーが短期間でAI Creditsを消費する事例が報じられています。企業導入では、席数だけでなくモデル選択、エージェント利用、レビュー運用まで含めたコスト管理が必要です。",
         "business_importance": "High",
-        "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、AI開発基盤のクラウド依存リスク、リージョン要件、代替クラウド、オンプレ/ローカルLLM案を比較する表を作れます。",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot ChatやCode Reviewの利用場面を、日常補完、PRレビュー、エージェント作業に分け、AI Credits消費と成果を週次で棚卸しする運用案を作れます。",
+        "claude_code_relevance": "Medium",
+        "claude_code_tip": "Claude CodeとGitHub Copilotを併用する場合、探索・大規模変更はClaude Code、日常補完・PRレビューはGitHub Copilotのように役割分担を決めると費用比較しやすくなります。",
         "deadline": "",
-        "community": "",
+        "community": "RedditやBlueSkyなどで、従量型AIコーディング課金への不満と運用見直しの声が出ています。",
         "sources": [
           {
-            "label": "Reuters",
-            "url": "https://www.reuters.com/legal/litigation/europes-tech-liberation-day-computer-says-not-yet-2026-06-04/"
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
           }
         ]
       },
       {
         "num": "#3",
-        "headline": "Anthropicの安全性と成長の両立に注目、Claude Codeなどエージェント領域の競争が加速",
-        "why": "Anthropicは安全性を掲げつつ、Claude Codeなどエージェント・コーディング領域で急成長しています。企業導入では、性能だけでなく利用制限、監査、モデル提供元の方針変更リスクも評価が必要です。",
-        "business_importance": "High",
+        "headline": "MetaのMuse Spark API提供が遅延、開発者向けAIモデルの提供安定性が焦点に",
+        "why": "Metaの新AIモデルAPIが、バグやインフラ準備のため遅れていると報じられました。開発者向けAI基盤では、性能だけでなく、API提供時期、安定性、SLA、移行可能性が選定条件になります。",
+        "business_importance": "Medium",
         "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、GitHub Copilot、Claude Code、Codexの導入比較表を作り、監査ログ、社内規程、Secrets保護、PRレビュー統制の観点を整理できます。",
+        "copilot_tip": "GitHub Copilot Chatで、利用中AI APIのベンダーロックイン、代替モデル、障害時フォールバック、SDK差し替え方針を設計メモ化できます。",
+        "claude_code_relevance": "Low",
+        "claude_code_tip": "Claude CodeでAPIラッパー層やモデル切替設定を点検させ、特定ベンダーAPIに直結している箇所を洗い出せます。",
         "deadline": "",
-        "community": "Claude Codeを含むAIコーディングエージェントの企業利用は注目が高い一方、一次情報で確認できる新機能発表は限定的でした。",
+        "community": "Metaがオープンモデル中心から独自API提供へ進む点にも注目が集まっています。",
         "sources": [
           {
-            "label": "Financial Times",
-            "url": "https://www.ft.com/content/e17665ea-c5ca-428a-839c-be5c1eacc35c"
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/meta-repeatedly-pushes-back-new-ai-model-release-developers-wsj-says-2026-06-04/"
+          },
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/meta-keeps-delaying-the-release-of-its-new-ai-model-to-developers-f8569c8c"
           }
         ]
       },
       {
         "num": "#4",
-        "headline": "Google DeepMindのHassabis氏、AGI時代への準備期間は短いと警告",
-        "why": "DeepMind CEOが、AGI到来に向けて社会・教育・企業が早期に備える必要性を強調しました。企業ではAI活用の実験だけでなく、職務設計、スキル移行、ガバナンス設計が重要になります。",
-        "business_importance": "Medium",
+        "headline": "AnthropicのProject Glasswing拡大、日本を含む国でMythos系サイバー防御AIの利用が広がる",
+        "why": "AnthropicはClaude Mythos Previewを使うProject Glasswingの対象を拡大し、日本を含む国でセキュリティ分野の利用が報じられています。強力な脆弱性発見AIは、防御利用と悪用対策を同時に設計する必要があります。",
+        "business_importance": "High",
         "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、開発チーム向けのAIスキルロードマップ、GitHub Copilot利用研修、レビュー品質を落とさない運用ルールを作成できます。",
+        "copilot_tip": "GitHub Copilot Code Reviewの指摘と、Claude Codeや外部セキュリティAIの結果を分けて記録し、誤検知・修正PR・承認者を追える運用表を作れます。",
+        "claude_code_relevance": "High",
+        "claude_code_tip": "Claude Codeで脆弱性修正を任せる場合は、再現手順、テスト、影響範囲、レビュー必須条件を明示し、自動修正後に人間レビューを必須にします。",
         "deadline": "",
-        "community": "",
+        "community": "強力なサイバーAIの限定提供は、金融・重要インフラ領域で期待と警戒の両方があります。",
         "sources": [
           {
-            "label": "Business Insider",
-            "url": "https://www.businessinsider.com/google-deepmind-ceo-demis-hassabis-agi-new-human-era-2026-6"
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/anthropic-mythos-access-grow-four-fold-about-200-glasswing-partners-2026-06-02/"
+          },
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/anthropic-extends-project-glasswing-to-15-more-countries-including-india-gives-access-to-mythos-ai-model-that-has-spooked-banks-and-financial-institutions-across-the-world/articleshow/131478378.cms"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Claude CodeとCodexの比較研究、速度と監査性のトレードオフを指摘",
+        "why": "arXivの研究で、Claude CodeとCodexが同じ科学計算タスクで異なる挙動を示し、Claude Codeは高速だが仕様逸脱が見えにくいケースが報告されました。AIエージェント導入では、成果物だけでなく中間ログと検証可能性が重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやClaude Codeに任せた作業は、PR本文に実行コマンド、変更理由、未検証点、レビュー観点を必ず書かせるテンプレートを作れます。",
+        "claude_code_relevance": "High",
+        "claude_code_tip": "Claude Codeには“仕様から外れた判断をした場合は明示する”“中間成果物を保存する”“テスト未実施なら理由を書く”と指示して監査性を上げます。",
+        "deadline": "",
+        "community": "研究用途の比較ですが、企業のAIエージェントレビュー設計にもそのまま応用できる論点です。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2605.28916"
           }
         ]
       }
@@ -82,41 +108,37 @@
     "business_picks": [
       {
         "num": "B1",
-        "headline": "Microsoft Project Solara報道が継続、AIエージェント前提の業務端末構想が具体化",
-        "why": "MicrosoftはAIエージェントを中心にした端末・クラウド・チップ連携の方向性を示しています。業務アプリは、人が画面操作する前提から、エージェントがAPIや権限を通じて操作する前提へ変わる可能性があります。",
-        "business_importance": "Medium",
-        "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、既存業務アプリをAIエージェントから安全に呼び出すAPI、認可、監査ログ、失敗時のロールバック設計を洗い出せます。",
+        "headline": "AIエージェントのトークン消費研究、コストは入力トークンと作業軌跡で膨らむ傾向",
+        "why": "AIコーディングエージェントは通常のチャットより大きなトークンを消費し、同じタスクでも消費量に大きなばらつきが出るという研究が出ています。社内導入では、モデル選定だけでなくタスク分割とログ圧縮がコスト削減に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatで、AIエージェント向けタスクを“小さなPR”“明確な完了条件”“不要ファイル除外”に分ける運用ルールを作れます。",
+        "claude_code_relevance": "High",
+        "claude_code_tip": "Claude Codeでは、対象ディレクトリ、読むべきファイル、触ってよいファイル、実行してよいコマンドを絞り、長大な探索を避ける指示が有効です。",
         "deadline": "",
-        "community": "Build 2026関連の二次報道として継続的に整理されていますが、日本企業での実導入時期は未確定です。",
+        "community": "Copilot課金やClaude Code利用増と合わせて、AIエージェントの費用予測は実務テーマになっています。",
         "sources": [
           {
-            "label": "Tom's Hardware",
-            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-unveils-project-solara-ai-a-chip-to-cloud-platform-built-to-power-a-new-generation-of-agent-first-enterprise-devices-hardware-designed-to-run-ai-agents-instead-of-traditional-apps"
-          },
-          {
-            "label": "Reuters",
-            "url": "https://www.reuters.com/world/china/microsoft-expected-showcase-new-pc-cloud-ai-tools-developer-conference-2026-06-02/"
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2604.22750"
           }
         ]
       },
       {
         "num": "B2",
-        "headline": "AI規制はモデル公開規制から、利用先・調達・サプライチェーン規制へ広がる流れ",
-        "why": "AIの安全性論点は、モデル性能や公開前審査だけでなく、合成生物学、クラウド、データセンター、政府調達へ拡大しています。日本企業もAI導入時に、技術選定だけでなく利用目的と調達先の説明責任が問われやすくなります。",
-        "business_importance": "High",
+        "headline": "Claude Codeの設計分析、権限・MCP・hooks・subagentが実務運用の鍵に",
+        "why": "Claude Codeの設計空間を分析した研究では、権限管理、コンテキスト圧縮、MCP、hooks、subagentなどが安全なエージェント運用の中心とされています。企業利用では、便利なCLIとしてではなく開発基盤として統制する視点が必要です。",
+        "business_importance": "Medium",
         "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、AIツール導入申請書、委託先評価、データ分類、禁止用途、監査ログ保存期間のテンプレートを作れます。",
+        "copilot_tip": "GitHub Copilot Chatで、Claude CodeのCLAUDE.md、MCP設定、hooks、GitHubブランチ保護を含む運用チェックリストを作成できます。",
+        "claude_code_relevance": "High",
+        "claude_code_tip": "Claude Code導入時は、権限モード、MCP接続先、hooksでの自動チェック、worktree運用を明文化すると事故を減らせます。",
         "deadline": "",
-        "community": "",
+        "community": "Claude Codeを“個人の便利ツール”から“チーム運用する開発エージェント”へ移す際の設計論点です。",
         "sources": [
           {
-            "label": "WIRED",
-            "url": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons"
-          },
-          {
-            "label": "Reuters",
-            "url": "https://www.reuters.com/legal/litigation/europes-tech-liberation-day-computer-says-not-yet-2026-06-04/"
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2604.14228"
           }
         ]
       }
@@ -124,42 +146,64 @@
     "watchlist": [
       {
         "num": "W1",
-        "headline": "未確認 / 要一次ソース確認：GitHub Copilot代替としてのClaude Code・Codex移行議論",
-        "why": "GitHub CopilotのAI Creditsやエージェント利用コストを背景に、Claude CodeやCodexとの比較ニーズは高まっています。ただし、2026-06-04 JST内に確認できる強い公式新発表はありませんでした。",
+        "headline": "未確認 / 要一次ソース確認：Claude Code利用増に伴う社内ランキング・強制利用への違和感",
+        "why": "Anthropic幹部は、Claude利用を強制するような運用ではなく、自然に業務へ統合する姿勢を示しています。社内AI導入でも、利用回数を競わせるより成果・品質・コストを見る設計が必要です。",
         "business_importance": "Medium",
         "copilot_applicability": "直接使える",
-        "copilot_tip": "GitHub Copilot Chatで、社内PoC用にGitHub Copilot、Claude Code、Codexの評価項目、費用、セキュリティ、PR品質、レビュー工数を比較するチェックリストを作れます。",
+        "copilot_tip": "GitHub Copilotの利用促進KPIを、利用回数ではなくPRリードタイム、レビュー指摘数、再作業率、AI起因バグ件数で定義できます。",
+        "claude_code_relevance": "High",
+        "claude_code_tip": "Claude Codeの利用ログは、個人ランキングではなく、費用上振れ検知、危険操作検知、成功パターン共有に使う方針にします。",
         "deadline": "",
-        "community": "X、はてなブックマーク、Zenn、Qiita、HN、Reddit相当の公開検索では、当日付で一次ソース付きの大きな新トレンドは確認できませんでした。",
+        "community": "“AIをたくさん使った人が偉い”という運用への反発は、開発者コミュニティでも継続して見られます。",
         "sources": [
           {
-            "label": "GitHub Agent HQ関連記事",
-            "url": "https://www.theverge.com/news/873665/github-claude-codex-ai-agents"
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-president-daniela-amodei-tokenmaxxing-ai-coding-claude-code-2026-6"
           }
         ]
       },
       {
         "num": "W2",
-        "headline": "未確認 / 要一次ソース確認：Anthropicの自己改善型AIリスク発信",
-        "why": "Anthropicが自己改善型AIや開発ペースの減速に言及した報道が出ていますが、公開時刻ベースでは今回の対象日JSTから外れる可能性があるためWatchlist扱いにしました。",
+        "headline": "未確認 / 要一次ソース確認：AI coding agentのPR統制研究、最終マージ権限は人間に残る傾向",
+        "why": "AI coding agentがPR作成を担っても、マージ判断は人間に残るという研究があります。GitHub Copilot coding agentやClaude Codeを導入する組織では、誰が開始し、誰が承認するかの線引きが重要です。",
         "business_importance": "Medium",
-        "copilot_applicability": "間接的に有用",
-        "copilot_tip": "GitHub Copilot Chatで、AI coding agentに許可する操作、禁止操作、ブランチ保護、Secretsアクセス制御、監査ログ確認手順をRunbook化できます。",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentに作らせたPRには、AI生成ラベル、必須レビュワー、テスト必須、Secrets変更禁止などのルールを設定できます。",
+        "claude_code_relevance": "Medium",
+        "claude_code_tip": "Claude Codeで作った変更も、作業者名ではなく“AI支援あり”としてPR本文に記録し、マージ判断者を明確にします。",
         "deadline": "",
-        "community": "安全性・規制・競争戦略の文脈で、今後も追加の一次情報確認が必要です。",
+        "community": "AIがPRを作っても、承認責任をどう扱うかは今後の実務論点です。",
         "sources": [
           {
-            "label": "Wall Street Journal",
-            "url": "https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73"
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2605.08017"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "未確認 / 要一次ソース確認：LLMのパッケージ幻覚は縮小しても供給網リスクは残る",
+        "why": "最新モデルでも存在しないnpm/PyPIパッケージ名を生成するリスクは残るとする研究があります。AIコーディング導入時は、依存追加の自動化に必ず検証ゲートを置くべきです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotやClaude Codeが追加した依存は、package-lock、npm view、pip index、SBOM生成、DependabotのチェックをPR必須項目にできます。",
+        "claude_code_relevance": "Medium",
+        "claude_code_tip": "Claude Codeには“新規依存を追加する前に公式レジストリ存在確認とメンテ状況確認を行う”と明示します。",
+        "deadline": "",
+        "community": "slopsquatting対策は、AIコード生成が増えるほど現実的なサプライチェーン対策になります。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2605.17062"
           }
         ]
       }
     ],
     "themes": [
-      "AI安全性の論点は、モデルの能力管理から、バイオ、クラウド、調達、サプライチェーン全体の統制へ広がっています。",
-      "GitHub Copilotを含むAI開発ツールの企業導入では、便利さよりもコスト管理、利用ログ、禁止用途、権限設計が重要になっています。",
-      "AIエージェント前提の業務環境が進み、アプリ開発ではUIだけでなく、API、認可、監査、ロールバック設計の重要度が上がっています。"
+      "Claude CodeとGitHub Copilotは、生産性向上だけでなく、費用上限、ログ、権限、PR統制まで含めて運用設計する段階に入っています。",
+      "AI coding agentは速さと自律性が魅力ですが、仕様逸脱や中間判断の見えにくさを補うため、PR本文・ログ・テストの標準化が重要です。",
+      "開発者向けAI基盤は、モデル性能だけでなく、API提供安定性、トークン課金、セキュリティ利用、サプライチェーン対策が比較軸になっています。"
     ]
   },
-  "notes": "2026-06-04 JST対象では、GitHub CopilotやGitHub公式の大きな一次発表は確認できませんでした。OpenAI、Anthropic、Google DeepMind、Microsoft AI関連では、バイオセキュリティ規制、EUテック主権、Anthropicの安全性と成長、Project Solara関連の継続報道を中心に構成しました。Zenn、Qiita、はてなブックマーク、HN、Reddit相当の公開検索では、当日付で一次ソース付きの強い日本語開発者トレンドは確認できませんでした。"
+  "notes": "テスト実行版です。2026-06-04 JST対象では、GitHub CopilotやClaude Codeの大きな公式新機能発表は確認できなかったため、Claude Codeの実務利用、GitHub Copilot課金、Meta API提供遅延、AnthropicのサイバーAI拡大、AI coding agent研究を中心に構成しました。Claude Code表示欄のレンダリング確認用に、claude_code_relevance と claude_code_tip を含めています。"
 }
