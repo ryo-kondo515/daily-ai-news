@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-04",
+  "generated_at_jst": "2026-06-05T08:00:05+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI・Anthropic・Google DeepMindなどのAI首脳、AI悪用による生物兵器リスク対策を米議会に要請",
+        "why": "主要AI企業が競争関係を越えて、合成DNA/RNA注文のスクリーニング義務化を求めました。生成AIの安全性議論が、モデル単体ではなくバイオ・サプライチェーン規制へ広がっています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI利用規程にバイオ・化学・医療領域の禁止用途、リスクレビュー、利用ログ確認手順を追加するドラフトを作れます。",
+        "deadline": "",
+        "community": "米テック系メディアで、OpenAIとAnthropicなど競合各社が共同署名した点が大きく取り上げられています。",
+        "sources": [
+          {
+            "label": "WIRED",
+            "url": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons"
+          },
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/942956/ai-biological-weapons-open-letter-congress"
+          },
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/politics/policy/top-ai-ceos-call-for-law-protecting-against-biological-weapons-88f2f99f"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "EUがテック主権パッケージを提示、クラウド・AI基盤の米国依存低減を狙う",
+        "why": "EUはクラウド調達やデータセンター、半導体などで域内技術の利用を促す方向を示しました。日本企業にとっても、AI基盤の調達先、データ所在、クラウド依存リスクを見直す材料になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI開発基盤のクラウド依存リスク、リージョン要件、代替クラウド、オンプレ/ローカルLLM案を比較する表を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/legal/litigation/europes-tech-liberation-day-computer-says-not-yet-2026-06-04/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Anthropicの安全性と成長の両立に注目、Claude Codeなどエージェント領域の競争が加速",
+        "why": "Anthropicは安全性を掲げつつ、Claude Codeなどエージェント・コーディング領域で急成長しています。企業導入では、性能だけでなく利用制限、監査、モデル提供元の方針変更リスクも評価が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、GitHub Copilot、Claude Code、Codexの導入比較表を作り、監査ログ、社内規程、Secrets保護、PRレビュー統制の観点を整理できます。",
+        "deadline": "",
+        "community": "Claude Codeを含むAIコーディングエージェントの企業利用は注目が高い一方、一次情報で確認できる新機能発表は限定的でした。",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/e17665ea-c5ca-428a-839c-be5c1eacc35c"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Google DeepMindのHassabis氏、AGI時代への準備期間は短いと警告",
+        "why": "DeepMind CEOが、AGI到来に向けて社会・教育・企業が早期に備える必要性を強調しました。企業ではAI活用の実験だけでなく、職務設計、スキル移行、ガバナンス設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、開発チーム向けのAIスキルロードマップ、GitHub Copilot利用研修、レビュー品質を落とさない運用ルールを作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/google-deepmind-ceo-demis-hassabis-agi-new-human-era-2026-6"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Microsoft Project Solara報道が継続、AIエージェント前提の業務端末構想が具体化",
+        "why": "MicrosoftはAIエージェントを中心にした端末・クラウド・チップ連携の方向性を示しています。業務アプリは、人が画面操作する前提から、エージェントがAPIや権限を通じて操作する前提へ変わる可能性があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、既存業務アプリをAIエージェントから安全に呼び出すAPI、認可、監査ログ、失敗時のロールバック設計を洗い出せます。",
+        "deadline": "",
+        "community": "Build 2026関連の二次報道として継続的に整理されていますが、日本企業での実導入時期は未確定です。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-unveils-project-solara-ai-a-chip-to-cloud-platform-built-to-power-a-new-generation-of-agent-first-enterprise-devices-hardware-designed-to-run-ai-agents-instead-of-traditional-apps"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/microsoft-expected-showcase-new-pc-cloud-ai-tools-developer-conference-2026-06-02/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI規制はモデル公開規制から、利用先・調達・サプライチェーン規制へ広がる流れ",
+        "why": "AIの安全性論点は、モデル性能や公開前審査だけでなく、合成生物学、クラウド、データセンター、政府調達へ拡大しています。日本企業もAI導入時に、技術選定だけでなく利用目的と調達先の説明責任が問われやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AIツール導入申請書、委託先評価、データ分類、禁止用途、監査ログ保存期間のテンプレートを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "WIRED",
+            "url": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/legal/litigation/europes-tech-liberation-day-computer-says-not-yet-2026-06-04/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認：GitHub Copilot代替としてのClaude Code・Codex移行議論",
+        "why": "GitHub CopilotのAI Creditsやエージェント利用コストを背景に、Claude CodeやCodexとの比較ニーズは高まっています。ただし、2026-06-04 JST内に確認できる強い公式新発表はありませんでした。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatで、社内PoC用にGitHub Copilot、Claude Code、Codexの評価項目、費用、セキュリティ、PR品質、レビュー工数を比較するチェックリストを作れます。",
+        "deadline": "",
+        "community": "X、はてなブックマーク、Zenn、Qiita、HN、Reddit相当の公開検索では、当日付で一次ソース付きの大きな新トレンドは確認できませんでした。",
+        "sources": [
+          {
+            "label": "GitHub Agent HQ関連記事",
+            "url": "https://www.theverge.com/news/873665/github-claude-codex-ai-agents"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認：Anthropicの自己改善型AIリスク発信",
+        "why": "Anthropicが自己改善型AIや開発ペースの減速に言及した報道が出ていますが、公開時刻ベースでは今回の対象日JSTから外れる可能性があるためWatchlist扱いにしました。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、AI coding agentに許可する操作、禁止操作、ブランチ保護、Secretsアクセス制御、監査ログ確認手順をRunbook化できます。",
+        "deadline": "",
+        "community": "安全性・規制・競争戦略の文脈で、今後も追加の一次情報確認が必要です。",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AI安全性の論点は、モデルの能力管理から、バイオ、クラウド、調達、サプライチェーン全体の統制へ広がっています。",
+      "GitHub Copilotを含むAI開発ツールの企業導入では、便利さよりもコスト管理、利用ログ、禁止用途、権限設計が重要になっています。",
+      "AIエージェント前提の業務環境が進み、アプリ開発ではUIだけでなく、API、認可、監査、ロールバック設計の重要度が上がっています。"
+    ]
+  },
+  "notes": "2026-06-04 JST対象では、GitHub CopilotやGitHub公式の大きな一次発表は確認できませんでした。OpenAI、Anthropic、Google DeepMind、Microsoft AI関連では、バイオセキュリティ規制、EUテック主権、Anthropicの安全性と成長、Project Solara関連の継続報道を中心に構成しました。Zenn、Qiita、はてなブックマーク、HN、Reddit相当の公開検索では、当日付で一次ソース付きの強い日本語開発者トレンドは確認できませんでした。"
+}
