@@ -1,16 +1,19 @@
-name: Daily AI News Digest Legacy
+name: Daily AI News Digest
 
 on:
+  push:
+    paths:
+      - "inbox/*.json"
   workflow_dispatch:
     inputs:
       target_date_jst:
-        description: "Override target date in JST (YYYY-MM-DD)"
+        description: "Target date in JST (YYYY-MM-DD). Defaults to latest inbox JSON."
         required: false
         type: string
       send_email:
         description: "Send email"
         required: false
-        default: false
+        default: true
         type: boolean
 
 jobs:
@@ -22,10 +25,8 @@ jobs:
       GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
       GMAIL_SMTP_APP_PASSWORD: ${{ secrets.GMAIL_SMTP_APP_PASSWORD }}
       DIGEST_TO_EMAIL: ${{ secrets.DIGEST_TO_EMAIL }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.2' }}
       TARGET_DATE_JST: ${{ inputs.target_date_jst }}
-      SEND_EMAIL: ${{ inputs.send_email }}
+      SEND_EMAIL: ${{ github.event_name == 'push' && 'true' || inputs.send_email }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,12 +36,35 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run legacy digest generator
-        run: python scripts/daily_ai_news_digest.py
+      - name: Resolve digest JSON path
+        id: digest_json
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -n "${TARGET_DATE_JST:-}" ]]; then
+            path="inbox/${TARGET_DATE_JST}.json"
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            path="$(git diff-tree --no-commit-id --name-only -r "${{ github.sha }}" | grep '^inbox/.*\.json$' | sort | tail -n 1)"
+          else
+            path="$(ls -1 inbox/*.json | sort | tail -n 1)"
+          fi
+
+          if [[ -z "${path}" || ! -f "${path}" ]]; then
+            echo "Digest JSON not found: ${path}" >&2
+            exit 1
+          fi
+
+          echo "path=${path}" >> "$GITHUB_OUTPUT"
+          echo "Using digest JSON: ${path}"
+
+      - name: Render digest HTML from JSON
+        run: python scripts/render_digest_from_json.py "${{ steps.digest_json.outputs.path }}"
 
       - name: Upload digest artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: daily-ai-news-digest-legacy
-          path: out/digest.html
+          name: daily-ai-news-digest
+          path: |
+            out/digest.html
+            out/digest.txt
