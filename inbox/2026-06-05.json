@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-05",
+  "generated_at_jst": "2026-06-06T08:00:19+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、リスク上昇時にAI開発を一時停止できる業界協調案を提起",
+        "why": "ClaudeやClaude Codeを業務利用する企業にとって、モデル性能だけでなく安全性・監査・ガバナンスをどう担保するかが重要論点になっています。AIエージェントの自律性が高まるほど、開発現場でも権限設計や停止条件の明文化が必要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入ルールに、AIエージェントの権限範囲、PR必須化、secret参照禁止、危険操作時の人間承認を明文化する観点として使えます。",
+        "deadline": "",
+        "community": "Reuters、AP、Business Insiderなどで報じられ、AI開発競争と規制・安全性のバランスを巡る議論が広がっています。",
+        "sources": [
+          {
+            "label": "Reuters"
+          },
+          {
+            "label": "AP News"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic社内でも「AIがコードを書く」前提が進み、ソフトウェア開発職の変化が焦点に",
+        "why": "Claudeが社内コード生成に深く使われているとの報道は、Claude Codeの実務浸透を示す材料です。日本企業でも、AIを単なる補完ではなく開発プロセスの一部として扱う設計が必要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeを併用する場合、CopilotはIDE内補完・PRレビュー、Claude Codeは大きめの修正や調査タスクなど、役割分担表を作るのに使えます。",
+        "deadline": "",
+        "community": "AIで開発者の役割がどう変わるか、採用・評価・レビュー体制への影響として報じられています。",
+        "sources": [
+          {
+            "label": "Business Insider"
+          },
+          {
+            "label": "Business Insider"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AI開発停止論は、企業のAI利用ポリシー整備を急がせる材料に",
+        "why": "モデル提供企業側の安全性議論は、利用企業側のAI利用規程・監査ログ・承認フローにも直結します。特にClaude CodeやGitHub Copilot coding agentのような実行系ツールでは、操作権限の分離が重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Code Reviewを必須チェックにし、AI生成PRは人間レビューを通す運用ルールの草案作成に使えます。",
+        "deadline": "",
+        "community": "賛否が割れており、競争抑制ではないかという批判も含めて議論されています。",
+        "sources": [
+          {
+            "label": "Business Insider"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: Claude Opus 4.8と「Ultracode mode」報道",
+        "why": "開発者向け性能・長時間タスク・安全性強化に関する内容が報じられていますが、現時点で強い一次ソース確認が必要です。Claude Codeの実務利用に影響する可能性があるため継続監視します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "正式発表が出た場合、GitHub Copilotとの比較観点として、長時間タスク、PR生成品質、セキュリティレビュー、コストを比較表にできます。",
+        "deadline": "",
+        "community": "現時点では報道ベースで、公式発表・公式ドキュメントの確認が必要です。",
+        "sources": [
+          {
+            "label": "The Economic Times"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Claude CodeやGitHub Copilotのような開発エージェントは、導入可否よりも権限・監査・停止条件の設計が重要になっています。",
+      "AIがコードを書く比率が上がるほど、人間の役割は実装そのものからレビュー、仕様判断、リスク管理へ寄っていきます。",
+      "この日は公式一次ソースの大型発表が少なく、Anthropicの安全性・ガバナンス議論が中心でした。"
+    ]
+  },
+  "notes": "信頼できる一次ソース付きの新規発表は少なめだったため短縮版です。Claude Opus 4.8関連の報道は確認可能な一次ソースが見つからなかったためWatchlist扱いにしました。"
+}
