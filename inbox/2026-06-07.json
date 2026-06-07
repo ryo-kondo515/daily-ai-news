@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-07",
+  "generated_at_jst": "2026-06-08T08:03:16+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、ChatGPTを『スーパーアプリ化』する大規模刷新を準備",
+        "why": "OpenAIがChatGPTをコーディング、エージェント、外部サービス連携を中心とした統合プラットフォームへ発展させる方針と報じられました。企業向け売上比率も拡大しており、開発者ワークフローへの影響が大きい動きです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとCodex、Claude Codeの役割分担を見直し、IDE補完・PRレビュー・長時間タスク実行を整理する検討材料になります。",
+        "deadline": "",
+        "community": "開発者コミュニティでは『ChatGPTが開発環境そのものになるのでは』という議論が広がっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/openai-plans-chatgpt-superapp-overhaul-ahead-listing-ft-reports-2026-06-07/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、Claudeが社内コードの80%以上を生成していると説明",
+        "why": "AnthropicはClaudeによる自己改善の加速を公表し、社内コードの大半をClaudeが生成していると説明しました。Claude Codeの実運用規模を示す重要な指標です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入組織でも、AI生成コード比率・レビュー通過率・テスト成功率を継続計測する運用設計の参考になります。",
+        "deadline": "",
+        "community": "AIが開発者の役割をどう変えるかについて賛否両論の議論が続いています。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-now-writes-more-than-80-percent-of-its-merged-code"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Anthropic、フロンティアAI開発の減速も選択肢と提言",
+        "why": "Anthropicは社会制度や安全対策が追いつくまで、先端AI開発の減速や一時停止も検討すべきと主張しました。企業のAIガバナンス整備にも影響しそうです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの利用規程に、権限管理、レビュー義務、監査ログ、機密情報取り扱いを明文化する際の参考になります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-says-leading-ai-labs-may-need-to-hit-brakes-2026-6"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: Claude CodeとCodexの比較研究が開発者界隈で注目",
+        "why": "Claude CodeとCodexを同条件で比較した研究が公開され、エージェント型開発ツールの評価方法に関心が集まっています。公式製品発表ではないためWatchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexを比較する際は成功率だけでなく、再現性、ログ、レビュー容易性も評価対象にすると有効です。",
+        "deadline": "",
+        "community": "研究者や開発者の間で、エージェント評価ベンチマークの妥当性が議論されています。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2605.28916"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認: Claude Code利用で技術スタックの多様化が進むとの研究",
+        "why": "Claude Code採用後に利用言語やリポジトリ参加数が増加したという研究結果が報告されました。学術研究段階であり実運用での再現性確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot利用状況と合わせて、エンジニアの技術領域拡大や学習効率を計測する指標設計の参考になります。",
+        "deadline": "",
+        "community": "AIコーディング支援がキャリア形成に与える影響として注目されています。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2605.25438"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "ChatGPT、Claude Code、Codexの競争が『チャット』から『開発環境そのもの』へ移行しています。",
+      "企業導入では性能比較よりも、監査性、権限管理、レビュー体制が重要になっています。",
+      "AIが生成するコード比率が増えるにつれ、人間の役割は実装からレビュー・設計・ガバナンスへ移っています。"
+    ]
+  },
+  "notes": "対象日は大型の公式製品発表が少なかったため短縮版です。コミュニティや研究ベースの話題は一次ソース未確認のためWatchlistに限定しました。"
+}
