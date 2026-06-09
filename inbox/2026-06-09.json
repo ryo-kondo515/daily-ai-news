@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-09",
+  "generated_at_jst": "2026-06-10T07:59:54+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、強力モデル「Claude Fable 5」を安全制限付きで一般公開",
+        "why": "ソフトウェア開発や分析に強い高性能モデルを広く提供しつつ、サイバー・バイオなど高リスク領域には制限を設ける動きです。Claude Codeを業務利用する企業では、性能向上とガードレール設計をセットで見る必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeを併用する場合、モデルごとの許可範囲、セキュリティレビュー、人間承認フローを比較表にして運用ルール化するとよいです。",
+        "deadline": "",
+        "community": "開発者向けには、高性能化よりも危険操作の制限・監査・権限設計が実務論点になりそうです。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/anthropic-rolls-out-public-version-mythos-without-cybersecurity-capability-2026-06-09/"
+          },
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-claude-fable-5-mythos-class-model-release-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、Broadcom連携で350億ドル規模のAI計算基盤拡張へ",
+        "why": "AIモデル競争の制約がモデル品質だけでなく、計算資源・専用チップ・データセンター調達に移っています。Claude Codeなど開発者向けAIの安定供給や価格にも中長期で影響します。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの導入比較では、機能だけでなく利用上限、混雑時の安定性、モデル選択、将来の価格改定リスクも評価項目に入れるべきです。",
+        "deadline": "",
+        "community": "AIツールの企業導入では、ベンダーの計算資源確保力が実用性・料金・SLAの前提になりつつあります。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/apollo-blackstone-back-anthropics-35-billion-capacity-expansion-new-broadcom-tie-2026-06-09/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Apple、新Siri AIを発表も対応端末・地域制約が論点に",
+        "why": "オンデバイスAIと個人データ活用を重視するAppleの方向性は、日本企業のAI導入におけるプライバシー設計の参考になります。一方で、対応端末や地域制限はAI機能の普及スピードを左右します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時も、端末要件、IDE要件、社内ネットワーク制約、利用可能地域を整理し、開発者ごとの差をなくす導入チェックリストを作るとよいです。",
+        "deadline": "",
+        "community": "AI機能は発表内容よりも、実際に誰がどの端末で使えるかが導入判断の焦点になっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/apples-ai-siri-will-be-held-back-by-aging-devices-morgan-stanley-says-2026-06-09/"
+          },
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/06/09/apple-siri-ai-agents-wwdc"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Meta、外部サイト行動データをAI応答やフィード推薦にも活用へ",
+        "why": "広告向けに使われていた外部行動データが、AI応答やコンテンツ推薦にも広がる動きです。AI導入時のデータ利用範囲・同意・オプトアウト設計の重要性が増します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotの社内導入でも、コード・プロンプト・リポジトリ情報がどの範囲で使われるかを、利用規約と管理設定から確認するチェックリスト作成に活用できます。",
+        "deadline": "",
+        "community": "AIパーソナライズの便利さと、外部行動データ利用への不安がセットで議論されそうです。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/946744/meta-website-activity-personalize-feeds"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AppleのSiri AI刷新、開発者向けには自然言語ショートカットとアプリ連携が注目点",
+        "why": "AIがOS内のアプリ操作や個人コンテキストを扱う方向に進むことで、業務アプリ側にもAI連携前提の設計が求められます。日本企業でも、AIに操作させるUI・権限・ログ設計の検討が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatを使って、既存業務アプリに対するAI操作時の権限モデル、監査ログ、エラー時の手戻り設計をレビューする用途に使えます。",
+        "deadline": "",
+        "community": "エージェント型AIでは、単なるチャット性能よりもアプリ横断の操作権限と安全な実行設計が重要になります。",
+        "sources": [
+          {
+            "label": "Wired",
+            "url": "https://www.wired.com/story/everything-apple-announced-at-wwdc-2026"
+          },
+          {
+            "label": "The Guardian",
+            "url": "https://www.theguardian.com/technology/2026/jun/08/apple-debuts-siri-ai-child-safety-features-wwdc"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: Claude Code・Codex・GitHub Copilotの企業内ロックイン回避が話題化",
+        "why": "大企業が特定AIベンダーに依存しない社内AI coding assistantを作る動きが報じられています。一次ソースが限定的なためWatchlist扱いですが、企業導入時のモデル非依存設計として重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを標準にしつつ、Claude CodeやCodexを併用する場合は、モデル非依存のプロンプト規約、AGENTS.md、レビュー基準、費用監視を共通化するとロックインを下げられます。",
+        "deadline": "",
+        "community": "AI coding agentの価格・利用制限・ベンダーロックインへの不満が、社内ツール化やLLM council型運用の関心につながっています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/walmart-code-puppy-ai-anthropic-claude-code-openai-codex-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認: Claude CodeなどAI開発ツールを装うマルウェア注意",
+        "why": "AI開発ツールの人気に便乗した偽サイト・偽インストーラは、開発者端末の認証情報やソースコード流出につながるリスクがあります。対象日は新規一次情報を確認できなかったためWatchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotやClaude Codeの導入手順では、公式配布元、拡張機能ID、インストールコマンド、社内許可済みバージョンを明文化し、開発者に共有するべきです。",
+        "deadline": "",
+        "community": "Claude Codeや類似CLIの利用拡大に伴い、検索広告や偽ダウンロード経由の感染リスクが企業開発環境の論点になります。",
+        "sources": [
+          {
+            "label": "TechRadar",
+            "url": "https://www.techradar.com/pro/security/infostealers-are-being-disguised-as-claude-code-openclaw-and-other-ai-developer-tools"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Claude Codeを含むAI coding agentは、性能競争だけでなく、権限・安全制限・監査・インストール経路管理が実務上の中心課題になっています。",
+      "GitHub Copilot、Claude Code、Codexの比較では、補完性能よりも、PRレビュー、Issue起点の実装、CI/CD連携、費用予測、モデル非依存運用が重要です。",
+      "AIエージェントはOS・SNS・開発環境へ広がっており、日本企業でもデータ利用範囲、同意、ログ、端末要件を導入前に整理する必要があります。"
+    ]
+  },
+  "notes": "対象日はGitHub Copilotの公式一次発表を確認できなかったため、Claude/Anthropic、Apple、Meta中心の短縮版です。Claude Code関連のコミュニティ・開発者向け話題は一部一次ソースが弱いためWatchlistに限定しました。"
+}
