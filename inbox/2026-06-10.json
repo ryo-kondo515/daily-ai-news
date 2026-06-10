@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-10",
+  "generated_at_jst": "2026-06-11T08:00:44+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、中国系とみられる影響工作でChatGPT悪用アカウントを停止",
+        "why": "データセンター建設や関税をめぐる世論工作に生成AIが使われた事例です。企業のAI利用でも、正規ユーザー管理・ログ監査・不正利用検知が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時の利用規程に、外部発信文書の生成、政治・世論操作、なりすまし投稿の禁止事項を明記し、監査ログ確認手順をCopilot Chatで草案化できます。",
+        "deadline": "",
+        "community": "AIインフラ反対運動と外国影響工作の切り分けが論点になっており、データセンター政策にも波及しそうです。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/media-telecom/openai-says-chinese-propaganda-is-being-deployed-foment-dissent-over-tariffs-2026-06-10/"
+          },
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/06/10/openai-china-ai-data-center-tariffs-chatgpt"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、強力AIの安全試験義務化と州AI法の維持を米議会に要請",
+        "why": "フロンティアモデルに独立安全試験を求める動きで、Claude Codeを含む高度AIツールの企業利用にも規制・監査の圧力が強まりそうです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexを並行導入する場合、モデルごとの安全評価、禁止用途、社内承認フローを比較表にしておくと説明しやすくなります。",
+        "deadline": "",
+        "community": "AI規制を連邦で統一するか、州法を残すかが米国で大きな争点になっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/anthropic-urges-us-require-safety-tests-most-capable-ai-models-2026-06-10/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Microsoft、Claude Fable 5を社内利用制限か データ保持が論点に",
+        "why": "GitHub CopilotやFoundry経由で使えるモデルでも、社内利用ではデータ保持・機密情報・法務レビューが別問題になります。Claude Code導入時にも同じ観点が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotでClaude系モデルを使う場合、Zero Data Retention、保持期間、フラグ付きデータの扱い、社内ソースコード投入可否をチェックリスト化するとよいです。",
+        "deadline": "",
+        "community": "高性能モデルの採用可否が、性能よりもデータ保持ポリシーで決まるケースとして注目されます。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、NVIDIA支援でオハイオ州の10GW級データセンター賃借を検討",
+        "why": "AIモデル競争の制約が計算資源に移っており、開発者向けAIツールの速度、利用上限、料金にも影響します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの導入比較では、機能だけでなく利用上限、混雑時の応答安定性、将来の価格改定リスクも評価項目に入れるべきです。",
+        "deadline": "",
+        "community": "AIデータセンターは、電力・地域合意・地政学リスクまで含む経営課題になっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/openai-weighs-leasing-ohio-data-center-with-nvidia-backing-information-reports-2026-06-10/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "OpenAI、1年以内の上場を視野と報道",
+        "why": "OpenAIとAnthropicの上場観測が強まり、AIツールの価格、法人契約、投資回収圧力が高まる可能性があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの導入稟議では、現在価格だけでなく、上場後の収益化圧力による料金改定リスクを補足するとよいです。",
+        "deadline": "",
+        "community": "AIツールの「定額使い放題」から、利用量・ROI管理への移行が進みそうです。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/openai-expects-go-public-within-next-year-information-reports-2026-06-10/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "VisaとOpenAI、ChatGPT内ショッピングの安全な決済で提携",
+        "why": "AIエージェントが購入・決済まで行う流れが進み、権限、上限金額、承認フローの設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatを使って、AIエージェントに許可する操作、承認が必要な操作、監査ログの仕様を整理する設計レビューに活用できます。",
+        "deadline": "",
+        "community": "AIエージェントの実行権限は、開発環境だけでなく決済・購買にも広がっています。",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/visa-to-secure-payments-for-shoppers-on-chatgpt-in-openai-partnership-7ece5b22"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: 企業のAI利用制限・トークン予算管理が話題化",
+        "why": "AIツールの利用量増加により、企業が週次上限、コスト管理、ROI測定を強めているという報道です。一次ソースの会社別確認が必要なためWatchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの導入では、ユーザー単位の利用状況、プレミアムリクエスト、PR作成数、レビュー時間短縮などを月次で見える化するとよいです。",
+        "deadline": "",
+        "community": "開発者向けAIでも、定額契約だけでなく利用上限と費用対効果の説明が求められています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/ai-companies-raising-prices-internal-token-limits-openai-anthropic-ipo-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認: Claude CodeとCodexの科学計算ワークフロー比較論文が継続的に注目",
+        "why": "Claude Codeは高速だが暗黙の仕様解釈、Codexは遅いが自己修正が明示的、という比較が実務上も示唆的です。査読前論文のためWatchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやClaude Codeを使う際は、速度だけでなく、途中判断のログ、仕様逸脱の検知、テスト結果の説明責任を評価軸に入れるべきです。",
+        "deadline": "",
+        "community": "AI coding agent比較では、単純な成功率よりも監査可能性と仕様解釈の差が重要になっています。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2605.28916"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIの企業導入では、モデル性能よりもデータ保持、監査ログ、禁止用途、権限設計が実務上の判断軸になっています。",
+      "Claude Code、GitHub Copilot、Codexは競合というより、用途別に併用しながら統制する段階に入りつつあります。",
+      "AIインフラ、上場、価格改定、利用量管理がつながり、開発者向けAIツールもROI説明が避けられなくなっています。"
+    ]
+  },
+  "notes": "対象日はGitHub Copilotの公式一次発表を確認できなかったため、OpenAI、Anthropic、AIインフラ、企業統制を中心に構成しました。Claude Code単体の公式更新は高信頼な当日ソースを確認できなかったため、関連する企業統制・モデル利用ポリシーの文脈で扱っています。"
+}
