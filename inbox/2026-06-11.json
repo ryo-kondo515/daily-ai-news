@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-11",
+  "generated_at_jst": "2026-06-12T08:00:25+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Agentic Workflowsがパブリックプレビューに",
+        "why": "Issue分類、CI失敗分析、ドキュメント更新などをGitHub Actions上のAIエージェントで自動化できます。自然言語MarkdownからActions YAMLへ変換され、既存のrunnerやポリシー制約を再利用できる点が実務向きです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやCopilot CLIと組み合わせ、CI失敗調査、脆弱性修正、依存関係更新、定型PR作成のワークフローを標準化できます。",
+        "deadline": "",
+        "community": "エージェントをPR作成だけでなくSDLC全体の自動化に広げる動きとして注目です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Agentic Workflows、PAT不要でGITHUB_TOKEN対応",
+        "why": "長期Personal Access Tokenを保管せずに、Actions組み込みのGITHUB_TOKENでエージェントワークフローを実行できます。大規模運用時の秘密情報管理と権限統制のリスクを下げられます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Copilot CLIを組織課金で使う場合、copilot-requests権限、Cost Center、ワークフロー単位のトークン上限をセットで設計すると安全です。",
+        "deadline": "",
+        "community": "AIエージェント運用で問題になりやすい長期トークン管理をGitHub標準機能側で吸収する方向です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-11-agentic-workflows-no-longer-need-a-personal-access-token/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Copilot CLIに統合設定コマンド /settings が追加",
+        "why": "Copilot CLIの設定が、手編集や個別コマンドではなく、スキーマ駆動の一元UIで管理できるようになりました。チーム展開時の設定ミスや利用者ごとの差分を減らしやすくなります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilot CLIを併用する場合、Copilot側のsessionSync、experimental、streamerModeなどを標準設定として整理し、導入手順書に落とし込めます。",
+        "deadline": "",
+        "community": "CLI型AIエージェントは設定項目が増えており、企業導入では設定の見える化が重要になります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-11-copilot-cli-configure-everything-from-one-place-with-settings/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub、AI Credits利用レポートの標準フィールドを更新",
+        "why": "AI Credit使用量をquantityとgross_amountで確認できるようになり、6月1日以降のAI課金モデルに合わせてレポートが整理されました。企業導入では利用量・費用の説明責任に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの部門別利用量、AI Credits消費、費用対効果を月次で集計し、Claude CodeやCodexとの比較表にできます。",
+        "deadline": "",
+        "community": "Copilotの利用上限・従量課金への関心が高まっており、管理者向けレポート整備は重要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-11-ai-usage-report-updates/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "OpenAI、Anthropic対抗で大幅値下げを検討と報道",
+        "why": "OpenAIがAnthropicとのユーザー獲得競争を見据え、トークン価格の大幅引き下げを検討していると報じられました。AI coding agentや社内AI基盤の選定では、価格改定リスクと移行容易性が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexを比較する社内資料で、機能差だけでなくトークン単価、上限、予算アラート、ベンダーロックインを評価軸にできます。",
+        "deadline": "",
+        "community": "未確定の価格報道ですが、OpenAI対Anthropicの競争が法人向けAIツール価格に波及する可能性があります。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/openai-considers-drastic-price-cuts-anticipating-war-users-with-anthropic-wsj-2026-06-11/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Bot作成PRも承認後にCI/CDを実行可能に",
+        "why": "github-actions[bot]が作成したPRでも、write権限を持つユーザーの承認後にCI/CDを実行できるようになりました。AI生成コードをCI未実行のまま誤ってマージするリスクを下げられます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Copilot-generated PRやAgentic WorkflowsのPRに対して、承認後CI、CodeQL、Copilot Code Reviewを必須チェックにする運用を検討できます。",
+        "deadline": "",
+        "community": "AIエージェントPRの安全な実行境界を整える変更です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-11-bot-created-pull-requests-can-run-workflows-if-approved/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub ActionsにUbuntu 26.04とWindows 11 arm64 VS2026 runnerが追加",
+        "why": "新しいGitHub-hosted runner imageがパブリックプレビューになりました。CI環境の移行確認や、Windows arm64 / Visual Studio 2026向け検証を早期に始められます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Copilot Chatで既存workflowのruns-on変更影響、依存ツール差分、移行チェックリストを作り、Agentic Workflowsで定期検証できます。",
+        "deadline": "09/上旬",
+        "community": "既存windows-11-arm labelはプレビュー終了後にvs2026 imageへ移行予定のため、CI利用企業は早めの検証が必要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-11-new-runner-images-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "Reuters、OpenAIとAnthropicの競争激化を詳報",
+        "why": "OpenAIとAnthropicの競争はモデル性能だけでなく、IPO、収益認識、企業向け導入、AI安全性の主張に広がっています。Claude CodeとGitHub Copilotの導入判断でも、ベンダーの事業安定性を見る必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの採用比較で、機能、価格、データ保持、監査、サポート、ベンダー継続性を表にして説明できます。",
+        "deadline": "",
+        "community": "AIツール選定は、単純な性能比較から企業統制・契約・価格の比較へ移っています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/legal/transactional/anthropic-v-openai-behind-bitter-battle-future-ai-2026-06-11/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: AnthropicのClaude利用制限ポリシー変更をめぐる反発",
+        "why": "Claudeの利用制限や透明性をめぐる議論が報じられていますが、対象ポリシーの一次ソース確認が必要です。Claude Codeを業務利用する場合、モデル制限・通知・代替モデルへの切替条件は確認すべきです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの利用規程に、モデル制限時の挙動、研究・競合開発用途、機密コード投入可否を明記できます。",
+        "deadline": "",
+        "community": "AI研究者・開発者コミュニティでは、透明性と安全対策のバランスが論点になっています。",
+        "sources": [
+          {
+            "label": "Wired",
+            "url": "https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認: Linux開発でGitHub Copilotを使ったレガシーGPUドライバ保守が話題",
+        "why": "古いAMD GPU向けMesa/R600ドライバの保守にGitHub Copilotが使われたという報道です。一次のコミット・開発者発言確認が必要ですが、AIによるレガシーコード保守の実例として注目です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotをC/C++のレガシーコード整理、警告修正、テスト追加、変更理由の説明作成に使う社内事例として参考になります。",
+        "deadline": "",
+        "community": "AI生成コードでも、タグ付け・人間の責任・レビューを求めるLinux系の運用姿勢が参考になります。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/software/linux/linux-developers-are-using-ai-vibe-coding-to-keep-vintage-amd-gpus-alive-r600-driver-cleaned-up-with-github-copilot-gives-hd-2000-to-hd-6000-series-a-new-lease-of-life"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは補完ツールから、Actions、CLI、エージェント、課金管理を含む開発基盤へ広がっています。",
+      "AIエージェント導入では、PAT削減、承認付きCI、サンドボックス、費用上限などの統制設計が中心課題になっています。",
+      "Claude Code、GitHub Copilot、Codexの比較では、性能だけでなくデータ保持、権限、監査、価格変更リスクを見る必要があります。"
+    ]
+  },
+  "notes": "2026-06-11 JSTはGitHub公式Changelogに開発者向けAI・Actions関連の一次情報が多かったため、GitHub Copilot / Agentic Workflows中心に構成しました。Anthropic / Claude Codeの当日公式発表は高信頼な一次ソースを確認できなかったため、関連する未確認トピックはWatchlist扱いにしました。"
+}
