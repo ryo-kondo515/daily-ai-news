@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-14",
+  "generated_at_jst": "2026-06-15T08:00:36+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropicの最先端モデル停止問題、欧州で『AI主権』議論に発展",
+        "why": "米政府によるAnthropic最先端モデルへのアクセス制限を受け、欧州各国でAI主権と自国モデル育成の議論が急速に強まっています。Claude Codeを含む開発基盤の選定でも、地政学リスクが現実的な評価項目になりつつあります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexを比較する際に、性能だけでなくリージョン依存・利用停止リスク・代替手段を含めたBCP設計を検討できます。",
+        "deadline": "",
+        "community": "欧州ではMistral AIなどの国産AI育成を求める声が強まっています。",
+        "sources": [
+          {
+            "label": "Le Monde",
+            "url": "https://www.lemonde.fr/en/pixels/article/2026/06/14/the-ai-war-has-begun-france-and-europe-worried-as-us-blocks-anthropic-s-latest-ai-model_6754455_13.html"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropicモデル規制の背景にAmazonの安全性懸念が浮上",
+        "why": "米政府による制限措置のきっかけとして、Amazon側からの安全性懸念が報じられました。AIモデルの能力だけでなく、安全性評価やレッドチーム結果が事業継続に直結する時代になっています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時も、コード生成性能だけでなく監査・安全性・権限管理の評価指標を整備できます。",
+        "deadline": "",
+        "community": "AI企業の安全性主張と政府判断の透明性を巡る議論が続いています。",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Claude Fable 5停止問題が企業のAIマルチベンダー戦略を後押し",
+        "why": "特定モデルへの依存リスクが顕在化し、企業はGitHub Copilot、Claude Code、Codexなどを用途別に組み合わせる運用を検討し始めています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを標準開発環境に据えつつ、Claude Codeを大規模改修や調査タスク向けに使い分ける設計が参考になります。",
+        "deadline": "",
+        "community": "開発者コミュニティではベンダーロックイン回避が再び重要テーマになっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-blocks-foreign-access-anthropics-most-advanced-ai-models-axios-reports-2026-06-13/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "MicrosoftがClaude Fable 5の利用を一時停止と報道",
+        "why": "Anthropicのデータ保持ポリシー変更が理由とされており、企業利用ではデータ保持期間や監査対応が重要な評価項目になっています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot導入時も、保存データ範囲や保持期間を法務・セキュリティ部門と共同で確認する運用に活用できます。",
+        "deadline": "06/30",
+        "community": "企業向けAIツールのデータ保持ポリシーへの関心が高まっています。",
+        "sources": [
+          {
+            "label": "Windows Central",
+            "url": "https://www.windowscentral.com/artificial-intelligence/microsoft-temporarily-ban-employees-from-using-claude-fable-5-ai"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIコーディングエージェント比較研究が実務評価へ移行",
+        "why": "PR受理率やタスク別成功率を比較する研究が増えています。単純なベンチマークより、実際の開発フローでの成果測定が重視され始めています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとClaude Codeを、自社のバグ修正・テスト追加・ドキュメント更新で比較評価する仕組みづくりに応用できます。",
+        "deadline": "",
+        "community": "AIエージェント評価は『どのタスクで強いか』を見る方向へ進んでいます。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2602.08915"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: Claudeが社内コードの80%以上を書いているとの報告",
+        "why": "Anthropic自身の報告として広く引用されていますが、第三者監査済みデータではありません。AIによる自己改善や開発プロセス変化を考える上で注目されています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot利用状況を定量化し、AI生成コード比率やレビュー工数を可視化する際の参考になります。",
+        "deadline": "",
+        "community": "AIエージェントが開発者の役割をどこまで変えるかが議論されています。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-now-writes-more-than-80-percent-of-its-merged-code"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認: Claude Codeアーキテクチャ解析研究が注目",
+        "why": "Claude Codeの権限管理、MCP、サブエージェント、コンテキスト圧縮などを分析する研究が公開されています。公式仕様ではないため参考情報として扱う必要があります。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentや社内エージェント設計時の権限分離・コンテキスト管理の参考になります。",
+        "deadline": "",
+        "community": "MCPやサブエージェント設計はOSSコミュニティでも議論が活発です。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2604.14228"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月14日は新機能発表よりもAI規制と地政学リスクが中心テーマでした。",
+      "Claude CodeやGitHub Copilotの導入判断では、性能だけでなく利用継続性や規制リスクが重要になっています。",
+      "企業のAI開発基盤は単一モデル依存からマルチベンダー運用へ向かう流れが強まっています。"
+    ]
+  },
+  "notes": "対象日ではGitHub CopilotやClaude Codeの大規模な公式機能リリースは確認できませんでした。信頼性の高い一次ソースを優先し、規制・ガバナンス・企業導入への影響を中心に構成しています。"
+}
