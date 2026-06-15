@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-15",
+  "generated_at_jst": "2026-06-16T08:00:32+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropicモデル停止問題、米政府との対立がさらに表面化",
+        "why": "Anthropicの高度モデル停止を巡り、安全性・輸出規制・外国人アクセス制限がAI開発基盤の事業継続リスクとして注目されています。Claude Code利用企業にとっても、モデル可用性と規制影響の確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeを併用する場合、モデル停止時の代替手順、社内利用ポリシー、PRレビューやCIで使うAIツールのフェイルオーバー方針を文書化できます。",
+        "deadline": "",
+        "community": "開発者視点では、AIコーディング基盤の性能だけでなく、地政学・規制・提供停止リスクも評価軸になっています。",
+        "sources": [
+          {
+            "label": "New York Post",
+            "url": "https://nypost.com/2026/06/15/business/anthropic-downplays-security-risks-of-mythos-and-fable-ai-models-after-ban-prompting-scorn-from-white-house-officials/"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-blocks-foreign-access-anthropics-most-advanced-ai-models-axios-reports-2026-06-13/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "CursorがClaude Code・Codexとの競争で独自モデル志向を強める",
+        "why": "CursorがAnthropic依存から自社モデル・大規模提携へ軸足を移す動きが報じられ、AIコーディング市場がIDE、モデル、エージェント基盤の総力戦になっています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot、Claude Code、Cursorを比較する際に、IDE統合だけでなく、GitHub連携、PR運用、社内標準化、モデル供給リスクを評価項目にできます。",
+        "deadline": "",
+        "community": "Claude Code、Codex、Cursorの使い分けは開発者コミュニティで継続的な比較対象になっています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/cursor-ceo-michael-truell-spacex-elon-musk-anthropic-2026-6"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Sonnet 4 / Opus 4の退役日が到来、移行確認が必要",
+        "why": "Anthropicの旧Claude 4系モデル退役スケジュールにより、API、Claude Code、社内ツールで古いモデル名を固定している場合は動作確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot側の利用モデルやClaude Code側の利用モデルを棚卸しし、社内README、開発環境構築手順、CI設定のモデル指定を更新するチェックリスト作成に使えます。",
+        "deadline": "06/15",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic Docs",
+            "url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "DisneyがAI生成コードの利用抑制を社内に促したとの報道",
+        "why": "大企業でAIコーディングを全面禁止ではなく、用途を限定して統制する流れが見えます。品質、著作権、保守性、レビュー責任の線引きが導入時の論点になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot導入時に、生成コードの利用可否、レビュー責任、テスト必須範囲、セキュリティレビュー対象を社内ガイドラインとして整備できます。",
+        "deadline": "",
+        "community": "企業利用では『使うか使わないか』より『どの工程でどこまで許可するか』が現実的な論点になっています。",
+        "sources": [
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/almost-a-year-after-giving-engineers-access-to-claude-and-cursor-disney-tells-engineers-minimise-ai-coded-products-that-/articleshow/131728705.cms"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: OpenAIのCodex強化に向けた買収報道",
+        "why": "Ona買収により、Codexが長時間・永続的なエージェント実行基盤を強化する可能性が報じられています。ただし、公式発表の確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agent、Claude Code、Codexの比較表に、長時間実行、セッション継続、権限管理、監査ログの観点を追加できます。",
+        "deadline": "",
+        "community": "AIコーディングエージェントは、単発のコード補完から長時間タスク実行基盤へ競争軸が移っています。",
+        "sources": [
+          {
+            "label": "TechRadar",
+            "url": "https://www.techradar.com/pro/openais-latest-acquisition-could-see-big-changes-on-the-way-for-its-codex-coding-assistant"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "未確認 / 要一次ソース確認: Claude Codeのアーキテクチャ解析研究が引き続き参照される",
+        "why": "Claude Codeの権限管理、MCP、コンテキスト圧縮、サブエージェント設計を分析する研究が、社内AIエージェント設計の参考情報として注目されています。公式仕様ではないため扱いに注意が必要です。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentや社内エージェント運用でも、権限分離、ワークツリー隔離、コマンド実行承認、ログ保存の設計レビュー観点として使えます。",
+        "deadline": "",
+        "community": "Claude Codeの内部設計を手がかりに、AIエージェントの安全な実行環境を考える議論が続いています。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2604.14228"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月15日は新機能発表よりも、AIコーディング基盤の規制リスクと企業統制が中心でした。",
+      "Claude Code、GitHub Copilot、Codex、Cursorの比較では、性能だけでなく、データ保持、権限、停止リスク、監査性が重要になっています。",
+      "企業導入では、AI生成コードを全面的に許可するのではなく、用途・責任・レビュー条件を明確にする流れが強まっています。"
+    ]
+  },
+  "notes": "信頼できる一次ソースの新規発表は少なめでした。Anthropic関連は公式発表よりも規制・報道ベースの動きが中心のため、重要度は高いものの一部は継続確認が必要です。"
+}
