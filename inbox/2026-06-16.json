@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-16",
+  "generated_at_jst": "2026-06-17T08:00:15+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Code Quality、7月20日に一般提供へ。AI機能は従量課金に",
+        "why": "GitHub Code Qualityが有料製品化され、Copilot code reviewやCopilot AutofixなどAI支援機能は使用量課金の対象になります。企業導入では品質改善効果だけでなく、利用量管理と予算上限の設計が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewの対象リポジトリ、レビュー頻度、AI使用量、品質ゲート条件を棚卸しし、導入前の費用試算と運用ルール作成に使えます。",
+        "deadline": "07/20",
+        "community": "価格体系が明示されたため、企業利用では「品質ゲートとして使う範囲」と「AIレビューの従量課金」を分けて考える必要があります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026/"
+          },
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-16-organization-level-enablement-for-github-code-quality/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Code Quality、組織単位で一括有効化・無効化が可能に",
+        "why": "Organization管理者が全リポジトリに対してCode Qualityを一括展開できるようになりました。大規模導入時の設定漏れを減らせる一方、対象範囲を誤るとコストや開発フローへの影響が広がります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewと合わせて、対象リポジトリ、除外リポジトリ、必須品質ゲート、例外承認フローをOrganization単位で整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-16-organization-level-enablement-for-github-code-quality/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Models、新規顧客への提供を停止。既存利用者は当面継続",
+        "why": "GitHub Modelsが段階的な退役に入り、新規組織・企業は利用開始できなくなりました。GitHub上でモデル検証や社内AI開発基盤を組んでいた企業は、Azure AI Foundryなどへの移行検討が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入とは別に、社内のモデル検証基盤、PoC環境、API利用先を棚卸しし、GitHub依存部分の移行計画を作る用途に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-06-16-github-models-is-no-longer-available-to-new-customers/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Anthropicの高度モデル制限を巡り、EUとG7で調整が続く",
+        "why": "Anthropicの高度モデル停止・制限を巡り、EUやG7が米国側とアクセス条件を協議しています。Claude Codeを業務利用する企業にとって、モデル可用性、国・地域ごとの制限、代替手段の確認が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用する前提で、モデル停止時の代替フロー、PRレビューの継続手段、機密コードの扱い、利用可能リージョンを社内ルール化できます。",
+        "deadline": "",
+        "community": "AIエージェントの性能だけでなく、輸出規制・国籍制限・企業の継続利用リスクが開発基盤の評価軸になっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/eu-commission-keeps-contact-with-anthropic-over-decision-disable-models-eu-2026-06-16/"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/legal/government/g7-leaders-discuss-trusted-partners-access-cutting-edge-us-ai-models-sources-say-2026-06-16/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "GitHubのAI需要増で、Microsoftが追加クラウド容量を確保との報道",
+        "why": "AIコーディング利用の増加でGitHubの処理量が急増し、Microsoftが追加容量確保に動いていると報じられました。GitHub CopilotやAIエージェントを業務基盤にする企業では、可用性と障害時の運用設計が重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotやCopilot coding agentに依存する作業を洗い出し、障害時の手動レビュー、ローカル実行、Claude Code等の代替手順をランブック化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/microsoft-github-amazon-ai-cloud-capacity-2026-6"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Sonnet 4 / Opus 4が退役済み。固定モデル指定の確認が必要",
+        "why": "Claude Sonnet 4とClaude Opus 4は6月15日に退役済みで、旧モデル名を固定したAPIや社内ツールは失敗する可能性があります。Claude Code周辺の自動化でも利用モデルの棚卸しが必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの併用環境で、README、CI設定、社内CLI、モデル指定、移行先モデルをチェックリスト化できます。",
+        "deadline": "06/15",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic Docs",
+            "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Microsoft、企業向けAIエージェントの従量課金と低コストモデル活用を検討との報道",
+        "why": "Copilot Coworkで使用量課金やDeepSeek活用が検討されていると報じられ、企業AIエージェントのコスト管理が重要論点になっています。GitHub Copilotでも同様に、利用量・モデル選択・セキュリティ説明が導入判断に影響します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時の比較資料に、固定費、従量課金、モデル選択、データ所在地、社内承認の観点を追加できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/06/16/microsoft-copilot-cowork-tokenmaxxing-cowork"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: SpaceXによるCursor買収報道",
+        "why": "Cursorが大手企業に買収される場合、AIコーディング市場の競争軸がIDE単体からクラウド・モデル・計算資源の統合に移る可能性があります。ただし、公式発表や一次資料での確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot、Claude Code、Cursorを比較する際に、機能だけでなく、提供元の継続性、モデル供給、企業向け管理機能、データ保護を評価項目にできます。",
+        "deadline": "",
+        "community": "AIコーディングツールの独立性やロックインを気にする開発者には影響が大きい話題です。",
+        "sources": [
+          {
+            "label": "AP News",
+            "url": "https://apnews.com/article/a5c60fcbaaca262cf107d30f1de899ef"
+          },
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/950571/spacex-is-officially-buying-cursor-for-60-billion"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Claude Mythos / Fableを巡る規制報道は継続監視",
+        "why": "高度モデルのアクセス制限は、Claude Codeの将来モデルや企業向けAIエージェントの可用性にも波及する可能性があります。公式な利用条件・対象地域・代替モデルの更新を継続確認すべきです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを主系、Claude Codeを副系または用途別に使う場合のリスク分散方針を作成できます。",
+        "deadline": "",
+        "community": "セキュリティ用途の高度モデル利用と、民間企業の開発者アクセスをどう両立するかが論点です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/legal/government/g7-leaders-discuss-trusted-partners-access-cutting-edge-us-ai-models-sources-say-2026-06-16/"
+          },
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/950412/anthropic-trump-adminstration-claude-mythos-fable-5-export-controls"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub関連では、AIコードレビューや品質管理が明確に有料・従量課金の運用フェーズへ移っています。",
+      "Claude Codeを含む高度AIエージェントは、性能比較だけでなく、モデル停止・地域制限・規制リスクが導入判断に直結し始めています。",
+      "企業導入では、GitHub Copilot、Claude Code、Cursor、Codexを単体比較するより、可用性、監査性、権限管理、コスト上限を含めた運用設計が重要です。"
+    ]
+  },
+  "notes": "信頼できる一次ソースはGitHub公式発表が中心でした。X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditの話題化も確認しましたが、6月16日公開分として一次ソース付きで強く採用できる日本語開発者向けトピックは限定的でした。Cursor買収報道は公式発表確認前のためWatchlist扱いにしています。"
+}
