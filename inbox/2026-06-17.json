@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-17",
+  "generated_at_jst": "2026-06-18T08:00:31+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "G7、Anthropic高度モデルへの「信頼できるパートナー」アクセスを協議",
+        "why": "AnthropicのMythos系モデル制限を受け、G7で同盟国・企業向けのアクセス枠組みが議論されました。Claude Codeを業務利用する企業にとって、モデル可用性と地域・国籍制限が実務リスクになっています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeを併用する前提で、モデル停止時の代替手順、PRレビュー継続策、利用可能リージョンを社内ルール化できます。",
+        "deadline": "",
+        "community": "AIモデルの性能だけでなく、突然の利用制限に耐える開発体制が論点になっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/legal/litigation/g7-leaders-vow-closer-ties-ai-they-hash-out-trusted-partners-scheme-2026-06-17/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "EU、米国AIモデル利用の継続性を重視。Anthropic問題を受け協調姿勢",
+        "why": "EU首脳は、欧州企業が安全に最良のAIモデルを使えることは米欧双方の利益だと強調しました。日本企業でも海外AI基盤への依存、調達先分散、停止時対応の整理が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexなどを横並びで評価し、調達・可用性・データ保護・代替運用の比較表を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/us-eu-mutual-interest-europe-use-best-ai-models-von-der-leyen-says-2026-06-17/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "EUサイバー当局ENISA、Anthropicと協議へ",
+        "why": "EUのサイバー当局がAnthropicと協議予定と報じられ、AIモデルのサイバー能力と規制対応が企業利用の前提条件になりつつあります。Claude Codeや高度コード解析モデルの利用範囲を明確にする必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Code ReviewやClaude Code Securityの利用範囲、脆弱性調査の承認フロー、ログ保全ルールの草案作成に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/eu-cybersecurity-agency-meet-anthropic-thursday-eu-commission-says-2026-06-17/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "欧州でAI主権論が再燃。VivaTechとG7で米国依存が主要テーマに",
+        "why": "Anthropic制限を背景に、欧州ではクラウド、半導体、基盤モデルの米国依存が改めて議論されています。日本企業でも、AI開発基盤を単一ベンダーに寄せすぎない設計が重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを主軸にしつつ、Claude CodeやOSSモデルを補完系にする運用設計、BCP、ベンダーロックイン評価に活用できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/europe-frets-about-us-ai-tech-world-flocks-france-g7-vivatech-2026-06-17/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Anthropic輸出規制の法的根拠に不透明感。AI提供の予見可能性が課題に",
+        "why": "The Vergeは、AnthropicのFable 5 / Mythos 5制限について、クラウド型AIサービスに輸出規制をどう適用するかが曖昧だと報じました。企業導入では、規約変更や政府規制による停止リスクを契約・運用面で見る必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot EnterpriseとClaude Codeを比較し、規約変更時の影響、利用停止時の代替フロー、社内通知テンプレートを整備できます。",
+        "deadline": "",
+        "community": "開発者側では、性能比較よりも「使い続けられるか」が評価軸として強まっています。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/951703/anthropic-shutdown-export-controls"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "OpenAI Codexで一時障害。AIコーディング基盤の可用性設計が重要に",
+        "why": "Codexでエラー増加が発生し、その後復旧したと報じられました。AIコーディングツールを開発フローに組み込むほど、障害時の手動運用や代替ツール設計が必要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの障害時ランブックを作り、PRレビュー、テスト、修正作業を手動に戻す条件を整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/openai-codex-elevated-errors-at-capacity-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHubのAI需要増で、Microsoftが追加クラウド容量を確保との報道",
+        "why": "AIコーディング利用の増加でGitHub側の処理量が急増し、Microsoftが追加容量確保に動いていると報じられました。GitHub Copilotやcoding agentを業務基盤化する企業では、可用性とコストの両面を見直す必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot依存の作業を棚卸しし、利用量、待ち時間、障害時の代替手順、チーム別の優先利用ルールを整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/microsoft-github-amazon-ai-cloud-capacity-2026-6"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認 / 要一次ソース確認: Anthropic高度モデルのRSI懸念を巡る議論",
+        "why": "Guardianで、Anthropicの高度モデルと再帰的自己改善リスクを巡る論考が掲載されました。公式発表や技術詳細だけではないためWatchlist扱いですが、AIエージェント規制の議論として継続監視が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeに許可する操作範囲、レビュー必須条件、権限昇格の禁止ルールを見直す観点として使えます。",
+        "deadline": "",
+        "community": "高度AIエージェントの自律性と停止可能性が、開発現場の権限設計にも波及し始めています。",
+        "sources": [
+          {
+            "label": "The Guardian",
+            "url": "https://www.theguardian.com/commentisfree/2026/jun/17/anthropic-ai-rsi-fable"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Claude Codeを含む高度AIエージェントは、性能比較だけでなく、規制・国籍制限・可用性が企業導入の主要論点になっています。",
+      "GitHub Copilot、Claude Code、Codexを単体で選ぶより、障害時の代替、監査、権限、コスト上限を含めた運用設計が重要です。",
+      "6月17日は新機能発表よりも、AIモデル提供の継続性・規制・クラウド容量に関するニュースが中心でした。"
+    ]
+  },
+  "notes": "信頼できる一次ソースの新機能発表は限定的でした。X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit相当の話題化も確認しましたが、6月17日公開分として一次ソース付きで強く採用できる日本語開発者向けトピックは少なめでした。"
+}
