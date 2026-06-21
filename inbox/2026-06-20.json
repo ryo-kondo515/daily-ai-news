@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-20",
+  "generated_at_jst": "2026-06-21T08:00:25+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot需要急増でMicrosoftがAWSの計算資源を活用",
+        "why": "AIエージェント利用拡大によりGitHubの負荷が急増し、MicrosoftがAWSを補完利用する方針が報じられました。AIコーディングの普及がインフラ設計に影響する段階へ入っています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot導入拡大時の利用量予測、社内ガバナンス、利用状況モニタリング設計の参考になります。",
+        "deadline": "",
+        "community": "Claude CodeやCursorとの競争激化が開発者コミュニティでも継続的に議論されています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/microsoft-github-amazon-ai-cloud-capacity-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHubのAIコーディング需要、2025年比で大幅増加見通し",
+        "why": "GitHubはAI支援開発の普及によりコード変更量が急拡大しているとされます。企業ではCopilotやClaude Code利用時のレビュー・品質管理の重要性が高まります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Copilot Code ReviewやPRレビュー自動化の導入効果を定量化する材料になります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "TechRadar",
+            "url": "https://www.techradar.com/pro/microsoft-forced-to-turn-to-aws-to-boost-github-cloud-capacity-following-ai-demand-surge"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "AI支援コードの実態調査、人間による継続的な修正が主流",
+        "why": "GitHub上のAI利用コード分析では、生成コードの投入後もリファクタリングやバグ修正が多数行われていました。AI単独ではなく人間との協調開発が主流であることが示されています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot利用時はレビュー基準やリファクタリングルールを整備すると効果が高まります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2606.06843"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Code Securityの活用事例が引き続き注目",
+        "why": "Anthropicは従来の静的解析と異なるアプローチで脆弱性探索を行うClaude Code Securityを展開しています。AIによるセキュリティレビューの実運用が進みつつあります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Code ReviewとClaude Code Securityを組み合わせた多層レビュー体制を検討できます。",
+        "deadline": "",
+        "community": "セキュリティ分野ではAIレビューと従来静的解析の使い分けが議論されています。",
+        "sources": [
+          {
+            "label": "Anthropic関連情報",
+            "url": "https://en.wikipedia.org/wiki/Claude_Code"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認: Claude Code関連の新機能・価格変更の噂",
+        "why": "6月20日JST対象では一次ソースによる重要発表を確認できませんでした。コミュニティでは継続的に話題化していますが要一次ソース確認です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotとの比較評価資料を継続的に更新すると導入判断に役立ちます。",
+        "deadline": "",
+        "community": "開発者コミュニティではClaude Code・Codex・Copilotの比較議論が継続しています。",
+        "sources": [
+          {
+            "label": "GitHub Agent Ecosystem",
+            "url": "https://www.theverge.com/news/873665/github-claude-codex-ai-agents"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIコーディングツールの普及がインフラ需要そのものを押し上げています。",
+      "生成AIコードは増加している一方で、人間によるレビューと品質管理の重要性はむしろ高まっています。",
+      "GitHub Copilot、Claude Code、Codexの競争が企業開発環境の標準化に影響を与えています。"
+    ]
+  },
+  "notes": "2026-06-20 JST対象では一次ソースベースの大型発表が少なかったため短縮版です。信頼性を優先し、未確認情報や噂は除外しました。"
+}
