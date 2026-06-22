@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-21",
+  "generated_at_jst": "2026-06-22T07:58:21+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code検索ユーザーを狙う偽インストール誘導に注意",
+        "why": "Claudeの共有チャットと検索広告を悪用し、Claude Code導入手順に見せかけて開発者端末へマルウェアを入れさせる攻撃が報じられています。日本も標的地域に含まれるため、公式導入手順の固定化が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Code導入時の公式URL確認、禁止コマンド、端末実行ルール、社内チェックリストを作成できます。",
+        "deadline": "",
+        "community": "Claude Codeの業務利用が広がるほど、検索広告・共有リンク経由の導入リスクが現実的な攻撃面になります。",
+        "sources": [
+          {
+            "label": "TechRadar",
+            "url": "https://www.techradar.com/pro/security/this-marks-a-sophisticated-evolution-experts-warn-claude-feature-hijacked-by-hackers-to-launch-major-malware-campaign"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AlphaFold主要研究者がGoogle DeepMindからAnthropicへ移籍",
+        "why": "AlphaFold共同開発者のJohn Jumper氏がAnthropicへ移ると報じられました。AnthropicがClaude/Claude Codeだけでなく、科学・研究領域のAI人材獲得を強めている点は注目です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-scientist-john-jumper-leave-google-deepmind-anthropic-2026-06-19/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: Claude Code関連の新機能・価格変更の話題",
+        "why": "6月21日JST対象では、Anthropic公式のClaude Code重要リリースや価格変更は確認できませんでした。コミュニティ上の比較・導入議論は継続していますが、未確認情報はTop 5から除外しました。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの比較表を継続更新し、料金・権限・監査・社内利用ルールを並べて評価できます。",
+        "deadline": "",
+        "community": "Zenn/Qiita/HN/Reddit等ではAIコーディングエージェント比較の関心が続いていますが、この日付で強い一次ソース付きの新発表は限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Docs",
+            "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月21日は、一次ソース付きの大型発表よりも、Claude Code利用拡大に伴うセキュリティ運用リスクが目立ちました。",
+      "AIコーディングツールは導入効果だけでなく、インストール経路、権限、端末コマンド実行ルールまで管理対象になっています。",
+      "GitHub Copilot、Claude Code、Codexを併用する企業では、ツール比較より先にガバナンスとレビュー体制を整える必要があります。"
+    ]
+  },
+  "notes": "2026-06-21 JST対象では、OpenAI/Anthropic/GitHub/Google DeepMind/Microsoft/NVIDIAの公式大型発表は確認できませんでした。信頼できる一次ソースまたは確認可能な報道に絞った短縮版です。"
+}
