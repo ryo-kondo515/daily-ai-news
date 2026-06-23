@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-23",
+  "generated_at_jst": "2026-06-24T07:58:56+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、Slack内で動く企業向けAIエージェント「Claude Tag」を発表",
+        "why": "Slack上で「@Claude」と呼び出すと、会話を読んでタスク分解や重要更新の通知を行うエージェントです。Claude Enterprise/Team向けベータで、企業利用では権限管理とチャンネル単位のデータ制御が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Slack連携AIの利用ルール、アクセス権限、ログ確認、GitHub上のPR運用との分担表を作成できます。",
+        "deadline": "",
+        "community": "Claude Code責任者のCat Wu氏も関与しており、開発者向けエージェントがSlack中心の業務導線へ広がる動きとして注目です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/anthropic-launches-claude-tag-research-preview-slack-users-2026-06-23/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Claude Code開発者、AI導入ROIと実験余地の両立を強調",
+        "why": "Claude CodeのBoris Cherny氏は、企業がAIコストのROIを見るのは正しい一方、早すぎる利用制限は有用な実験を潰すと述べました。AIコーディング導入では、利用量管理と現場探索のバランスが論点になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotの利用量、PR数、レビュー指摘、手戻り削減を計測し、Claude Code利用時のROI指標と並べて評価できます。",
+        "deadline": "",
+        "community": "Claude Code、Codex、GitHub Copilotの比較では、単純な生成コード量よりも開発フロー全体の改善を測るべきという議論が強まっています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/boris-cherny-anthropic-token-cost-roi-ai-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Five Eyes、AIを使ったサイバー攻撃の短期的な高度化を警告",
+        "why": "主要情報機関が、AIによる攻撃能力が数か月単位で高まる可能性を警告しました。AIコーディング導入企業では、生成コードや自動修正のセキュリティレビューを標準化する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code ReviewをPRの一次セキュリティチェックに使い、Claude CodeやCodexで作った変更にも同じレビュー基準を適用できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/df50c416-9308-46cc-af14-8f069bba9aa6"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、広告事業とCodexを企業向け収益源として訴求",
+        "why": "OpenAIがCannes LionsでChatGPT広告事業とCodexの業務活用を売り込みました。Codexは開発者向けだけでなく、マーケティングや業務自動化の文脈でも位置づけられています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとCodexの役割を、IDE内支援、Issue対応、PR作成、業務自動化で分けて比較表にできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/9717a042-fd09-4d08-972d-29b68f7985a4"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "MicronとAnthropic、AIインフラ供給で戦略提携",
+        "why": "MicronはAnthropic向けにメモリ・ストレージ製品を供給し、Anthropicへの投資も行うと発表されました。Claude系モデルの拡大に必要なAIインフラ確保競争が続いています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/micron-anthropic-sign-ai-infrastructure-supply-agreement-2026-06-22/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI関連株が下落、安価な中国AIモデルへの警戒が再燃",
+        "why": "中国発の低コストAIモデルへの警戒から、米国AI関連株が下落しました。企業導入では、高性能モデルだけでなくコスト効率や代替モデル選定も重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codex、OSSモデルの費用・性能・データ管理を比較する導入判断資料を作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Barron's",
+            "url": "https://www.barrons.com/articles/tech-stock-drop-china-ai-e1703f3a"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: 6月23日JSTのGitHub Copilot公式大型発表は確認できず",
+        "why": "GitHub公式ブログや主要報道では、この対象日にGitHub Copilotの大きな新機能・価格変更は確認できませんでした。AIエージェント比較の話題は継続しているため、Watchlist扱いに留めます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの現行運用について、Claude CodeやCodexとの差分を権限、監査、PRレビュー、コストで継続比較できます。",
+        "deadline": "",
+        "community": "Zenn/Qiita/HN/Reddit/はてな等ではAIコーディングエージェント比較への関心が続いていますが、この日付で強い一次ソース付きの新発表は限定的でした。",
+        "sources": [
+          {
+            "label": "GitHub Copilot",
+            "url": "https://github.com/features/copilot"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要確認: Claude Codeの権限・Auto Mode安全性への研究関心が継続",
+        "why": "Claude Codeはファイル編集やコマンド実行を伴うため、権限境界や危険操作の検知が継続的な論点です。公式新発表ではありませんが、企業導入時のチェック項目として重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Code利用時の危険コマンド、承認フロー、リポジトリ権限、秘密情報保護のチェックリストを作れます。",
+        "deadline": "",
+        "community": "AIエージェントの権限管理は、Claude Code、Codex、GitHub Copilot coding agentを比較する際の主要論点になっています。",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2604.04978"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月23日は、Claude TagのようにAIエージェントが個人チャットからチーム業務へ広がる動きが目立ちました。",
+      "AIコーディング導入では、ROI、利用量管理、実験余地、レビュー品質を同時に設計する必要があります。",
+      "GitHub Copilot、Claude Code、Codexを併用する企業では、機能比較よりも権限・監査・セキュリティレビューの共通ルール化が重要です。"
+    ]
+  },
+  "notes": "2026-06-23 JST対象では、GitHub Copilotの公式大型発表は確認できませんでした。Claude/Claude Code周辺の企業導入・ROI・Slack連携・セキュリティ運用を中心に構成しました。"
+}
