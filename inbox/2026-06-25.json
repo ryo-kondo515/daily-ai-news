@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-25",
+  "generated_at_jst": "2026-06-26T08:01:10+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、新モデル公開を段階展開へ",
+        "why": "米政府の安全保障上の懸念を受け、OpenAIが新モデルの全面公開を遅らせると報じられました。企業利用では、モデル提供が政策判断で変わるリスクも導入判断に入れる必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入資料に、利用モデル変更、提供停止、代替ツール、社内承認フローの観点を追加できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/trump-administration-asks-openai-stagger-release-new-model-information-reports-2026-06-25/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、AlibabaによるClaude能力抽出を主張",
+        "why": "Anthropicが、Alibaba側による大規模なClaudeモデル能力の抽出を主張したと報じられました。Claude Codeを含むAI活用では、API規約、出力利用、ログ監査、モデル蒸留リスクの確認が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの利用規約を比較し、生成物の再利用、社外持ち出し、学習利用禁止の社内ルールを整理できます。",
+        "deadline": "",
+        "community": "ClaudeやQwenなど競合モデル間の能力抽出リスクは、企業のAI利用規約確認にも直結します。",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/anthropic-claims-alibaba-ran-brazen-campaign-to-access-its-claude-ai-model-69d7a392"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Z.ai、GLM-5.2でコーディング・エージェント性能を訴求",
+        "why": "中国Z.aiが、GLM-5.2の性能と上場計画を背景にOpenAI/Anthropicへの対抗姿勢を強めています。安価な高性能OSS系モデルは、Claude CodeやGitHub Copilotの企業導入比較にも影響します。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codex、OSSモデルを、性能、コスト、データ管理、社内運用負荷で比較できます。",
+        "deadline": "",
+        "community": "OSSモデルの高性能化により、コスト削減と安全性・ガバナンスのトレードオフが強まっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/asia-pacific/after-anthropic-shutdown-chinas-zai-closes-frontier-gap-it-plans-dual-listing-2026-06-25/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI Codex利用から見るAIエージェント普及が進展",
+        "why": "Codexを含むAIエージェントが、単純なチャットから長めの委任タスクへ広がっていると報じられました。開発現場では、GitHub Copilot、Claude Code、Codexの役割分担が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotをIDE内支援、Claude CodeをCLIでの自律作業、Codexを別系統の検証・タスク委任として比較できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/06/25/codex-agents-growth-openai"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "GLM-5.2公開でAIサイバー悪用リスクも拡大",
+        "why": "高性能OSSモデルが低コストで使える一方、悪用や安全機構の回避が懸念されています。AIコーディング導入企業では、生成コードレビューと秘密情報保護の運用が欠かせません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code ReviewをPRの一次チェックに使い、Claude CodeやOSSモデルで生成した変更にも同じセキュリティ基準を適用できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/06/25/china-glm-52-open-source-hackers"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIモデル提供停止・制限リスクが企業導入の論点に",
+        "why": "OpenAIやAnthropicを巡る政策・規制報道により、単一ベンダー依存のリスクが見えやすくなりました。開発支援AIも、代替手段と業務継続計画が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの障害時・提供制限時の切替手順をRunbook化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/957372/openai-will-delay-gpt-5-6-after-trump-administration-request"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: 6月25日JSTのGitHub Copilot公式大型発表は確認できず",
+        "why": "GitHub公式のCopilot新機能・価格変更・企業向け仕様変更は、この対象日では確認できませんでした。AIコーディングエージェント比較の話題は継続しています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの現行運用を、Claude CodeやCodexと費用、権限、PRレビュー、監査性で比較できます。",
+        "deadline": "",
+        "community": "Zenn/Qiita/HN/Reddit/はてな等を確認しましたが、この日付で強い一次ソース付きの新発表は限定的でした。",
+        "sources": [
+          {
+            "label": "GitHub Copilot",
+            "url": "https://github.com/features/copilot"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Claude Code公式大型発表は確認できず、運用リスクの議論は継続",
+        "why": "Anthropic公式のClaude Code重要リリースや価格変更は確認できませんでした。一方で、Claude系モデルの提供制限、能力抽出、エージェント権限管理は継続的な監視対象です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Code利用時の権限、危険コマンド、秘密情報、障害時代替のチェックリストを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Docs",
+            "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月25日は、AIモデルの提供制限・政策リスク・能力抽出リスクが目立ちました。",
+      "GitHub Copilot、Claude Code、Codexの比較では、性能だけでなく継続利用性、規約、監査、セキュリティが重要です。",
+      "OSS系高性能モデルの台頭により、コスト削減とガバナンス強化を同時に考える必要があります。"
+    ]
+  },
+  "notes": "2026-06-25 JST対象では、GitHub CopilotとClaude Codeの公式大型リリースは確認できませんでした。信頼できる主要報道と公式ドキュメントを優先し、AI規制、Claude関連リスク、OSSモデル、Codex/エージェント動向を中心に構成しました。"
+}
