@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-26",
+  "generated_at_jst": "2026-06-27T07:59:05+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "AI生成コードの「Cleanup Tax」が開発現場の新課題に",
+        "why": "Claude Codeなどでスタートアップのコード生成が急増する一方、バグ修正・保守性確認の負担が増えていると報じられました。AI導入効果は生成速度だけでなく、レビューと品質管理込みで測る必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewを使い、Claude CodeやCodexで生成したコードにも同じレビュー基準を適用できます。",
+        "deadline": "",
+        "community": "AIコーディングの普及により、人間の設計力・レビュー力の重要性が再評価されています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/ai-writing-all-startup-code-thats-creating-a-new-problem-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "米政府、AnthropicのClaude Mythos制限を一部解除と報道",
+        "why": "米政府がAnthropicの先端モデルClaude Mythos 5について、一部米国企業・政府機関向けの提供を認めたと報じられました。企業利用では、モデル提供が政策・安全保障判断で変動するリスクが見えます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの利用停止・制限時の代替手順をRunbook化できます。",
+        "deadline": "",
+        "community": "ReutersはSemafor報道として伝えており、独自確認は限定的なため継続確認が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-releases-anthropic-model-mythos-some-us-companies-semafor-reports-2026-06-26/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "OpenAI、新モデル提供をサイバー審査で限定展開",
+        "why": "OpenAIが最新ChatGPT製品へのアクセスを、米政府のサイバーセキュリティ審査中に限定顧客へ絞ったと報じられました。AI開発支援ツールでも、提供制限や審査待ちが業務計画に影響し得ます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入計画に、利用モデル変更、提供制限、代替ツール、社内承認フローを含められます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "AP News",
+            "url": "https://apnews.com/article/065d5398baac7f16c8265c2cb8ba2baa"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub、AIコーディング需要で過去最高級の利用と報道",
+        "why": "GitHub Copilot需要の拡大により、GitHubの利用が大きく伸びていると報じられました。Claude Code、Codex、Cursorとの競争が、企業のAI開発支援ツール選定を加速させています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの利用量、PR数、レビュー指摘、手戻り削減を計測し、Claude CodeやCodexとのROI比較に使えます。",
+        "deadline": "",
+        "community": "従量課金化後は、利用拡大とコスト管理をセットで見る必要があります。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/github-best-month-ever-internal-meeting-2026-6"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコーディングエージェントの導入実態を測る研究が注目",
+        "why": "Claude Code、GitHub Copilot、Codexなどの利用痕跡をGitHub上で検出する研究が公開されています。企業でも、AI生成コードの可視化・監査・品質保証が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub上のPR、commit、bot署名、設定ファイルを見て、GitHub CopilotやClaude Code由来の変更を監査する仕組みを検討できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "arXiv",
+            "url": "https://arxiv.org/abs/2606.24429"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: Claude Code公式大型発表は確認できず",
+        "why": "6月26日JST対象では、Anthropic公式のClaude Code重要リリースや価格変更は確認できませんでした。一方で、障害時代替、権限管理、生成コード品質は継続的な監視対象です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Code利用時の権限、危険コマンド、秘密情報、レビュー手順のチェックリストを作れます。",
+        "deadline": "",
+        "community": "AIコーディングの品質管理やCleanup Taxへの関心が高まっています。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Docs",
+            "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: GitHub Copilot公式大型発表は確認できず",
+        "why": "6月26日JST対象では、GitHub公式のCopilot新機能・価格変更・企業向け仕様変更は確認できませんでした。AIコーディング需要と競合比較は引き続き重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの現行運用を、Claude CodeやCodexと費用、権限、PRレビュー、監査性で比較できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Copilot",
+            "url": "https://github.com/features/copilot"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月26日は、AIコーディングの普及と品質管理コストが主要テーマでした。",
+      "Claude Code、GitHub Copilot、Codexの比較では、生成性能だけでなくレビュー、監査、障害時代替、コスト管理が重要です。",
+      "先端AIモデルは政策・安全保障審査の影響を受けやすく、企業導入では単一ベンダー依存を避ける設計が必要です。"
+    ]
+  },
+  "notes": "2026-06-26 JST対象では、GitHub CopilotとClaude Codeの公式大型リリースは確認できませんでした。信頼できる報道と公式ドキュメントを優先し、AIコーディング品質、モデル提供制限、企業導入リスクを中心に短縮版として構成しました。"
+}
