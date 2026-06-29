@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-29",
+  "generated_at_jst": "2026-06-30T07:59:08+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code悪用例、クリーンなGitHubリポジトリ経由でマルウェア実行の懸念",
+        "why": "Mozilla 0dinチームの検証として、AIコーディングエージェントが見た目は正常なリポジトリの指示に従い、悪意あるコマンド実行へ誘導される可能性が報じられました。Claude CodeやGitHub Copilot導入時は、権限・実行確認・未知リポジトリの扱いが重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Review、CodeQL、ブランチ保護を組み合わせ、AI生成・AI実行コードのレビューゲートを設定できます。",
+        "deadline": "",
+        "community": "AIエージェントにローカル実行権限を与える危険性が、開発者向けセキュリティ論点として強まりそうです。",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/cyber-security/ai-coding-agents-can-be-tricked-into-installing-malware-via-clean-github-repositories-mozillas-0din-team-shows-how-claude-code-can-be-exploited-by-its-own-helpfulness"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "カリフォルニア州、AnthropicとClaude割引提供で合意",
+        "why": "カリフォルニア州政府と地方自治体向けに、Claudeを割引提供する合意が報じられました。公共部門での生成AI導入が進む一方、ガバナンス、研修、利用範囲の設計が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの社内展開でも、利用部門、研修、監査、データ取り扱いをセットで導入計画に落とし込めます。",
+        "deadline": "",
+        "community": "政府・自治体でのClaude採用は、企業導入時の稟議材料にもなり得ます。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/newsom-anthropic-ink-deal-expand-government-use-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "中国AI、サイバー領域でAnthropic級に近づくとの報道",
+        "why": "Zhipu AIなど中国系モデルが、サイバーセキュリティやバグ検出で米国の高度モデルに迫ると報じられました。開発支援AIでは、性能だけでなくオープンモデルの悪用リスクと社内統制が課題になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、OSSモデルを、秘密情報保護、監査性、社内運用負荷、利用規約の観点で比較できます。",
+        "deadline": "",
+        "community": "高性能なオープンモデルは開発効率化に有用な一方、攻撃者にも使われやすい点が懸念です。",
+        "sources": [
+          {
+            "label": "New York Post",
+            "url": "https://nypost.com/2026/06/29/business/chinese-ai-is-now-on-par-with-anthropic-in-terms-of-cybersecurity-report/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIエージェント時代は「実行権限」の設計が競争力に",
+        "why": "Claude CodeのようなCLI型エージェントは便利ですが、ローカル実行・依存関係導入・外部通信のリスクも大きくなります。企業導入では、便利さより先に権限境界を決める必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Actions、Dependabot、CodeQL、Copilot Code Reviewを使い、AIが触った変更をPR単位で検査する運用にできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Tom's Hardware",
+            "url": "https://www.tomshardware.com/tech-industry/cyber-security/ai-coding-agents-can-be-tricked-into-installing-malware-via-clean-github-repositories-mozillas-0din-team-shows-how-claude-code-can-be-exploited-by-its-own-helpfulness"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "公共部門のAI導入、研修・サポート込みの契約が増加",
+        "why": "Claudeの自治体向け提供では、ツール提供だけでなく研修や技術支援も含まれると報じられました。企業のGitHub CopilotやClaude Code導入でも、ライセンス契約だけでは定着しにくいことを示しています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotの導入計画に、利用ガイド、禁止事項、レビュー基準、効果測定、教育コンテンツを含められます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/newsom-anthropic-ink-deal-expand-government-use-2026-6"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: Claude Code公式大型発表は確認できず",
+        "why": "6月29日JST対象では、Anthropic公式のClaude Code重要リリース、価格変更、企業向け仕様変更は確認できませんでした。一方で、Claude Codeの実行権限とセキュリティリスクは継続監視が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Code利用時の権限、危険コマンド、秘密情報、未知リポジトリ確認のチェックリストを作れます。",
+        "deadline": "",
+        "community": "Claude Code自体の新機能より、エージェント実行リスクへの関心が高まっています。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Docs",
+            "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: GitHub Copilot公式大型発表は確認できず",
+        "why": "6月29日JST対象では、GitHub公式のCopilot新機能・価格変更・企業向け仕様変更は確認できませんでした。AIコードレビュー、権限管理、PR統制の実務設計は引き続き重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの利用量、PRレビュー効果、Claude Code併用時の作業分担を定期的に棚卸しできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Copilot",
+            "url": "https://github.com/features/copilot"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "要一次ソース確認: 日本語コミュニティで強い新規トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク等で、6月29日JSTに一次ソース付きでTop 5へ上げられるClaude Code/GitHub Copilot新情報は確認できませんでした。弱い話題は採用せず、継続監視に留めます。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの社内導入メモを作る際、公式情報とコミュニティ実践例を分けて整理できます。",
+        "deadline": "",
+        "community": "未確認の小ネタは複数ありましたが、一次ソース不足のため除外しました。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月29日は、Claude Codeを含むAIコーディングエージェントのセキュリティが主要テーマでした。",
+      "GitHub Copilot、Claude Code、Codexの企業利用では、生成速度よりも実行権限、レビュー、監査、秘密情報保護が重要です。",
+      "公共部門でのAI導入が進む一方、研修・サポート・ガバナンスを含めた導入設計が競争力になります。"
+    ]
+  },
+  "notes": "2026-06-29 JST対象では、GitHub CopilotとClaude Codeの公式大型リリースは確認できませんでした。信頼できる報道がAIエージェントのセキュリティ、Claudeの公共部門導入、中国AIのサイバー性能に集中していたため、短縮版として構成しました。"
+}
