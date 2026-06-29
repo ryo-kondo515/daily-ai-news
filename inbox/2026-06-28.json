@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-06-28",
+  "generated_at_jst": "2026-06-29T08:00:58+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "AI生成コード、人的レビュー省略が進むと報道",
+        "why": "AIコーディングエージェントで生成されたコードが、人的レビューなしで本番投入される比率が増えていると報じられました。GitHub CopilotやClaude Code導入企業では、速度向上と品質保証のバランスが重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewを品質ゲートとして使い、Claude CodeやCursorで生成した変更にも同じPRレビュー基準を適用できます。",
+        "deadline": "",
+        "community": "AI生成コードのレビュー省略は、開発速度と責任所在の両面で議論になりやすいテーマです。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/ai-coding-agents-cursor-human-review-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "オーストリア、Anthropic誘致をEUに提案と報道",
+        "why": "米国のAIアクセス制限を受け、オーストリアがAnthropicを欧州に誘致する案をEUに示したと報じられました。Claude Codeを含むAI利用では、モデル提供地域・規制・可用性が企業導入の重要論点になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの利用可能地域、規約、データ保護、代替手段を比較する導入資料を作れます。",
+        "deadline": "",
+        "community": "欧州のAI主権と米国モデル依存の見直しが論点です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/austria-lobbies-eu-host-anthropic-ai-after-us-curbs-bloomberg-news-reports-2026-06-28/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "中国Z.ai、サイバー領域でAnthropic級性能を主張",
+        "why": "Zhipu AIのGLM-5.2が、サイバーセキュリティやバグ検出でAnthropicの高度モデルに迫ると報じられました。OSS/オープンウェイト系モデルの進展は、AIコーディング支援のコスト・安全性・悪用リスクに影響します。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude CodeとOSSモデルを、セキュリティ、監査、秘密情報保護、社内運用負荷で比較できます。",
+        "deadline": "",
+        "community": "高性能オープンモデルは、開発者には魅力的ですが、悪用や統制の難しさも大きくなります。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/958804/chinas-z-ai-glm-52-mythos-cybersecurity"
+          },
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/chinese-ai-anthropic-mythos-cybersecurity-574b02c2"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコードレビューは自動化より品質ゲート設計が重要に",
+        "why": "AI生成コードの本番投入が増えるほど、レビューの省略ではなく、どこを人間が確認するかの設計が重要になります。Claude CodeやGitHub Copilotを併用する企業では、PR単位の統制が現実的です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Review、ブランチ保護、必須レビュー、CodeQLを組み合わせてAI生成コード用の品質ゲートを作れます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/ai-coding-agents-cursor-human-review-2026-6"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIモデル提供制限は、開発支援AIのBCP課題に",
+        "why": "Anthropicを巡る米国のアクセス制限と欧州誘致論は、先端モデル利用が政策判断に左右されることを示しています。業務利用では、Claude Code単独依存ではなく代替ワークフローを準備すべきです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを標準IDE支援、Claude CodeをCLI自律作業、Codexを検証用途などに分け、停止時の切替手順を整理できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/austria-lobbies-eu-host-anthropic-ai-after-us-curbs-bloomberg-news-reports-2026-06-28/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: Claude Code公式大型発表は確認できず",
+        "why": "6月28日JST対象では、Anthropic公式のClaude Code重要リリース、価格変更、企業向け仕様変更は確認できませんでした。ただし、Anthropic本体の提供制限・地域展開はClaude Code運用にも影響し得ます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Chatで、Claude Code利用時の権限、危険コマンド、秘密情報、レビュー手順のチェックリストを作れます。",
+        "deadline": "",
+        "community": "Claude Code自体より、基盤モデルの提供可否と企業ガバナンスが監視対象です。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Docs",
+            "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: GitHub Copilot公式大型発表は確認できず",
+        "why": "6月28日JST対象では、GitHub公式のCopilot新機能・価格変更・企業向け仕様変更は確認できませんでした。AIコードレビューとエージェント併用の運用設計は引き続き重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの利用量、PRレビュー効果、Claude Code併用時の作業分担を定期的に棚卸しできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Copilot",
+            "url": "https://github.com/features/copilot"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "要一次ソース確認: 日本語コミュニティで強い新規トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク等で、6月28日JSTに一次ソース付きでTop 5へ上げられるClaude Code/GitHub Copilot新情報は確認できませんでした。弱い話題は採用せず、継続監視に留めます。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの社内導入メモを作る際、公式情報とコミュニティ実践例を分けて整理できます。",
+        "deadline": "",
+        "community": "未確認の小ネタは複数ありましたが、一次ソース不足のため除外しました。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "6月28日は、AI生成コードのレビュー省略と品質保証が主要テーマでした。",
+      "Claude Code、GitHub Copilot、Codexの企業利用では、生成速度よりもレビュー、監査、権限、停止時の代替運用が重要です。",
+      "Anthropicを巡る米国・欧州の動きから、AIモデル提供は技術だけでなく政策・地域戦略にも左右されることが見えます。"
+    ]
+  },
+  "notes": "2026-06-28 JST対象では、GitHub CopilotとClaude Codeの公式大型リリースは確認できませんでした。信頼できる報道がAIコードレビュー、Anthropic提供制限、オープンモデルのサイバー性能に集中していたため、短縮版として構成しました。"
+}
