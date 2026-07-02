@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-02",
+  "generated_at_jst": "2026-07-03T07:58:18+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Copilot CLI、GitHub ActionsでPAT不要に",
+        "why": "Copilot CLIをGitHub Actions内で `GITHUB_TOKEN` だけで実行できるようになりました。長期PATをSecretsに置く運用を減らせるため、企業の自動化・セキュリティ両面で重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub ActionsのCopilot CLI実行をPATから `GITHUB_TOKEN` に移行し、`copilot-requests: write` 権限とAIクレジット上限をセットで管理できます。",
+        "deadline": "",
+        "community": "AIエージェントをCIで使う際の秘密情報管理が大きく改善します。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Copilotエージェントのセッション履歴ストリーミングがPublic Preview",
+        "why": "Enterprise Cloudで、Copilotのプロンプト、応答、ツール呼び出しなどのセッションデータを取得できるようになりました。監査、SIEM連携、AI利用ガバナンスの実装に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Copilot Usage Records Streaming/APIを有効化し、AI利用ログを監査ログやMicrosoft Purviewへ流す運用を検討できます。",
+        "deadline": "",
+        "community": "Claude CodeやCodexと比較する際も、監査ログの粒度は重要な評価軸になります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Claude Code 2.1.198、背景エージェントのPR作成や通知を強化",
+        "why": "Claude Codeの更新で、背景エージェント完了時の通知、worktreeでのcommit/push/ドラフトPR作成、サブエージェント品質改善などが追加されました。Claude Codeを実務で使う場合、エージェント作業の完了確認とレビュー導線が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude Codeが作成したドラフトPRをGitHub Copilot Code ReviewやCodeQLで検査する運用にできます。",
+        "deadline": "",
+        "community": "背景エージェントの自律実行が進むほど、権限、PRレビュー、通知設計が実務上の焦点になります。",
+        "sources": [
+          {
+            "label": "Anthropic claude-code CHANGELOG",
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Cost Centers、AIクレジットプールをサポート",
+        "why": "Copilot Business/Enterpriseの月次AIクレジットについて、コストセンター単位で利用上限を管理できるようになりました。部署別のAI利用予算やチャージバック設計に役立ちます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "部署・チームごとのCost CenterにAI credit poolを設定し、Copilot CLIやエージェント実行の予算超過を抑制できます。",
+        "deadline": "",
+        "community": "従量課金を避けたい企業にとって、利用上限管理は導入判断の材料になります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Microsoft、企業AI導入支援会社に25億ドル投資",
+        "why": "Microsoftは企業が複数モデルやOSSモデルを選定・統合するための新会社を立ち上げると報じられました。単一ベンダー依存から、用途別にAIを組み合わせる流れが強まっています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codex、社内LLMの使い分け表や導入ロードマップ作成に活用できます。",
+        "deadline": "",
+        "community": "企業AI導入では、モデル性能だけでなくROI、データ所有、運用支援が重視されます。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/retail-consumer/microsoft-launches-firm-help-companies-adopt-ai-with-25-billion-2026-07-02/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "OpenAIの米政府5%持分案、AIガバナンス議論が加速",
+        "why": "OpenAIが米政府に5%持分を与える案を協議したと報じられました。AI企業の利益配分、政府関与、モデル公開判断への影響が企業利用にも波及し得ます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入資料に、外部AIベンダーの規制・政府関与・モデル提供停止リスクを評価軸として追加できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/openai-proposes-handing-trump-administration-5-stake-ft-reports-2026-07-02/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Anthropic、政府持分協議はしていないとの報道",
+        "why": "OpenAI報道を受け、Anthropicについては米政府との持分協議はないとReutersが報じました。Claude Code利用企業にとっては、モデル提供・規制・企業方針の違いを分けて見る必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeのベンダーリスク比較に、政府関与、提供地域、停止時代替を含められます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/trump-administration-anthropic-have-not-discussed-government-taking-stakes-firm-2026-07-02/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "GitHub Issue Fieldsが一般提供、AIタスク管理の構造化に有用",
+        "why": "Issueに構造化フィールドを持たせやすくなり、AIエージェントへ渡す作業条件や優先度を整理しやすくなります。Copilot coding agentやClaude Codeへのタスク委譲前の整備に向いています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Issue Fieldsで優先度、影響範囲、期待成果、レビュー観点を管理し、Copilot coding agentに渡すタスク品質を上げられます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-02-issue-fields-are-now-generally-available/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Codeの「Claude in Chrome」一般提供と権限設計を継続確認",
+        "why": "Claude Code 2.1.198ではClaude in Chromeの一般提供が含まれています。ブラウザ操作を伴うAIエージェントは、Cookie、社内ページ、機密情報、操作範囲の制御が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Browser ToolsとClaude in Chromeを比較し、ブラウザ操作時の禁止事項、検証環境、認証情報の扱いを整理できます。",
+        "deadline": "",
+        "community": "ブラウザ操作型エージェントは便利な一方、権限境界を誤ると情報漏えいリスクがあります。",
+        "sources": [
+          {
+            "label": "Anthropic claude-code CHANGELOG",
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: 日本語コミュニティの強い新規Claude Codeトレンドは限定的",
+        "why": "7月2日JST対象では、Zenn、Qiita、はてなブックマーク等で一次ソース付きでTop 5へ上げられるClaude Code新情報は限定的でした。公式CHANGELOG中心に継続監視します。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの社内導入メモを、公式更新とコミュニティ実践例に分けて管理できます。",
+        "deadline": "",
+        "community": "未確認の小ネタはありましたが、一次ソース不足のため採用しませんでした。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "7月2日は、GitHub Copilotの企業運用・監査・コスト管理に直結する公式アップデートが中心でした。",
+      "Claude Codeは背景エージェント、Chrome連携、通知、PR作成など、実務ワークフローへの統合がさらに進んでいます。",
+      "AIエージェント導入では、便利さよりも先に、秘密情報、監査ログ、AIクレジット上限、PRレビュー導線を設計する必要があります。"
+    ]
+  },
+  "notes": "2026-07-02 JST対象はGitHub Copilot公式ChangelogとClaude Code CHANGELOGが中心でした。日本語コミュニティの一次ソース付き強トレンドは限定的だったため、弱い話題は採用していません。"
+}
