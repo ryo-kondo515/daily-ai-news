@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-05",
+  "generated_at_jst": "2026-07-06T07:58:46+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "7月5日JSTは主要AI企業の公式大型発表が限定的",
+        "why": "GitHub、Anthropic、OpenAI、Google DeepMind、Meta AI、NVIDIAの公式発表では、7月5日JST対象の高信頼な大型ニュースは確認できませんでした。無理に弱い話題を採用せず、前週の企業運用系アップデート継続確認日とします。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "前週のGitHub Copilot CLI、Usage Records Streaming、Cost Centers、Vision、Browser Toolsの社内導入可否を棚卸しできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          },
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "OpenAI News",
+            "url": "https://openai.com/news/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Code 2.1.200/2.1.201の権限・背景エージェント修正を継続確認",
+        "why": "Claude CodeのCHANGELOGでは、Manual権限モード、AskUserQuestionの自動継続停止、背景エージェント安定性、Sonnet 5セッション修正が確認できます。ただし7月5日JST公開と断定できないためWatchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude Codeの権限設計を、GitHub Copilot coding agent、GitHub Copilot Code Review、PRレビュー承認フローと比較できます。",
+        "deadline": "",
+        "community": "背景エージェントの自律実行では、権限、停止、再開、PR作成後レビューの設計が重要です。",
+        "sources": [
+          {
+            "label": "Anthropic claude-code CHANGELOG",
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: AlibabaのClaude Code禁止報道が二次メディアで継続拡散",
+        "why": "7月5日JST前後もClaude Codeの中国関連リスク報道が継続していますが、元情報は前日までのReuters/FT報道に依存しています。新規一次ソースではないためTop 5には入れません。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの利用可能地域、ログ、データ送信、社内禁止条件を比較する管理表を作れます。",
+        "deadline": "",
+        "community": "Claude Codeの企業利用では、地域制限と環境識別機能への懸念が引き続き論点です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/"
+          },
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "要一次ソース確認: 日本語コミュニティの強い新規トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク等で、7月5日JSTに一次ソース付きでTop 5へ上げられるClaude Code/GitHub Copilot新情報は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの社内導入メモを、公式更新とコミュニティ実践例に分けて継続管理できます。",
+        "deadline": "",
+        "community": "未確認の小ネタはありましたが、一次ソース不足のため採用していません。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "7月5日は週末要因もあり、主要AI企業の公式大型発表は限定的でした。",
+      "GitHub CopilotとClaude Codeの実務導入では、前週に出た監査ログ、AIクレジット、権限モード、背景エージェントの変更確認が重要です。",
+      "弱い二次報道よりも、公式Changelogと一次ソース確認を優先する日でした。"
+    ]
+  },
+  "notes": "2026-07-05 JST対象は、GitHub Copilot、Anthropic、OpenAI、Google DeepMind、Meta AI、NVIDIAの高信頼な公式大型発表が確認できなかったため、短縮版として構成しました。前日以前の話題の二次拡散はWatchlistに留めています。"
+}
