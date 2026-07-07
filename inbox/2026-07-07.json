@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-07",
+  "generated_at_jst": "2026-07-08T07:59:32+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Cowork、モバイルとWebに拡大",
+        "why": "AnthropicのAIエージェントClaude Coworkが、iOS、Android、Webから使えるようになったと報じられました。クラウド実行が既定になり、PCを閉じてもバックグラウンドタスクを継続できる点が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Actionsと比較し、クラウド実行、承認待ち通知、権限管理、監査ログの違いを整理できます。",
+        "deadline": "08/05 使用量上限延長",
+        "community": "常時稼働型エージェントでは、便利さと同時に、外部サービス接続・権限・承認フローが論点になります。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web"
+          },
+          {
+            "label": "WIRED",
+            "url": "https://www.wired.com/story/shut-those-laptops-anthropic-puts-its-claude-cowork-agent-on-your-phone"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Coworkのクラウド実行化は、Claude Code運用にも近い論点",
+        "why": "PCローカル依存からクラウド継続実行へ移ることで、作業継続性は上がります。一方で、ファイル、Slack、メール、会議情報などへのアクセス権限設計がより重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Claude Coworkの利用範囲を、ローカル実行、クラウド実行、外部サービス連携、承認必須操作で比較できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "WIRED",
+            "url": "https://www.wired.com/story/shut-those-laptops-anthropic-puts-its-claude-cowork-agent-on-your-phone"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub Copilot公式の7月7日新規大型発表は確認できず",
+        "why": "7月7日JST対象では、GitHub Changelog上で新規のGitHub Copilot大型発表は確認できませんでした。直近のCopilot CLI、Usage Records、Cost Centers、Code Review運用確認が優先です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "前週までのGitHub Copilot運用系アップデートを棚卸しし、Claude Code/Coworkとの使い分け表を更新できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Coworkの公式一次ソースを継続確認",
+        "why": "7月7日の報道は確認できましたが、今回の調査ではAnthropic公式の該当告知ページを確認できませんでした。企業導入判断では、公式ドキュメントの権限、データ保持、対象プラン、制限事項を待つべきです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "公式情報が出たら、GitHub Copilot coding agent、Claude Code、Claude Coworkのセキュリティ比較資料を更新できます。",
+        "deadline": "",
+        "community": "報道ベースではMaxユーザー先行、他プランは数週間以内とされていますが、公式確認が必要です。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: 日本語コミュニティの強い新規トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク等で、7月7日JSTに一次ソース付きでTop 5へ上げられるClaude Code/GitHub Copilot新情報は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの社内導入メモを、公式更新とコミュニティ実践例に分けて継続管理できます。",
+        "deadline": "",
+        "community": "未確認の小ネタはありましたが、一次ソース不足のため採用していません。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "7月7日は、Claude Coworkのモバイル・Web展開が最も実務影響のある話題でした。",
+      "AIエージェントは、PC上の補助ツールから、クラウドで継続実行される業務基盤へ広がっています。",
+      "GitHub Copilot、Claude Code、Claude Coworkを比較する際は、性能だけでなく、実行場所、権限、監査、承認フローを見比べる必要があります。"
+    ]
+  },
+  "notes": "2026-07-07 JST対象は、GitHub Copilot、OpenAI、Google DeepMind、Meta AI、NVIDIAの高信頼な公式大型発表が限定的でした。Claude Coworkのモバイル・Web展開は複数メディアで確認できましたが、Anthropic公式告知ページは今回確認できなかったため、公式一次ソース確認をWatchlistに残しています。"
+}
