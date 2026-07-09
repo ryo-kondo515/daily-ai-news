@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-09",
+  "generated_at_jst": "2026-07-10T07:58:24+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、GPT-5.6を一般提供開始",
+        "why": "OpenAIがGPT-5.6ファミリーを一般提供し、Sol、Terra、Lunaを発表しました。コーディング、知識作業、サイバー、科学領域での性能・コスト効率を前面に出しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codex系エージェントの比較表に、モデル性能、コスト、PRレビュー性能、並列エージェント対応を追加できます。",
+        "deadline": "",
+        "community": "AIコーディングエージェントの性能比較では、単体の正答率よりもトークン効率とレビュー品質が論点になります。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-6/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "ChatGPT Work発表、Codex統合で業務エージェント化",
+        "why": "OpenAIが、アプリやファイルを横断して長時間タスクを進めるChatGPT Workを発表しました。Codex技術を内蔵し、デスクトップ版ではPRレビュー、差分内編集、複数リポジトリ対応も強化されています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやClaude Codeと、リポジトリ操作、PRレビュー、承認フロー、ローカルファイルアクセスの違いを比較できます。",
+        "deadline": "",
+        "community": "業務エージェント化により、便利さと同時に接続アプリ、社内データ、承認権限の管理が重要になります。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GPT-5.6、Microsoft 365 Copilotの優先モデルに",
+        "why": "OpenAIは、GPT-5.6がMicrosoft 365 Copilotの新しい優先モデルになると発表しました。Word、Excel、PowerPoint、Chat、Coworkでの業務AI体験が強化されます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotとは別製品として整理しつつ、開発部門と業務部門で使うCopilot群のガバナンスを分けて設計できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Anthropic、Claude利用を振り返るReflect機能をβ提供",
+        "why": "Anthropicが、Claudeの利用傾向を可視化し、AIとの関わり方を振り返る機能をβ提供しました。Free、Pro、Maxユーザー向けで、Memoryが有効な場合に利用できます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotの利用ログや開発者アンケートと組み合わせ、AI活用の過不足、依存、教育テーマを可視化する設計に応用できます。",
+        "deadline": "",
+        "community": "Claude CodeやGitHub Copilot導入でも、利用量だけでなく人間の判断力をどう保つかが論点になります。",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://www.anthropic.com/news/reflect-with-claude"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Meta、AIチップIrisを9月量産へ",
+        "why": "Reutersは、Metaが独自AIチップIrisを2026年9月に量産開始する計画だと報じました。AIモデル競争は、GPU依存を下げる自社チップ・電力・データセンター競争にも広がっています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/asia-pacific/meta-put-ai-chip-into-production-september-it-looks-double-computing-capacity-2026-07-09/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "OpenAI Bio Bug Bounty、GPT-5.6を対象に継続プログラム化",
+        "why": "OpenAIはBio Bug Bountyを継続的な非公開プログラムにし、GPT-5.6とGPT-5.5のユニバーサル jailbreak 報酬を5万ドルへ引き上げました。フロンティアモデルの安全性検証が制度化されています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの社内利用規程にも、危険領域、禁止プロンプト、レッドチーム、報告フローを入れる参考になります。",
+        "deadline": "07/27 GPT-5.5 Bio Bounty終了",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/bio-bug-bounty/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Anthropic、AIへの難問を集める公開イニシアチブ開始",
+        "why": "Anthropicは、AIへの期待と懸念を集め、公共利益に向けた取り組みを説明する企画を発表しました。企業AI導入でも、透明性と説明責任がより重視されます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Code導入時の社内FAQ、懸念一覧、利用原則を作る材料にできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://www.anthropic.com/news/hard-questions"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "Claude Codeの中国バックドア論争、Anthropicは否定",
+        "why": "中国側のClaude Code脆弱性主張に対し、Anthropicは不正利用対策の仕組みだと反論しています。企業利用では、実通信、ログ、地域制限、アップデート管理の確認が不可欠です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの通信先、ログ、利用規約、禁止地域、監査性を比較するセキュリティチェックリストを作れます。",
+        "deadline": "",
+        "community": "開発者向けAIツールでも、外部通信と識別情報の扱いが強い懸念になっています。",
+        "sources": [
+          {
+            "label": "The Times",
+            "url": "https://www.thetimes.com/business/technology/article/china-anthropic-ai-claude-code-j6xq2r2d8"
+          },
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/china-says-it-has-found-security-vulnerabilities-in-anthropics-claude-code-5ecf05dc"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: Claude Codeの対象バージョンと技術詳細",
+        "why": "Claude Codeの中国向け警告は複数メディアで報じられていますが、対象バージョン、送信内容、現在の挙動については公式の詳細確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude CodeのIDE拡張、CLI、プロキシ、許可ドメイン、ログ取得方法を棚卸しできます。",
+        "deadline": "",
+        "community": "Claude Codeを職場で使う場合、セキュリティ部門に説明できる一次情報の確保が重要です。",
+        "sources": [
+          {
+            "label": "Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/china-says-it-has-found-security-vulnerabilities-in-anthropics-claude-code-5ecf05dc"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "ChatGPT Workの企業管理機能を継続確認",
+        "why": "ChatGPT Workは接続アプリ、ローカルファイル、ブラウザ、Scheduled Tasksを扱うため、管理者制御、監査、Auto-reviewの実効性確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentと比較し、どの作業をGitHub内に閉じ、どの作業をChatGPT Workへ任せるかを切り分けられます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "要一次ソース確認: 日本語コミュニティの強い新規トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク等で、7月9日JSTに一次ソース付きでTop 5へ上げられるGitHub Copilot/Claude Code新情報は限定的でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "公式発表と日本語コミュニティ実践例を分けて、社内導入メモに追記できます。",
+        "deadline": "",
+        "community": "未確認の小ネタはありましたが、一次ソース不足のため採用していません。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "7月9日は、OpenAIのGPT-5.6とChatGPT Workが最重要トピックでした。",
+      "AIエージェントは、コード補助から業務横断の長時間タスク実行へ広がっています。",
+      "Claude CodeやGitHub Copilotの企業利用では、性能比較だけでなく、外部通信、監査、承認、利用ログ管理が重要です。"
+    ]
+  },
+  "notes": "2026-07-09 JST対象は、OpenAI公式発表が多く、GPT-5.6、ChatGPT Work、Microsoft 365 Copilot連携、Bio Bug Bountyが中心でした。GitHub Copilot公式の大型新発表は確認できませんでした。Claude Code関連は中国のセキュリティ警告へのAnthropic反論が継続論点ですが、技術詳細は一次ソース確認が必要です。"
+}
