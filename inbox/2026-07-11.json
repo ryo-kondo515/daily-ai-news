@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-11",
+  "generated_at_jst": "2026-07-12T08:00:46+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "AIが15年間見逃されていたLinuxカーネル脆弱性の発見を支援",
+        "why": "AI駆動の脆弱性探索ツールVEGAが、Linuxカーネルの権限昇格脆弱性「GhostLock」の発見に使われたと報じられました。AIによるコード生成だけでなく、長年残る欠陥の探索が実用段階に入っています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot Code ReviewやGitHub Advanced Securityと組み合わせ、古いC/C++コード、並行処理、メモリ管理を重点的にレビューする運用へ応用できます。",
+        "deadline": "",
+        "community": "Linux、コンテナ、CIランナーへの影響が大きく、AIを使った脆弱性探索とパッチ確認が注目されています。",
+        "sources": [
+          {
+            "label": "WIRED",
+            "url": "https://www.wired.com/story/security-news-this-week-ai-found-a-root-bug-in-linux-that-everyone-missed-for-15-years/"
+          },
+          {
+            "label": "Nebula Security",
+            "url": "https://nebusec.ai/blog/ghostlock"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "企業のAI導入で、基盤モデル企業へのデータ依存を懸念する声",
+        "why": "PalantirのAlex Karp CEOが、AI企業が顧客企業のデータや業務知識から過度な価値を得る構造を批判しました。企業AIでは生産性だけでなく、データ主権とベンダーロックインが重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeについて、送信データ、保持期間、学習利用、モデル切替、監査ログ、退出時の移行性を比較できます。",
+        "deadline": "",
+        "community": "AIライセンス費用に対して十分な事業価値が得られているか、経営層による再評価が強まっています。",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/alex-karp-is-saying-what-every-angry-ceo-is-thinking-about-ai-7f5f7c0c"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコードレビューは生成コードだけでなく既存資産へ広げる",
+        "why": "GhostLockは15年前から存在したコード上の欠陥でした。AI活用の価値は、新規コード生成だけでなく、長期間レビューされていないレガシーコードの再検査にもあります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatに、use-after-free、競合状態、排他、境界値、エラー処理を観点として指定し、重要モジュールを段階的に再レビューできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "WIRED",
+            "url": "https://www.wired.com/story/security-news-this-week-ai-found-a-root-bug-in-linux-that-everyone-missed-for-15-years/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub CopilotとClaude Codeの評価にデータ主権を追加",
+        "why": "AI開発ツールはコードや設計情報へ深くアクセスするため、単純な性能比較では不十分です。契約、データ利用、モデル依存、停止時の代替手段を含む評価が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot EnterpriseとClaude Codeの利用規約、データ保持、接続先、権限、監査ログを共通フォーマットで棚卸しできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Wall Street Journal",
+            "url": "https://www.wsj.com/tech/ai/alex-karp-is-saying-what-every-angry-ceo-is-thinking-about-ai-7f5f7c0c"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "GhostLockのパッチ適用状況を継続確認",
+        "why": "GhostLockはLinuxディストリビューションごとに修正版の提供状況が異なります。コンテナ基盤やCIランナーを含め、利用中のカーネルが修正済みか確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、対象OS、カーネルバージョン、CI環境、対応状況を確認する棚卸しスクリプトやRunbookを作成できます。",
+        "deadline": "",
+        "community": "公開された実証コードにより、未更新環境への悪用リスクが高まる可能性があります。",
+        "sources": [
+          {
+            "label": "NVD",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43499"
+          },
+          {
+            "label": "Linux Kernel",
+            "url": "https://git.kernel.org/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: 7月11日のGitHub Copilot・Claude Code大型更新は確認できず",
+        "why": "GitHubとAnthropicの公式情報を確認しましたが、7月11日JSTに公開された高信頼な大型製品更新は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "直近のGitHub Copilot coding agent、Copilot CLI、Claude Codeの権限・セキュリティ更新を継続監視できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          },
+          {
+            "label": "Anthropic News",
+            "url": "https://www.anthropic.com/news"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "要一次ソース確認: 日本語開発者コミュニティの強い新規トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク等を確認しましたが、7月11日JSTに一次ソース付きで採用できるGitHub Copilot・Claude Code関連の新規話題は限定的でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "公式発表とコミュニティの実践記事を分けて、社内AI開発ツールのナレッジを更新できます。",
+        "deadline": "",
+        "community": "未確認の小規模な投稿はありましたが、信頼性と新規性が不足していたため採用していません。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          },
+          {
+            "label": "Hacker News",
+            "url": "https://news.ycombinator.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "7月11日は大型製品発表が少なく、AIによるソフトウェア脆弱性探索が最も実務的な話題でした。",
+      "GitHub CopilotやClaude Codeの価値は、新規コード生成だけでなく、レガシーコードの再検査やセキュリティ運用にも広がっています。",
+      "企業AI導入では、性能と料金に加えて、データ主権、監査性、ベンダーロックインを評価する必要があります。"
+    ]
+  },
+  "notes": "2026-07-11 JST対象は短縮版です。週末で公式の大型発表が少なく、当日公開を確認できた高信頼な記事を中心に構成しました。GitHub CopilotおよびClaude Codeの当日付大型公式更新は確認できませんでした。"
+}
