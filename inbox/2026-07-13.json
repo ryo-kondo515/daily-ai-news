@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-13",
+  "generated_at_jst": "2026-07-14T08:01:43+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "ノーベル賞受賞者ら200人超、AIの経済影響へ早急な対応を要請",
+        "why": "OpenAI、Anthropic、Googleの関係者を含む研究者・経済学者が、雇用喪失などに備えた政策と制度の整備を求めました。企業にもAI導入効果と人員への影響を同時に測る姿勢が求められます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeについて、開発速度だけでなく、役割変化、レビュー負荷、必要スキル、配置転換への影響を測る評価項目を作成できます。",
+        "deadline": "",
+        "community": "AIの生産性向上だけでなく、短期間で進む職務変化への備えが主要な論点になっています。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/over-200-experts-call-urgent-action-tackle-ais-economic-impact-2026-07-13/"
+          },
+          {
+            "label": "Associated Press",
+            "url": "https://apnews.com/article/783469467e0df1463df44518f33295ee"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Microsoft CEO、モデル事業者へのデータ依存と蒸留制限を問題提起",
+        "why": "Satya Nadella氏は、公開データで学習したモデル提供者が蒸留を制限し、顧客利用データから学ぶ構造に疑問を示しました。企業にはモデルに依存しないデータ境界と評価基盤が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexについて、送信データ、保持、学習利用、モデル切替、評価ログ、ベンダー移行性を共通フォーマットで比較できます。",
+        "deadline": "",
+        "community": "蒸留の是非に加え、企業のコードや利用履歴から生じる価値を誰が保有するかが議論されています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/microsoft-ceo-satya-nadella-swipe-ai-model-makers-distillation-2026-7"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AI開発ツールのKPIに人材・組織への影響を追加",
+        "why": "AI導入による変化は、生成コード量やPR数だけでは捉えられません。担当業務の変化、レビュー責任、学習機会、ジュニア育成も評価対象にする必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot導入前後で、PR処理時間、手戻り率、レビュー時間、習得技術、担当範囲、エスカレーション件数を追跡できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/over-200-experts-call-urgent-action-tackle-ais-economic-impact-2026-07-13/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub CopilotとClaude Codeを単一ベンダー依存の観点で再評価",
+        "why": "AIモデルや料金、利用条件は短期間で変化します。開発履歴や組織固有の知識を特定製品だけに閉じ込めない運用設計が重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "プロンプト、指示ファイル、MCP設定、評価ケース、Runbookをリポジトリで管理し、GitHub CopilotとClaude Codeの双方で再利用できる形にできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/microsoft-ceo-satya-nadella-swipe-ai-model-makers-distillation-2026-7"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: MicrosoftとAnthropicの蒸留・データ利用を巡る対立",
+        "why": "Nadella氏の発言は報道で確認できますが、Anthropicを直接名指ししたものではありません。各社の正式な利用規約や反論を確認する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとClaude Codeの契約条件、データ保持、モデル改善への利用、出力の二次利用、監査ログを法務・セキュリティと確認できます。",
+        "deadline": "",
+        "community": "モデル学習では公開データの利用を認めながら、出力の蒸留を制限する整合性が議論されています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/microsoft-ceo-satya-nadella-swipe-ai-model-makers-distillation-2026-7"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: 7月13日のGitHub Copilot・Claude Code大型更新は確認できず",
+        "why": "GitHubとAnthropicの公開情報を確認しましたが、7月13日JSTに限定した高信頼な大型製品更新は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "既存のGitHub Copilot coding agent、Code Review、CLIと、Claude Codeの権限・MCP・CI/CD運用の検証を継続できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          },
+          {
+            "label": "Anthropic News",
+            "url": "https://www.anthropic.com/news"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "要一次ソース確認: 日本語開発者コミュニティの強い当日トレンドは限定的",
+        "why": "Zenn、Qiita、はてなブックマーク、Hacker News、Redditを確認しましたが、7月13日JSTに一次ソース付きで昇格できる新規話題は限定的でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeの実践記事は、公式仕様とコミュニティ評価を分けて社内ナレッジへ整理できます。",
+        "deadline": "",
+        "community": "個別の活用投稿はあるものの、当日性、一次情報、広がりを満たす話題は確認できませんでした。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          },
+          {
+            "label": "Hacker News",
+            "url": "https://news.ycombinator.com/"
+          },
+          {
+            "label": "Reddit",
+            "url": "https://www.reddit.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "7月13日は製品の大型更新より、AIが雇用や企業制度へ与える影響が中心テーマでした。",
+      "GitHub CopilotやClaude Codeの評価には、開発生産性だけでなく、人材育成、職務変化、データ主権を含める必要があります。",
+      "企業固有の知識、評価ケース、指示ファイルを製品から分離し、複数のAI開発ツールへ移行できる設計が重要です。"
+    ]
+  },
+  "notes": "2026-07-13 JST対象は短縮版です。主要AI企業の公式ブログ、GitHub・Anthropicの公開情報、英語・日本語の開発者コミュニティを確認しましたが、当日公開の高信頼な大型製品発表は限定的でした。Microsoft CEOの発言は報道を確認できましたが、特定企業を直接名指ししていないため、解釈をWatchlistにも記載しています。"
+}
