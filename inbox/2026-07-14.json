@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-14",
+  "generated_at_jst": "2026-07-15T07:58:32+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "米政府、AI企業と重要インフラを結ぶサイバー防御連携組織を設置へ",
+        "why": "OpenAI、Anthropic、NVIDIA、Metaなどと重要インフラ事業者が、AIで発見した脆弱性情報を共有する枠組みです。AIエージェントの防御利用と官民連携が本格化します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewやcoding agentの出力を、CodeQL、依存関係スキャン、秘密情報検出と組み合わせ、発見から修正までの監査可能な手順を整備できます。",
+        "deadline": "",
+        "community": "AIによる脆弱性発見を歓迎する一方、機密情報の共有範囲や責任分界が実務上の論点です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-launch-ai-cybersecurity-coordination-group-white-house-says-2026-07-14/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Google DeepMindトップ、米国主導の国際AI監督機関を提唱",
+        "why": "Demis Hassabis氏は、先端モデルを評価し、重大なリスクがあれば公開停止も判断できる国際的な枠組みを提案しました。企業のモデル選定にも第三者評価が影響しそうです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの採用審査に、モデル評価、利用可能範囲、禁止用途、緊急停止、監査ログの項目を追加できます。",
+        "deadline": "",
+        "community": "安全性強化への支持がある一方、米国主導の枠組みが国際的な中立性を保てるかが議論されています。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "孫正義氏、AIインフラに世界で年5兆ドル規模の投資が必要と予測",
+        "why": "SoftBank Groupの孫正義氏は、AIエージェントとロボットの普及を支えるデータセンター、半導体、電力への巨額投資を訴えました。日本企業のAI投資判断にも影響する発言です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの導入効果を、ライセンス費だけでなく、推論コスト、CI実行時間、レビュー工数、インフラ利用量まで含めて試算できます。",
+        "deadline": "",
+        "community": "AI投資を過小評価すべきでないという評価と、需要予測や投資回収が楽観的すぎるという批判が併存しています。",
+        "sources": [
+          {
+            "label": "Associated Press",
+            "url": "https://apnews.com/article/97ce41a43624440aa2b91c025937b979"
+          },
+          {
+            "label": "Financial Times",
+            "url": "https://www.ft.com/content/fc0d48f4-a2ce-45b1-a0ad-83a0a8409f00"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Tower Semiconductor、日本で30億ドルのAI向け半導体投資",
+        "why": "日本政府の支援を受け、AIチップ間通信を高速化するシリコンフォトニクスなどの生産を拡大します。AIインフラの国内供給網強化につながる動きです。",
+        "business_importance": "High",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "国内生産基盤の強化が評価される一方、政府補助に見合う長期需要と技術競争力の検証が必要です。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/world/asia-pacific/tower-semiconductor-invest-3-billion-japan-backed-by-government-grants-2026-07-14/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AI開発エージェントに脆弱性報告とエスカレーション手順を組み込む",
+        "why": "AIが脆弱性を発見する機会が増えるほど、発見後の共有先、公開範囲、修正期限、責任者の設計が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentが検出した問題をIssue化し、重要度ラベル、担当者、修正期限、CodeQL再検査を自動で紐づける運用を設計できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-launch-ai-cybersecurity-coordination-group-white-house-says-2026-07-14/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub Copilot・Claude Code・Codexの統制基準を共通化",
+        "why": "モデルやツールごとに個別ルールを作ると、更新のたびに運用が分断されます。権限、データ送信、監査、承認、停止条件を共通化する方が管理しやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを基準に、リポジトリアクセス、外部通信、秘密情報、コマンド実行、PR作成、マージ権限をClaude CodeやCodexと比較表にできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-launch-ai-cybersecurity-coordination-group-white-house-says-2026-07-14/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: AIサイバー連携組織の参加条件と共有データ範囲",
+        "why": "設置方針は報道されていますが、企業の参加条件、共有対象、免責、機密情報の扱いなどの詳細は未確認です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotやClaude Codeで発見した脆弱性を外部共有する前に、情報分類、法務確認、顧客通知、CVE手続きを定義できます。",
+        "deadline": "",
+        "community": "実効性には期待がある一方、官民間でのデータ共有が過剰監視や機密漏えいにつながる懸念があります。",
+        "sources": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/us-launch-ai-cybersecurity-coordination-group-white-house-says-2026-07-14/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: 国際AI監督機関の権限とオープンモデルの扱い",
+        "why": "監督機関構想は報道で確認できますが、設置時期、法的権限、評価方法、オープンモデルへの適用範囲は未確定です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotのモデル切替機能を前提に、利用停止されたモデルから別モデルへ移行できる評価セットと代替手順を準備できます。",
+        "deadline": "",
+        "community": "安全評価の標準化には支持がある一方、少数企業や国家が市場参入を制限する仕組みになり得るとの批判があります。",
+        "sources": [
+          {
+            "label": "The Verge",
+            "url": "https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "7月14日のGitHub Copilot・Claude Code大型公式更新は確認できず",
+        "why": "対象日の公開情報を確認しましたが、GitHub CopilotまたはClaude Codeの高信頼な大型機能更新、価格変更、提供条件変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "既存機能について、GitHub Copilot Code Review、coding agent、Claude Codeの権限設定と監査ログの比較検証を継続できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          },
+          {
+            "label": "Anthropic News",
+            "url": "https://www.anthropic.com/news"
+          }
+        ]
+      },
+      {
+        "num": "W4",
+        "headline": "要一次ソース確認: 日本語開発者コミュニティの当日トレンドは限定的",
+        "why": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditを確認しましたが、対象日に一次ソース付きでTop 5へ昇格できる開発者向け話題は限定的でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの実践記事は、公式仕様、再現手順、セキュリティ条件を確認してから社内ナレッジへ反映できます。",
+        "deadline": "",
+        "community": "AIエージェント活用の投稿は継続していますが、当日性と一次情報を同時に満たす強い話題は確認できませんでした。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          },
+          {
+            "label": "Hacker News",
+            "url": "https://news.ycombinator.com/"
+          },
+          {
+            "label": "Reddit",
+            "url": "https://www.reddit.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIの競争軸が、モデル性能だけでなく、サイバー防御、規制、監査、官民連携へ広がっています。",
+      "日本では、AIサービスそのものに加え、半導体、データセンター、電力など基盤投資の重要性が増しています。",
+      "GitHub Copilot、Claude Code、Codexの企業導入では、ツール別ではなく共通の権限・監査・停止基準を持つことが重要です。"
+    ]
+  },
+  "notes": "2026-07-14 JST対象です。主要AI企業の公式情報、報道、英語・日本語の開発者コミュニティを確認しました。対象日はAIコーディングツールの大型公式更新が限定的だったため、サイバー防御、国際ガバナンス、日本のAIインフラ投資を中心に構成しています。"
+}
