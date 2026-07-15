@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-15",
+  "generated_at_jst": "2026-07-16T08:02:43+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "豪州政府、著作権保護を含むAI政策案を州政府と協議へ",
+        "why": "生成AIによるクリエイター作品の利用を含め、安全策と著作権保護を重視する政策案が示されました。企業には学習データ、生成物、権利処理の記録がより重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeで生成したコード、文書、画像素材について、出典確認、ライセンス検査、生成履歴の保存手順を共通化できます。",
+        "deadline": "",
+        "community": "クリエイター保護を歓迎する意見がある一方、具体的な執行方法やデータセンター規制の不足も指摘されています。",
+        "sources": [
+          {
+            "label": "The Guardian",
+            "url": "https://www.theguardian.com/australia-news/live/2026/jul/15/australia-news-live-ceo-pay-anthony-albanese-palestine-gaza-ai-artificial-intelligence-datacentres-copyright-royal-commission-antisemitism-labor-ntwnfb"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、企業のAIコスト増には利用停止より運用最適化を提言",
+        "why": "部門ごとの無秩序な利用がコスト増につながるとして、モデル選択や利用量の可視化による最適化が重要だと説明しました。Claude Codeを全社展開する企業にも直接関係します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとClaude Codeについて、利用者数、継続率、PR処理時間、トークン費用、手戻り率を同じ指標で比較し、用途別に使い分けられます。",
+        "deadline": "",
+        "community": "AI利用を止めるのではなく、安価なモデルへのルーティングや利用制限を組み合わせる運用が注目されています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-ai-costs-responses-routers-2026-7"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub CopilotとClaude Codeの費用対効果を利用量だけで判断しない",
+        "why": "トークン費用だけを削減すると、開発速度や品質の改善機会まで失う可能性があります。成果とコストを同じ単位で追跡する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot導入前後で、PR作成時間、レビュー時間、修正回数、障害件数、利用費を計測し、Claude Codeとも比較できる評価表を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-ai-costs-responses-routers-2026-7"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "生成AIの著作権・ライセンス確認を開発フローに組み込む",
+        "why": "各国で生成AIと著作権を巡る政策議論が進み、生成物の利用根拠を後から説明できる運用が求められています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotで生成したコードをPRに含める際、依存ライセンス検査、類似コード確認、レビュー承認を必須チェックとして設定できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "The Guardian",
+            "url": "https://www.theguardian.com/australia-news/live/2026/jul/15/australia-news-live-ceo-pay-anthony-albanese-palestine-gaza-ai-artificial-intelligence-datacentres-copyright-royal-commission-antisemitism-labor-ntwnfb"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: Anthropic、米州単位で強いAI安全規制を支持",
+        "why": "Anthropicがニューヨーク、イリノイ、マサチューセッツなどで、独立リスク評価や政府執行を含む規制を支持していると報じられました。詳細は各法案とAnthropicの正式見解の確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeについて、モデルリスク評価、禁止用途、インシデント報告、監査ログを地域別規制に対応できる形で整理できます。",
+        "deadline": "",
+        "community": "強い安全規制を評価する意見と、州ごとに異なる規制が企業運用を複雑化させるとの懸念があります。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-openai-ai-safety-laws-state-lobbying-2026-7"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認: Anthropicのモデルルーティング機能検討",
+        "why": "Claudeの用途やコストに応じてモデルを選択する仕組みを検討していると報じられましたが、正式な製品発表や提供時期は確認できません。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotのモデル選択とClaude Codeを、品質、応答速度、トークン費、権限範囲で比較し、タスク別の利用基準を作成できます。",
+        "deadline": "",
+        "community": "高性能モデルの固定利用より、タスクに応じたモデル切替を求める企業利用者の関心が高まっています。",
+        "sources": [
+          {
+            "label": "Business Insider",
+            "url": "https://www.businessinsider.com/anthropic-ai-costs-responses-routers-2026-7"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "7月15日のGitHub Copilot・Claude Code大型公式更新は確認できず",
+        "why": "対象日の公式発表を確認しましたが、GitHub CopilotまたはClaude Codeの大型機能更新、価格改定、提供条件変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "既存のGitHub Copilot Code Review、coding agent、Claude Codeの権限管理、MCP、CI/CD連携の比較検証を継続できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          },
+          {
+            "label": "Anthropic News",
+            "url": "https://www.anthropic.com/news"
+          }
+        ]
+      },
+      {
+        "num": "W4",
+        "headline": "要一次ソース確認: 日本語開発者コミュニティの当日トレンドは限定的",
+        "why": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditを確認しましたが、対象日に一次ソース付きで昇格できる強い新規話題は限定的でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの活用記事は、公式仕様、再現手順、権限設定、セキュリティ条件を確認してから社内展開できます。",
+        "deadline": "",
+        "community": "AIエージェントの費用管理やモデル使い分けへの関心は継続していますが、当日公開の一次情報は限られました。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          },
+          {
+            "label": "Hacker News",
+            "url": "https://news.ycombinator.com/"
+          },
+          {
+            "label": "Reddit",
+            "url": "https://www.reddit.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "企業のAI導入では、利用停止よりもコスト、品質、成果をまとめて管理する運用設計が重視されています。",
+      "GitHub CopilotとClaude Codeの比較は、機能だけでなく、費用、権限、監査、継続利用率まで含める必要があります。",
+      "生成AIの著作権と安全規制を巡り、企業には生成物と利用履歴を説明できる体制が求められています。"
+    ]
+  },
+  "notes": "2026-07-15 JST対象は短縮版です。主要AI企業、GitHub、Anthropicの公式情報と主要報道、英語・日本語の開発者コミュニティを確認しましたが、対象日に公開された高信頼な大型製品発表は限定的でした。Anthropicの規制方針とモデルルーティングに関する報道は公式一次ソースを確認できなかったため、Watchlistに記載しています。"
+}
