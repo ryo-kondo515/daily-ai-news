@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-16",
+  "generated_at_jst": "2026-07-17T07:58:04+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、Claude Codeによる大規模コード移行の実践手法を公開",
+        "why": "BunのZigからRustへの約100万行移行などを題材に、ルール作成、並列エージェント、敵対的レビュー、CI検証を組み合わせた手順を公開しました。大規模移行を人手中心の長期案件から、検証ループ中心のプロジェクトへ変える事例です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやCopilot Chatでも、依存関係の調査、移行ルール作成、テスト生成、PR単位のレビューを分担し、Claude Codeと同じ評価基準で比較できます。",
+        "deadline": "",
+        "community": "大規模移行の速度が注目される一方、Bun移行はAPI価格換算で約16.5万ドルとされ、費用管理と機械的な検証環境の必要性が論点です。",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://claude.com/blog/ai-code-migration"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "IntelとGoogle Cloud、Geminiを全社業務と半導体開発へ展開",
+        "why": "IntelはGemini Enterpriseを、エンジニアリング、サプライチェーン、管理業務へ導入します。半導体設計にもエージェント型ワークフローを組み込み、全社展開と専門業務への適用を同時に進めます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeを含む開発AIについて、設計、実装、レビュー、社内文書などの用途別に利用モデル、権限、監査ログ、成果指標を整理できます。",
+        "deadline": "",
+        "community": "単純なチャット導入ではなく、既存業務にエージェントを組み込む企業事例として注目されます。",
+        "sources": [
+          {
+            "label": "Google Cloud",
+            "url": "https://www.googlecloudpresscorner.com/2026-07-16-Intel-and-Google-Cloud-Announce-Collaboration-to-Accelerate-Intels-AI-Enabled-Enterprise-Transformation"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "NotebookLMが「Gemini Notebook」へ名称変更",
+        "why": "GoogleはNotebookLMをGemini Notebookへ改称し、今後Google製品群との連携を拡大する方針を示しました。既存の共有ノートやリンクは自動転送され、管理者による作業は不要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Gemini Notebookで仕様書や調査資料を整理し、確定した要件をGitHub Issueやリポジトリ文書へ移してGitHub Copilotの実装コンテキストにできます。",
+        "deadline": "",
+        "community": "名称統合によりGeminiブランドは分かりやすくなる一方、従来のNotebookLMという独立した製品認知が薄れるとの見方もあります。",
+        "sources": [
+          {
+            "label": "Google Workspace Updates",
+            "url": "https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、未成年者にも安全なAIアクセスが必要との方針を公開",
+        "why": "OpenAIは、未成年者のAI利用を全面的に排除するのではなく、年齢に応じた保護策を設けながら安全に利用可能にする必要があるとの考えを示しました。教育、家庭、サービス提供者の責任分担が焦点です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを教育や若手育成で利用する場合、利用者区分、入力禁止情報、レビュー必須条件、生成コードの検証手順をポリシー化できます。",
+        "deadline": "",
+        "community": "安全な利用機会の確保を支持する意見と、年齢確認や保護者同意の実効性を懸念する意見の双方が想定されます。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/news/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "NVIDIA、企業映像を理解して行動するコンテキスト認識AIエージェントを解説",
+        "why": "大量の映像を認識するだけでなく、業務システムと連携して判断や処理を実行する映像AIエージェントの構成が公開されました。工場、店舗、物流、設備監視などでフィジカルAIと業務システムを結ぶ設計に関係します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを使い、映像イベントのAPI定義、状態管理、監査ログ、異常時のフェイルセーフ処理、テストコードを整備できます。",
+        "deadline": "",
+        "community": "映像データの保持期間、個人情報、誤検知時の責任、エージェントに許可する操作範囲が導入上の主要論点です。",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/category/deep-learning/generative-ai/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコード移行では「コード」より「生成と検証のループ」を管理する",
+        "why": "Claude Codeの事例では、個別の不具合を人が直すのではなく、移行ルール、作業キュー、コンパイラ、テスト、レビューの仕組みを改善しています。再実行可能な工程設計が成果を左右します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentに渡すIssueを機械的に分割し、PRごとにビルド、テスト、セキュリティレビュー、互換性確認を必須化できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://claude.com/blog/ai-code-migration"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Claude CodeとGitHub Copilotの評価にトークン費用と手戻り率を追加",
+        "why": "大規模なエージェント処理は開発期間を短縮できる一方、モデル利用料や大量の生成コードに対する検証コストが増えます。速度だけでは投資対効果を判断できません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "ツール別に利用費、完了Issue数、マージ率、レビュー修正回数、障害件数、再実行回数を記録し、同一タスクで比較できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://claude.com/blog/ai-code-migration"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "全社AI導入はモデル選定より業務フローへの接続が重要",
+        "why": "IntelとGoogle Cloudの事例は、汎用チャットの配布ではなく、設計、サプライチェーン、管理業務ごとにエージェント型ワークフローを構築する方向を示しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを開発部門だけに閉じず、Issue起票、設計レビュー、変更説明、運用手順の作成まで一連の開発フローとして設計できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google Cloud",
+            "url": "https://www.googlecloudpresscorner.com/2026-07-16-Intel-and-Google-Cloud-Announce-Collaboration-to-Accelerate-Intels-AI-Enabled-Enterprise-Transformation"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認: EUがAndroidを競合AIアシスタントへ開放する措置",
+        "why": "Googleに対し、Android上で競合AIサービスが利用しやすくなるよう求める措置が報じられました。正式な対象機能、期限、Googleの対応内容は欧州委員会の一次資料確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "AIアシスタント市場の競争促進を評価する声が想定される一方、OSの安全性、権限管理、既定サービスの扱いが論点になります。",
+        "sources": [
+          {
+            "label": "The Washington Post",
+            "url": "https://www.washingtonpost.com/technology/innovations/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "日本のフィジカルAI連携、製造現場での具体的な実装範囲を注視",
+        "why": "富士通、FANUC、安川電機、川崎重工などがNVIDIA基盤を活用する動きが報じられています。公式発表の一部は7月15日付のため、7月16日分では継続動向として扱います。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotでロボット制御API、デジタルツイン連携、エッジ推論、通信障害時の安全制御、CI/CDの設計を支援できます。",
+        "deadline": "",
+        "community": "日本の製造業が保有する現場データを、海外製AI基盤上でどのように管理するかが注目点です。",
+        "sources": [
+          {
+            "label": "NVIDIA",
+            "url": "https://blogs.nvidia.com/blog/japan-ecosystem-2026/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "7月16日のGitHub Copilot大型公式アップデートは確認できず",
+        "why": "対象日のGitHub Changelogを確認しましたが、GitHub Copilotの新しい大型機能、価格変更、提供条件変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "直近のセキュリティレビュー、coding agent、利用量管理、モデル選択機能について社内検証を継続できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/?label=copilot"
+          }
+        ]
+      },
+      {
+        "num": "W4",
+        "headline": "日本語開発者コミュニティの当日大型トレンドは限定的",
+        "why": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditを確認しましたが、7月16日公開で一次ソースを伴う強い新規トピックは限定的でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeやGitHub Copilotの活用記事は、公式仕様、再現手順、権限設定、費用条件を確認してから社内へ展開できます。",
+        "deadline": "",
+        "community": "Claude Codeの大規模移行事例については、速度よりも費用、テスト品質、生成コードの保守性が今後の議論点になると考えられます。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/"
+          },
+          {
+            "label": "はてなブックマーク",
+            "url": "https://b.hatena.ne.jp/"
+          },
+          {
+            "label": "Hacker News",
+            "url": "https://news.ycombinator.com/"
+          },
+          {
+            "label": "Reddit",
+            "url": "https://www.reddit.com/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Claude Codeの活用はコード補完から、大規模移行を複数エージェントと自動検証で進める段階へ移っています。",
+      "企業のAI導入では、モデルの性能比較だけでなく、業務フロー、権限、監査、費用、成果指標を一体で設計する必要があります。",
+      "日本ではフィジカルAIへの投資が進み、ソフトウェア開発、エッジAI、ロボット制御、データガバナンスの連携が重要になります。"
+    ]
+  },
+  "notes": "2026-07-16 JSTに公開された高信頼の公式情報を中心に整理しました。GitHub Copilotの大型公式更新は確認できませんでした。EUのAndroidと競合AIに関する話題は公式一次資料を十分に確認できなかったためWatchlistに限定しています。NVIDIAと日本企業のフィジカルAI連携は主要公式発表が7月15日付のため、7月16日の継続動向として扱っています。"
+}
