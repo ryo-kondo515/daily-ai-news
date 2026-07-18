@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-17",
+  "generated_at_jst": "2026-07-18T07:58:43+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot Code Review、CLAUDE.md対応とファイアウォールを追加",
+        "why": "GitHub Copilot Code ReviewがCLAUDE.md、AGENTS.md、GEMINI.md、REVIEW.mdを読み取れるようになりました。レビュー環境のセットアップやネットワーク接続も個別に制御でき、企業導入時の安全性と再現性が高まります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "既存のClaude Code向けCLAUDE.mdをGitHub Copilot Code Reviewでも再利用し、レビュー観点を一元管理できます。機密リポジトリでは既定のファイアウォールと許可先を確認します。",
+        "deadline": "",
+        "community": "従来はGitHub Copilot Code ReviewがCLAUDE.mdを参照しない点が日本の開発者から課題視されており、複数AIツール間の指示ファイル共通化が進む更新です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot、リポジトリ別の利用効果測定に対応",
+        "why": "Copilot coding agentが作成・マージしたPRと、Copilot Code ReviewがレビューしたPRをリポジトリ単位で取得できるREST APIが正式提供されました。導入効果を組織全体の平均ではなく、コードベースごとに評価できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "リポジトリ別にPR作成数、マージ率、レビュー指摘数、修正回数、不具合件数を集計し、GitHub Copilotの適用対象を選定できます。",
+        "deadline": "",
+        "community": "AIコードレビューの価値をセキュリティ指摘やバグリスク別に測りたいという実務上の関心に対応する更新です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Copilotアプリの利用状況が管理APIで可視化",
+        "why": "企業・組織向けの利用状況APIに、GitHub Copilotアプリの利用者数、セッション数、プロンプト数、トークン消費量が追加されました。IDEやcoding agentと分けてデスクトップアプリの定着度を確認できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "IDE、GitHub Copilotアプリ、Code Review、coding agentを用途別に比較し、利用率と成果が低いチャネルの教育や予算配分を見直せます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、AI投資を「成功タスク当たりの総コスト」で測る指標を提案",
+        "why": "OpenAIはトークン単価や利用者数ではなく、品質基準を満たした仕事量、再試行、人手レビュー、手戻りを含む総コストでAIの価値を測る考え方を公開しました。企業のAIツール比較に適した評価軸です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexを、完了タスク数、初回成功率、人手修正時間、レビュー負荷、利用費を含む成功タスク単価で比較できます。",
+        "deadline": "",
+        "community": "モデルのベンチマーク性能やトークン単価だけでは、実際の開発生産性を判断できないという企業導入上の課題に沿った提案です。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/a-scorecard-for-the-ai-age/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "GitHub Mobile、レビュー指摘からCopilot修正を直接開始可能に",
+        "why": "スマートフォン上のGitHub Mobileで、Copilot Code ReviewのコメントからCopilot cloud agentへ修正を依頼できるようになりました。外出中でもレビュー確認から修正開始まで進められます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "軽微なレビュー指摘はモバイルから修正を開始し、生成された差分とCI結果を後からPCで確認する運用にできます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-github-mobile-fix-pull-request-comments-with-copilot-cloud-agent/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "CLAUDE.mdをAI開発ツール共通の運用ルールにする好機",
+        "why": "GitHub Copilot Code ReviewがCLAUDE.mdを正式に読み取るため、Claude CodeとGitHub Copilotでレビュー基準を共有しやすくなりました。ただし、各ツールの解釈差は実際のレビュー結果で検証する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "CLAUDE.mdには共通ルールを記載し、GitHub Copilot固有の設定はcopilot-instructions.mdやcopilot-code-review.ymlに分離します。",
+        "deadline": "",
+        "community": "日本では指示ファイルの重複管理や、ツールごとに読み取るファイルが違うことが運用上の課題として報告されていました。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/"
+          },
+          {
+            "label": "Qiita",
+            "url": "https://qiita.com/shiba8/items/2fda1a3cfa78f2d8d3b8"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIコードレビューの導入判断をリポジトリ単位へ細分化",
+        "why": "同じ企業でも、コードの更新頻度、テスト整備度、言語、障害リスクによってAIレビューの効果は異なります。今回のAPIにより、効果の高いリポジトリへ予算と教育を集中できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "まず4〜8週間データを蓄積し、PR数だけでなく指摘採用率、修正時間、障害流出率と組み合わせて評価します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "GitHub Copilot、Claude Code、Codexの比較指標を成果ベースへ変更",
+        "why": "安価なモデルでも再試行やレビューが増えれば総コストは上昇します。ライセンス価格やトークン量だけでなく、品質基準を満たすまでの人件費と手戻りを含める必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "同一のIssueを各ツールに割り当て、完了時間、初回CI成功率、レビュー修正数、利用費、担当者の確認時間を比較します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/a-scorecard-for-the-ai-age/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "GitHub CopilotとClaude CodeでCLAUDE.mdの解釈が一致するか要検証",
+        "why": "ファイルを共有できても、優先順位、対象範囲、外部ファイル参照、長い指示の処理方法はツールごとに異なる可能性があります。共通化前に代表的なPRで比較検証が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "同じCLAUDE.mdを使って両ツールにレビューさせ、必須ルールの検出率、誤検知、指摘の一貫性を記録します。",
+        "deadline": "",
+        "community": "ZennやQiitaではAIレビュー用指示の長文化、参照ファイルの違い、ツールごとの挙動差が継続的に議論されています。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/"
+          },
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/fujiya228/scraps/bdcf0f4aca66ea"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "セルフホストランナー利用時はCopilot Code Reviewのファイアウォールが非対応",
+        "why": "GitHubホストランナーではファイアウォールが既定で有効ですが、セルフホストランナーでは現時点で利用できません。機密環境ではネットワーク分離や外部通信制御を別途設計する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "セルフホストランナーの送信先制限、資格情報の注入方法、ログ、シークレット参照範囲を確認し、GitHubホスト環境との差を文書化します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "Claude Codeの7月17日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code関連情報、GitHubリポジトリを確認しましたが、対象日付の大型機能、料金、提供条件、企業向けポリシー変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "今回GitHub Copilot Code ReviewがCLAUDE.mdに対応したため、Claude Codeとの共通ルール運用を優先して検証できます。",
+        "deadline": "",
+        "community": "日本の開発者コミュニティではClaude CodeによるPRレビューやGitHub Actions連携の実践記事が引き続き参照されています。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      },
+      {
+        "num": "W4",
+        "headline": "AI利用指標が活動量中心になり、品質との誤認に注意",
+        "why": "セッション数、プロンプト数、PR数が増えても、品質や生産性が向上したとは限りません。利用状況APIは成果指標や不具合データと組み合わせる必要があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "利用率を目標にせず、CI成功率、レビュー採用率、リードタイム、障害件数、担当者の確認時間を主要KPIにします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api/"
+          },
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/a-scorecard-for-the-ai-age/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは機能追加だけでなく、企業が利用効果をリポジトリ単位で測定・統制できる基盤を強化しています。",
+      "CLAUDE.md対応により、Claude CodeとGitHub Copilotのルール共通化が進む一方、解釈差や権限、ネットワーク制御の検証が必要です。",
+      "AI開発ツールの評価は、利用者数やトークン単価から、成功タスク数、品質、人手修正、手戻りを含む総コストへ移りつつあります。"
+    ]
+  },
+  "notes": "2026-07-17 JST公開分はGitHub Copilot関連の公式更新が中心でした。Anthropic、Google、Meta、Microsoft、NVIDIAの公式情報も確認しましたが、対象日付で優先度の高いClaude Codeまたは開発者向け大型発表は確認できなかったため、弱い話題による件数の水増しはしていません。"
+}
