@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-22",
+  "generated_at_jst": "2026-07-23T08:02:06+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot、利用段階と開発成果を可視化するImpact Dashboardを公開",
+        "why": "企業管理者が、コード補完中心、エージェント中心、複数エージェント活用などの導入段階ごとに、PR数、マージ速度、利用者数を比較できるようになりました。ライセンス配布数ではなく、活用の深さと成果を追跡できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "非利用者、コード補完利用者、coding agent利用者を比較し、PRのマージ速度、レビュー回数、不具合件数を加えて導入効果を検証します。",
+        "deadline": "",
+        "community": "企業導入では利用者数だけをKPIにしがちであり、実際の開発フローへの定着度を可視化できる点が注目されます。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAI、米国の国家研究基盤へフロンティアAIを提供する長期方針を発表",
+        "why": "米政府、国立研究所、大学と連携し、AIモデルをスーパーコンピューター、シミュレーション、研究設備へ接続する方針です。科学研究でのAI活用が、単体モデルから研究基盤全体の統合へ進みます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを研究コード、実験パイプライン、再現手順、データ処理コードの整備に使い、生成物にはレビューと実験ログを残します。",
+        "deadline": "",
+        "community": "研究速度の向上が期待される一方、機密研究データ、モデル出力の検証、国外研究者へのアクセス条件が今後の論点です。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/advancing-the-next-era-of-national-science/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Microsoft、米エネルギー省のAI科学計画へ6000万ドルを投資",
+        "why": "Azureの計算資源・AIクレジットに4000万ドル、設計・導入支援に2000万ドルを投じます。インフラ提供だけでなく、研究現場への実装支援まで含めたAI導入モデルです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "研究・技術部門でGitHub Copilotを導入する際も、ライセンス提供だけでなく、対象業務、教育、レビュー、成果指標までセットで設計します。",
+        "deadline": "",
+        "community": "計算資源だけでは研究成果につながらないため、専門人材による実装・運用支援へ投資している点が企業導入の参考になります。",
+        "sources": [
+          {
+            "label": "Microsoft",
+            "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilotの評価を利用率から開発成果へ移行",
+        "why": "新しいダッシュボードは利用段階とPR成果を結び付けます。ただし、コード量やPR速度だけでは品質向上を証明できないため、独自の品質指標を追加する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Impact Dashboardの指標に、レビュー指摘採用率、手戻り、不具合流出率、担当者の確認時間を加えて評価します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI導入支援はモデル提供より運用設計に価値が移る",
+        "why": "Microsoftの投資の3分の1は、設計、導入、活用支援に割り当てられています。AI基盤が一般化するほど、業務接続、検証、教育、運用の価値が高まります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの導入では、アカウント配布だけでなく、対象タスク、禁止事項、指示ファイル、レビュー方法、KPIを標準化します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Microsoft",
+            "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "研究・製造AIでは再現性と監査可能性を実装要件にする",
+        "why": "AIが研究判断やシミュレーションに組み込まれると、結果だけでなく、使用モデル、入力データ、コード、実行環境を再現できる必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで作成した研究コードも、モデル名、依存関係、データ版、テスト結果をリポジトリとCIに記録します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/advancing-the-next-era-of-national-science/"
+          },
+          {
+            "label": "Microsoft",
+            "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "GitHub CopilotのImpact Dashboardは因果関係の誤認に注意",
+        "why": "Copilotを深く使うチームのPR速度が高くても、元々成熟したチームがAIを積極利用している可能性があります。ダッシュボードの相関だけで生産性向上を断定できません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "同一チームの導入前後や段階導入したリポジトリを比較し、チーム能力や案件難易度の影響を分けて評価します。",
+        "deadline": "",
+        "community": "AI利用量とコード量を成果として扱うと、不要なPRや生成コードの増加を促すとの批判が考えられます。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "米国の国家科学AI計画、データ利用条件と国際アクセスの詳細待ち",
+        "why": "OpenAIとMicrosoftは長期支援を表明しましたが、研究データの保持、モデル学習への利用、国外研究者のアクセス、成果物の知的財産条件は追加確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "研究コードへGitHub Copilotを導入する場合も、機密区分、入力可能データ、生成物の権利、ログ保持を事前に定義します。",
+        "deadline": "",
+        "community": "国家安全保障と科学振興が一体化することで、研究の開放性や国際共同研究への影響が論点になり得ます。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/advancing-the-next-era-of-national-science/"
+          },
+          {
+            "label": "Microsoft",
+            "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "Claude Codeの7月22日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Codeの公開リポジトリ、関連ドキュメントを確認しましたが、対象日の大型機能、料金、企業向け管理機能の変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotでは成果可視化が強化されたため、Claude Codeについても利用費、完了タスク、PR速度、レビュー工数を同じ形式で記録します。",
+        "deadline": "",
+        "community": "X、Zenn、Qiita、Hacker News、Redditでも、対象日公開の一次ソースを伴うClaude Codeの大型トピックは限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotの企業導入は、ライセンス数や利用回数ではなく、活用段階と開発成果を測るフェーズへ進みました。",
+      "OpenAIとMicrosoftは、AIモデル単体ではなく、計算資源、研究設備、専門人材を統合する国家科学基盤へ投資しています。",
+      "AIの成果指標には速度やコード量だけでなく、品質、再現性、手戻り、監査可能性を含める必要があります。"
+    ]
+  },
+  "notes": "2026年7月22日JST公開分は、GitHub Copilotの企業向け効果測定機能と、OpenAI・Microsoftによる米国のAI科学基盤支援が中心でした。Anthropic、Google、Meta、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認しましたが、対象日公開で一次ソースを伴う独立した大型開発者向けトピックは限定的だったため、短縮版としています。"
+}
