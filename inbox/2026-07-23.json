@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-23",
+  "generated_at_jst": "2026-07-24T08:14:40+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot cloud agent、Linear連携を正式提供",
+        "why": "LinearのIssueをCopilotへ割り当てると、GitHub Actions上の一時環境で作業し、ドラフトPRを作成できます。モデル、カスタムエージェント、対象ブランチもIssue単位で指定可能です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "LinearのIssueテンプレートに受け入れ条件、変更禁止範囲、必須テストを記載し、Copilotが作成したPRには人間のレビューとCI成功を必須化します。",
+        "deadline": "",
+        "community": "Issue管理から実装開始までをつなぐ一方、曖昧なIssueをそのままエージェントへ渡すと手戻りが増える点に注意が必要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub MCP Server、7月28日公開予定の次期MCP仕様へ先行対応",
+        "why": "次期MCP仕様ではセッションとinitializeが廃止され、ステートレス化による拡張性と接続速度の改善が見込まれます。GitHub MCP Serverは後方互換性を保ちながら先行対応しました。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "独自MCPサーバーは公式適合テストをCIへ組み込み、GitHub CopilotとClaude Codeの双方で新旧クライアント互換性を確認します。",
+        "deadline": "07/28 締切",
+        "community": "日本語の既存記事には旧MCPエンドポイントや旧設定例が残っているため、社内手順書の更新も必要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/"
+          },
+          {
+            "label": "MCP Draft Specification",
+            "url": "https://modelcontextprotocol.io/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Issues、AIエージェント操作に承認・確信度・理由表示を追加",
+        "why": "Issueのラベル、担当者、種類、クローズなどをエージェントが変更する際、確信度に応じて自動適用か人間確認かを分けられます。操作理由も監査履歴として残ります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "高確信度のラベル付けのみ自動化し、Issueクローズや担当者変更は提案に留めるなど、操作ごとに承認基準を分けます。",
+        "deadline": "",
+        "community": "GitHubは承認機能をセキュリティ境界ではなくワークフロー上の補助と明記しており、権限管理との混同を避ける必要があります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Mobile、失敗したActionsチェックをCopilotへ修正依頼可能に",
+        "why": "モバイルから失敗したCIを選び、Copilot coding agentへ調査と修正を依頼できます。Copilotは既存PRの上に新しいPRを作り、修正後に利用者へレビューを求めます。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "移動中は修正開始までに留め、最終的な差分確認、追加テスト、マージ判断はPC上で実施する運用にします。",
+        "deadline": "",
+        "community": "CI失敗への初動を短縮できますが、エージェント生成の修正をそのままマージしない統制が必要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "OpenAI、ChatGPTに健康記録とApple Healthを接続するHealth機能を公開",
+        "why": "米国の18歳以上を対象に、対応する医療記録とApple Healthを接続し、検査結果、服薬、活動、睡眠を文脈として質問できる機能を公開しました。接続データは基盤モデルの学習や広告には使用しないとしています。",
+        "business_importance": "High",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "日本では現時点で医療記録連携の対象外ですが、高機密データを生成AIへ接続する際の同意、分離保存、利用目的制限の事例として重要です。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/health-in-chatgpt/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Issue管理と実装エージェントの接続では入力品質を管理する",
+        "why": "LinearやGitHub Issuesから直接エージェントを起動できるほど、Issueの曖昧さがそのまま誤実装や不要なPRにつながります。IssueをAIへの実行仕様として整備する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Issueテンプレートへ目的、受け入れ条件、変更禁止範囲、確認方法、関連ファイルを必須項目として追加します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIエージェントの承認画面をアクセス制御の代替にしない",
+        "why": "GitHubの承認機能は変更前の確認を容易にしますが、エージェントが直接操作する権限自体を制限するものではありません。最小権限と監査ログが別途必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Issue操作、コード変更、Actions実行、シークレット参照を別権限に分け、承認対象とサーバー側で禁止する操作を明文化します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "MCP更新を契機にGitHub CopilotとClaude Codeの接続先を棚卸し",
+        "why": "MCPのステートレス化により運用は簡素化しますが、接続するサーバー、認証方式、取得データ、操作権限のリスクは残ります。複数AIツールで設定が分散しない管理が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとClaude Codeで使用するMCPサーバー一覧、管理者、権限、認証情報、ログ保持、適合テスト結果を共通台帳で管理します。",
+        "deadline": "07/28 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "次期MCP仕様への移行で独自サーバーの互換性を確認",
+        "why": "公式SDKは後方互換性を維持していますが、独自実装や古いSDKではセッション、initialize、認証フローへの依存が残っている可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "7月28日までに公式適合テストと新旧クライアント接続試験を実施し、失敗時に旧仕様へ戻せる手順を用意します。",
+        "deadline": "07/28 締切",
+        "community": "日本語のLinear・MCP解説記事でも旧SSEエンドポイントの廃止が注意点として扱われており、古い設定例の残存が実務上のリスクです。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/"
+          },
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/417/articles/masakazu-linear-changelog-2026q1"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "GitHub Issuesの確信度判定を品質保証として扱わない",
+        "why": "確信度はエージェント自身の評価であり、実際の正確性を保証しません。高確信度の誤操作が自動適用される可能性もあります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "初期は高確信度でも自動適用範囲をラベル追加など可逆的な操作に限定し、誤操作率を測定します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "Linear連携時のGitHub Actions費用と権限範囲を確認",
+        "why": "Copilot cloud agentはGitHub Actions上の一時環境で動作します。大量のIssueを自動割り当てすると、Actions実行時間とAIクレジットが増える可能性があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "対象チーム、リポジトリ、月次予算、同時実行数を限定し、Issue当たりの費用とマージ率を測定します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available/"
+          }
+        ]
+      },
+      {
+        "num": "W4",
+        "headline": "Claude Codeの7月23日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Codeの公開リポジトリ、関連ドキュメントを確認しましたが、対象日の大型機能、料金、提供条件、企業向け管理機能の変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub MCP Serverの次期仕様対応を踏まえ、Claude Code側のMCPクライアント互換性と接続設定を確認します。",
+        "deadline": "",
+        "community": "X、Zenn、Qiita、Hacker News、Redditでも、対象日公開で一次ソースを伴うClaude Codeの大型トピックは限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      },
+      {
+        "num": "W5",
+        "headline": "ChatGPT Healthの日本提供と医療データ接続条件を注視",
+        "why": "医療記録連携は米国限定で、日本での提供時期、対応医療機関、個人情報保護法上の取り扱いは未定です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "健康情報を一般チャットでも参照可能にする設計では、利用者の同意範囲と誤った医療判断を防ぐ表示が重要になります。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/health-in-chatgpt/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは、Issue管理、実装、CI修正までを連続して自動化する開発基盤へ進んでいます。",
+      "AIエージェントの自動化では、確信度や承認画面だけでなく、最小権限、監査、費用上限、可逆性が重要です。",
+      "MCPのステートレス化で接続基盤は拡張しやすくなりますが、互換性、認証、接続先ガバナンスの整備が必要です。"
+    ]
+  },
+  "notes": "2026年7月23日JST公開分は、GitHub CopilotとMCP、Issue自動化、モバイルCI修正に関する公式更新が中心でした。Anthropic、Google、Meta、Microsoft、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認しましたが、対象日公開で一次ソースを伴う独立した大型開発者向けトピックは限定的でした。"
+}
