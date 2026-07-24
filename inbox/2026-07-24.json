@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-24",
+  "generated_at_jst": "2026-07-25T08:56:47+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、複雑なコーディング向けClaude Opus 5を公開",
+        "why": "Claude Opus 5はClaude Fable 5に近い性能を半分の価格で提供し、複雑なコーディングや長時間の知識作業を重視します。APIではclaude-opus-5として提供されています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとClaude Codeで同一の複雑なIssueを実行し、初回CI成功率、人手修正時間、不要な変更、利用費を比較します。",
+        "deadline": "",
+        "community": "開発者の関心は公称性能だけでなく、Fable 5との使い分け、長時間タスクの実コスト、モデル選択ルールに集まっています。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Platform Docs",
+            "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/anthropic-rolls-out-opus-5-ai-model-efficiency-upgrade-2026-07-24/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Claude Opus 5、GitHub Copilotで提供開始",
+        "why": "GitHubはClaude Opus 5をGitHub Copilotで提供開始しました。企業プランでは管理者がモデル利用ポリシーと費用を確認したうえで段階導入する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "対象者とリポジトリを限定して有効化し、既存モデルとの品質、AIクレジット、PR修正回数を比較してから展開範囲を広げます。",
+        "deadline": "",
+        "community": "高性能モデルの追加により、既定モデル化よりもタスク難易度に応じたモデルルーティングの重要性が増しています。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "AWS、Claude Opus 5をAmazon Bedrockで提供",
+        "why": "AWSはClaude Opus 5をAmazon Bedrockで利用可能にし、長時間のエージェント型コーディングや知識業務で使える選択肢を拡大しました。AWSはゼロデータ保持にも対応すると案内しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとAWS上のClaude Codeを併用する場合、入力可能なデータ、ログ保持、リージョン、認証、モデル別費用を共通の管理表で整理します。",
+        "deadline": "",
+        "community": "規制業界や機密コードを扱う企業では、モデル能力よりデータ保持条件とクラウド側の統制機能が採用判断を左右します。",
+        "sources": [
+          {
+            "label": "AWS News Release",
+            "url": "https://ebs.publicnow.com/view/BA39EB74481C829DB17AB93860C316D5557045E1"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Opus 5を全タスクの既定モデルにしない",
+        "why": "高性能モデルは複雑な作業に有効ですが、軽微な修正まで利用すると費用が増えます。タスクの難易度に応じたモデルルーティングが必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "定型修正は低コストモデル、複数ファイルの設計変更や長時間タスクはOpus 5とし、GitHub Copilotのモデル選択基準を明文化します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
+          },
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/technology/anthropic-rolls-out-opus-5-ai-model-efficiency-upgrade-2026-07-24/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "同じモデルでも実行環境込みで比較する",
+        "why": "同じClaude Opus 5でも、GitHub Copilot、Claude Code、Amazon Bedrockでは権限、ツール、ログ、課金、データ保持条件が異なります。モデル単体の評価では企業利用を判断できません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "同一Issueを各環境で実行し、モデル費、Actions費、作業時間、外部通信、監査ログ、人間の確認工数を比較します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
+          },
+          {
+            "label": "Anthropic Claude Platform Docs",
+            "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Opus 5の独立した実務評価とClaude Codeでの提供条件を注視",
+        "why": "公式資料と報道では性能と価格が示されましたが、長時間の実開発における成功率、利用上限、Claude Code各プランでの扱いは継続確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "公称ベンチマークではなく、自社リポジトリの修正、テスト、レビューを用いてGitHub CopilotとClaude Codeを評価します。",
+        "deadline": "",
+        "community": "対象日公開の日本語コミュニティでは、一次ソースを伴う大規模な実測報告はまだ限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Platform Docs",
+            "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          },
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "GitHub Copilot利用時のClaude Opus 5従量課金を確認",
+        "why": "高性能モデルは長時間のcloud agentやCLI利用で消費額が大きくなる可能性があります。企業導入ではモデル許可と予算設定を同時に行う必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "試験導入ではセッション上限、個人予算、コストセンター、同時実行数を設定し、成功タスク当たりのAIクレジットを記録します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "対象日の大手公式AI発表は限定的",
+        "why": "OpenAI、Google DeepMind、Meta AI、Microsoft AI、NVIDIAの公式情報を確認しましたが、7月24日JST公開で優先度の高い独立した大型開発者向け発表は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "新規発表が少ない間に、GitHub CopilotとClaude Codeのモデル許可、費用、ログ、権限、停止条件を棚卸しします。",
+        "deadline": "",
+        "community": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditでも、対象日公開で一次ソースを伴う独立した大型トピックは限定的でした。",
+        "sources": [
+          {
+            "label": "OpenAI News",
+            "url": "https://openai.com/news/"
+          },
+          {
+            "label": "NVIDIA Recent Posts",
+            "url": "https://developer.nvidia.com/blog/recent-posts"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "Claude Opus 5の登場により、高度なコーディング性能をより低い価格帯で利用する選択肢が増えました。",
+      "同じモデルでもGitHub Copilot、Claude Code、Amazon Bedrockでは、権限、課金、監査、データ保持条件が異なります。",
+      "企業導入ではモデル性能だけでなく、成功タスク当たりの総コストと運用ガバナンスを比較する必要があります。"
+    ]
+  },
+  "notes": "2026年7月24日JST公開分はClaude Opus 5と、そのGitHub Copilot・Amazon Bedrockでの提供開始が中心でした。重複報道は統合し、一次情報または確認可能な公式資料を優先しました。X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認しましたが、対象日公開で一次ソースを伴う独立した大型トピックは限定的だったため短縮版としています。"
+}
