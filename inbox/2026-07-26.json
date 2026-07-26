@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-26",
+  "generated_at_jst": "2026-07-27T08:19:11+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Microsoft、NVIDIA、MetaなどがオープンウェイトAIへの性急な規制に反対",
+        "why": "7月26日公開の国内報道で、米国の企業・団体がオープンウェイトAIの競争力、安全研究、デジタル主権への重要性を訴えた書簡が紹介されました。Anthropicは署名しておらず、AI業界内のガバナンス思想の違いも鮮明です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、オープンウェイトモデル採用時のライセンス、脆弱性評価、モデル配布、データ保持、ベンダーロックインの比較資料を作成できます。",
+        "deadline": "",
+        "community": "国内では、オンプレミス運用やベンダーロックイン回避への期待と、公開後に撤回できない安全リスクの両面が注目されています。",
+        "sources": [
+          {
+            "label": "Open Weights and American AI Leadership",
+            "url": "https://openweights.gitlawb.com/"
+          },
+          {
+            "label": "ITmedia NEWS",
+            "url": "https://www.itmedia.co.jp/news/articles/2607/26/news014.html"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "解雇後の記者名義をAI生成記事へ無断使用、著者表示の信頼性が問題に",
+        "why": "7月26日公開の国内記事で、退職後のフリーランス記者の氏名がAI生成記事の署名に使われていた事例が報じられました。生成コンテンツの著者責任、同意、監査記録を企業が管理する必要性を示します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、生成コンテンツの承認者、AI利用表示、変更履歴、公開前チェックを管理するワークフローや監査ログを実装できます。",
+        "deadline": "",
+        "community": "日本語メディアでも、機械翻訳やAI生成記事に実在人物の名義を付ける運用への不信が共有されています。",
+        "sources": [
+          {
+            "label": "GIGAZINE",
+            "url": "https://gigazine.net/news/20260726-ai-take-over-journalist/"
+          },
+          {
+            "label": "Press Gazette",
+            "url": "https://pressgazette.co.uk/news/journalist-fired-by-clickout-media-saw-robot-reporter-take-over-their-byline/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "オープンウェイトモデルはコストだけでなく撤回不能性まで評価",
+        "why": "自社運用やモデル改変はベンダーロックインを減らしますが、公開済みの重みは後から回収できません。安全性、更新責任、配布先管理を含む総合評価が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、クローズドAPIとオープンウェイトの費用、運用負荷、監査、更新、インシデント対応を比較する評価表を作成できます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Open Weights and American AI Leadership",
+            "url": "https://openweights.gitlawb.com/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI生成物の著者名・承認者・責任主体を分離して記録",
+        "why": "AI生成物に実在人物の名前を付けると、本人の信用や法的責任に影響します。生成者、編集者、承認者、公開名義を別項目で管理すべきです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub IssuesやPRテンプレートにAI利用有無、確認者、公開責任者、出典確認欄を追加し、変更履歴を残せます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GIGAZINE",
+            "url": "https://gigazine.net/news/20260726-ai-take-over-journalist/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "オープンウェイト支持書簡の署名企業と政策への影響を継続確認",
+        "why": "書簡は7月24日に公開され、その後署名者が増えています。米国の規制、対中政策、モデル蒸留の扱いへどこまで影響するかは未確定です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで、署名企業、規制案、ライセンス条件、社内採用モデルへの影響を更新できる監視表を作成します。",
+        "deadline": "",
+        "community": "OpenAIやGoogleは支持を表明する一方、Anthropicが署名していない点が議論されています。",
+        "sources": [
+          {
+            "label": "Open Weights and American AI Leadership",
+            "url": "https://openweights.gitlawb.com/"
+          },
+          {
+            "label": "ITmedia NEWS",
+            "url": "https://www.itmedia.co.jp/news/articles/2607/26/news014.html"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "7月26日のGitHub Copilot大型公式更新は確認できず",
+        "why": "GitHub Changelogを確認しましたが、対象日付の新機能、料金、企業向けポリシー変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "直近に追加されたモデル、MCP、coding agent、利用量管理の社内検証を継続します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/label/copilot/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "7月26日のClaude Code大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code公式リポジトリ、関連ドキュメントを確認しましたが、対象日付の大型機能、料金、企業向け管理機能の変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotについて、モデル利用条件、権限、MCP接続、監査ログの比較を継続します。",
+        "deadline": "",
+        "community": "X、Zenn、Qiita、Hacker News、Redditでも、対象日公開で一次ソースを伴う大型トピックは限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "対象日は大型製品発表が少なく、オープンウェイトAIの規制と産業競争が主要テーマでした。",
+      "オープンウェイトは自由度と主権を高める一方、公開後の撤回不能性と安全管理が課題です。",
+      "AI生成コンテンツでは、生成者、承認者、公開名義、責任主体を分離して記録する必要があります。"
+    ]
+  },
+  "notes": "2026年7月26日JSTは日曜日で、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAによる対象日付の大型公式製品発表は確認できませんでした。7月26日に公開された国内報道を、確認可能な原資料や元記事で裏取りした短縮版です。"
+}
