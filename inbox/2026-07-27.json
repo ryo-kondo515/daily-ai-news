@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-27",
+  "generated_at_jst": "2026-07-28T08:50:15+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilotアプリとcloud agent、企業の統一管理設定に対応",
+        "why": "企業のmanaged-settings.jsonを、VS CodeとCopilot CLIに加えてCopilotアプリとcloud agentにも適用できるようになりました。プラグイン、マーケットプレイス、承認回避などをクライアント横断で統制できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "copilot/managed-settings.jsonで許可プラグイン、接続可能なマーケットプレイス、承認回避の禁止を定義し、対応するCopilotクライアントへ共通基準を適用します。",
+        "deadline": "",
+        "community": "AIエージェントの利用面が増えるほど、統制されていないクライアントが企業全体の弱点になる点が重要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilotアプリ、CLIから独立した専用アクセスポリシーを追加",
+        "why": "企業・組織管理者がCopilotアプリとCopilot CLIを別々に許可できるようになりました。Copilotアプリは既定で有効なため、未評価の企業は設定確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "AI ControlsでCopilotアプリを全社許可、全社禁止、組織判断のいずれにするか決め、利用対象と管理責任者を明確にします。",
+        "deadline": "",
+        "community": "デスクトップ型エージェントとCLIでは利用目的やリスクが異なるため、クライアント別に許可できる点が実務的です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-27-manage-github-copilot-app-access-with-a-dedicated-policy/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "OpenAI調査、職種固有のAI利用の43.5％が本来の職域外タスク",
+        "why": "米国のChatGPT利用80万件超を分析し、職種固有メッセージの43.5％が別職種に関連する作業だったと報告しました。AIが既存業務の効率化だけでなく、職種間の受け渡しを減らしている可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "非エンジニアがGitHub Copilotを使う場合、軽微な技術調査や文書修正と、本番コード変更の権限・レビュー条件を分けます。",
+        "deadline": "",
+        "community": "職域拡大を生産性向上と見る一方、専門家確認の省略や責任範囲の曖昧化が懸念されます。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub、AI開発ではモデルより反復可能なハーネス運用が重要と解説",
+        "why": "新しいモデルやMCPを追い続けるより、試作、計画、実装、レビューを安定して回すワークフローの習熟が重要だと解説しました。複数AIツールを無秩序に増やす運用への問題提起です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを標準ハーネスとして、試作、計画、実装、CI、Code Review、人間承認までの基本フローを固定します。",
+        "deadline": "",
+        "community": "ツールやプロンプトを増やすより、コンテキスト管理と検証方法を習熟すべきだという実務的な見方です。",
+        "sources": [
+          {
+            "label": "GitHub Blog",
+            "url": "https://github.blog/company/the-harness-is-all-you-need-mostly/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Copilotクライアント追加時の既定有効化を見逃さない",
+        "why": "Copilotアプリの専用ポリシーは既定で有効です。企業が認識しないまま、新しいエージェント実行面が利用可能になる可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "新クライアント追加時に、既定値、対象者、利用可能なリポジトリ、外部通信、費用上限を確認する変更管理手順を作ります。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-27-manage-github-copilot-app-access-with-a-dedicated-policy/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "GitHub CopilotとClaude Codeに共通の最低統制基準を設ける",
+        "why": "GitHub Copilotの統制範囲は拡大しましたが、Claude Codeなど別ツールには同じ設定が自動適用されません。複数ツールをまたぐ企業標準が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "プラグイン、MCP、外部通信、コマンド承認、シークレット、ログ保持、人間レビューを共通基準にし、ツール別の実装差を台帳化します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app/"
+          },
+          {
+            "label": "Anthropic Claude Code Security",
+            "url": "https://docs.anthropic.com/en/docs/claude-code/security"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "AIによる職域拡大では承認責任を再設計",
+        "why": "AIを使えば専門外の作業へ着手しやすくなりますが、最終的な品質、法務、セキュリティ判断まで本人へ移せるとは限りません。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで専門外のコードを作成できても、コードオーナー、必須レビュー、セキュリティチェックを省略できないルールにします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Copilot cloud agentでは承認回避設定の適用範囲に注意",
+        "why": "プラグインとマーケットプレイスの管理設定はcloud agentにも適用されますが、承認回避を禁止する設定は対話型クライアントのみが対象です。cloud agentは別の統制で補う必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "cloud agentでは利用可能なリポジトリ、GitHub Actions権限、シークレット、ネットワーク、必須PRレビューを個別に制限します。",
+        "deadline": "",
+        "community": "一つのmanaged-settings.jsonですべての統制が同じように適用されると誤解しないことが重要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "managed-settings.jsonの反映遅延を運用に織り込む",
+        "why": "設定は再ログインや再起動時のほか、通常は約1時間以内に反映されます。緊急遮断の手段としては即時性が不足する場合があります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "緊急時は専用アクセスポリシーの無効化、資格情報の失効、ネットワーク遮断と組み合わせ、managed-settings.jsonだけに依存しません。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "Claude Codeの7月27日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code関連資料、公開リポジトリを確認しましたが、対象日の大型機能、料金、企業管理、セキュリティ方針の変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotの統制強化を基準に、Claude Codeで不足する中央設定、監査、プラグイン管理を確認します。",
+        "deadline": "",
+        "community": "X、Zenn、Qiita、Hacker News、Redditでも、対象日に一次ソースを伴って広く話題化したClaude Codeの新規発表は確認できませんでした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      },
+      {
+        "num": "W4",
+        "headline": "OpenAIの職域横断調査は米国ChatGPT利用データに限定",
+        "why": "調査は米国利用者のメッセージを基にしており、日本企業の職務分掌、雇用慣行、規制環境へそのまま適用できません。国内データによる検証が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "日本の社内PoCでは、GitHub Copilot導入後に専門外タスク、他部門への依頼、レビュー工数がどう変化したかを独自に計測します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotは、アプリ、CLI、VS Code、cloud agentを横断して企業が統制できる開発基盤へ進んでいます。",
+      "中央管理が拡大しても、対話型クライアントと非同期cloud agentでは適用される安全策が異なるため、個別確認が必要です。",
+      "AIは業務を効率化するだけでなく職種間の境界を変えつつあり、権限と最終承認責任の再設計が重要です。"
+    ]
+  },
+  "notes": "2026年7月27日JST公開分は、GitHub Copilotの企業向けアクセスポリシーと統一管理設定、OpenAIの職域横断に関する調査が中心でした。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しましたが、対象日に一次ソースを伴って広く話題化した独立したClaude Code・OSS開発ツールの新規トピックは限定的でした。"
+}
