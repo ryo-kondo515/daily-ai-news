@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-28",
+  "generated_at_jst": "2026-07-29T08:07:41+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Grok 4.5、GitHub Copilotで段階提供開始",
+        "why": "最大50万トークンのコンテキスト、画像入力、推論強度の選択に対応し、VS Code、Copilot CLI、cloud agentなどで利用できます。Business／Enterpriseでは管理者による明示的な有効化が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude Opus 5や既存モデルと同一Issueを処理し、初回CI成功率、実行時間、AIクレジット、人手修正量を比較して利用対象を決めます。",
+        "deadline": "",
+        "community": "高速なツール並列実行への期待がある一方、従量課金下での長文脈利用コストが実務上の確認点です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Actions、不審なワークフローを実行前に自動保留",
+        "why": "侵害された認証情報から悪意あるActionsワークフローを投入し、CI/CD資格情報を盗む攻撃への対策です。対象実行は書き込み権限を持つ共同編集者がWeb上で承認するまで開始されません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentが.github/workflowsを変更したPRでも、CODEOWNERS、最小権限、固定SHA、人間承認を必須にします。",
+        "deadline": "",
+        "community": "自動生成されたCI/CD変更も通常コード以上の高リスク資産として扱う必要があります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Dependabot、悪意あるパッケージの検知対象を拡大",
+        "why": "GitHub Advisory DatabaseがOpenSSF malicious-packagesの情報を取り込み、npmやPyPIなど複数エコシステムのマルウェア検知を強化しました。既にマルウェア警告を有効化している場合は追加設定なしで反映されます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotが提案した依存追加は自動承認せず、Dependabot、公開日、保守者、ライセンス、固定バージョンをPRで確認します。",
+        "deadline": "",
+        "community": "AIコーディングで依存追加が高速化するほど、タイポスクワッティングや新規マルウェアへの自動検知が重要になります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems/"
+          },
+          {
+            "label": "OpenSSF malicious-packages",
+            "url": "https://github.com/ossf/malicious-packages"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilotの新モデルは限定導入から始める",
+        "why": "Grok 4.5は提供元の定価に基づく従量課金で、長文脈や高い推論強度はコスト増につながります。モデル追加をそのまま全社既定にせず、用途別評価が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "対象チームとリポジトリを限定し、Claude Code、Claudeモデル、Grok 4.5を成功タスク単価で比較します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIが変更するCI/CDファイルを高リスク資産として管理",
+        "why": "Actionsワークフローはシークレット、クラウド権限、本番デプロイへ接続できます。通常コードより強いレビューと承認条件が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotによるworkflow、Dockerfile、デプロイスクリプト変更には、セキュリティ担当者の必須レビューを設定します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "AI生成コードの依存追加を自動承認しない",
+        "why": "モデルが提案したパッケージ名が正しく見えても、マルウェア、保守停止、ライセンス、出所の問題は残ります。生成元のモデルは安全性を保証しません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "依存追加PRにDependabot確認、SBOM更新、固定バージョン、代替候補比較を要求します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認：MCP 2026-07-28最終仕様の正式公開",
+        "why": "5月公開の公式リリース候補では、7月28日にステートレスな中核、拡張機構、Tasks、MCP Apps、認証強化を含む最終仕様を公開予定としていました。今回の調査では最終公開ページを確認できないため、正式反映前に一次ソース確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotとClaude Codeで使うMCPサーバーは、対応仕様、認証方式、旧クライアント互換性を確認してから更新します。",
+        "deadline": "",
+        "community": "開発者コミュニティではステートレス化による運用簡素化と、既存MCP実装への破壊的変更が主な関心です。",
+        "sources": [
+          {
+            "label": "Model Context Protocol Blog",
+            "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Actionsの不審実行保留は公開リポジトリ限定",
+        "why": "今回の自動保護はgithub.com上の公開リポジトリが対象で、非公開リポジトリやGitHub Enterprise Serverには適用されません。既存の権限設計を代替する機能ではありません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "非公開リポジトリではActions権限、OIDC、環境承認、シークレット分離、固定SHAを継続して強制します。",
+        "deadline": "",
+        "community": "保護対象を全リポジトリと誤認しないことが重要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "Claude Codeの対象日付大型公式更新は確認できず",
+        "why": "Anthropicの公式ニュース、Claude Code関連資料、公開リポジトリを確認しましたが、7月28日付の大型機能、料金、企業管理、セキュリティ方針変更は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot側のモデル追加やCI/CD保護を基準に、Claude Codeのモデル選択、MCP、権限、依存追加ルールも同じ台帳で管理します。",
+        "deadline": "",
+        "community": "X、Zenn、Qiita、Hacker News、Redditでは複数エージェント併用例が見られましたが、対象日の一次ソース付き大型発表には至っていません。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotではモデル選択肢が増え、性能だけでなく従量費と企業ポリシーを含む評価が必要です。",
+      "AI開発ワークフローでは、生成コードに加えてCI/CDと依存パッケージを高リスク領域として管理する必要があります。",
+      "MCPの大規模改訂が予定され、Claude CodeとGitHub Copilotをまたぐ接続基盤の互換性確認が重要になっています。"
+    ]
+  },
+  "notes": "2026年7月28日JST公開分は、GitHub CopilotへのGrok 4.5追加、GitHub Actionsのサプライチェーン防御、Dependabotのマルウェア検知拡大が中心でした。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。MCP 2026-07-28については正式公開予定を一次資料で確認できましたが、最終公開ページを確認できなかったためWatchlistに限定しています。"
+}
