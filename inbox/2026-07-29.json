@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-29",
+  "generated_at_jst": "2026-07-30T08:31:11+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot、企業向けGAモデルを既定有効化へ",
+        "why": "Copilot BusinessとEnterpriseでは、今後一般提供される対象モデルが原則自動で有効になります。厳格な審査が必要な企業には単一のオプトアウト設定が用意されます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotのモデル追加を変更管理の対象とし、データ保持、料金、利用部署、対象リポジトリを審査してから許可します。",
+        "deadline": "08/26 締切",
+        "community": "利便性向上の一方、管理者が把握しないまま利用可能モデルが増えるガバナンスリスクが論点です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAI、研究者10万人へ先端モデルを無償提供",
+        "why": "科学、数学、工学の研究者を対象に、GPT-5.6 Sol Proなどの先端モデルを提供します。2026年夏に1万人から始め、2027年までに10万人へ拡大する計画です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "研究コードではGitHub Copilotをテスト作成、再現手順、PRレビューに使い、AI生成物の検証可能性を高めます。",
+        "deadline": "",
+        "community": "研究加速への期待と、AI生成コードや仮説の再現性・著者責任をどう担保するかが論点です。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/chatgpt-for-academic-researchers/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "OpenAI、GPT-5.6の効率化とエージェント運用設計を解説",
+        "why": "推論基盤、キャッシュ、カーネル最適化に加え、コンテキスト肥大化や重複作業を抑えるエージェントハーネスの重要性を公開しました。Codexを用いた本番最適化事例も示しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentでも、コンテキスト量、再試行回数、ツール呼び出し、成功タスク単価を計測し、長時間処理の無駄を可視化します。",
+        "deadline": "",
+        "community": "モデル性能だけでなく、コンテキスト管理と検証ループを含むハーネスが実コストを左右する点が注目されます。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "NVIDIA、自己ホスト型AIコーディング支援の検証構成を公開",
+        "why": "NeMo Guardrails、CI検証、監査可能なコミット追跡を組み合わせ、ソースを外部へ出さずにAI支援を導入する構成を紹介しました。幻覚した依存パッケージの検出も含みます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを使う場合も、依存追加、機密ファイル、CI通過、欠陥流出率を外部ガードレールとして管理し、モデル任せにしません。",
+        "deadline": "",
+        "community": "規制産業や機密コードを扱う企業では、クラウド型支援との比較材料になります。",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "CodeQL 2.26.1、主要言語の解析精度と対応範囲を改善",
+        "why": "Go、Java/Kotlin、JavaScript/TypeScriptのフレームワーク解析を拡張し、Rustの誤検知を削減しました。AI生成コードを含むPRの静的解析精度向上につながります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotが生成・修正したコードにもCodeQLを必須チェックとして適用し、新規警告を人間が確認してからマージします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilotの新モデル追加を自動承認しない",
+        "why": "既定有効化は導入を速めますが、データ処理条件、課金倍率、品質、規制適合性がモデルごとに異なります。企業はモデル追加を製品変更として管理すべきです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "モデル台帳を作り、提供元、保持条件、対象ユーザー、費用上限、停止手順を記録します。",
+        "deadline": "08/26 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIコーディングの評価指標を生成量から検証可能性へ移す",
+        "why": "高度な実装ほど、再現性、テスト、依存関係、監査証跡が重要です。生成速度だけでは欠陥や保守負荷を見落とします。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの効果を、CI成功率、レビュー指摘、欠陥流出率、修正時間、依存追加の安全性で評価します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails/"
+          },
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "Claude CodeとGitHub Copilotの運用ルールを共通化する",
+        "why": "複数のコーディングエージェントを併用すると、指示ファイル、権限、検証基準が分岐しやすくなります。共通原則とツール固有設定を分離すると監査しやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "共通の開発規約を一つの文書で管理し、GitHub Copilot用のcopilot-instructions.mdとClaude Code用のCLAUDE.mdへ同期します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "AWS Japan Zenn",
+            "url": "https://zenn.dev/aws_japan/articles/kiro-claude-code-hybrid-workflow"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認：KiroとClaude Codeの共通ワークフロー運用",
+        "why": "日本語コミュニティで、状態ファイルと共通ルールを使い複数AI開発ツールを切り替える実践例が共有されました。ツール対応範囲や運用効果は各公式資料で追加確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotとの併用では、同一Issue、同一テスト、同一レビュー基準で成果を比較し、文脈移行の欠落を確認します。",
+        "deadline": "",
+        "community": "Zennでは、会話履歴ではなく状態と成果物をGit管理し、Claude Codeや他ツール間で作業を引き継ぐ方法が紹介されています。",
+        "sources": [
+          {
+            "label": "AWS Japan Zenn",
+            "url": "https://zenn.dev/aws_japan/articles/kiro-claude-code-hybrid-workflow"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Claude Codeの対象日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code関連資料、公開リポジトリを確認しましたが、対象日の料金、CLI、MCP、企業管理に関する高確度な大型発表は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot側のモデル管理と静的解析更新を基準に、Claude Codeの権限、監査、費用管理との差分を継続確認します。",
+        "deadline": "",
+        "community": "対象日の日本語コミュニティでは、Claude Codeの新機能より複数ツール併用とトークン消費管理の実践が中心でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotの企業利用では、新モデルの既定有効化に備えた継続的なモデル審査が必要です。",
+      "AIコーディングの価値は生成速度だけでなく、CI、静的解析、依存関係、監査証跡を含むハーネスで決まります。",
+      "Claude CodeとGitHub Copilotを併用する場合、状態、規約、テスト、承認基準をGit上の共通資産として管理することが重要です。"
+    ]
+  },
+  "notes": "2026年7月29日JST公開分は、GitHub Copilotの企業向けモデル管理、OpenAIの研究者支援とGPT-5.6効率化、NVIDIAの自己ホスト型AIコーディング支援、CodeQL更新が中心でした。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。対象日に一次ソースを伴うClaude Code、Google DeepMind、Meta AI、Microsoft AIの独立した大型発表は限定的でした。"
+}
