@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-30",
+  "generated_at_jst": "2026-07-31T08:05:01+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Modelsが7月30日で完全終了、推論APIとBYOKも利用不可に",
+        "why": "GitHub Modelsのplayground、モデルカタログ、推論API、BYOKが既存利用者を含めて終了しました。利用中のプロジェクトはMicrosoft Foundryなどへの移行確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Modelsを参照するコード、Actions、設定ファイルをGitHub Copilotで検索し、移行先APIへの変更と回帰テストをPR化します。",
+        "deadline": "07/30 締切",
+        "community": "GitHub上のモデル推論基盤と開発支援AIの役割が分かれ、モデルAPIは外部基盤、開発ワークフローはGitHub Copilotへ寄せる構成が明確になりました。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Models依存をコードとCI/CDの両方で洗い出す",
+        "why": "アプリ本体だけでなく、GitHub Actions、検証スクリプト、環境変数、社内手順に旧エンドポイントが残ると障害が継続します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Chatでリポジトリ全体を検索し、GitHub ModelsのAPI、SDK、環境変数、ドキュメント参照を一覧化して移行PRを作成します。",
+        "deadline": "07/30 締切",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Codeの7月30日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code関連ドキュメント、公開リポジトリを確認しましたが、対象日の料金、CLI、企業管理、MCPに関する高確度な大型発表は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotの権限、MCP、監査、CI/CD利用条件を継続比較し、更新時に社内標準へ反映します。",
+        "deadline": "",
+        "community": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認しましたが、一次ソースを伴う対象日公開の大型更新は限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "対象日公開の大手AI企業による高確度な大型発表は限定的",
+        "why": "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報を確認しましたが、7月30日JST公開として確認できる重要発表は少数でした。",
+        "business_importance": "Low",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "コミュニティでは既存のAIエージェント運用、複数ツールの設定管理、MCPの安全性に関する実践共有が中心でした。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/"
+          },
+          {
+            "label": "OpenAI News",
+            "url": "https://openai.com/news/"
+          },
+          {
+            "label": "Google DeepMind News",
+            "url": "https://deepmind.google/blog/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Modelsの終了により、モデル推論APIとGitHub上の開発支援ワークフローを分けて設計する必要があります。",
+      "サービス終了対応では、アプリコードだけでなくCI/CD、環境変数、運用手順まで依存関係を洗い出すことが重要です。",
+      "対象日は大型公式発表が少なく、弱い話題を水増しせず短縮版としました。"
+    ]
+  },
+  "notes": "2026年7月30日JST公開分は高確度な公式ニュースが限定的だったため短縮版です。GitHub Models終了の告知自体は7月1日公開ですが、サービス終了日が対象日の7月30日であり、開発ワークフローへの実務影響が大きいため主要項目として掲載しました。対象日公開として一次ソースを確認できない話題はTop 5へ追加していません。"
+}
