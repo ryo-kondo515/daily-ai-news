@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-07-31",
+  "generated_at_jst": "2026-08-01T08:14:58+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot、チーム単位のモデル利用制御を公開プレビュー",
+        "why": "企業全体の基準を維持しつつ、先行検証チームなどに追加モデルを許可できるようになりました。新モデルの段階導入と利用者単位のガバナンスがしやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "先行チームへ限定してモデルを解放し、PR品質、レビュー工数、AIクレジット、障害率を比較してから全社展開します。",
+        "deadline": "",
+        "community": "公開プレビューのため、権限反映や複数企業所属ユーザーの挙動を本番導入前に確認する必要があります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot、Gemini 2.5 ProとGemini 3 Flashを提供終了",
+        "why": "Copilot Chat、インライン編集、Agentモード、コード補完を含む全GitHub Copilot体験から両モデルが削除されました。固定モデルを前提にした手順や評価基準は更新が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "代替モデルを企業ポリシーで有効化し、品質、速度、AIクレジット、利用条件を再評価します。",
+        "deadline": "07/31 締切",
+        "community": "代替モデルが管理者設定で無効な場合、利用者のモデル選択肢が突然減る点に注意が必要です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "npm、2FA回避トークンによる機密操作を制限",
+        "why": "2FAを回避するnpm granular access tokenでは、トークン作成、権限変更、maintainer追加などの高リスク操作ができなくなりました。漏えい資格情報による乗っ取り範囲を縮小します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotでnpmトークン参照箇所と公開ワークフローを洗い出し、OIDCを使うtrusted publishingへ移行します。",
+        "deadline": "",
+        "community": "CI/CDで長期トークンを使い続ける運用は、今後さらに制限される可能性があります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-restricting-npm-bypass-2fa-granular-access-tokens/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、AI普及を支えるフルスタック投資方針を公開",
+        "why": "モデル、推論効率、インフラを一体で改善し、より安価で広く使えるAIを目指す方針を示しました。企業利用ではモデル性能だけでなく、供給能力と価格持続性も重要な評価軸になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude CodeとCodexを比較する際、モデル品質だけでなく、料金変動、利用上限、停止時の代替経路も評価表に含めます。",
+        "deadline": "",
+        "community": "AI基盤への大規模投資が価格低下につながる期待と、特定事業者への依存が強まる懸念があります。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/building-abundant-intelligence/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilotのモデル権限を段階開放する",
+        "why": "全社員へ新モデルを即時解放すると、費用、品質、データ処理条件の評価前に利用が広がります。少数チームでの検証後に展開する方が管理しやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "モデルごとに対象者、用途、料金、保持条件、停止手順を定義し、評価結果を承認記録として残します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "特定モデル名に依存した開発手順を減らす",
+        "why": "GitHub Copilotではモデルの追加と終了が続いています。手順書やプロンプトが特定モデルへ固定されると、提供終了時の移行負担が増えます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "低遅延、深いレビュー、長文理解など用途別の選定基準を作り、代替モデルでも同じ受入条件を満たせるようにします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "npm公開を長期トークンからOIDCへ移行",
+        "why": "2FA回避トークンの権限は縮小されています。人手を介さないCI/CD公開では、短期資格情報を使うtrusted publishingが安全です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotに移行PRを作らせる際も、Actions権限、環境承認、パッケージ所有者のレビューを必須にします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-restricting-npm-bypass-2fa-granular-access-tokens/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Codeの7月31日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code関連ドキュメント、公開リポジトリを確認しましたが、対象日のCLI、料金、MCP、企業管理に関する大型更新は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotのモデル単位ガバナンスを基準に、Claude Code側のモデル選択、権限、監査方法との差を整理します。",
+        "deadline": "",
+        "community": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditでも、一次ソースを伴う独立した大型更新は限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "GitHub Copilotのチーム単位モデル制御は公開プレビュー",
+        "why": "本番標準化前の機能であり、対象顧客への展開時期や管理画面の挙動が変わる可能性があります。限定チームでの検証が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "権限反映、複数所属時の優先順位、監査ログ、モデル利用実績を検証し、ロールバック手順を用意します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotの企業管理は、組織単位からチーム・利用者単位のモデル制御へ進んでいます。",
+      "モデルの提供終了が続くため、特定モデルへ固定された手順より、用途別に代替可能な開発ワークフローが重要です。",
+      "AI開発のサプライチェーンでは、npm公開資格情報を長期トークンからOIDCへ移す流れが強まっています。"
+    ]
+  },
+  "notes": "2026年7月31日JST公開分は、GitHub Copilotのチーム単位モデルポリシー、Geminiモデルの提供終了、npmの2FA回避トークン制限、OpenAIのインフラ・価格持続性に関する方針が中心でした。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。対象日に一次ソースを伴うClaude Codeの大型更新は確認できず、全体として短縮版です。"
+}
