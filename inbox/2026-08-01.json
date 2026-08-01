@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-01",
+  "generated_at_jst": "2026-08-02T08:53:09+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認：Claude Code向けCLAUDE.mdの規模別設計が話題",
+        "why": "プロジェクト規模に応じてCLAUDE.mdを分割し、個人設定とリポジトリ設定を使い分ける実践例がZennで公開されました。Anthropicの新機能発表ではなく、コミュニティによる運用提案です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "共通規約を正本として管理し、Claude Code向けCLAUDE.mdとGitHub Copilot向けinstructions・skillsへ必要部分を同期します。長文化による指示競合やコンテキスト消費も検証します。",
+        "deadline": "",
+        "community": "日本の開発現場で、AIエージェント向け指示ファイルをどこまで詳細化するかが継続的な論点になっています。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/sunsun_eng/articles/claude-md-7-improvements"
+          },
+          {
+            "label": "Claude Code Docs",
+            "url": "https://code.claude.com/docs/en/memory"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月1日は週末で、高確度な公式AI製品発表は限定的でした。弱い話題をTop 5へ水増しせず、コミュニティ動向のみをWatchlistに掲載しています。",
+      "Claude CodeやGitHub Copilotの企業利用では、指示ファイルの量よりも、正本管理、適用範囲、競合防止、更新責任の明確化が重要です。",
+      "複数のコーディングエージェントを併用する場合、ツールごとに規約を手作業で複製せず、共通ルールから生成・検証する運用が有効です。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月1日JST公開分について、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表、Claude Codeの公式ドキュメント・公開リポジトリ、およびX、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しましたが、対象日に公開された高確度な大型公式ニュースは確認できませんでした。GitHub Copilot、Claude Code、AIエージェントに関する一次ソース未確認の投稿や、対象日より前に公開された更新はTop 5とBusiness Picksから除外しました。"
+}
