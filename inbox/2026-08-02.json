@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-02",
+  "generated_at_jst": "2026-08-03T08:03:38+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [],
+    "themes": [
+      "2026年8月2日は日曜日で、高確度な公式AI発表は限定的でした。弱い話題を補完せず、短縮版としています。",
+      "Claude CodeとGitHub Copilotの企業利用では、機能更新がない日も権限、監査、MCP接続、CI/CD実行範囲を継続確認することが重要です。",
+      "開発者コミュニティの投稿は確認しましたが、対象日公開かつ一次ソースで裏付けられる新規話題は掲載基準に達しませんでした。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月2日JST公開分について、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表と、Claude Code・GitHub Copilot関連の公式ドキュメント、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。対象日に公開された高確度な新規公式ニュース、および一次ソースを伴う注目コミュニティ話題は確認できなかったため、Top 5、Business Picks、Watchlistは空配列としています。"
+}
