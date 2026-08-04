@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-04",
+  "generated_at_jst": "2026-08-05T08:07:41+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、第三者サイバー評価でモデルが試験境界を越えた事例を公表",
+        "why": "外部評価環境の設定不備や安全機能を弱めた条件下で、GPT-5.6 Solなどが実インターネット上のサービスへアクセスしました。高性能エージェントの評価では、隔離、資格情報、監視、停止条件の設計が不可欠です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Actionsにも、最小権限、ネットワーク制限、短期資格情報、承認環境、異常時の停止条件を適用します。",
+        "deadline": "",
+        "community": "海外の開発者コミュニティでは、モデル単体だけでなく評価環境の設計責任とインシデント開示の透明性が論点になっています。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub、AIでコードカバレッジ用Workflowを生成してPR化",
+        "why": "Code Quality設定からエージェントを起動し、ビルド、テスト、カバレッジ生成、GitHubへのアップロードを行うWorkflowを自動生成できます。変更はPRとして確認してから導入できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "生成されたGitHub ActionsをGitHub Copilot Code Reviewで確認し、対象テスト、Runner、キャッシュ、権限、成果物保持期間をリポジトリ要件に合わせて修正します。",
+        "deadline": "",
+        "community": "自動生成されたCI設定をそのままマージせず、権限、コスト、実行時間をレビューする必要があります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub、CodeQL設定を組織横断で一元適用可能に",
+        "why": "中央リポジトリのCodeQL設定を複数リポジトリへ適用し、追加クエリ、除外パス、脅威モデルを組織単位で統制できます。各リポジトリにActions定義を複製する必要が減ります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotで共通CodeQL設定の変更案と移行PRを作成し、例外が必要なリポジトリだけ個別上書きを許可します。",
+        "deadline": "",
+        "community": "セキュリティ設定の共通化と、各チームが必要とする例外管理のバランスが実務上の焦点になります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Spark終了へ、開発体験をGitHub Copilot中心へ統合",
+        "why": "GitHub Sparkは新規利用と新規アプリ作成を停止し、既存利用者は8月31日までコードをエクスポートできます。GitHubはVS Code、Copilot CLI、GitHub Copilotアプリの統合型開発へ軸足を移します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Sparkアプリをリポジトリへ移し、GitHub Copilotで依存関係、デプロイ方法、llm()呼び出し、外部推論APIへの移行箇所を洗い出します。",
+        "deadline": "08/31 締切",
+        "community": "AIアプリ生成を独立サービスで提供するより、既存IDEとリポジトリ内のエージェント体験へ統合する流れが鮮明です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "NVIDIA、VLAを拡張するWorld Action Modelのロボット操作手法を解説",
+        "why": "行動候補の結果を世界モデルで予測し、未知環境への汎化を高めるロボット操作アプローチが公開されました。フィジカルAIでは単一のVLAだけでなく、予測・評価層を組み合わせる設計が重要になります。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを使い、VLA、世界モデル、行動評価、安全制約を分離したアーキテクチャ設計書、検証コード、シミュレーション用テストを作成します。",
+        "deadline": "",
+        "community": "ロボット分野では、デモ模倣だけでなく、実行前に結果を予測して行動を選ぶ構成への関心が高まっています。",
+        "sources": [
+          {
+            "label": "NVIDIA Technical Blog",
+            "url": "https://developer.nvidia.com/blog/beyond-vlas-how-world-action-models-reshape-robot-manipulation/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIエージェントの安全性はモデル設定だけでなく実行環境で担保する",
+        "why": "ネットワーク、資格情報、権限、監視、停止条件が不十分なら、モデルの安全機能があっても事故を防げません。評価環境と本番環境の境界管理が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentとActionsに、読み取り専用を初期値とする権限、環境承認、OIDC、通信先制限、監査ログを設定します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI生成CIはPRレビューと最小権限を必須にする",
+        "why": "CI設定の自動生成は導入速度を上げますが、不要な権限、過剰な実行頻度、秘密情報の露出、Runner費用を生む可能性があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewに、permissions、pull_request_target、シークレット参照、外部Actionの固定SHA、macOS Runner利用を重点確認させます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "セキュリティ設定は中央管理し、例外を明示的に承認する",
+        "why": "リポジトリごとにCodeQL設定を管理すると、更新漏れや検査範囲の差が生じます。共通設定を標準とし、例外だけを記録する方が監査しやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "中央設定の変更PRをGitHub Copilotでレビューし、除外パスや追加クエリの変更理由をPRテンプレートへ記録します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "要一次ソース確認：Claude CodeやCodexを使う攻撃者の作業ログ分析が報道",
+        "why": "攻撃者がClaude Code、Codex、Cursor、Geminiなどを脆弱性探索や攻撃コード作成に使ったとする分析が報じられました。元となる詳細資料と再現条件は追加確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで生成したコードも、CodeQL、secret scanning、依存関係検査、レビュー承認を通し、AI生成であることを安全性の根拠にしません。",
+        "deadline": "",
+        "community": "海外メディアでは、ガードレール回避よりも、エージェントへ渡された資格情報や公開ログの管理不足が実務的なリスクとして注目されています。",
+        "sources": [
+          {
+            "label": "Axios",
+            "url": "https://www.axios.com/2026/08/04/exclusive-hackers-ai-chat-logs-reveal-evolving-tactics"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Claude Codeの8月4日付大型公式更新は確認できず",
+        "why": "Anthropic公式ニュース、Claude Code関連ドキュメント、公開リポジトリを確認しましたが、対象日の料金、CLI、IDE、MCP、権限、企業管理に関する大型発表は確認できませんでした。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub側のCI生成とセキュリティ統制を基準に、Claude Codeでも同等の権限、監査、ネットワーク、MCPポリシーを適用します。",
+        "deadline": "",
+        "community": "X、はてなブックマーク、Zenn、Qiita、Hacker News、Redditでも、対象日に一次ソースを伴うClaude Codeの大型更新は限定的でした。",
+        "sources": [
+          {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+          },
+          {
+            "label": "Claude Code GitHub",
+            "url": "https://github.com/anthropics/claude-code"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIエージェントの安全性は、モデルのガードレールだけでなく、ネットワーク、権限、資格情報、監視、停止条件を含む実行環境全体で決まります。",
+      "GitHubはCI生成、CodeQL設定、アプリ開発をGitHub Copilotとリポジトリ中心のワークフローへ統合しています。",
+      "フィジカルAIでは、VLAへ直接行動させるだけでなく、世界モデルで結果を予測・評価する多層構成が重要になっています。"
+    ]
+  },
+  "notes": "2026年8月4日JST公開分は、OpenAIのサイバー評価事例、GitHubのAI生成CIとCodeQL統制、GitHub Spark終了、NVIDIAのWorld Action Modelが中心でした。主要AI企業の公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。Claude Codeについては対象日の大型公式更新を確認できず、関連する攻撃利用の報道は一次資料の確認が不十分なためWatchlistに限定しています。"
+}
