@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-05",
+  "generated_at_jst": "2026-08-06T08:34:00+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [],
+    "themes": [
+      "8月5日は、主要AI企業から対象日に公開された高確度な大型公式発表が確認できない静かな一日でした。",
+      "Claude CodeとGitHub Copilotについても、料金、API、MCP、権限、PR、CI/CDに関する対象日付の一次情報は確認できませんでした。",
+      "追跡不能なSNS投稿や公開日の確認できないコミュニティ記事は、誤情報防止のため掲載していません。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月5日JST公開分について、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表・変更履歴を優先確認し、Claude Code、GitHub Copilot、AIエージェント、開発ワークフロー、セキュリティ、ガバナンス、料金、API、MCP、PR、CI/CDを重点調査しました。X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認しましたが、対象日公開と一次ソースを両方確認できる注目ニュースは見つかりませんでした。対象日以前に告知され8月5日に施行された移行・提供終了情報は、公開日条件に合わないため除外しています。"
+}
