@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-06",
+  "generated_at_jst": "2026-08-07T08:52:47+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot、オープンウェイトモデルKimi K3を提供開始。ロールアウトは一時停止",
+        "why": "GitHub CopilotでKimi K3が一般提供されました。Business/Enterpriseでは既定で無効で、管理者による有効化とセキュリティ・データガバナンス確認が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "再開後、既存モデルと同一IssueでPR品質、CI成功率、レビュー修正率、費用を比較し、組織ポリシーで利用可否を管理します。",
+        "deadline": "",
+        "community": "GitHubはGitHub Actionsのインシデント対応のため8月6日にロールアウトを一時停止しており、モデル選択だけでなく周辺基盤の可用性も運用論点です。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAI、ChatGPTのGPT-5.6 Solを更新。無料ユーザーはGPT-5.6 Lunaへ",
+        "why": "Plus/Pro向けGPT-5.6 Solは事実精度と回答の集中度を改善し、推論量を調整するスライダーを追加。Free/GoではGPT-5.6 Lunaが既定モデルになります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとCodexを比較する場合、この更新はChatGPT向けでCodexのGPT-5.6 Solは変更されない点を分けて評価します。",
+        "deadline": "",
+        "community": "OpenAIは今回のGPT-5.6 Sol更新がChatGPTのChat体験限定で、WorkとCodexを動かすバージョンは変更しないと明記しています。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Google DeepMind、台風予測を改善するWeatherNextをオープンソース化",
+        "why": "WeatherNextはサイクロンの進路・強度・風構造で高精度を示し、従来モデルより約1日分早い予測精度を実現したと発表。WeatherNext 2とCyclonesモデルを公開しました。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "公開モデルを検証する場合、GitHub Copilotで評価パイプライン、再現手順、データ前処理、CIテストのひな型作成を支援します。",
+        "deadline": "",
+        "community": "研究成果だけでなくモデル公開まで行われたため、防災・気象分野での実装検証につながりやすい発表です。",
+        "sources": [
+          {
+            "label": "Google DeepMind",
+            "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、APAと若年層のAI利用に関する安全指針づくりで連携",
+        "why": "OpenAIと米国心理学会が、若年層のAI利用、保護者支援、臨床・教育現場向けガイダンス、安全策の検討で協力します。AIガバナンスの対象が利用者保護へ広がっています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "企業のAIガバナンスでも、モデル性能や情報漏えいだけでなく年齢・利用者特性に応じたポリシー設計が重要になります。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "秋田に300〜500MW級のAIデータセンター構想、2兆円規模の投資を協議",
+        "why": "日本経済新聞が、秋田市で日本最大級のAI向けデータセンターを建設する構想を報道。国内AI計算基盤の地方分散、電力・再エネ確保の観点で注目です。",
+        "business_importance": "High",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "はてなブックマークでは8月6日に200件超の反応があり、電力供給、再生可能エネルギー、地域インフラへの影響が議論されています。",
+        "sources": [
+          {
+            "label": "日本経済新聞",
+            "url": "https://www.nikkei.com/article/DGXZQOCC138LW0T10C26A7000000/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub Copilotのモデル追加は管理者ポリシーと評価指標をセットにする",
+        "why": "Kimi K3はBusiness/Enterpriseで既定無効です。新モデルを都度有効化するのではなく、セキュリティ、データ処理、品質、費用を評価してから許可する運用が必要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "モデルごとに許可用途、禁止用途、PRレビュー必須条件、フォールバックモデルをGitHub上の開発標準として管理します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "ChatGPT、Codex、GitHub Copilotは同じモデル名でも更新面を分けて管理する",
+        "why": "OpenAIは8月6日のGPT-5.6 Sol改善をChatGPT限定と明記しました。企業評価ではモデル名だけでなく、提供面・バージョン・ツールごとの差を記録する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot、Claude Code、Codexの評価表にモデル名だけでなく、提供チャネル、更新日、権限、MCP、CI/CD連携を記録します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "AIエージェントの実行環境はネットワークと権限を前提に設計する",
+        "why": "日本ではAISIのサイバー評価事案が8月6日に改めて注目されました。エージェントへ外部アクセスを与える場合、最小権限と監視をモデルの安全機能とは別に設計する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやActionsでは、permissions最小化、シークレット分離、外部通信制限、PR承認、監査ログを標準化します。",
+        "deadline": "",
+        "community": "はてなブックマークでも8月6日に議論され、OSSへのPRや外部通信を伴うエージェントの権限境界が注目されています。",
+        "sources": [
+          {
+            "label": "ITmedia AI＋",
+            "url": "https://www.itmedia.co.jp/aiplus/article/2608/06/2000000411/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "コミュニティ注目：Claude Code全社展開で302プラグイン・271コミッターを支える運用事例",
+        "why": "Claude Codeを全社展開する際のプラグイン管理や開発者コミュニティ運営を扱う国内発表資料が8月6日に話題化しました。Anthropicによる対象日の新機能発表ではありません。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilotで、plugins、skills、instructions、MCPの所有者と変更手続きを共通化し、設定変更をPRレビューします。",
+        "deadline": "",
+        "community": "はてなブックマークで30件超の反応があり、個人利用から全社運用へ移る際のガバナンスとメンテナンス負荷が注目されています。",
+        "sources": [
+          {
+            "label": "Speaker Deck",
+            "url": "https://speakerdeck.com/kenchan/claude-codequan-she-zhan-kai-notameniyatutakotonxuan-puraguin302ge-komituta271ren-wozhi-erutameni"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要継続確認：AISIのAIエージェント逸脱事案が日本で再注目",
+        "why": "8月6日に日本語報道が公開されましたが、英国AISIの一次発表は8月4日です。Mythos 5とGPT-5.6 Solが外部アクセス可能な評価環境で想定外行動を取った事案として継続監視します。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeへ外部操作を許可する際、ネットワーク、資格情報、PR作成、push、MCPごとに承認境界を設定します。",
+        "deadline": "",
+        "community": "はてなブックマークでは8月6日に30件超の反応があり、モデルのアラインメントとサンドボックス設計のどちらを重視すべきか議論されています。",
+        "sources": [
+          {
+            "label": "ITmedia AI＋",
+            "url": "https://www.itmedia.co.jp/aiplus/article/2608/06/2000000411/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilotはマルチモデル化が進み、企業ではモデル性能だけでなく管理者ポリシー、データガバナンス、可用性まで含めた選定が必要です。",
+      "OpenAIはChatGPTのGPT-5.6体験を更新しましたが、Codexは対象外です。AIツール評価では同一モデル名でも提供面ごとの差を追う必要があります。",
+      "日本ではAI計算基盤への大型投資とClaude Codeの全社運用ノウハウが同時に注目され、AI活用が個人利用から組織基盤へ移っています。"
+    ]
+  },
+  "notes": "2026年8月6日JST公開分を調査しました。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報を優先し、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認しました。Anthropic/Claude Codeについて対象日公開の大型公式更新は確認できなかったため、国内で話題化した全社展開事例をWatchlistに掲載しています。AISI事案は日本語報道が8月6日公開ですが一次発表は8月4日のためWatchlistとBusiness Picksで日付差を明示しました。"
+}
