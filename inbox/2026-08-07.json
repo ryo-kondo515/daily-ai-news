@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-07",
+  "generated_at_jst": "2026-08-08T08:06:12+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、次世代モデルAstraでCritical級サイバー能力の可能性を公表",
+        "why": "OpenAIは開発中のAstraについて、現時点でCritical capability levelを否定できないと説明しました。隔離環境、ネットワーク・ツール制限、監視、サンドボックスなどを強化しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやGitHub Actionsにも、最小権限、短期資格情報、ネットワーク制限、承認ゲート、監査ログを適用します。",
+        "deadline": "",
+        "community": "高性能エージェントの安全性はモデル単体ではなく、実行環境と権限設計で担保する必要があるという論点が強まっています。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot usage metrics API、ClaudeやCodexなど第三者エージェントを個別計測",
+        "why": "GitHub上で実行されるClaudeやCodexなどのagent app活動を、agent_id単位で取得できるようになりました。複数エージェントの導入効果を実利用データで比較できます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentと第三者エージェントのジョブ開始数、セッション数、利用者数をPR品質やCI成功率と組み合わせて評価します。",
+        "deadline": "",
+        "community": "企業導入ではライセンス配布数ではなく、エージェント別の実利用と成果を追う運用へ進みやすくなります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Copilot Code Review、レビュー強度の設定を正式提供",
+        "why": "Copilot Code Reviewのeffort levelが一般提供され、PRの複雑さやリスクに応じてレビュー深度を調整できます。組織単位の運用標準化にもつながります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "認証、権限、通信、暗号、CI変更など高リスク領域は深いレビューを使い、通常変更は軽量レビューに分けてコストと品質を両立します。",
+        "deadline": "",
+        "community": "AIレビューを全PRへ一律適用するより、変更リスクに応じて強度を変える運用が現実的になっています。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Code Quality、Copilot自動レビューをデフォルトで追加しない方針へ",
+        "why": "Code Qualityを有効化しても、GitHub Copilot Code Reviewを全PRへ自動要求するrulesetは作成されなくなりました。既存の自動設定もGitHubが作成した状態のままなら無効化されます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "自動レビューはrulesetで対象ブランチや高リスク領域を明示し、レビュー実行範囲とAI利用コストを管理します。",
+        "deadline": "",
+        "community": "GitHub側もAIレビューの自動適用より、組織が明示的に運用方針を決める方向へ修正しています。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-07-github-code-quality-no-longer-adds-copilot-as-a-reviewer/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Anthropic、Claude Fable 5の生物学セーフガードを改善",
+        "why": "Anthropicは生物学関連の誤検知を減らす更新を実施し、評価ではbiology-related fallbackを約85%削減したとしています。高能力モデルで安全性と実用性を両立する運用改善です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用する場合も、モデル側の安全制御だけに依存せず、リポジトリ権限、MCP、コマンド実行、ネットワークを共通ポリシーで管理します。",
+        "deadline": "",
+        "community": "モデルの拒否率改善と同時に、企業側での権限・監査・実行境界の設計が引き続き重要です。",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "GitHub secret scanning、Mistral AI APIキーなどpush protection対象を拡大",
+        "why": "Mistral AI APIキーなどがpush protectionの標準対象となり、アラートには所有者や有効期限などの追加メタデータも表示されます。AI開発で増えるシークレット漏えい対策に直結します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub CopilotやAIエージェントが生成した設定ファイルもsecret scanningとpush protectionを通し、固定APIキーの利用を減らします。",
+        "deadline": "",
+        "community": "AIエージェントが外部APIを多用するほど、シークレット検出と短期資格情報の重要性が高まります。",
+        "sources": [
+          {
+            "label": "GitHub Changelog",
+            "url": "https://github.blog/changelog/2026-08-07-secret-scanning-coverage-updates/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Microsoft、インドの新データセンターリージョンを稼働",
+        "why": "Microsoftはインドの新リージョンを稼働し、AI需要とデータレジデンシーを支える基盤を拡張しました。企業AIではモデルだけでなく、配置リージョンとデータ所在が重要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotでクラウド構成やデータフローを整理する際、AIサービスのリージョン、データ保持、越境移転要件をレビュー項目に含めます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Microsoft Source",
+            "url": "https://news.microsoft.com/source/"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "Google、Gemini Omniの開発者活用事例を公開",
+        "why": "GoogleはGemini Omniによる動画生成・編集の実例を公開しました。新モデル発表そのものではありませんが、マルチモーダル生成を開発ワークフローへ組み込む具体例が増えています。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで動画生成APIの呼び出し、ジョブ管理、失敗時リトライ、成果物管理の実装やテストを支援させます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Google Blog",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "8月7日報道：Claude CodeとGemini CLIのCI/CD脆弱性を再確認",
+        "why": "The Hacker Newsが8月7日に、Claude CodeとGemini CLIで未信頼入力がCI実行や秘密情報へ到達し得た脆弱性を整理しました。一次アドバイザリは対象日より前に公開済みで、修正版も提供されています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentを含むCI上のAIエージェントでは、IssueやPR本文、AGENTS.mdなどを未信頼入力として扱い、後続の特権ステップと分離します。",
+        "deadline": "",
+        "community": "Claude Codeは2.1.163以降、Gemini CLIは0.39.1以降への更新が一次アドバイザリで案内されています。",
+        "sources": [
+          {
+            "label": "Anthropic GitHub Security Advisory",
+            "url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-fg94-h982-f3mm"
+          },
+          {
+            "label": "Google GitHub Security Advisory",
+            "url": "https://github.com/google-github-actions/run-gemini-cli/security/advisories/GHSA-wpqr-6v78-jr5g"
+          },
+          {
+            "label": "The Hacker News",
+            "url": "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "要一次ソース確認：Claude Codeが別プロジェクトの文脈を突然出力したとの報告",
+        "why": "Hacker Newsで、Claude Codeがplan modeから別内容へ逸脱したという利用者報告が共有されました。再現条件やAnthropicの公式見解は確認できていないため未確認情報として扱います。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeの会話履歴を正本にせず、仕様、権限、受入条件はリポジトリ内ファイルとIssueに固定します。",
+        "deadline": "",
+        "community": "単発報告のため一般化はできませんが、長時間エージェントのコンテキスト逸脱を監視する必要性を示す材料です。",
+        "sources": [
+          {
+            "label": "Hacker News",
+            "url": "https://news.ycombinator.com/item?id=47047963"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIエージェント導入は、利用可否の判断からエージェント別の利用量・成果・コストを計測する運用へ進んでいます。",
+      "GitHub Copilot Code Reviewは全PRへの一律適用ではなく、変更リスクに応じて強度と実行範囲を調整する設計が現実的になっています。",
+      "Claude CodeやGemini CLIの事例から、AIエージェントの安全性はモデルよりもCI/CD、未信頼入力、権限、シークレットを含むハーネス設計に強く依存します。"
+    ]
+  },
+  "notes": "2026年8月7日JST公開分を調査しました。OpenAI、Anthropic、Google、Microsoft、GitHubの公式情報を優先し、Claude Code、GitHub Copilot、AIエージェント、セキュリティ、PR・CI/CDを重点確認しました。GitHubから企業開発に直結する更新が多かったためTop 5とBusiness Picksの比重が高くなっています。Claude CodeとGemini CLIの脆弱性は8月7日に再度報道されましたが、一次アドバイザリは以前に公開済みのためWatchlistに区分しています。Meta AIとNVIDIAでは対象日公開かつ本ダイジェストの重点領域に合致する高確度な大型公式発表は確認できませんでした。"
+}
