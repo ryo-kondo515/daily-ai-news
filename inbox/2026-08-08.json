@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-08",
+  "generated_at_jst": "2026-08-09T08:36:27+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "NVIDIA、アルメニアでCIS最大級のAI Factory稼働を発表",
+        "why": "FirebirdがNVIDIA、Dell TechnologiesなどとAI計算基盤を稼働しました。2027年末までに7万基超のBlackwell・Rubin GPUと300MW規模への拡張を計画しており、国家・地域単位でAI計算能力を確保する動きが加速しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotでAI基盤の構成、GPU依存、推論コスト、リージョン要件を設計書やADRとして整理し、クラウド・自前GPUの選択をレビューします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Blog",
+            "url": "https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIインフラ競争はモデル性能だけでなく電力・GPU・地域主権の勝負へ",
+        "why": "Firebirdは同一設置面積で最大40%多くGPUを稼働できる構成を掲げています。AI導入コストではモデル単価だけでなく、電力効率と計算資源の確保が重要になります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを使い、推論量、GPU利用率、リージョン、可用性、データ所在を含むインフラ比較表と移行計画をリポジトリで管理します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "NVIDIA Blog",
+            "url": "https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "コミュニティ注目：Claude Code・Codex・GitHub Copilot CLIなど6製品の設定資産を横断比較",
+        "why": "Claude CodeのCLAUDE.md、Skills、hooks、MCPなどを他のコーディングエージェントへどう移植するかを比較した日本語記事が公開されました。各社による8月8日の新機能発表ではないためWatchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "CLAUDE.mdやGitHub Copilot instructionsを個別最適化するだけでなく、規約、Skills、MCP権限、CI受入条件の共通部分をGit管理し、各エージェント向け設定へ変換します。",
+        "deadline": "",
+        "community": "Zennでは、製品間のファイル互換性ではなく、同じ入力に対して近い振る舞いを維持するPortable Coreという考え方が提示されています。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/suwash/articles/agentic-coding-clis_20260807"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "コミュニティ注目：npmサプライチェーン攻撃への実務的な防御設定",
+        "why": "npm・yarnで依存パッケージの公開直後インストールやinstall script実行を抑制する設定例が日本語で共有されました。公式の新規セキュリティ勧告ではなく、既存機能を組み合わせた実践記事です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotやcoding agentが依存パッケージを追加するPRでも、lockfile固定、npm ci、最小リリース経過時間、install script制限、Dependabot・CI検査を必須にします。",
+        "deadline": "",
+        "community": "Zennでは、AIエージェントが自律的に依存関係を追加する開発フローでも使えるサプライチェーン防御策として実装例が共有されています。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/mima_ita/articles/ce5991d27cae69"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月8日は主要AI企業のモデル・API・Claude Code・GitHub Copilotに関する大型公式発表が少ない日でした。",
+      "AI競争ではモデルそのものに加え、GPU、電力、データセンター、リージョンを含む計算基盤の確保が企業・国家レベルの重要テーマになっています。",
+      "開発者コミュニティでは、Claude Code、GitHub Copilot、Codexなど複数エージェントを前提に、設定資産の共通化とサプライチェーン防御を組み込む運用設計への関心が高まっています。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月8日JST公開分について、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報を優先確認しました。対象日に公開され、重点領域に合致する高確度な大型公式ニュースはNVIDIAのAI Factory発表が中心でした。Claude CodeとGitHub Copilotについては対象日の大型公式アップデートを確認できませんでした。X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認し、一次発表ではない開発者向け話題はWatchlistに限定しています。"
+}
