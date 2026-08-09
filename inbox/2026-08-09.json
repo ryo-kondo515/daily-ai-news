@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-09",
+  "generated_at_jst": "2026-08-10T08:29:16+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [],
+    "themes": [
+      "8月9日は日曜日で、主要AI企業から対象日に公開された高確度な大型公式発表は確認できませんでした。",
+      "Claude CodeとGitHub Copilotは直前まで更新が続いているため、企業利用では機能追加そのものより権限・MCP・CI/CD・監査の継続的な棚卸しが重要です。",
+      "AIコーディングエージェントの比較では、モデル性能だけでなくPR成果、CI成功率、コスト、権限制御、監査性を共通指標にする必要があります。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月9日JST公開分について、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報を優先確認し、Claude Code、GitHub Copilot、AIエージェント、開発ワークフロー、セキュリティ、ガバナンス、料金、API、MCP、PR、CI/CDを重点確認しました。X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも探索しましたが、対象日公開かつ一次ソースで裏付けられる注目ニュース、または対象日公開と明確に確認できる高品質なコミュニティ話題は十分に確認できませんでした。弱い話題や公開日の不明確な情報で件数を埋めず、短縮版としています。"
+}
