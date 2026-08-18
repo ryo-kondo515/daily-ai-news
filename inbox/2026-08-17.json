@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-17",
+  "generated_at_jst": "2026-08-18T10:13:20+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、AIによるサイバー攻撃能力の急速な向上に警鐘。「守る側にもエージェントを」",
+        "why": "OpenAIは、AIエージェントが実際のサイバー攻撃の一部を自動化できる段階に入り、既存の技術的負債や権限設定がより短時間で悪用され得ると指摘しました。最小権限、多層防御、ネットワーク分離など従来型の対策をAI時代向けに高速化する必要があります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentへ広い権限を与える前に、branch rulesets、secret scanning、CodeQL、Actions権限、ネットワーク接続、レビュー承認を独立した防御層として設計します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI", "url": "https://openai.com/index/the-defenders-window/"}
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHubで大規模障害、Copilot・Actions・PR・APIなど多数の開発ワークフローに影響",
+        "why": "8月17日22:40 JSTごろからGitHubの多数サービスで障害が始まり、Web・APIでは約20%、rawコンテンツ等では約50%のエラー率が報告されました。Copilotも利用不能・認証失敗が発生し、AI駆動開発の基盤依存リスクを示しました。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotやcoding agentの会話だけに作業状態を残さず、Issue、ローカルGit、テスト結果などにも受入条件と進捗を残し、GitHub障害時でも作業を継続できるようにします。",
+        "deadline": "",
+        "community": "GitHub CommunityではVisual StudioからGitHub Copilotへ接続できない報告が複数投稿されました。",
+        "sources": [
+          {"label": "GitHub Status", "url": "https://www.githubstatus.com/"},
+          {"label": "GitHub Community", "url": "https://github.com/orgs/community/discussions/205164"}
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "OpenAI、オハイオに最大8GW級AI計算基盤。NVIDIAと次世代スーパーコンピューター設計へ",
+        "why": "OpenAIはPORTS-Pike Technology Campusで約8GW-ITの計算容量を確保する契約を発表しました。NVIDIAのAI計算基盤を専用導入し、初期800MWは2028年の利用開始を見込みます。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotを使ってAI基盤のADRや容量計画を作成する際、モデル性能だけでなく電力、GPU、リージョン、可用性、データ所在、将来コストを設計項目に含めます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI", "url": "https://openai.com/index/openai-joins-ports-pike-project/"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "サイバーエージェント、Claude Code・Codex利用が急増。コード補完中心の開発からエージェント委任へ",
+        "why": "国内約1,200人のエンジニアを対象にAI利用費を補助するサイバーエージェントでは、Claude Code・Codexなど開発AIエージェントの利用が拡大し、GitHub Copilotのコード補完利用は1年間で約75%減少したと報じられました。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotを補完率だけで評価せず、coding agent、Code Review、Issue→PRまで含め、Claude Code・Codexとタスク完了率、レビュー修正数、CI成功率で比較します。",
+        "deadline": "",
+        "community": "はてなブックマークでも「実装・テストをAIへ任せ、人間がレビューする開発への移行」として反応が見られました。",
+        "sources": [
+          {"label": "＠IT", "url": "https://atmarkit.itmedia.co.jp/ait/articles/2608/17/news053.html"},
+          {"label": "はてなブックマーク", "url": "https://b.hatena.ne.jp/entry/s/atmarkit.itmedia.co.jp/ait/articles/2608/17/news053.html"}
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AIセキュリティエージェントがGitHub Copilotのレビューをすり抜けたCI/CD脆弱性を発見",
+        "why": "WizのRed AgentはSnowflakeの公開リポジトリに存在したGitHub Actionsインジェクションを自律的に発見・悪用し、内部Jiraまで到達しました。問題のあるPRではGitHub Copilotによるレビューも行われていました。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewをセキュリティゲートの代替にせず、Actions変更にはCODEOWNERS、静的解析、権限制限、外部入力のtaint検査、人間レビューを重ねます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Wiz Research", "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"}
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "GitHub、エージェント作業をチャットから「Canvas」へ。可視化・承認可能なワークフローを提唱",
+        "why": "GitHubはCopilotのエージェント作業を持続的な共有面で可視化し、人間が途中で確認・修正・承認できるCanvas活用を紹介しました。長時間エージェントではチャットログだけでは状態把握しにくい問題へのアプローチです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "長時間のGitHub Copilotタスクでは、計画、変更対象、未解決事項、承認点を明示し、人間が途中介入できる形で運用します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "GitHub Blog", "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/"}
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "時刻要確認：Anthropic、Claude各モデルの能力・安全対策を一覧化したTransparency Hubを更新",
+        "why": "Anthropicは8月17日付でClaude Opus 5、Sonnet 5などの能力、安全評価、導入時の保護策をまとめたModel Reportを公開しています。JSTでの正確な公開時刻を確認できないためWatchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotの企業採用を比較する際、性能だけでなく、モデル提供元の安全評価、データ利用、アクセス経路、ガードレールも評価表に追加します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Anthropic Transparency Hub", "url": "https://www.anthropic.com/transparency"}
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "時刻要確認：Wiz Red Agent事例、AIコードレビューをAI攻撃エージェントが上回る構図",
+        "why": "Wizの公開日は8月17日ですがJSTでの公開時刻を確定できません。内容は、AI生成・AIレビュー済みの開発フローでも、自律型セキュリティエージェントが重大なCI/CD欠陥を発見できたという重要な事例です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot Code Reviewの指摘有無を安全性の証明とせず、CI/CD設定変更には別系統のセキュリティ検査を必須にします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Wiz Research", "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"}
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "コミュニティ注目：Claude CodeとGitHub Copilotをどう使い分けるかの議論が継続",
+        "why": "RedditではClaude CodeとGitHub Copilot CLIの比較議論が続いています。個人の体験談が中心で客観的ベンチマークではないため、製品優劣ではなく利用者の評価軸を見る材料として扱います。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "コミュニティ評判ではなく、同一Issue・同一CI・同一受入条件でClaude CodeとGitHub Copilotを社内評価します。",
+        "deadline": "",
+        "community": "ターミナル中心のClaude CodeとCopilot CLIでは、モデルだけでなくエージェントハーネスやワークフロー統合の違いを重視する意見が見られます。",
+        "sources": [
+          {"label": "Reddit / r/GithubCopilot", "url": "https://www.reddit.com/r/GithubCopilot/comments/1vhol6k/claude_code_vs_github_copilot/"}
+        ]
+      }
+    ],
+    "themes": [
+      "AIコーディングは補完中心から、実装・テスト・レビューをエージェントへ委任する段階へ進み、日本企業でも利用構成の変化が数字として表れ始めています。",
+      "AIエージェントがコードを書き、別のAIが攻撃・監査する時代では、GitHub Copilot Code Reviewだけに安全性を依存せず、CI、権限、静的解析、人間承認を独立した品質ゲートとして残す必要があります。",
+      "GitHub障害が示したように、AI駆動開発がGitHubやクラウドエージェントへ集中するほど、作業状態の持ち方と障害時のフォールバック設計が重要になります。"
+    ]
+  },
+  "notes": "2026年8月17日00:00〜23:59 JST公開分を対象に、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。GitHubの大規模障害は8月17日22:40 JSTに公式Statusで最初の告知が出たため対象に含めています。Anthropic Transparency HubとWiz Researchは8月17日付を確認できましたがJSTの正確な公開時刻を確定できないためWatchlistでも明示しました。Claude Codeについて対象時間内の大型公式製品アップデートは確認できませんでした。"
+}
