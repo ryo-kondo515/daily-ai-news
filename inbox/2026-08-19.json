@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-19",
+  "generated_at_jst": "2026-08-20T08:00:00+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Codeの週次利用上限+50%措置、米国時間8/19終了予定を引き続き監視",
+        "why": "Anthropicの期間限定措置は8月19日23:59 PTまでと案内されており、日本時間では8月20日15:59ごろの終了です。対象日中の新規公式発表ではないためWatchlistに限定します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用するチームでは、上限変更後に同一Issueの完了率、待ち時間、追加課金、PR品質を比較し、用途別の標準ツールを見直します。",
+        "deadline": "08/20 締切",
+        "community": "日本のZennでも8月のClaude移行・料金期限の一つとして整理されており、ヘビーユーザーへの影響が注目されています。",
+        "sources": [
+          {
+            "label": "Anthropic Help Center",
+            "url": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work"
+          },
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/mdtechknowledge/articles/claude-august-2026-migration-deadlines"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "ChatGPT Business、追加席の請求タイミングを8/19から即時按分へ変更",
+        "why": "OpenAIは追加の有料席を加えた時点で残存期間分を即時請求する方式へ変更しました。総額は変わらず請求タイミングのみの変更ですが、公式ページの更新時刻は8月20日JSTに入るためWatchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeを含むAI開発ツールの席課金・従量課金を比較する際、月額単価だけでなく追加席の按分、利用量、途中追加時のキャッシュフローも管理表に含めます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI Help Center",
+            "url": "https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月19日JSTは、主要AI企業から対象時間内に新規公開された高確度な大型製品・API発表が非常に少ない日でした。",
+      "Claude Codeでは期間限定の利用上限緩和が終了に近づき、モデル性能だけでなく利用上限・追加課金を含む運用設計が改めて重要です。",
+      "厳密なJST公開時刻を優先し、米国時間8月19日でも日本時間では8月20日に入る記事は翌日分へ回しています。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月19日00:00〜23:59 JSTについて、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しましたが、重点領域に合致し、かつ公開時刻まで対象時間内と確認できる大型公式ニュースは確認できませんでした。GitHub Changelogでは8月19日付の新規Copilot発表を確認できず、Anthropicでも対象時間内のClaude Code大型公式リリースは確認できませんでした。Claude Codeの週次利用上限+50%措置は8月19日23:59 PTまでで、日本時間では8月20日15:59ごろに終了するためWatchlistで追跡しています。OpenAIのChatGPT Business追加席請求変更は8月19日適用開始ですが、確認できた公式Help Center更新は8月20日JSTだったためTop 5から除外しました。また、Guidelight AI StandardsのAI企業コントロール評価を扱うReuters記事は2026年8月19日21:25 UTC、すなわち8月20日06:25 JST公開のため今回から除外し、次回対象とします。"
+}
