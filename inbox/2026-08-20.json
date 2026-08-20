@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-20",
+  "generated_at_jst": "2026-08-21T08:02:00+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Anthropic、スタートアップ向けClaude Code実践ガイドを公開。MCP・Hooks・worktree・Code Reviewを体系化",
+        "why": "12社超の導入事例を基に、Claude Codeを開発ライフサイクルへ組み込む5原則を整理しました。MCPやCLIで正本へ接続し、Hooksを決定論的ゲート、worktreeを並列実装の分離境界として使う具体策まで示しています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentでも、Issue・PRを正本にし、Actions・rulesets・Code Reviewを決定論的ゲートとして配置します。Claude Codeと同じ受入条件で比較し、モデルではなくワークフロー全体を評価します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic / Claude Code Guide for Startups",
+            "url": "https://claude.com/blog/claude-code-guide-for-startups"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Anthropic、Claude Academyを本格展開。AI活用教育を『何をAIへ委任するか』まで広げる",
+        "why": "Claude Academyでは、プロンプト技法だけでなく、AIへ委任すべき仕事・人が残すべき仕事・AI利用の開示まで含めたAI fluency教育を提供します。企業導入ではツール配布だけでなく利用判断の教育が重要になることを示しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時も、補完やChatの操作研修だけでなく、どのタスクをcoding agentへ委任するか、人間レビューを必須にする領域、AI利用の記録方法を社内標準にします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic / Claude Academy",
+            "url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "monday.com、Anthropic事例で『agent-first』製品への転換を紹介",
+        "why": "Anthropicはmonday.comが人とAIエージェントが同じ業務基盤で協働するagent-first設計へ移行した事例を公開しました。AI機能を個別追加するより、タスク・状態・権限を人とエージェントで共有する設計が主眼です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub開発でも人とcoding agentが同じIssue、PR、CI状態を共有し、チャット外に進捗と判断を残すことで、エージェントを追加機能ではなくワークフロー参加者として扱えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic Blog",
+            "url": "https://claude.com/blog"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Code運用は『指示』と『強制』を分ける。Hooksをハードゲートに",
+        "why": "Anthropicのガイドは、変えてはいけない規則をCLAUDE.mdへ、確実に守らせる必要がある工程をHooksへ置く使い分けを推奨しています。AIの確率的挙動と決定論的な品質保証を分離する考え方です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotへのinstructionsだけで必須ルールを担保せず、テスト、lint、secret scanning、CodeQL、CODEOWNERS、rulesetsをGitHub Actions側の必須条件にします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic / Claude Code Guide for Startups",
+            "url": "https://claude.com/blog/claude-code-guide-for-startups"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "MCPだけに寄せず、成熟したCLIはCLIで使うという実務的な接続戦略",
+        "why": "Anthropicは外部ツール接続でMCPを推奨しつつ、gh・kubectl・psqlなど成熟したCLIがある場合はCLIの方がトークン効率に優れるケースがあると整理しました。接続方式は標準化より目的適合で選ぶべきという示唆です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot CLIやcoding agentでも、GitHub操作はgh、クラウド操作は既存CLI、独自業務システムはMCPというように、権限・監査・コンテキスト消費を比較して接続方法を選びます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic / Claude Code Guide for Startups",
+            "url": "https://claude.com/blog/claude-code-guide-for-startups"
+          }
+        ]
+      }
+    ],
+    "watchlist": [],
+    "themes": [
+      "Claude Codeの焦点はモデル性能だけでなく、MCP・CLI・Hooks・worktree・Code Reviewを組み合わせた開発ハーネス設計へ移っています。",
+      "企業のAI導入では、ツールの操作教育より『何を委任し、どこを人が検証するか』というAI fluencyとガバナンス教育が重要になっています。",
+      "人とAIエージェントが同じIssue・状態・権限を共有するagent-first設計が、開発以外の業務プロダクトにも広がっています。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月20日00:00〜23:59 JSTを対象に、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。対象日の重点領域で明確に確認できた一次情報はAnthropicのClaude Code実践ガイド、Claude Academy、monday.comのagent-first事例が中心でした。GitHub Copilotについて8月20日付の公式Changelog更新は確認できず、コミュニティ側でも対象日と一次ソースを同時に満たす強い話題を確認できなかったためWatchlistは空にしています。"
+}
