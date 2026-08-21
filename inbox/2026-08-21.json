@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-21",
+  "generated_at_jst": "2026-08-22T07:57:36+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code 2.1.238公開、短期トークン対応とself-hosted runner運用を強化",
+        "why": "AnthropicのClaude Code 2.1.238が8月21日JSTに公開され、プラグイン取得時の短期HTTPヘッダー生成、self-hosted runnerの遅延シャットダウン、動的Proxy-Authorization対応などが追加されました。企業ネットワークや社内実行基盤での運用性を高める更新です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilotを企業利用する際、固定トークンの配布を避け、短期資格情報、egress proxy、runner停止時のセッション保護を共通の運用要件として比較します。",
+        "deadline": "",
+        "community": "Claude Code 2.1.238は日本語のリリース追跡でも、MCP・プラグイン認証とself-hosted runner運用の改善として注目されています。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code npm",
+            "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code"
+          },
+          {
+            "label": "Anthropic Claude Code Changelog",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot Cloud Agentのタスク可視化障害が解消、出力遅延は最大約1時間",
+        "why": "GitHubはCopilot Cloud Agentで新規タスクの進捗表示やセッション出力が遅延する障害を8月21日09:37 JSTに解消しました。タスク自体は実行されていても状態表示が遅れるケースがあり、長時間エージェントの監視設計が課題になります。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentの状態表示だけを監視せず、PR作成、commit、CI結果などGitHub上の成果物を別系統の完了シグナルとして扱います。",
+        "deadline": "",
+        "community": "障害中はCloud Agentのセッション出力が約1時間遅延しており、可用性だけでなくオブザーバビリティの重要性が浮き彫りになりました。",
+        "sources": [
+          {
+            "label": "GitHub Status",
+            "url": "https://www.githubstatus.com/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub、毎日小さな技術的負債を直すエージェント運用例「Tidy-Upper」を紹介",
+        "why": "GitHubはAgentic Workflowsの実例として、毎日低リスクな簡素化候補を1件だけ選び、構文確認とビルド検証を通してPR化する運用を公開しました。無人エージェントに大規模変更を任せず、狭い責務と検証可能性を優先する設計が特徴です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentでも、技術的負債解消を大規模リファクタではなく、対象ファイル・変更量・必須テストを限定した定期タスクとしてIssue化します。",
+        "deadline": "",
+        "community": "GitHub自身が、無人エージェントでは『大きく直せること』より『安全に小さく直せること』を重視した事例です。",
+        "sources": [
+          {
+            "label": "GitHub Agentic Workflows",
+            "url": "https://github.github.com/gh-aw/blog/2026-08-21-agent-of-the-day/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Codeの企業運用は固定APIキーから短期資格情報へ",
+        "why": "2.1.238ではプラグイン配布元に対しheadersHelperで短期トークンなどのHTTPヘッダーを都度生成でき、self-hosted runnerでも動的Proxy-Authorizationに対応しました。秘密情報を長期保存しない設計へ寄せやすくなります。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやGitHub Actionsでも、長期PATや固定シークレットよりOIDC、短期トークン、環境単位の最小権限を優先し、Claude Codeと同じ秘密情報管理基準で統制します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Changelog",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "エージェント自動化は『変更量を絞る』こと自体が安全策になる",
+        "why": "GitHubのTidy-Upperは毎回1件の低リスク変更だけを選び、構文・ビルド確認を必須にしています。大規模な自律化より、狭い責務と機械的な受入条件の積み重ねが実運用に向きます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentの定期タスクには、変更ファイル数、diff量、禁止ディレクトリ、必須テストを明示し、条件を超えた場合はPRを作らず人へ戻します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "GitHub Agentic Workflows",
+            "url": "https://github.github.com/gh-aw/blog/2026-08-21-agent-of-the-day/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "コミュニティ注目：Claude Codeのサブエージェントが固まる問題とタイムアウト不足",
+        "why": "8月21日の日本語記事で、Claude Codeのサブエージェントがin_progressのまま応答しない事例がGitHub Issueベースで整理されました。公式の新機能発表ではなく、現時点の実運用上の課題としてWatchlist扱いです。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeやGitHub Copilot coding agentを並列実行する場合、各タスクに外部タイムアウト、最大実行時間、再実行条件、手動停止手順を設けます。",
+        "deadline": "",
+        "community": "日本語開発者向けに、/tasksや環境変数を使った切り分け方法が共有されています。",
+        "sources": [
+          {
+            "label": "ゆとラボ",
+            "url": "https://yuto-lab.com/blog/claude-code-subagent-stuck-not-responding-guide-2026/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月21日は大型モデル発表より、Claude Codeの企業運用改善とGitHub Copilot Cloud Agentの可用性・監視が主要テーマでした。",
+      "AIエージェントの実務導入では、固定資格情報を避ける認証設計、self-hosted runner運用、外部タイムアウトなどモデル外の基盤設計が重要になっています。",
+      "GitHubの実例が示すように、無人エージェントは大規模変更より、変更量を絞り機械的に検証できる小さな定期タスクから始める方が安全です。"
+    ]
+  },
+  "notes": "2026年8月21日00:00〜23:59 JSTを対象に、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。対象時間内の大型モデル・API発表は限定的だったため短縮版です。Claude Code 2.1.238はnpm上の公開時刻からJST対象時間内と確認しました。GitHub Copilot Cloud Agent障害の解消は2026年8月21日00:37 UTC（09:37 JST）です。一次ソースを確認できないコミュニティ由来の話題はTop 5に入れていません。"
+}
