@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-22",
+  "generated_at_jst": "2026-08-23T08:03:31+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code v2.1.239 / v2.1.240が8月22日JSTに公開、企業運用とRemote Controlの安定性を改善",
+        "why": "v2.1.239ではBedrock・MCP・Remote Control・クロスセッション通信など多数の修正が入り、v2.1.240では追加の信頼性改善が公開されました。Claude CodeをチームやCIで常用する場合、運用安定性に直結する更新です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilot CLI／coding agentを併用するチームは、同じIssue・PR・CIで障害率、再試行回数、権限エラー、所要時間を比較し、ツールごとの運用基準を更新します。",
+        "deadline": "",
+        "community": "日本ではRemote Controlの実機検証記事が8月22日に公開され、スマホ起点のセッション生成やworktree分離への関心が見られます。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code release feed",
+            "url": "https://github.com/anthropics/claude-code/blob/main/feed.xml"
+          },
+          {
+            "label": "Claude Code v2.1.239",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239"
+          },
+          {
+            "label": "Claude Code v2.1.240",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.240"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Code Remote Control、スマホからローカル環境へ作業を投げる運用が現実的に",
+        "why": "公式ドキュメントでは、Remote Controlがローカルのファイル、MCP、ツール、設定を保持したままスマホやブラウザから操作でき、server modeでは最大32セッション、worktree分離にも対応します。外出先からの承認や長時間タスク監視に向きます。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentのクラウド実行とClaude Code Remote Controlのローカル実行を、データ所在、権限、MCP接続、障害時の復旧性で使い分けます。",
+        "deadline": "",
+        "community": "8月22日の日本語実機検証では、スマホから新規セッションを起動し、worktreeごとに並列作業できる運用が確認されています。",
+        "sources": [
+          {
+            "label": "Claude Code Docs - Remote Control",
+            "url": "https://code.claude.com/docs/en/remote-control"
+          },
+          {
+            "label": "日本語実機検証",
+            "url": "https://kt-tech.blog/blogs/claude-code-remote-control-reliability-update"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "コミュニティ注目：GitHub Copilot導入後のレビュー負荷・重複コード増加への懸念",
+        "why": "8月22日のRedditでは、AI生成コードが『正しそうに見える』ことでレビュー負荷が上がる、agent modeが余計な変更をする、近似実装が増えるといった現場課題が議論されました。体験談ベースのため要追加検証です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの効果測定では生成量だけでなく、レビュー時間、差し戻し率、重複実装、CI失敗率を追い、ガードレール導入前後で比較します。",
+        "deadline": "",
+        "community": "Redditで企業利用時の認知負荷やレビューコストが論点になっています。",
+        "sources": [
+          {
+            "label": "Reddit / r/GithubCopilot",
+            "url": "https://www.reddit.com/r/GithubCopilot/comments/1vvko6j/copilot_at_work_what_does_it_actually_cost_you_in/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "時刻要確認：Anthropic、Claude Mythos 5をClaude Securityへ展開しOSS防御に3,500万ドル枠",
+        "why": "Anthropic公式は8月21日付で、Claude SecurityのスキャンをMythos 5へ切り替え、OSS向けに3,500万ドル分のクレジット基金を設けると発表しました。JSTでの公開時刻を確定できないためWatchlist扱いです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude Security、GitHub Copilot Code Review、CodeQL、secret scanningを同じ脆弱性セットで比較し、AIレビューで拾えない項目をCI必須ゲートへ移します。",
+        "deadline": "",
+        "community": "日本語のAIニュースまとめでも取り上げられていますが、対象日の厳密なJST公開時刻は確認できませんでした。",
+        "sources": [
+          {
+            "label": "Anthropic",
+            "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月22日は主要AI企業の大型新モデル発表が少なく、Claude Codeの運用安定性・Remote Control改善が中心の短縮版です。",
+      "Claude Codeの企業利用は、モデル性能だけでなくRemote Control、MCP、プロキシ、Bedrock、クロスセッション通信など周辺運用の成熟が重要になっています。",
+      "GitHub Copilotを含むAIコーディングでは、生成量よりレビュー負荷、CI失敗、重複実装など『後工程コスト』を測る必要性が強まっています。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月22日00:00〜23:59 JSTを対象に、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。Anthropic公式のClaude Code release feedではv2.1.239が2026-08-21T19:54:16Z（8月22日04:54 JST）、v2.1.240が2026-08-22T14:45:21Z（8月22日23:45 JST）に更新されており、対象時間内と確認できました。GitHub Copilot公式Changelogでは対象日の新規更新を確認できませんでした。Claude Mythos 5のClaude Security展開は公式日付が8月21日ですが公開時刻を確定できないためWatchlistに限定しています。"
+}
