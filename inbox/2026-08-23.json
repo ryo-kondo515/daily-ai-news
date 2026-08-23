@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-23",
+  "generated_at_jst": "2026-08-24T08:02:27+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code v2.1.241公開、信頼性改善に集中した小規模アップデート",
+        "why": "Anthropicは8月23日09:52 JSTにClaude Code v2.1.241を公開しました。内容はバグ修正と信頼性改善のみで、大型機能追加ではありません。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用するチームでは、エージェント本体の更新頻度と不具合影響を分けて追跡し、社内標準バージョンやロールバック手順を定めます。",
+        "deadline": "",
+        "community": "Claude Codeは高頻度更新が続いており、コミュニティでは安定版運用や自動更新の扱いへの関心が継続しています。",
+        "sources": [
+          {
+            "label": "Anthropic / Claude Code GitHub Release",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコーディングツールは『最新追随』より更新統制が企業運用の論点に",
+        "why": "Claude Code v2.1.241は小規模な信頼性更新でしたが、高頻度リリースが続く環境では企業側の更新ポリシー、検証環境、ロールバックが重要です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot CLIやClaude Codeを業務利用する場合、最新版自動追随ではなく、検証済みバージョン・更新窓口・受入テストをGitHub上で管理します。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "Anthropic / Claude Code GitHub Release",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認：Claude Codeでセッション上限が急に100%表示になる報告",
+        "why": "8月23日にClaude Code公式GitHubで、軽い利用でも短期セッション上限が100%になり利用不能になるというIssueが報告されました。単一報告であり、Anthropicから障害認定や正式説明は確認できていません。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用する場合、利用制限や障害時に別ツールへ切り替えられるよう、Issue・PR・受入条件を特定チャット内だけに残さない運用にします。",
+        "deadline": "",
+        "community": "Claude Code利用量や上限消費に関する不満はRedditでも継続しており、実利用時の可用性が話題になっています。",
+        "sources": [
+          {
+            "label": "GitHub Issue / anthropics/claude-code #88978",
+            "url": "https://github.com/anthropics/claude-code/issues/88978"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "コミュニティ注目：Claude Codeを夜間・長時間自律実行する運用方法が議論",
+        "why": "Redditで、夜間にClaude Codeへ長時間タスクを任せるための分割方法やサブエージェント構成が活発に議論されました。公式推奨ではなく、運用ノウハウとしてのコミュニティ話題です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentやClaude Codeで長時間タスクを回す場合、EpicやIssueへ作業単位を分割し、各タスクに明示的な受入条件・CI・停止条件を付けます。",
+        "deadline": "",
+        "community": "r/ClaudeCodeでは、夜間処理はタスク分割とトークン予算管理がボトルネックという意見が多く見られました。",
+        "sources": [
+          {
+            "label": "Reddit / r/ClaudeCode",
+            "url": "https://www.reddit.com/r/ClaudeCode/comments/1vw5muy/how_do_you_get_claude_to_code_overnight/"
+          }
+        ]
+      },
+      {
+        "num": "W3",
+        "headline": "未確認：Claude Codeの一時的な利用枠拡大終了を巡りCodex移行議論",
+        "why": "8月23日に、Claude Codeの一時的な利用枠拡大が8月末で終了するとの理解からCodex移行を検討する議論が広がりました。ただし投稿内でも『恒久的な50%削減ではない』との訂正があり、正式条件は一次ソース確認が必要です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude Code、Codex、GitHub Copilotを比較する際は、キャンペーン時の利用枠ではなく通常時の上限、料金、PR完了率、CI成功率を共通条件で評価します。",
+        "deadline": "",
+        "community": "Redditではブランド固定を避け、Claude Code・Codex・GitHub Copilotを用途別に切り替えるべきという意見も目立ちました。",
+        "sources": [
+          {
+            "label": "Reddit / r/vibecoding",
+            "url": "https://www.reddit.com/r/vibecoding/comments/1vwdzfy/switching_away_from_claude_code_after_aug_31/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月23日は主要AI企業から大型の公式製品・API発表がほぼなく、Claude Codeの信頼性更新が中心の短縮版です。",
+      "AIコーディングツールの企業利用では、モデル性能だけでなく高頻度アップデートをどう検証・固定・ロールバックするかが運用上の重要課題です。",
+      "コミュニティではClaude Codeの長時間自律実行、利用上限、Codexなど他ツールとの切り替えが議論され、単一エージェント依存を避ける運用への関心が続いています。"
+    ]
+  },
+  "notes": "短縮版です。2026年8月23日00:00〜23:59 JSTを対象に、OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式情報と、X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認しました。対象時間内で確認できた重点領域の高確度な公式更新はClaude Code v2.1.241が中心でした。GitHub Changelogには8月23日付のGitHub Copilot更新を確認できず、OpenAI公式ニュース一覧にも同日付の新規発表は確認できませんでした。Claude Codeの利用上限・料金に関するコミュニティ投稿は、公式確認が取れない主張を含むためWatchlistに限定しています。"
+}
