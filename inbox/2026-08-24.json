@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-24",
+  "generated_at_jst": "2026-08-25T07:59:01+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、GPT-5.6 Sol／Terra／LunaをAWSのAI開発エージェントKiroへ投入",
+        "why": "GPT-5.6ファミリーがKiroで利用可能になり、要件整理、設計、実装、レビュー、テストまでの長時間開発ワークフローへ統合されました。OpenAIとAWSはTerminal-Bench 2.1で、TerraがKiro上の成功タスクを約82%低いコストで完了したとしています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentとKiroを同じIssue・受入条件で比較し、PR完成率、CI成功率、修正回数、所要時間、1タスク当たり費用を測ります。",
+        "deadline": "",
+        "community": "モデル単体より、仕様・設計・テストを含むエージェントハーネス全体で価格性能を競う流れが強まっています。",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-6-in-kiro/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Claudeで複数モデルの大規模エラー、Claude Code・APIにも影響",
+        "why": "Anthropic公式Statusでは8月24日14:06〜17:36 JSTごろにOpus 5、Fable 5など複数モデルでエラー率が上昇し、Claude API、Claude Code、Coworkなどへ影響しました。同日にはClaude.aiログイン障害も複数回発生しています。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用する場合、作業状態をIssue・branch・PR・CIへ残し、片方のサービス障害時に別エージェントへ引き継げるようにします。",
+        "deadline": "",
+        "community": "RedditでもClaude Codeのサブスクリプション認証を含むログイン障害が共有され、可用性への関心が見られました。",
+        "sources": [
+          {
+            "label": "Anthropic Status",
+            "url": "https://status.claude.com/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコーディングの競争軸はモデル性能から『仕様・検証込みのハーネス効率』へ",
+        "why": "Kiroは高レベル要求を仕様、技術設計、実行タスクへ分解し、要所で人間が確認しながらproperty-based testingまで行います。長時間エージェントではモデル名より、この周辺設計が品質とコストを左右します。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotでもinstructions、Issueテンプレート、テスト、Code Review、rulesetを一体で評価し、モデル単体ではなく開発ハーネス全体の受入条件達成率をKPIにします。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {
+            "label": "OpenAI",
+            "url": "https://openai.com/index/gpt-5-6-in-kiro/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Claude Codeへ広い権限を渡すなら、承認回数より『止めた操作のログ』を改善材料に",
+        "why": "国内の実運用事例では、直近30日の約1.9万回のWrite/Edit/Bash系操作のうち約5%がセーフティガードに止められたと報告されました。拒否ログを分析して許可・禁止ルールを育てる方式は、エージェント自律化と安全性を両立する具体策です。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilot coding agentでも、拒否された操作やレビュー差し戻しを分類し、ruleset、Actions権限、CODEOWNERS、secret scanningなど決定論的ガードレールへ反映します。",
+        "deadline": "",
+        "community": "Zennでセーフィーの実務事例として公開され、AIへ権限を渡す際の承認疲れとガードレール改善の両立が具体的に示されています。",
+        "sources": [
+          {
+            "label": "Zenn / Safie",
+            "url": "https://zenn.dev/safie_inc/articles/32310d10d43748"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "コミュニティ注目：Claude Codeが必須手順を無言で飛ばす実案件事例",
+        "why": "8月24日の国内記事では、必須手順のスキップ、誤った指示への忠実な追従、保存済み状態からの誤再開などが48件の観測として報告されました。単一案件の実践記録であり一般化はできないためWatchlistです。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotでも重要工程をプロンプト依存にせず、CI必須チェック、PRテンプレート、状態ファイル、機械判定できる受入条件へ移します。",
+        "deadline": "",
+        "community": "AIが高速化するほど、人が工程状態を理解・検証する速度がボトルネックになるという実務上の問題提起です。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/nexta_/articles/bd75edaaece9cc"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "コミュニティ注目：Claude Codeのsupervisor／Agent viewでバックグラウンド実行を解説",
+        "why": "8月24日の国内記事で、ターミナル終了後もセッションを継続するsupervisorデーモンとAgent viewの挙動が整理されました。research preview機能で仕様変更が多いため、企業導入では要公式確認です。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentなど長時間実行型エージェントでも、バックグラウンド処理の所有者、停止条件、タイムアウト、ログ保存、branch分離を明文化します。",
+        "deadline": "",
+        "community": "長時間・非同期エージェントをローカルCLIの延長ではなく、常駐ジョブとして運用する際の設計論として参考になります。",
+        "sources": [
+          {
+            "label": "Zenn",
+            "url": "https://zenn.dev/uehaj/articles/claude-code-supervisor-agent-view"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "AIコーディングはモデル単体の性能比較から、仕様、設計、テスト、承認を含むエージェントハーネス全体の価格性能競争へ移っています。",
+      "Claude Codeの自律化が進む一方、可用性、必須工程のスキップ、権限管理など、モデル外側の運用設計が実務上の重要課題になっています。",
+      "企業導入では人間の承認回数を増やすだけでなく、拒否・失敗ログをrulesetやCIなど決定論的ガードレールへ継続的に反映する運用が有効です。"
+    ]
+  },
+  "notes": "2026年8月24日00:00〜23:59 JSTを対象に、主要AI企業の公式発表と開発者コミュニティを確認しました。OpenAIのKiro記事は公式に8月24日付で、外部配信時刻情報でも同日JST内の公開と確認できるためTop 5へ採用しました。Anthropicは対象時間内に複数モデルの大規模エラーが公式Statusで確認できました。GitHub Copilotの対象日公式ChangelogやClaude Codeの大型公式製品リリースは確認できなかったため、弱い話題で件数を埋めず短縮版としています。"
+}
