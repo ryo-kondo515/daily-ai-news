@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-25",
+  "generated_at_jst": "2026-08-26T07:59:29+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、初の独自推論チップ『Jalapeño』の実測結果を公開",
+        "why": "GPT-OSS 120Bなどの公開ベンチマークで、電力効率と低遅延の両面を強調。AIエージェントの長時間実行や大規模推論のコスト構造に影響し得る基盤技術です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotで推論基盤の比較表、性能要件、コスト試算コードを作る際の前提整理に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI Engineering", "url": "https://openai.com/index/jalapeno-first-results/"},
+          {"label": "OpenAI", "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence/"}
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAI、ChatGPT WorkとCodex向けAdmin pluginを発表",
+        "why": "利用状況、権限、メンバー、利用上限、支出申請を会話から扱い、既存権限と承認フローを維持したまま管理操作を実行できます。AIエージェントの企業導入で重要なガバナンス層の具体例です。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入時も、権限・利用量・承認・監査ログを会話型管理に寄せる設計比較の材料になります。",
+        "deadline": "",
+        "community": "Redditでは可視性と承認ルーティングを評価する反応が見られました。",
+        "sources": [
+          {"label": "OpenAI", "url": "https://openai.com/index/introducing-admin-plugin/"},
+          {"label": "Reddit", "url": "https://www.reddit.com/r/artificial/comments/1vyab8z/openai_adds_an_admin_plugin_for_chatgpt_work_and/"}
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "OpenAI、ロシア発の新たな秘密影響工作キャンペーンを遮断",
+        "why": "ChatGPTアカウント群を停止し、AI生成投稿だけでなく、盗用・誤帰属コンテンツや偽装された情報発信基盤まで含む影響工作を調査・公開しました。生成AIの悪用対策と運用監視の実例です。",
+        "business_importance": "High",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI", "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "OpenAI、AI基盤を『チップから製品までの統合スタック』として明確化",
+        "why": "Microsoft、NVIDIA、AWS、AMD、Broadcom、Cerebras、CoreWeaveなど複数供給元を使い分け、性能・価格・供給リスクを最適化する方針を示しました。AIサービスの競争力がモデル単体ではなくインフラ統合力に移る流れを示しています。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilotでクラウド/推論基盤の比較検討資料やアーキテクチャ判断記録を作る際の観点整理に使えます。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI", "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence/"}
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "OpenAI Realtime APIの新発表がコミュニティ上で8月25日付として再浮上 — 要一次ソース時刻確認",
+        "why": "OpenAI Developer Communityでは8月25日付のAnnouncementとして表示されていますが、リンク先の一次ソース本文は2025年8月28日公開の既存発表です。新規更新なのか再掲・スレッド更新なのかを継続確認します。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "Realtime APIの映像入力やMCP利用に関する開発者質問が同日に見られました。",
+        "sources": [
+          {"label": "OpenAI Developer Community", "url": "https://community.openai.com/c/announcements/6"},
+          {"label": "OpenAI", "url": "https://openai.com/index/introducing-gpt-realtime/"}
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Claude Code／GitHub Copilotは8月25日付の大型公式更新を確認できず",
+        "why": "対象時間内に、Claude CodeやGitHub Copilotの主要な新機能・料金・PR/CI/CD関連の公式発表を高信頼で確認できませんでした。弱い二次情報で埋めず継続監視します。",
+        "business_importance": "Low",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "GitHub Copilotの公式Changelogとcoding agent関連更新を次回も優先確認します。",
+        "deadline": "",
+        "community": "",
+        "sources": []
+      }
+    ],
+    "themes": [
+      "AI競争はモデル性能だけでなく、独自チップ・電力効率・供給網まで含むフルスタック競争へ進んでいます。",
+      "企業向けAIエージェントでは、実行能力と同時に権限、承認、監査、支出管理を一体化するガバナンス層が重要になっています。",
+      "開発者向けAIでは同日のClaude Code／GitHub Copilot大型更新は薄く、今回は無理に件数を増やさず一次ソース重視の短縮版としました。"
+    ]
+  },
+  "notes": "2026-08-25 JSTはOpenAI公式発表が中心。Claude CodeとGitHub Copilotについては対象時間内に高信頼な大型公式更新を確認できなかったため短縮版。Realtime APIのコミュニティ表示は既存一次ソースとの日付不整合があるためWatchlist扱い。"
+}
