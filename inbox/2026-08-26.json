@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-26",
+  "generated_at_jst": "2026-08-27T07:59:46+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot Code Review、Azure Reposでパブリックプレビュー",
+        "why": "Azure DevOps利用組織でもGitHub Copilot Code Reviewを使えるようになり、PRレビューのAI支援がGitHub外へ拡張。既存のAzure Repos中心の企業にとって導入障壁が下がる。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "Azure ReposのPRレビューでCopilot Code Reviewを試し、人間レビュー前の一次チェックや指摘傾向の比較に使う。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Microsoft DevBlogs", "url": "https://devblogs.microsoft.com/devops/copilot-code-reviews-for-azure-repos-public-preview/"}
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Google DeepMind、Gemini 3.5 Transcribeを発表",
+        "why": "音声認識を単純な文字起こしではなく、知的な音声インタラクション向けに拡張。音声エージェントや会議・コール業務の入力品質向上につながる。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "音声入力を使う開発ツールや業務アプリの設計・API統合コード作成、評価用テストケース整備をGitHub Copilotで支援する。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Google DeepMind", "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/"}
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "NVIDIA、NVLink Fusion向け次世代高帯域メモリNVHBMを発表",
+        "why": "AIエージェントや超大規模モデルでボトルネックになりやすいメモリ帯域を、半カスタムAI基盤向けに強化。Amazon Annapurna Labsが最初の協業先となる。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "AI基盤更改時のアーキテクチャ比較、性能要件整理、ベンチマークコードや運用Runbookの作成をGitHub Copilotで補助する。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "NVIDIA Blog", "url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/"}
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Apps、Enterpriseの課金データへアクセス可能に",
+        "why": "GitHub AppからEnterprise課金データを取得できるようになり、開発ツールやAIコーディング利用を含むコスト監視・FinOps自動化を組み込みやすくなる。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub利用料やAI開発ツールのコスト可視化Appを作る際、API統合・集計処理・ダッシュボード実装をGitHub Copilotで支援する。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "GitHub Changelog", "url": "https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data/"}
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "OpenAI、教育利用の大規模分析を公開",
+        "why": "ChatGPTが学習支援にどう使われているかを大規模データで示し、AIを単発回答ではなく継続的な学習フィードバックへ使う傾向を可視化した。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI", "url": "https://openai.com/index/learning-never-stops/"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコードレビューの適用範囲がGitHub外へ拡大",
+        "why": "Azure Repos対応は、GitHub Copilotを既存の企業開発基盤へ後付けできることを示す。全社GitHub移行を前提にしないAI導入パターンとして重要。",
+        "business_importance": "High",
+        "copilot_applicability": "直接使える",
+        "copilot_tip": "既存レビュープロセスの一部チームだけでPoCし、指摘精度・レビュー時間・再修正率を測る。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Microsoft DevBlogs", "url": "https://devblogs.microsoft.com/devops/copilot-code-reviews-for-azure-repos-public-preview/"}
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI基盤の競争軸がGPU単体からメモリ・接続・システム統合へ",
+        "why": "NVHBMの発表は、エージェントや大規模推論の性能が計算性能だけでなくメモリ帯域とシステム統合で決まる流れを強める。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "インフラ選定資料の比較表、性能試験コード、評価観点のドラフト作成にGitHub Copilotを使う。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "NVIDIA Blog", "url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/"}
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "未確認：AnthropicがNscaleと約450億ドル規模の計算資源契約との報道",
+        "why": "TechCrunchが関係者情報として報道。Anthropicの計算資源確保がさらに大型化している可能性があるが、今回確認できた範囲ではAnthropicまたはNscaleの一次発表を確認できていない。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "一次ソース未確認のためWatchlist扱い。",
+        "sources": [
+          {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"}
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "開発者コミュニティでClaude CodeとCodexの役割分担運用が具体化",
+        "why": "ZennでClaudeを司令塔、Codexを実装ワーカーとして分ける運用例が公開。複数エージェントを能力・利用枠・コストで使い分ける実践が増えている。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "同様の役割分担を試す場合、GitHub CopilotはPRレビューやコード補完、GitHub上の変更確認レイヤーとして組み合わせられる。",
+        "deadline": "",
+        "community": "コミュニティ実践例であり、一般的な最適構成としては未検証。",
+        "sources": [
+          {"label": "Zenn", "url": "https://zenn.dev/sun_asterisk/articles/f8ee013f00cbc3"}
+        ]
+      }
+    ],
+    "themes": [
+      "AIコードレビューがリポジトリ基盤をまたいで利用可能になり、企業導入の選択肢が広がっている。",
+      "エージェント基盤ではモデル性能だけでなく、メモリ帯域・課金可視化・運用統制までが重要になっている。",
+      "開発現場では単一AIへの集中から、Claude Code・Codex・GitHub Copilotなどを役割別に組み合わせる方向が強まっている。"
+    ]
+  },
+  "notes": "8月26日JST公開を確認できた一次情報を優先。Anthropicの大型計算資源契約報道は一次発表を確認できなかったためWatchlistに限定した。Claude Code単体の大型公式更新は対象時間内で高信頼に確認できなかった。"
+}
