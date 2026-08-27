@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-27",
+  "generated_at_jst": "2026-08-28T08:00:58+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code 2.1.247公開、APIコスト最適化と管理API対応を強化",
+        "why": "Claude Code 2.1.247が8月27日08:06 JSTに公開。/claude-api cost-optimize、Admin API対応、MCP接続失敗の可視化、プラグイン市場のハードニングなど、企業運用と開発者体験の両面が強化された。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotとClaude Codeを併用する組織では、モデル利用コスト、MCP接続失敗、権限・管理APIの運用観点を共通ガバナンス項目として揃えると比較しやすい。",
+        "deadline": "",
+        "community": "日本の開発者コミュニティでは、Claude Codeの無人実行が権限確認で長時間停止する実例も共有され、完全自律運用時の承認設計が引き続き論点になっている。",
+        "sources": [
+          {"label": "Anthropic Claude Code Release v2.1.247", "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247"},
+          {"label": "Zenn: 無人Claude Codeの承認停止事例", "url": "https://zenn.dev/sivami/articles/61d6115c38e014"}
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Google、Gemini Omni 1.1 FlashをAPI提供開始",
+        "why": "Google DeepMindはGemini Omni 1.1 Flashを発表。シーン延長、開始・終了フレーム指定、4Kアップスケールなど動画生成制御を強化し、Google AI StudioとGemini Enterprise Agent Platformから利用可能にした。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Google: Build with Gemini Omni 1.1 Flash", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/"}
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Google DeepMind、フロンティアモデルの二重盲検評価を試行",
+        "why": "評価問題の事前露出やベンチマーク汚染を抑えるため、暗号学的に隔離された環境で独自フロンティアモデルを評価する二重盲検方式を発表。モデル性能評価の信頼性とガバナンスに関わる重要な試み。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入評価でも、固定ベンチマークだけでなく未公開社内課題やブラインド評価を併用すると、モデル更新時の実運用性能を測りやすい。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Google DeepMind: double-blind AI evaluations", "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"}
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、ブラジルで商業運営を開始",
+        "why": "OpenAIはサンパウロを拠点にブラジルで商業運営を開始。企業・開発者・研究機関・公共機関との連携を強化し、地域別のエンタープライズ展開を拡大する。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI: Expanding OpenAI’s presence in Brazil", "url": "https://openai.com/index/expanding-our-presence-in-brazil/"}
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "OpenAI、ChatGPTと批判的思考訓練の補完効果を研究",
+        "why": "1,000人超の学生を対象とした無作為化実験で、ChatGPT利用と因果推論トレーニングが異なる形で成果を改善したと報告。AI利用を単純な代替ではなく、人間側の思考訓練と組み合わせる設計を示唆する。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot導入教育でも、生成結果の受け入れ方だけでなくレビュー、検証、因果説明をセットで訓練する設計の参考になる。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI: ChatGPT and critical-thinking training", "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Code運用では『権限待ちで止まる』が無人化の実務リスク",
+        "why": "8月27日の日本語コミュニティでは、PreToolUseでallowしていても機密ファイル判定により承認待ちとなり、無人ルーチンが最大13時間以上停止した事例が共有された。エージェント運用では成功率だけでなく、停止理由の可観測性と復旧経路が重要。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Copilot coding agentでも、権限確認・Actions失敗・ネットワーク遮断を『人の確認が必要な停止』として分類し、通知・再開手順・監査ログを設計しておくとよい。",
+        "deadline": "",
+        "community": "Zennで実際の長時間停止事例と原因分析が公開されている。一次製品仕様ではなくユーザー検証として扱う。",
+        "sources": [
+          {"label": "Zenn: PreToolUseのallowでは勝てないsensitive file判定", "url": "https://zenn.dev/sivami/articles/61d6115c38e014"}
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Code週次利用上限50%増量、8月31日終了予定を巡り議論",
+        "why": "Redditでは、期間限定の週次利用上限50%増量が8月31日で終了するのか、恒久化されるのかが話題。8月27日時点で恒久化を確定する新たな一次発表は確認できていないため要継続確認。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotを併用する場合、利用上限やAI Creditsの変更を踏まえ、タスク種別ごとのルーティングと月次コストを比較するとよい。",
+        "deadline": "08/31 終了予定。恒久化は未確認。",
+        "community": "Reddit r/ClaudeCodeで利用上限の縮小懸念と恒久化期待が活発に議論されている。",
+        "sources": [
+          {"label": "Reddit: Claude Code weekly limits discussion", "url": "https://www.reddit.com/r/ClaudeCode/comments/1w01yew/per_anthropics_own_help_page_claude_code_weekly/"}
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "日本コミュニティでMCP/Skillの動的探索と情報流出リスクが論点化",
+        "why": "ARDをClaude Codeへ接続する検証では、MCPサーバーやSkillを動的発見できる利便性の一方、検索クエリが平文で外部送信される点やtrust層の実効性が課題として報告された。仕様はドラフト段階のためWatchlist扱い。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotのMCP利用でも、外部サーバーへ渡すクエリ・コード・メタデータを分類し、許可リストやDLPルールを設定する運用に応用できる。",
+        "deadline": "",
+        "community": "ZennでClaude Code 2.1.246を使った具体的な通信観測とPreToolUse hookによる対策例が公開された。",
+        "sources": [
+          {"label": "Zenn: ARDをClaude Codeに導入する", "url": "https://zenn.dev/k_yoshiya/articles/claude-code-ard-agentfinder"}
+        ]
+      }
+    ],
+    "themes": [
+      "AI開発ツールは機能追加だけでなく、権限・MCP・管理API・コスト可視化まで企業運用機能が急速に厚くなっている。",
+      "エージェントの無人運用では、モデル性能よりも承認待ち・停止・再開・監査のハーネス設計が実務上のボトルネックになりやすい。",
+      "フロンティアモデル評価では、ベンチマーク汚染を避けるブラインド評価や暗号学的隔離など、評価プロセスそのものの信頼性が重要テーマになっている。"
+    ]
+  },
+  "notes": "8月27日JSTはGitHub Copilotの新規公式Changelogを確認できなかったため、弱い情報で補完せず、Claude Code・Google DeepMind・OpenAIの高信頼情報を中心に構成した。Claude Code v2.1.248は2026-08-28 07:12 JST公開のため対象外。"
+}
