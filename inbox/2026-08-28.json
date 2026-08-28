@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-28",
+  "generated_at_jst": "2026-08-29T08:01:59+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code 2.1.248公開、restricted modeと機密ファイル保護を強化",
+        "why": "Claude Code v2.1.248が8月28日07:12 JSTに公開。--restrictedでコマンド実行・WebFetchを抑止し、ファイル操作を作業ディレクトリ内に制限できるようになった。加えて、/ultrareviewやローカル起点のクラウドセッションがprod.env、*.tfvars、key.pem.tmp、id_rsa.swoなど未コミットの機密ファイルをアップロードし得る問題を修正した。MCP認証、managed settings、workflow、Remote Control、background sessionも多数改善。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやMCP利用でも、無人実行用の制限モード、作業ディレクトリ境界、秘密情報の外部送信防止、権限バイパス禁止を共通のガバナンス要件として定義するとよい。",
+        "deadline": "",
+        "community": "8月28日のコミュニティでも、AIコーディングエージェントをCIや無人運用へ組み込む際の権限境界と安全な実行モードが注目された。",
+        "sources": [
+          {"label": "Anthropic Claude Code Release v2.1.248", "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248"}
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Claude Code 2.1.250公開、バグ修正と信頼性改善",
+        "why": "Claude Code v2.1.250が8月28日09:49 JSTに公開。内容はバグ修正と信頼性改善に限定されるが、v2.1.248直後の追加安定化リリースとして、当日中に更新が継続した。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Anthropic Claude Code Release v2.1.250", "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.250"}
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Anthropic、AI安全研究提案を評価するベンチマークTASTEを公開",
+        "why": "Anthropic Fellows Programは、AI安全研究提案の優劣をモデルがどこまで人間研究者と同様に判断できるか測るTASTEを公開。92組の比較で人間研究者の推定一致率は77%、Fable 5は60%で、人間の専門判断にはなお差があると報告した。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "AIコードレビューや設計レビューでも、モデル同士の自己評価だけでなく、専門家の高信頼ラベルや意見一致率を基準に評価セットを作る発想が参考になる。",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "Anthropic Alignment: TASTE", "url": "https://alignment.anthropic.com/2026/taste/"}
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "OpenAI、タイ政府とAIスタートアップ支援プログラムを開始",
+        "why": "OpenAIとタイ高等教育・科学・研究・イノベーション省が8週間のAI Acceleratorを開始。医療・ウェルネス・教育分野の10社を対象に、プロトタイプから実運用へ進めるためのテスト、安全対策、利用者フィードバック、事業化を支援する。OpenAIによればタイのCodex週間アクティブ利用は2026年初から350倍超に成長した。",
+        "business_importance": "Medium",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "",
+        "sources": [
+          {"label": "OpenAI: Supporting Thailand’s next generation of AI startups", "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIエージェント開発は『実装させる』より『検証を強制する』設計が重要",
+        "why": "8月28日のZennでは、Claude Codeに実装を任せつつ、PlaywrightやGitHub Actionsなどを使って『動いたから完成』で終わらせず検証工程を課した実践例が公開された。エージェントを成果物生成器としてではなく、検証可能な開発プロセスへ組み込む考え方が実務的。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "Copilot coding agentでも、受入条件、テスト、CI、PRレビューを先に定義し、完了判定をエージェントの自己申告ではなく機械的なチェックへ寄せるとよい。",
+        "deadline": "",
+        "community": "日本語コミュニティの実践例。一次製品仕様ではなくユーザー検証として扱う。",
+        "sources": [
+          {"label": "Zenn: AIエージェントに完成と言わせずTAB譜生成ツールを検証させた話", "url": "https://zenn.dev/c0c260479f/articles/58e6fdc6e259e0"}
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Codexの5時間利用枠と長時間タスク継続性への不満が継続",
+        "why": "OpenAI Developer Communityでは8月28日、Codexの5時間利用枠が長時間タスクを途中で止めやすいという投稿が複数あり、Safe Pause/Resumeやチェックポイント機構を求める声が出た。料金・利用上限の新たな公式変更としては確認できていないためWatchlist扱い。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Copilot coding agentを含む長時間エージェント運用では、利用枠だけでなく中断・再開・状態保存・再ディスパッチの設計を比較項目にするとよい。",
+        "deadline": "",
+        "community": "OpenAI Developer Communityで利用枠消費とタスク継続性への不満が投稿された。公式仕様変更は未確認。",
+        "sources": [
+          {"label": "OpenAI Developer Community: Codex Rate Limits Discussion", "url": "https://community.openai.com/t/codex-rate-limits-discussion-thread/1378553/625"}
+        ]
+      }
+    ],
+    "themes": [
+      "AIコーディングエージェントの競争軸が、生成性能だけでなく制限モード、秘密情報保護、権限境界、再開性など運用ハーネスへ広がっている。",
+      "モデル自身の自己評価ではなく、人間の高信頼評価やCI・テストによる外部検証を組み込むことが、エージェント運用の品質保証で重要になっている。",
+      "8月28日JSTはGitHub Copilotの新規大型公式Changelogを確認できず、弱い情報で補完せず短縮版とした。"
+    ]
+  },
+  "notes": "対象時間は2026-08-28 00:00-23:59 JST。Claude Code v2.1.248は2026-08-28 07:12 JST、v2.1.250は09:49 JSTで対象内。v2.1.251は2026-08-29 03:19 JST公開のため対象外。GitHub Copilotについては対象日付の信頼できる大型公式Changelogを確認できなかった。"
+}
