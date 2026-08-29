@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-29",
+  "generated_at_jst": "2026-08-30T08:00:17+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Claude Code 2.1.251公開、モデル切替フック・コスト可視化・権限境界を強化",
+        "why": "Claude Code v2.1.251が2026年8月29日03:19 JSTに公開。PreModelSwitch/PostModelSwitchフックでモデル切替をブロック・確認・注釈できるようになり、/usageにSpend limit、/costにセッション単位のprompt cache指標が追加された。さらにsymlinkを使った作業ディレクトリ外アクセス、plugin commandのpath traversal、権限確認前のWorkflow scriptPath参照、Grep/GlobのRead deny回避など複数のセキュリティ問題を修正。Remote Control、background session、MCP、self-hosted runnerも多数改善された。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub Copilot coding agentやCode Reviewでも、モデル切替を監査対象にする、費用上限とキャッシュ効率を可視化する、symlinkやplugin/MCP経由の権限境界をテストする、という運用要件が参考になる。",
+        "deadline": "",
+        "community": "同日公開のQiitaでは、CLAUDE_CODE_SUBAGENT_MODELの意味変更により、エージェント定義のmodel指定が環境変数より優先されることを実機検証した記事が公開された。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Release v2.1.251",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251"
+          },
+          {
+            "label": "Qiita: 環境変数でサブエージェントのモデルを固定できなくなった",
+            "url": "https://qiita.com/jqit_suwa/items/fc7f964572190fb8a77a"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AIコードレビューの『OK』を校正する実験、わざと仕込んだバグで検出力を測る",
+        "why": "8月29日のZennで、複数の意図的なバグを仕込んだコードをAIレビューにかけ、レビュー結果の信頼度を実データで確認する実践例が公開された。AIにレビューさせるだけでなく、既知欠陥を含む評価セットで『どの程度見逃すか』を測る考え方は、AIコードレビューを本番導入する際の評価設計に直結する。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "GitHub Copilot Code Reviewを導入する場合も、実PRだけで精度を判断せず、既知のバグ・セキュリティ欠陥・規約違反を仕込んだ固定評価セットを作り、検出率と誤警報率を定期測定するとよい。",
+        "deadline": "",
+        "community": "日本語コミュニティの実験記事。製品仕様や公式ベンチマークではなく、導入評価手法の参考として扱う。",
+        "sources": [
+          {
+            "label": "Zenn: AIレビューの「OK」はどこまで信じていいか、わざとバグを5個仕込んで測ってみた",
+            "url": "https://zenn.dev/nomurasan/articles/planted-bugs-llm-judge-calibration"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Claude Code 2.1.251でサブエージェントのモデル優先順位が変更",
+        "why": "同日公開のQiita記事では、CLAUDE_CODE_SUBAGENT_MODELが全サブエージェントを強制上書きする挙動から『デフォルト値』へ変わり、agent definition内のmodel指定や明示的なspawn時指定が優先されることを検証している。公式リリースノートにも同変更が明記されている。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "複数エージェント運用では、モデル選択の優先順位を暗黙にせず、リポジトリ設定・組織設定・実行時指定のどれを正とするかを固定し、CIで実モデルをログ化すると再現性が上がる。",
+        "deadline": "",
+        "community": "公式変更を日本語コミュニティが実機確認した例。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code Release v2.1.251",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251"
+          },
+          {
+            "label": "Qiita: 環境変数でサブエージェントのモデルを固定できなくなった",
+            "url": "https://qiita.com/jqit_suwa/items/fc7f964572190fb8a77a"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Codeの標準週次上限を9月14日から25%恒久増とする告知が拡散、現行比では約17%減",
+        "why": "8月29日、Claude Developers公式Xアカウントの投稿として『9月14日からPro、Max、Team、seat-based Enterpriseの標準週次上限を25%恒久増、現在の一時的な50%増はそれまで継続』との内容が複数媒体・コミュニティで確認された。基準を100とすると現行150から125になるため、現在比では約16.7%減となる。ただし検索時点で元投稿が削除されたとの報告があり、Anthropicの恒久的な公式文書でも確認できないためWatchlist扱い。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "AIコーディングツールの費用比較では、月額価格だけでなく一時増量・恒久上限・追加クレジット・長時間タスクの中断可能性を分離して評価する必要がある。",
+        "deadline": "2026-09-14",
+        "community": "Redditでは『増量という表現だが現行の一時50%増からは減る』という反応が中心。元投稿削除の指摘もあるため、正式確定までは要監視。",
+        "sources": [
+          {
+            "label": "Techmeme: ClaudeDevs announcement summary",
+            "url": "https://www.techmeme.com/260829/p13"
+          },
+          {
+            "label": "Reddit r/AI_Agents discussion",
+            "url": "https://www.reddit.com/r/AI_Agents/comments/1w1smho/claude_code_reducing_rate_limit_by_25_starting/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Meta『Muse Code』やGoogle『Gemini 4』など8月29日付の非公式記事が出回るが一次確認できず",
+        "why": "一部のAIニュース集約サイトでMetaの新コーディングエージェント『Muse Code』やGoogle DeepMind『Gemini 4』の発表をうたう記事が掲載されたが、対象時間内にMeta AI公式ブログ、Google DeepMind公式ブログで対応する発表を確認できなかった。一次ソースが出るまでは事実として扱わない。",
+        "business_importance": "Low",
+        "copilot_applicability": "関係なし",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "生成AIニュースの自動集約では、将来製品名や架空の発表を既成事実化するページが混在するため、公式発表の存在確認を必須とする。",
+        "sources": [
+          {
+            "label": "Meta AI official blog",
+            "url": "https://ai.meta.com/blog/"
+          },
+          {
+            "label": "Google DeepMind official blog",
+            "url": "https://deepmind.google/discover/blog/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "8月29日JSTの確度の高い大型公式更新はClaude Code v2.1.251が中心で、週末らしく全体件数は少ないため短縮版とした。",
+      "Claude Codeの更新はモデル切替ガバナンス、支出上限、prompt cache可視化、symlink・plugin・Workflow・sandbox周辺の権限境界など、企業運用ハーネスの強化が目立つ。",
+      "AIコードレビューは『モデルがOKと言ったか』ではなく、既知欠陥を使った評価セットとCIによる外部検証で校正する方向が実務上重要。",
+      "GitHub Copilotについては2026年8月29日付の信頼できる新規公式Changelogを確認できず、Copilot欄を無関係なAIニュースで埋めなかった。"
+    ]
+  },
+  "notes": "対象時間は2026-08-29 00:00-23:59 JST。Claude Code v2.1.251はGitHub releaseのpublished_at 2026-08-28T18:19:32Z、すなわち2026-08-29 03:19:32 JSTで対象内。OpenAI、Anthropic本体ニュース、Google DeepMind、Meta AI、Microsoft、GitHub Changelog、NVIDIAの主要公式発表を確認したが、対象日付で本ダイジェストの重点領域に該当する高信頼な大型発表は限定的だった。Claude Code週次上限の9月14日変更は公式X投稿として広く引用されたが元投稿削除の報告があるためWatchlist。"
+}
