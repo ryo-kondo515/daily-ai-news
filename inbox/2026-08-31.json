@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-08-31",
+  "generated_at_jst": "2026-09-01T08:04:14+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot in VS Codeの8月更新、Copilot/Claudeの外部セッション継続とAgent Plugins 1.0対応を追加",
+        "why": "GitHubは2026年8月31日、VS Code v1.132〜v1.135で提供したGitHub Copilot関連機能を公式Changelogに集約した。Agents windowでは、CopilotまたはClaudeで他アプリから開始したエージェントセッションをVS Codeで継続できるほか、Agent Plugins 1.0準拠のポータブルなエージェント拡張、複数チャットの並列表示、同一セッションへの複数ウィンドウ接続などを追加。さらに実験的な/rubber-duckコマンドで補完モデルにセカンドオピニオンを求められる。IDE内の単発チャットから、複数エージェント・複数セッションを束ねる開発ワークフローへ重心が移っていることを示す更新。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "GitHub Copilotを標準化する場合、モデル選定だけでなく、セッションの引き継ぎ、エージェント拡張の配布、複数セッションの管理、第二モデルによるレビューまでを開発標準に含める。特にAgent Plugins 1.0が他クライアントとの互換層として育つかは継続監視価値が高い。",
+        "deadline": "",
+        "community": "8月31日はGitHub公式更新自体が主要トピック。はてなブックマークでもCopilotのルール管理やClaude Code設定など、AI開発環境の標準化・設定共有に関する記事が目立った。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: GitHub Copilot in VS Code, August 2026 releases",
+            "url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Claude Codeの週次利用上限、9月14日から標準比25%増へ――現行の一時増量比では約17%減",
+        "why": "8月31日にITmedia AI+とPC Watchが、Anthropicの開発者向け公式Xアカウント@ClaudeDevsの告知を日本語で報道した。Pro、Max、Team、シート課金Enterpriseでは9月14日から標準の週次上限が恒久的に25%増える一方、現在適用中の50%一時増量が終了するため、実際に現在使える量と比べると約17%減る。週次上限の具体的トークン数は公開されておらず、利用モデルや会話長などで実使用量は変動する。",
+        "business_importance": "High",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "Claude Codeを常用するチームは、9月14日以降の利用枠減少を前提に、夜間ジョブや大量レビューなど高消費ワークロードの優先順位を見直す。GitHub Copilotとの併用では、定額枠・premium request・API従量課金を同じ作業単位で比較するとコスト差を把握しやすい。",
+        "deadline": "2026-09-14",
+        "community": "『25%増』と『現状比17%減』が同時に成立する表現が日本語圏でも話題化。基準値が異なるため数学的には矛盾しないが、利用者視点では実質的な減枠として受け止められている。",
+        "sources": [
+          {
+            "label": "ITmedia AI+: Claude Codeの週次制限枠、9月14日に25％引き上げ 実質は現状比17％減に",
+            "url": "https://www.itmedia.co.jp/aiplus/article/2608/31/2000000951/"
+          },
+          {
+            "label": "PC Watch: Claude Codeの週間上限、9月14日から25%増。現状比では17%減に",
+            "url": "https://pc.watch.impress.co.jp/docs/news/2136857.html"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AgentCore Memoryのnamespaceをテナント境界として検証、変数渡し忘れを即時エラー化する実例",
+        "why": "8月31日のZennで、Amazon Bedrock AgentCore Memoryのflexible namespace variablesを使い、組織・テナント単位で長期記憶を分離する実測記事が公開された。AIエージェントを複数顧客・複数部門で共有する場合、A社の記憶がB社へ混入しないことをプロンプトではなく保存層のnamespaceで強制する設計は、エージェント基盤のセキュリティとガバナンスに直結する。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "社内エージェントやcoding agentに長期記憶を追加する場合、ユーザー・リポジトリ・組織境界をアプリの慣習ではなくストレージキーや認可で強制する。記憶の混線はプロンプトインジェクションとは別系統の情報漏えいとして脅威モデルに入れる。",
+        "deadline": "",
+        "community": "NTT DATA系の日本語技術記事による実測。一次製品発表ではなく、実装上のガードレール事例として収録。",
+        "sources": [
+          {
+            "label": "Zenn: AgentCore Memoryのflexible namespace variablesを実測",
+            "url": "https://zenn.dev/nttdata_tech/articles/a4d73048bca582"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "三菱GX Works3のラダープログラムをCLI/MCP経由でAI解析する個人実装が公開",
+        "why": "8月31日のZennで、GX Works3の.gx3プロジェクトを読み取り専用解析し、CLIまたはMCP経由でAIからラダー回路を追跡できる非公式ツールgx3-cli-mcpが公開された。製造現場の専用エンジニアリングツールをMCPでAIへ接続し、属人的な設備トラブル解析を支援する具体例で、MCPがWeb/SaaSだけでなくOT・組込み領域へ広がる方向性を示す。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "GitHub CopilotやClaude Codeから専用開発資産を参照させる場合、まずread-only MCPとして導入し、解析・検索用途と書き込み用途を分離する。PLCや設備制御では、AIが生成した変更を直接実機へ反映させない安全境界が特に重要。",
+        "deadline": "",
+        "community": "日本の製造業エンジニアによる個人実装。三菱電機公式ではないため、利用時はファイル形式の互換性や安全性を別途検証する必要がある。",
+        "sources": [
+          {
+            "label": "Zenn: GX Works3 を開かずにAIがラダーを追えるようにしました",
+            "url": "https://zenn.dev/purinzan/articles/gx-works3-ladder-cli-mcp"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "AIコーディング環境の限界からRust製コードエディタを自作する事例、エージェント時代のIDE要件を示唆",
+        "why": "8月31日のZennで、Cursor利用時の制約を背景にRustで独自コードエディタを構築した事例が公開された。一次製品発表ではないものの、AIエージェントとの統合が深まるにつれ、既存IDEのUIや拡張機構ではなく、セッション、差分、実行、コンテキストをAI前提で再設計する動きが開発者側にも出ている。",
+        "business_importance": "Low",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Copilot導入評価では補完精度だけでなく、エージェントセッション管理、差分レビュー、コンテキスト制御、外部ツール接続がIDE体験として自然かを評価する。今後はモデルよりホスト環境の差が生産性を左右する可能性がある。",
+        "deadline": "",
+        "community": "個人開発事例。製品の優劣を直接証明するものではないが、AIネイティブIDEへの要求を読む材料になる。",
+        "sources": [
+          {
+            "label": "Zenn: 元医師、Cursorに限界を感じRustでコードエディタを作ってしまう",
+            "url": "https://zenn.dev/ikora/articles/3018a401031718"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Code週次上限告知のX投稿差し替えを巡る説明は継続確認",
+        "why": "複数の日本語・海外記事は、Anthropicの@ClaudeDevsによる当初投稿が削除または差し替えられたと報じている。9月14日から標準比25%増、現状比約17%減という数値自体は複数媒体で一致しているが、投稿差し替えの経緯や最終的な運用条件についてAnthropicの恒久的なドキュメントページで確認できていないためWatchlistとする。",
+        "business_importance": "Medium",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "料金・利用上限を調達判断へ使う際はSNS告知だけで固定せず、9月14日前後にAnthropicの料金・利用制限ドキュメントを再確認する。",
+        "deadline": "2026-09-14",
+        "community": "日本語圏では『増枠なのに実質減』という伝え方への反応が強い。",
+        "sources": [
+          {
+            "label": "ITmedia AI+: Claude Codeの週次制限枠",
+            "url": "https://www.itmedia.co.jp/aiplus/article/2608/31/2000000951/"
+          },
+          {
+            "label": "Hashout: Claude Code週次上限の投稿差し替えに関する整理",
+            "url": "https://hashout.jp/ai/9563/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "GitHub Copilot/VS Codeは単一チャット中心から、外部セッション継続、複数セッション、ポータブルなAgent Plugins、補完モデルによるレビューを含むエージェント運用基盤へ進化している。",
+      "Claude Codeでは9月14日の週次利用上限変更が日本の利用者にも直接影響する。標準比では25%増だが、現行の一時50%増量と比べると約17%減となるため、常時稼働・無人ジョブほど影響を受けやすい。",
+      "日本の技術コミュニティでは、長期記憶のテナント分離やPLCラダー解析MCPなど、エージェントを業務システム・OTへ安全につなぐ具体論が増えている。",
+      "OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、NVIDIAの主要公式チャネルについては、2026年8月31日JST対象内で今回の重点テーマに該当するGitHub Copilot更新以上の高信頼な大型公式発表は確認できず、無理に件数を埋めない短縮版とした。"
+    ]
+  },
+  "notes": "対象時間は2026-08-31 00:00-23:59 JST。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表を優先し、GitHub Changelog、Claude Code関連、X相当の公開検索、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアを確認。GitHub Copilotに関する記述はGitHub Copilot、Copilot Chat、レビュー、エージェントセッション、GitHub開発ワークフローの範囲に限定した。Claude Code週次上限は8月29日現地時間の公式X告知を8月31日に日本語媒体が新規報道したため対象日のニュースとして収録し、投稿差し替え経緯は恒久的な一次ドキュメント未確認のためWatchlistにも明示した。秘密情報は含めていない。"
+}
