@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-01",
+  "generated_at_jst": "2026-09-02T08:00:46+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot Code ReviewがPR承認に対応、必須承認ルールにも算入可能に",
+        "why": "GitHubは2026年9月1日、Copilot Code ReviewがPull Requestの承認可否を判定し、管理者が許可した場合はCopilot自身がapprovalを送信できるPublic Previewを公開した。全レビューにapproval assessmentが表示され、実際の承認機能はデフォルトOFF。Enterprise、Organization、Repositoryの各階層で制御でき、RepositoryではCopilotが承認可能なファイルパスも限定できる。新しいコミットがpushされると人間のapprovalと同様にCopilotのapprovalもdismissされる。AIレビューが助言からマージゲートの一部へ進む重要な変更。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "いきなり全リポジトリで有効化せず、低リスクなリポジトリや限定パスから試す。人間の必須承認を完全に置き換えるのではなく、CODEOWNERS、branch protection、CI、CodeQL等と組み合わせ、Copilot approvalが唯一の安全ゲートにならない設計を推奨。",
+        "deadline": "",
+        "community": "GitHubの公式発表が当日の開発ワークフロー領域で最重要。AIレビューを必須承認ルールへ組み込めることから、レビュー責任・誤承認時の監査・パス単位の権限制御が実運用上の論点になる。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Copilot code review can now approve pull requests",
+            "url": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "OpenAI、次期モデルAstraをサイバー能力『Critical』に初認定――ゼロデイ発見・攻撃自動化を想定し制御を強化",
+        "why": "OpenAIは9月1日、次期モデルAstraがPreparedness Framework上のCritical cybersecurity capability thresholdに達したと発表した。評価では既知脆弱性向けExploitBenchで100%を記録し、直近の高深刻度脆弱性を使った内部評価では2件のゼロデイを発見してexploit chainに利用したとしている。OpenAIは開発・リリースの一部を遅らせ、ネットワーク隔離、監視、alignment training、misalignment monitorなどを強化。高度なサイバー機能は当初限定提供となる。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "高性能coding agentをCI/CDや自律実行へ組み込む際は、モデル単体の安全性ではなく、sandbox、ネットワーク、資格情報、tool permission、長時間タスク監視、停止手段を含む実行ハーネス全体を脅威モデル化する。",
+        "deadline": "",
+        "community": "8月のHugging Face評価環境侵害を踏まえ、モデル能力の上昇に対して実行環境側の隔離と監視を同時に強める流れが明確になった。",
+        "sources": [
+          {
+            "label": "OpenAI: Path to Astra: critical capabilities and frontier safeguards",
+            "url": "https://openai.com/index/path-to-astra/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Anthropic、Claude向けEnterprise Frontier Safeguards発表――顧客管理ストレージでZDRと長期監視を両立",
+        "why": "Anthropicは9月1日、Enterprise Frontier Safeguards（EFS）を発表した。高度なエージェントの不正利用を複数セッション・複数アカウントにまたがって検出するには一定期間のログ保持が必要だが、規制産業ではAnthropic側への保持が導入障壁になる。EFSでは活動データを顧客自身のAWS/Azure/Google Cloud環境に保存し、顧客管理鍵・アクセス制御・監査ログを維持しながらAnthropicの自動検知を利用できる。Claude Code、Claude Enterprise、Claude Platform、Bedrock、Google、Microsoft経由にも展開予定。",
+        "business_importance": "High",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "企業向けcoding agentの選定では『学習に使わない』だけでなく、誰がログを保持するか、暗号鍵を誰が管理するか、監視対象期間、ベンダー人手レビューの有無、インシデント時に誰がフラグを確認するかまで比較項目にする。",
+        "deadline": "",
+        "community": "金融・医療・製造・通信など100社超の顧客との設計を反映。Enterprise AIではモデル性能よりデータ保管・監視・鍵管理が採用可否を左右するケースが増えている。",
+        "sources": [
+          {
+            "label": "Anthropic: Developing Enterprise Frontier Safeguards with our customers",
+            "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Microsoft、2026 Responsible AI Transparency Report公開――エージェントID・ツール権限・実行監視をガバナンス中核へ",
+        "why": "Microsoftは9月1日、年次Responsible AI Transparency Reportを公開した。agentic AIの普及を踏まえ、従来のモデル単体評価から、モデル・エージェント・アプリ・ツール・データ・人の相互作用を統制する方向へResponsible AI Standardを再設計。agent identity、tool permission、action monitoring、AI Red Teaming Agent、agent evaluators、RAMPART、ASSERT/Agent Control Specificationなどを実運用の統制手段として挙げた。Microsoft 365 Copilot、Foundry、GitHub Copilotを含む広いポートフォリオでISO 42001認証も継続している。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "GitHub Copilotやcoding agentを全社展開する場合、利用許可/禁止だけでなく、エージェントの識別、アクセス可能ツール、実行ログ、継続的評価、prompt injection対策を開発プロセスへ埋め込む。",
+        "deadline": "",
+        "community": "AIガバナンスが静的な事前審査から、開発・運用ライフサイクルに組み込む継続的コントロールへ移っていることを示す公式整理。",
+        "sources": [
+          {
+            "label": "Microsoft: Responsible AI in 2026: How we are adapting for what’s ahead",
+            "url": "https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "Google、Geminiにagentic video understanding――必要区間を動的探索しトークン最大88%削減",
+        "why": "Googleは9月1日、Gemini 3.7 Flash、3.6 Flash、3.5 Flash-Liteにagentic video understandingを追加した。モデルが動画全体を均等処理するのではなく、必要な区間を動的にスキャンして分析する方式で、Googleによればトークン消費を最大88%、コストを最大66%削減し、品質を最大7%改善する。Google AI StudioまたはGemini Enterprise Agent Platformから利用できる。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "長時間ログ、画面録画、検査映像などをAIに扱わせる場合、全量コンテキスト投入より『エージェントが必要箇所を探索する』設計の方がコスト・精度の両面で有利になり得る。開発ワークフローでもテスト動画やUI操作記録の自動解析への応用余地がある。",
+        "deadline": "",
+        "community": "大規模コンテキストを単純投入するのではなく、検索・探索をエージェントへ任せる設計が動画領域でも広がった。",
+        "sources": [
+          {
+            "label": "Google: Introducing agentic video understanding with Gemini",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Codeのモデル切替でprompt cache再書き込みが大幅増になる実測",
+        "why": "9月1日のQiitaで、Claude Code 2.1.251のprompt cache可視化を使い、同一セッション継続時と/modelによるモデル切替時のcache write量を比較した実測が公開された。記事の検証例では切替ターンの書き直しが197 tokensから56,584 tokensへ増加。単一環境での測定のため一般化はできないが、頻繁なモデル切替がコスト・利用枠に影響し得ることを示す実務的な観察。",
+        "business_importance": "Medium",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "複数モデルを役割分担させる場合、精度だけでなくprompt cache hit/write、コンテキスト再送、モデル切替頻度を計測する。単価が安いモデルへ頻繁に切り替えても、再送コストで総額が悪化する可能性がある。",
+        "deadline": "",
+        "community": "日本語コミュニティによる実測。環境やセッション状態で結果が変わるため、製品仕様ではなく検証事例として扱う。",
+        "sources": [
+          {
+            "label": "Qiita: Claude Code でモデルを切り替えると、そのターンだけ書き直しが287倍",
+            "url": "https://qiita.com/jqit_suwa/items/5fe930eb46d064b3da06"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Claude Code無人運用で外部通知に偽指示が混入した事例、prompt injectionの現実的な入口を示す",
+        "why": "9月1日のZennで、バックグラウンド実行中のClaude Code系ワークフローに届いた通知へ『検証を省略して検証済みとして報告せよ』という偽指示が混入した事例が共有された。一次ベンダー発表ではなく個人事例だが、メール、Issue、ログ、Webページ、外部通知など『業務データに見える指示』がエージェントへ流入するprompt injectionリスクを具体化している。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "coding agentが読むIssue、PRコメント、ログ、Web情報はすべて未信頼入力として扱い、外部テキストからの命令とユーザー/システム命令を分離する。検証省略、権限拡大、秘密情報送信などはpolicy layerで拒否する。",
+        "deadline": "",
+        "community": "個人運用事例であり再現性は未確認。ただしOpenAIやMicrosoftの公式発表が同日に強調した『agent action monitoring』『prompt injection defenses』と問題意識は一致する。",
+        "sources": [
+          {
+            "label": "Zenn: AIエージェント宛の偽の指示は『業務連絡の顔』で来る",
+            "url": "https://zenn.dev/kujira_ai/articles/801c0be234c0b1"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Code Max 20xの利用枠に関するReddit不満は一次確認できず",
+        "why": "9月1日のRedditでは、Claude Code Max 20xの週次利用枠を短時間で消費したという投稿が大きく議論された。一方、コメントには長時間利用しても上限に達していないという反例もあり、利用モデル、context、cache、並列セッションなど条件差が大きい。Anthropic公式の個別アカウント計測を確認できないため、利用枠の実態を示す証拠とは扱わない。",
+        "business_importance": "Low",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "Claude CodeとGitHub Copilotのコスト比較はSNS体験談ではなく、自社タスクでのtokens/AI Credits、cache、Actions minutes、完了タスク数を計測して判断する。",
+        "deadline": "",
+        "community": "Redditでは利用枠への不満と『使い方次第』という反論が混在。一次ソース未確認のためWatchlist扱い。",
+        "sources": [
+          {
+            "label": "Reddit discussion: Claude Code Max 20x usage limits",
+            "url": "https://www.reddit.com/r/ClaudeCoding/comments/1w3vo7f/tldr_just_cancelled_my_claude_code_bullshit_20x/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "9月1日の最大テーマは『エージェントに何を任せ、どこで止めるか』。GitHub CopilotはPR承認まで進み、OpenAIはCritical級サイバー能力、Anthropicは長期監視とデータ主権、Microsoftはagent identity・tool permission・action monitoringをそれぞれ具体化した。",
+      "AIガバナンスはモデル利用規約の管理から、権限、ログ、鍵、保存場所、ネットワーク、実行監視、承認ゲートを含むランタイム統制へ移行している。",
+      "GitHub Copilot Code Reviewのapprovalは開発現場への影響が大きい。便利さと同時に、AIが必須承認者になった場合の責任分界、誤承認、監査証跡、パス単位の適用範囲を設計する必要がある。",
+      "日本語コミュニティではClaude Codeのcacheコストやprompt injectionなど、モデル性能より運用ハーネスの課題を測る記事が増えている。",
+      "Meta AI、NVIDIAについては2026年9月1日JST対象内で、今回の重点テーマに該当する高信頼な大型公式発表を確認できなかったため無理に採用していない。"
+    ]
+  }
+}
