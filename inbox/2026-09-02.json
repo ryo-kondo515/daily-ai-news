@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-02",
+  "generated_at_jst": "2026-09-03T07:59:33+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "Google、Gemini 3.8 Flash / 3.8 Flash Cyberを発表――長時間コーディングと自律脆弱性修正を強化",
+        "why": "Googleは2026年9月2日、Gemini 3.8 FlashとGemini 3.8 Flash Cyberを発表した。3.8 Flashはソフトウェアエンジニアリング、agentic task、複数段階推論を重点強化し、DeepSWE v1.1などで前世代を上回るとする。価格は2026年末まで入力100万tokenあたり0.75ドル、出力100万tokenあたり3.75ドル。3.8 Flash Cyberは脆弱性発見と自動パッチに特化し、CyberGymでfrontier-level performance、20言語を含むGoogle内部評価で脆弱性発見成功率70%超、CWE-Benchでpass@1 47.2%を報告。",
+        "business_importance": "High",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "coding agentの評価では単発コード生成だけでなく、長時間タスク完遂率、tool call回数、token消費、再試行、テスト・修正ループまで含めて比較する。Gemini 3.8 Flashは高effort時にtoken消費が増えるため、1M token単価だけでなくタスク完了単価で評価する。",
+        "deadline": "2026-12-31まで導入価格。2027-01-01から入力1.50ドル/100万token、出力7.50ドル/100万tokenへ変更予定。",
+        "community": "Hacker Newsでも当日上位に入り、性能向上だけでなく『高effortほどtokenを多く使うためタスク単価が上がり得る』点が論点。Google自身も効率優先用途では低effortまたは3.7 Flash継続利用を案内している。",
+        "sources": [
+          {
+            "label": "Google: Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+          },
+          {
+            "label": "Google DeepMind model cards",
+            "url": "https://deepmind.google/models/model-cards/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot、app/CLIでContent ExclusionsがGA――機密コードをagentic workflowの文脈から除外",
+        "why": "GitHubは9月2日、GitHub Copilot appとCopilot CLIがEnterprise、Organization、Repository管理者のContent Exclusion policyを正式に尊重するようになったと発表した。除外ファイルはCopilotのcontextとして使用されず、機密コードをagentic workflowから保護しやすくなる。Copilot Business / Enterprise向け。GitHub DocsではContent Exclusionがinline suggestion、Copilot Chat、Copilot Code Reviewにも適用される一方、IDEのAgent modeなど一部経路には制約が残るため、対象surfaceごとの確認が必要。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "秘密鍵、顧客固有ロジック、ライセンス制約コード、セキュリティ設定などを除外候補として棚卸しする。ただしContent ExclusionをDLPの代替と考えず、権限、secret scanning、network policy、レビューを併用する。IDE Agent mode等での制約差も検証する。",
+        "deadline": "",
+        "community": "AI coding agentがより広いリポジトリ文脈を読むようになるほど、モデル性能より『読ませない境界』の設計が重要になる。前日のCopilot PR approval対応と合わせ、GitHubはAIをマージゲートへ近づける一方で管理面も強化している。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Content exclusions generally available in Copilot app and CLI",
+            "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/"
+          },
+          {
+            "label": "GitHub Docs: Content exclusion for GitHub Copilot",
+            "url": "https://docs.github.com/en/copilot/concepts/context/content-exclusion"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Google、Fairwind Program開始――Gemini 3.8 Flash Cyber＋CodeMenderを政府・重要インフラ等へ限定提供",
+        "why": "Googleは9月2日、政府機関、重要インフラ、主要技術基盤、信頼できる企業パートナー向けの限定アクセス施策Fairwind Programを開始した。Gemini 3.8 Flash CyberとCodeMender harnessを組み合わせ、脆弱性の発見、検証、修正、deployment-ready patch生成までを自律化する。参加者には社内のcybersecurity / incident response / penetration testing担当へのアクセス限定やMFA等の運用基準を要求。Googleは650超の参加パートナーを挙げている。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "強力なcoding/security agentはモデル単体で解禁せず、対象ユーザー、対象repository、network、credential、tool permission、MFA、監査ログ、patch reviewをセットで段階開放する。高能力モデルほど『誰に何を実行させるか』の運用設計が主要論点になる。",
+        "deadline": "",
+        "community": "OpenAIが前日にAstraをCritical cyber capabilityと位置づけた流れと合わせ、主要ベンダーは高サイバー能力を全面公開せず、trusted defender向けに限定しながら防御用途を先行させる方向へ寄っている。",
+        "sources": [
+          {
+            "label": "Google: Proactive cyber defense for governments and enterprises",
+            "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Copilot、企業管理で任意モデルをデフォルト指定可能に――team単位の標準モデルも設定",
+        "why": "GitHubは9月2日、Copilotのenterprise-managed settingsで新規会話のdefault modelを任意に指定できる機能をGAした。model設定をoverridableにしteam-mappings.jsonを使うことで、Enterprise teamごとに異なる標準モデルを割り当てられる。その他ユーザーはenterprise defaultを継承する。Copilot Business / EnterpriseのGitHub Copilot app、Copilot CLI、VS Codeで利用可能。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "全社員を同一モデルに固定するより、開発、レビュー、調査、低コスト用途などteamごとに標準モデルを分け、例外だけ上位モデルを選べる運用が現実的。モデル追加・価格変更時にpolicy driftが起きないよう、managed settingsをコードとして管理する。",
+        "deadline": "",
+        "community": "GitHub Copilotがマルチモデル前提になったことで、モデル選択は個人設定から企業ガバナンス対象へ移行。品質・料金・データポリシーの違いをteam単位で制御する需要に対応した更新。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Enterprise-managed settings support any default model",
+            "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Entra Agent IDでAzureリソースへ認証する実機検証――AIエージェント専用identityの実装例",
+        "why": "9月2日のZennで、Microsoft Foundryが発行するEntra Agent IDを使いAzure Blob Storageへ認証・アクセスする検証が公開された。一次ベンダー発表ではなく技術検証だが、AIエージェントを人間ユーザーや通常のservice principalと分けて識別し、最小権限を与える設計を具体化している。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "社内agentに共有credentialを持たせず、agentごとにidentityを分離し、RBAC、期限、監査ログ、失効手順を設計する。coding agentがCI/CDやクラウド資源へ触る場合も同じ考え方が有効。",
+        "deadline": "",
+        "community": "前日のMicrosoft Responsible AI Reportが強調したagent identity / tool permissionを、Azure上で具体的に試した日本語実装例として有用。",
+        "sources": [
+          {
+            "label": "Zenn: Entra Agent IDでAzureリソースに認証・アクセスする",
+            "url": "https://zenn.dev/headwaters/articles/213f43dbf9a484"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AgentCore Web Searchのdomain filter実測――agentの参照先制御はfailure modeまで検証が必要",
+        "why": "9月2日のZennで、Amazon Bedrock AgentCore Web Search Toolのdomain filterを実測した記事が公開された。管理者側filterとruntime filterの組み合わせにより、範囲外要求が明示エラーになる場合と結果がsilent dropされる場合があると報告。8月19日のAWS公式更新を追試したコミュニティ検証で、agentのWebアクセス制御を単純なallowlistだけでなく失敗時挙動まで確認する重要性を示す。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "MCPやWeb Searchをagentへ許可する際、許可domainだけでなく、redirect、subdomain、検索結果0件、policy衝突時の挙動をテストケース化する。CIでpolicy regression testを持つとよい。",
+        "deadline": "",
+        "community": "AIエージェントの外部情報アクセスをガバナンスする際、policy定義だけでなく実際のtool挙動を観測する必要があるという実務的な示唆。",
+        "sources": [
+          {
+            "label": "Zenn: AgentCore Web Searchのドメインフィルタを実測",
+            "url": "https://zenn.dev/nttdata_tech/articles/a8e6f6018f107b"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Meta Muse Spark 1.3の9月2日ロールアウト報道――公式モデルページは確認できるが公開日を一次確認できず",
+        "why": "9月2日、複数媒体がMetaのMuse Spark 1.3ロールアウトを報道した。Meta公式developer siteにはMuse Spark 1.3のモデルページが存在し、agentic workflowとcompetitive coding向けモデルであることは確認できる。一方、検索時点でMeta一次ページから9月2日公開時刻を確定できなかったため、対象日ニュースとしてはWatchlist扱いとする。報道では前世代比でtool call約20%減、token約25%減とされる。",
+        "business_importance": "Medium",
+        "copilot_applicability": "比較検討に有用",
+        "copilot_tip": "正式なrelease noteまたはMeta一次発表で公開日・benchmark条件を確認してから採用判断する。agentic codingではtool call数とtoken数の削減がタスク単価に直結するため、事実確認できれば比較指標として有用。",
+        "deadline": "",
+        "community": "Hacker NewsではMuse Spark 1.3が当日上位に入ったが、一次ソースの日付確認が不十分なため確定扱いしない。",
+        "sources": [
+          {
+            "label": "Meta Developer: Muse Spark 1.3",
+            "url": "https://developer.meta.com/ai/models/muse-spark/"
+          },
+          {
+            "label": "Neowin: Meta rolls out Muse Spark 1.3",
+            "url": "https://www.neowin.net/news/meta-rolls-out-muse-spark-13-with-stronger-coding-and-agentic-performance/"
+          }
+        ]
+      },
+      {
+        "num": "W2",
+        "headline": "Meta Muse Voice Transcribeの9月2日発表報道――一次ソース未確認",
+        "why": "9月2日にMeta Muse Voice Transcribeの提供開始を伝える報道が出た。リアルタイム音声認識、20人超のspeaker diarization、code-switching、adaptive delay、Muse Codeでのdictation利用などが報じられている。ただし今回の調査ではMeta公式一次発表ページを確認できなかったためWatchlistに限定する。",
+        "business_importance": "Low",
+        "copilot_applicability": "対象外",
+        "copilot_tip": "GitHub Copilot関連フィールドには含めない。音声入力を開発ワークフローへ組み込む場合の参考候補としてのみ監視する。",
+        "deadline": "",
+        "community": "一次ソース確認後に正式採用可否を判断する。",
+        "sources": [
+          {
+            "label": "IANS配信記事: Meta launches Muse Voice Transcribe",
+            "url": "https://www.cityairnews.com/content/meta-launches-muse-voice-transcribe-with-native-support-for-five-indian-languages"
+          }
+        ]
+      }
+    ]
+  }
+}
