@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-03",
+  "generated_at_jst": "2026-09-04T08:00:35+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot、Gemini 3.8 Flashを追加――cloud agentやCLI、Xcodeを含む広範な開発面で利用可能",
+        "why": "GitHubは2026年9月3日、GoogleのGemini 3.8 FlashをGitHub Copilotへ段階的に追加した。GitHubの初期評価では複雑なterminal-based coding taskで強く、actionable failureからの継続的なリカバリと厳密な検証を示したという。対象はCopilot Pro、Pro+、Max、Business、Enterpriseで、VS Code、Visual Studio、Copilot CLI、GitHub Copilot cloud agent、Copilot app、JetBrains、Xcode、Eclipseから選択できる。Business / Enterprise管理者はmodel policyで利用可否を制御でき、新モデル自動有効化の設定にも従う。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "Copilotのモデル比較ではコード生成精度だけでなく、terminal task完遂率、失敗からの復帰、tool call数、token消費、テスト実行回数を含むタスク単位で評価する。新モデルの自動有効化を許可している企業は、model policyと標準モデル設定を合わせて確認する。",
+        "deadline": "導入価格は2026-12-31まで。ロールアウトは段階的。",
+        "community": "前日にGoogleが3.8 Flashを発表した直後にCopilotへ統合されており、モデル公開から主要coding agentへの採用までの時間がさらに短くなっている。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Gemini 3.8 Flash is now available in GitHub Copilot",
+            "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "GitHub Copilot、4モデルを10月2日に廃止――agent modeやcode completionを含む全体で移行が必要",
+        "why": "GitHubは9月3日、Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code、Claude Opus 4.7を2026年10月2日にGitHub Copilot全体から廃止すると発表した。対象はCopilot Chat、inline edits、ask / agent mode、code completionsを含む。推奨移行先はGemini 3.8 Flash、Kimi K3、Claude Opus 5。Business / Enterpriseでは代替モデルがmodel policyで有効になっているか管理者確認が必要。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "CIや開発手順、社内ガイド、評価スクリプトでモデル名を固定している場合は棚卸しする。モデル廃止を前提に、model aliasまたは集中管理された設定を使い、モデル変更時の回帰評価を自動化する。",
+        "deadline": "2026-10-02に対象4モデルを廃止。",
+        "community": "Copilotのマルチモデル化が進む一方、モデルライフサイクルが短くなっており、企業側には『モデルを固定する運用』から『継続的に差し替える運用』への転換が求められる。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Upcoming deprecation of selected GitHub Copilot models",
+            "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Copilot Business / Enterprise、カード・PayPal契約の受付再開――10月からseat前払い運用へ",
+        "why": "GitHubは9月3日、クレジットカードまたはPayPal払いのCopilot Business / Enterprise新規契約を今後数週間かけて段階的に再開すると発表した。新規seatは利用開始前の支払いが必要となり、既存顧客も2026年10月1日以降の次回請求サイクルから割り当て済み全seatが前払い対象になる。含有usage超過時には追加支払いが必要になる場合がある。plan価格自体は変更しない。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "休眠seatを放置すると前払いコストが発生するため、GitHub側のseat assignmentと実利用を定期突合する。coding agentやpremium requestの利用拡大と合わせ、seat費用と従量費を別々に予算管理する。",
+        "deadline": "既存のカード・PayPal払い顧客は2026-10-01以降の次回billing cycleから新運用。",
+        "community": "Copilot利用が組織全体へ広がる中、技術ガバナンスだけでなくseat管理と従量usageのFinOpsが重要になっている。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Reopening Copilot Business and Enterprise signups",
+            "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "GitHub Actions、Dependabot alert用の最小権限とreusable workflow識別情報を追加",
+        "why": "GitHubは9月3日、Actionsに3つの更新を発表した。runner versionの登録・実行サポート終了日を返すREST API、Dependabot alertを読むためのGITHUB_TOKENの新しいvulnerability-alerts: read権限、reusable workflow自身のworkflow_ref / workflow_sha / repository / file_pathを取得できるjob contextが追加された。特にvulnerability-alerts権限により、より広い権限を与えずに脆弱性情報をCIで利用できる。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub開発ワークフローに直接有用",
+        "copilot_tip": "AI coding agentがPR作成後にActionsを起動する構成では、GITHUB_TOKENを最小権限化し、必要なworkflowだけDependabot alertをread可能にする。reusable workflowでは新しいjob.workflow_*を監査ログやpolicy判定に使い、どの共通workflow定義が実行されたかを追跡する。",
+        "deadline": "",
+        "community": "AIエージェントがCI/CDまで連鎖的に操作するほど、workflow tokenの最小権限と実行元workflowの識別が重要になる。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: GitHub Actions: Early September 2026 updates",
+            "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates/"
+          }
+        ]
+      },
+      {
+        "num": "#5",
+        "headline": "NVIDIA、Hugging Faceを約129億ドルで買収へ――open model基盤の中立性維持を明言",
+        "why": "NVIDIAは9月3日、Hugging Faceを129億3030万ドルで買収する契約を発表した。NVIDIAによればHugging Faceは1800万人超の開発者・研究者・クリエイター、300万超のモデル、50万datasets、100万applicationsを擁する。買収後もopen platformとして継続し、利用モデル、framework、cloud、inference providerは選択可能で、NVIDIA computeを必須にしないと明言している。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "社内AI基盤でHugging Face依存が大きい場合、hosting、inference endpoint、model registry、licensing、data governanceの契約・技術依存を整理する。現時点では中立性維持が公式方針だが、長期的なroadmapやpricingは継続監視する。",
+        "deadline": "買収完了時期は発表本文の条件に従う。",
+        "community": "open model ecosystemの中心的プラットフォームが主要GPUベンダー傘下に入るため、インフラ統合の利点とエコシステム中立性への懸念の双方が今後の主要論点になる。",
+        "sources": [
+          {
+            "label": "NVIDIA Blog: NVIDIA to Acquire Hugging Face",
+            "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "日本語解説：GitHubクラウド上のCopilotとcoding agentを開発フローへ組み込む整理",
+        "why": "9月3日、MicrosoftのZennアカウントから、IDE内のCopilot利用に加えてGitHubクラウド上のCopilot機能やagentをIssue / PR中心のworkflowへ組み込む解説が公開された。公式一次発表ではないが、日本の開発チームがcoding agentをIDE補助から非同期開発フローへ拡張する際の実務整理として有用。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "agentへ直接自由入力させるより、Issueを受け口にして要件、受入条件、変更範囲、禁止事項を構造化し、PRを成果物として人間レビューへ戻すworkflowを標準化する。",
+        "deadline": "",
+        "community": "日本語圏でも『IDEで補完を使う』段階から、GitHub上でagentへ非同期委任する運用の解説が増えている。",
+        "sources": [
+          {
+            "label": "Zenn: GitHub CopilotはIDEだけじゃない！GitHubのクラウド上のCopilotとエージェント活用",
+            "url": "https://zenn.dev/microsoft/articles/ghcp-cloud-agent-workflow"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Copilot PR承認のtrust boundaryを検討する日本語記事――審査対象branchの指示をAIが読む問題を指摘",
+        "why": "9月3日のQiita記事で、9月1日に公開されたCopilot Code ReviewのPR承認機能について、AI reviewerがhead branch上のreview instructions等を参照し得る点をtrust boundaryの観点から検討している。一次情報そのものではないが、AIのApproveをbranch protectionの1票として数える場合に、審査対象からAIへの指示入力をどう扱うかという重要な設計論点を提示している。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "Copilot approvalをrequired reviewへ算入する場合、AIが参照するinstructions、skills、設定ファイルの配置と変更権限を確認し、PR作成者が自由に変更できる入力だけでapproval判定が誘導されないようにする。重要repositoryでは人間承認を残す。",
+        "deadline": "",
+        "community": "AIレビューが参考意見からマージ権限に近づくにつれ、prompt injectionだけでなくrepository内設定の所有権がガバナンス課題になっている。",
+        "sources": [
+          {
+            "label": "Qiita: 1票を持つAIは、審査対象ブランチから指示を読む。GitHub Copilot承認機能の設計と落とし穴",
+            "url": "https://qiita.com/emi_ndk/items/675894eca29351303b35"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "9月3日にClaude API / Claude Codeでエラー率上昇との報告――公式status一次ページを本収集では確定確認できず",
+        "why": "複数の追跡サイト・報道が、9月3日UTCにClaude Mythos 5.1、Fable 5.1、Opus系を含む複数モデルでエラー率が上昇し、claude.ai、Claude API、Claude Code、Coworkへ影響したと報告している。ただし本ダイジェスト作成時点でAnthropic公式statusページの該当incident本文を一次ソースとして確定できなかったためWatchlistとする。",
+        "business_importance": "Medium",
+        "copilot_applicability": "Claude Code運用に有用",
+        "copilot_tip": "Claude CodeをCIや自動処理へ組み込む場合、provider障害時のretry上限、timeout、fallback model、partial failureの扱いを明示する。一次status確認後に正式なincident recordとして扱う。",
+        "deadline": "",
+        "community": "AI coding agentの常時利用が増えるほど、モデル性能だけでなくprovider可用性とfallback設計が開発生産性へ直結する。",
+        "sources": [
+          {
+            "label": "Claude Pulse: 2026-09-03 incident tracking (unofficial)",
+            "url": "https://claude-pulse.chatbot.tw/ja/"
+          }
+        ]
+      }
+    ]
+  }
+}
