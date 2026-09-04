@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-04",
+  "generated_at_jst": "2026-09-05T07:59:22+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "GitHub Copilot、GPT-6 AstraをGA――coding agentを含む主要開発面で利用可能",
+        "why": "GitHubは2026年9月4日、OpenAIのGPT-6 AstraをGitHub Copilotで一般提供した。Astraは長時間・自律的なcoding / agentic task向けに設計され、GitHubの内部評価では計画、診断と検証の並列化、自己確認を行い、従来OpenAIモデルより少ないstepで長期coding taskを完遂したという。Copilot Pro+、Max、Business、Enterpriseで、VS Code、Visual Studio、Copilot CLI、GitHub Copilot coding agent、Copilot app、github.com、Mobile、JetBrains、Xcode、Eclipseから利用可能。usage-based billingではprovider list pricingが適用される。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "coding agentの評価では単発のコード生成精度より、IssueからPRまでの完遂率、途中の自己検証、tool call数、テスト再実行回数、総コスト、失敗時の復帰をタスク単位で測る。Business / Enterpriseではmodel policyとdefault model enablementを確認する。",
+        "deadline": "段階的ロールアウト中。",
+        "community": "前日にOpenAIがAstraを発表した直後のCopilot GAで、基盤モデル公開から主要coding agentへの採用までのリードタイムがさらに短縮している。日本語圏でも9月4日にAstraの仕様・Codex運用解説が複数公開された。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: GPT-6 Astra is generally available in GitHub Copilot",
+            "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/"
+          },
+          {
+            "label": "OpenAI: GPT-6 Astra",
+            "url": "https://openai.com/index/gpt-6-astra/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Claude Code v2.1.260、diffパネルとprompt-cache診断を追加――権限・sandboxの重要修正も多数",
+        "why": "AnthropicのClaude Code v2.1.260はGitHub Release上で2026年9月4日08:48 JSTに公開された。フルスクリーン時に未コミット差分を会話横へ表示するdiff panel、/costとstatus lineでprompt-cache missの推定原因を示す機能、headless session向け/reload-pluginsなどを追加。さらに、括弧を含むEdit/Write/Read permission ruleが無効化されread-only folderを書き込み可能にする問題、zshのREPORTTIME等へのcommand substitutionを自動承認するBash permission checkの穴、Fable 5.1でtool result後のcontextがcache対象外になる問題などを修正した。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Claude CodeやCopilot coding agentを無人実行するチームは、モデル精度だけでなくpermission parser、sandbox、prompt cache、plugin / MCP読み込みをリリースごとに回帰確認する。特にread-only境界やshell auto-approvalはCI環境で重大なので、v2.1.260以前を利用している場合は更新検討を優先する。",
+        "deadline": "v2.1.260以前で該当permission / sandbox機能を利用中なら早期更新を推奨。",
+        "community": "Qiitaでは同日、Fable 5.1のprompt cacheがtoolを使うturnでは改善した一方、toolなしturnではcache missが残る実測が共有された。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code v2.1.260 release",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260"
+          },
+          {
+            "label": "Anthropic Claude Code CHANGELOG",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+          },
+          {
+            "label": "Qiita: Claude Code のキャッシュ、ツールを使ったターンだけ乗るようになった",
+            "url": "https://qiita.com/suwa_nobu/items/3a135f5db9d53257a9e4"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "GitHub Copilot週次更新――Agent Merge、multi-root agent session、content exclusionなどを整理",
+        "why": "GitHubは9月4日の週次リリースまとめで、Copilot app / CLIのcontent exclusions、JetBrains向け新Copilot harnessのGA、VS Code 1.136のAgent Merge public preview、multi-root workspaceでのCopilot / Claude agent session、chat session階層化を整理した。Agent Mergeはreview feedback、failed checks、merge conflictの解消を支援し、PRをmerge-readyへ近づける。",
+        "business_importance": "High",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "Issue→coding agent→PR→Code Review→Agent Merge→人間承認という非同期フローを小規模repositoryで試し、どこをAIに委任し、どこをbranch protectionやrequired checksで固定するかを決める。content exclusionがagentic workflow全体で効くかも機密repositoryで確認する。",
+        "deadline": "Agent Mergeはpublic preview。multi-root workspaceはexperimental。",
+        "community": "CopilotがIDE補助から、PRの修正・check失敗・merge conflictまで扱う開発フロー層へ広がっている。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: GitHub Copilot weekly releases — August 31",
+            "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31/"
+          }
+        ]
+      },
+      {
+        "num": "#4",
+        "headline": "Anthropic、Claudeが11日間ほぼ自律でフェルマー最終定理をLean形式化したと発表",
+        "why": "Anthropicは9月4日、フェルマー最終定理について初の完全なcomputer-checked proofを共有した。ClaudeがLeanで11日間、ほぼ自律的に形式化を進めたとしている。一般的なcoding agent更新ではないが、長期タスクでの自己分解、形式検証、機械的にチェック可能な成果物という観点で、今後のsoftware engineering agent設計にも示唆が大きい。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "AIエージェントへ長時間タスクを任せる際は、自然言語の『できた』ではなく、Lean proofやtest suite、type checker、static analysisのような機械判定可能なacceptance criteriaを置く。",
+        "deadline": "",
+        "community": "研究数学の成果だが、AIエージェントの長期自律作業では『検証可能な成果物を作らせる』設計が重要という実務的示唆がある。",
+        "sources": [
+          {
+            "label": "Anthropic Research: Formalizing Fermat's Last Theorem",
+            "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "AstraとFable 5.1、同じ定価でも実コストはcache hit率とtoken構成で変わるという日本語実測整理",
+        "why": "9月4日のZennで、GPT-6 AstraとClaude Fable 5.1のAPI基本単価がともに入力$10 / 出力$50 per 1M tokensでも、cache read、長文入力、tokenization差、出力比率によって実請求が大きく変わるという比較が公開された。一次料金表に基づく二次分析で、agent workloadのFinOps観点として有用。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "coding agentのモデル選定ではlist priceではなく、1タスクあたりinput/output/cache token、cache hit率、完遂率、再試行数を記録し、成功タスク単価で比較する。",
+        "deadline": "",
+        "community": "日本語コミュニティでは『モデル単価』ではなく『ワークロード実測』で比較する方向へ議論が進んでいる。",
+        "sources": [
+          {
+            "label": "Zenn: Fable 5.1とGPT-6 Astraの定価が揃った。価格で選べなくなったのではなく、測らないと選べなくなった",
+            "url": "https://zenn.dev/genelab_999/articles/2281f72b68e2b0"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "AI駆動開発の論点が『コード生成』から『チーム全体の仕事設計』へ――はてなで開発プロセス資料が話題",
+        "why": "9月4日のはてなブックマークでは、AI駆動開発の実態調査や『生成AIでスクラムによる開発はどう変わるか』といった資料が注目された。共通する論点は、AIがコードを書くこと自体より、要件定義、レビュー、テスト、PR、意思決定、チーム役割をどう再設計するかへ関心が移っている点。",
+        "business_importance": "Medium",
+        "copilot_applicability": "直接有用",
+        "copilot_tip": "Copilot導入効果をlines of codeや利用率だけで測らず、PR lead time、review wait、手戻り率、failed check率、agentから人へのhandoff回数などチームフローの指標を置く。",
+        "deadline": "",
+        "community": "日本の開発者コミュニティではAI codingの個人効率より、開発プロセス再設計への関心が強まっている。",
+        "sources": [
+          {
+            "label": "はてなブックマーク AI・機械学習新着",
+            "url": "https://b.hatena.ne.jp/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "num": "W1",
+        "headline": "Claude Code 2.1.260のPlan Modeで承認前にWriteできるとの報告――公式endpointでの再現未確認",
+        "why": "9月4日にanthropics/claude-code issue #91978で、Plan Mode表示中でもWrite toolが実行されファイルを変更できたという再現報告が投稿された。2.1.260 / Windows 11で観測されているが、custom Anthropic-compatible endpointを利用しており、公式Anthropic endpointで同じ挙動が起きるか、client-side permission enforcementか互換endpoint側かは未確定。一次のユーザー報告ではあるが製品側確認がないためWatchlist扱い。",
+        "business_importance": "High",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "Plan ModeやUI表示をsecurity boundaryとみなさず、filesystem permission、sandbox、container、branch protectionなど外部の強制境界を併用する。custom endpoint利用時は特にpermission semanticsをE2Eで検証する。",
+        "deadline": "",
+        "community": "同issueは影響範囲とroot causeを未確定としている。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code issue #91978",
+            "url": "https://github.com/anthropics/claude-code/issues/91978"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026年9月4日JSTは、GitHub CopilotへのGPT-6 Astra GAとClaude Code v2.1.260が開発者向けの中心トピック。",
+      "coding agentの競争軸は単発生成品質から、長期タスク完遂、自己検証、PR統合、sandbox / permission、prompt cache、運用コストへ広がっている。",
+      "GitHub CopilotではAgent Mergeやsession管理など、IssueからPR・mergeまでをつなぐworkflow層の機能拡張が続く。",
+      "Claudeのフェルマー最終定理形式化は、長期自律タスクで機械検証可能なacceptance criteriaを持つ重要性を示す。",
+      "OpenAI、Google DeepMind、Meta AI、Microsoft AI、NVIDIAについては、9月4日JST対象内で上記テーマを上回る信頼度・重要度の新規公式発表を確認できず、無理に件数を埋めなかった。"
+    ]
+  },
+  "notes": "対象時間は2026-09-04 00:00-23:59 JST。OpenAI、Anthropic、Google DeepMind、Meta AI、Microsoft AI、GitHub、NVIDIAの公式発表を優先確認し、Claude Code releases / CHANGELOG、GitHub Changelog、X相当の公開検索、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも確認した。Claude Code v2.1.260はGitHub Releaseのpublished_at 2026-09-03T23:48:12Z、すなわち2026-09-04 08:48:12 JSTのため対象内。OpenAIのGPT-6 Astra本体発表は9月3日付だが、GitHub CopilotでのGAは9月4日付の新規公式発表として収録。一次ソースで製品側確認のないPlan Mode write bypass報告はWatchlistに限定した。JSONにはメールアドレス、APIキー、SMTP認証情報、その他の秘密情報を含めていない。"
+}
