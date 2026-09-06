@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-06",
+  "generated_at_jst": "2026-09-07T08:01:33+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "#1",
+        "headline": "OpenAI、社内で『自動研究インターン』到達を報告――研究者1人日あたり3.1 agent-workdaysを投入",
+        "why": "OpenAIは9月6日、研究組織でcoding agentが日常業務を大きく変えている内部データを公開し、2026年9月までの目標としていた『automated research intern』に到達したと発表した。ここでいうresearch internは、人間の指示下で、熟練研究者なら数日かかる明確に定義された研究タスクを遂行できるシステム。2026年8月中旬時点で研究組織全体では、人間の標準8時間労働1日あたり3.1 agent-workdays相当のagent runtimeを利用し、median researcherはAPI換算で1日600ドル超、90パーセンタイルでは1日7,000ドル超の推論を使っている。OpenAIは2028年3月までのautomated AI researcherを次の目標としている一方、4〜8時間級の成功タスクでも半数超が1回以上の人間介入を要すると明示している。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub開発ワークフローに間接的に有用",
+        "copilot_tip": "coding agentの価値を『生成コード量』だけで測らず、同時並列session数、完了したtaskの人間換算時間、介入回数、experiment/PR throughput、推論コストをセットで計測する。Copilot coding agentやClaude Codeを複数並列で使う場合も、4〜8時間級タスクでは人間介入が依然重要という前提で、途中レビューと受入テストを設計する。",
+        "deadline": "",
+        "community": "同日、日本語圏でもCodex終了コード0と成果物完成を分けて検証する記事が公開され、agentの『完了報告』ではなく成果物そのものを機械検証する運用が注目されている。",
+        "sources": [
+          {
+            "label": "OpenAI: Research acceleration: The view inside OpenAI",
+            "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
+          }
+        ]
+      },
+      {
+        "num": "#2",
+        "headline": "Microsoft Agent Package Manager v0.29.1公開――Copilot/Claude Code/Codex横断でagent依存関係をmanifest・lockfile・policy管理",
+        "why": "MicrosoftのOSS『Agent Package Manager（APM）』v0.29.1が9月6日に公開された。APMはskills、prompts、instructions、plugins、MCP serversなどのagent contextをapm.ymlで宣言し、lockfileでversionとcontent hashを固定してGitHub Copilot、Claude Code、Codex、Gemini、Cursorなど複数harnessへ再現可能に展開する仕組み。install時にはhidden Unicode検査、transitive MCPの明示的trust、content hash固定を行い、apm-policy.ymlによるenterprise→org→repoのtighten-only policy継承も備える。v0.29.1ではprivate subdirectory cacheの認証、malformed executable trust設定の報告、MCP uninstallのmanaged target限定、Copilot dialectのLSP field alias受入など運用・互換性修正が多数入った。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot、Copilot Chat、coding agent、GitHub開発ワークフローに直接有用",
+        "copilot_tip": "repoごとに.github/copilot-instructions.mdやMCP、skillsを手作業配布している場合、agent contextをsoftware dependencyと同様にmanifest・lockfile・policyで扱う発想が有効。特にCIではapm auditやlockfile差分をrequired checkへ組み込み、未承認MCPやprompt/skill driftをPR段階で止める設計を検討する。",
+        "deadline": "",
+        "community": "agent設定の標準化がharness固有設定から一段上のdependency managementへ移りつつあり、複数agentを併用する企業ほど再現性・供給網管理・policy enforcementの価値が大きい。",
+        "sources": [
+          {
+            "label": "Microsoft APM v0.29.1 release",
+            "url": "https://github.com/microsoft/apm/releases/tag/v0.29.1"
+          },
+          {
+            "label": "Microsoft Agent Package Manager documentation",
+            "url": "https://microsoft.github.io/apm/"
+          }
+        ]
+      },
+      {
+        "num": "#3",
+        "headline": "Claude Code v2.1.263公開――今回はbug fix中心、直前の大規模企業運用強化後の安定化リリース",
+        "why": "Anthropicは9月6日にClaude Code v2.1.263を公開した。公式release noteは『Bug fixes and reliability improvements』のみで、新機能の詳細は列挙されていない。直前のv2.1.261でOrganization policy診断、/skill-doctor、大容量subagent prompt、MCP/Remote Control/managed settings周辺の多数修正が入った後の安定化版に位置付けられる。週末かつ詳細変更が公開されていないため、v2.1.263単体での運用変更は限定的と判断する。",
+        "business_importance": "Medium",
+        "copilot_applicability": "間接的に有用",
+        "copilot_tip": "CIや共通開発端末でClaude Codeを利用している場合、機能追加だけでなくreliability-only releaseも検証環境で追従する。agent toolはMCP、hooks、remote session、認証など外部依存が多いため、バージョン固定と段階rolloutを行い、再現性のあるrollback手順を持つ。",
+        "deadline": "",
+        "community": "公式release noteが簡略なため、詳細な挙動差を推測せず、必要なチームは実環境のsmoke testで確認するのが安全。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code v2.1.263 release",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "日本語実測：AIエージェント経由のPR Markdown画像がサニタイズされる理由――zero-click exfiltration対策",
+        "why": "9月6日のZenn記事で、GitHub API経由でAIエージェントがPR本文・コメント・reviewへ外部画像Markdownを書いた際、![alt](URL)の『!』が保存時に除去され、単なるリンクへ変換される挙動が実測された。背景には、prompt injectionを受けたagentが秘密情報を外部画像URLのqueryへ埋め込み、閲覧時に画像取得だけで外部送信させるMarkdown Image Exfiltrationという攻撃クラスがある。記事では、GitHub自身への画像添付はbrowser session前提で公開APIがなく、API駆動agentでは人間と同じ証跡添付UXをそのまま再現できない点も整理している。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub開発ワークフローに直接有用",
+        "copilot_tip": "coding agentにPR証跡を自動投稿させる場合、外部画像embedを前提にしない。スクリーンショット等はCI artifactや承認済みストレージへ保存し、PRには安全なリンクとテキスト要約を残す。『表示できないからsanitizeを回避する』のではなく、意図的なsecurity boundaryとして扱う。",
+        "deadline": "",
+        "community": "AIエージェントがIssue→実装→PRまで自律化するほど、Markdown、HTML、URL、artifactなど『成果物の表示経路』自体がdata exfiltration surfaceになるという実務的な示唆がある。",
+        "sources": [
+          {
+            "label": "Zenn: AI エージェントが PR に画像を貼れないのには理由があった —— Markdown Image Exfiltration",
+            "url": "https://zenn.dev/j_kashiwagi/articles/2026-09-05-markdown-image-exfiltration-pr-evidence"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "日本語実測：Codexが終了コード0でも成果物未作成――agent CIはpost-condition検証が必須",
+        "why": "9月6日のZenn記事では、Codex＋GPT-6 Astraを使った単発検証で、約3.8分後にexit code 0で終了したにもかかわらず指定したreport.mdが作成されていなかった例が報告された。著者は一般化せず1回の観測と明示した上で、ファイル存在、空でないこと、必須見出しを含むことなどをPythonでpost-conditionとして検証する方法を提示している。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub開発ワークフローに直接有用",
+        "copilot_tip": "coding agentのworkflowではprocess exit codeや最終メッセージを成功条件にしない。PR作成、対象ファイル変更、テスト結果、schema、必須セクション、artifact生成などtask固有のpost-conditionをGitHub Actionsで機械判定し、満たさない場合はjob failureにする。",
+        "deadline": "",
+        "community": "agentの自律性が上がるほど『agentが成功と言ったか』と『依頼した成果物が成立したか』を分離して評価する必要がある。OpenAI自身も長時間taskでは人間介入が残ると報告しており、受入条件の自動化が重要になる。",
+        "sources": [
+          {
+            "label": "Zenn: Codexの終了後に成果物を確認する｜Pythonで欠落・空ファイル・必須項目をチェック",
+            "url": "https://zenn.dev/megu0xxx0x/articles/029517235e4db1"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "GPT-6 Astraが24時間以内にextended Task-in-Prompt攻撃でjailbreakされたとの報告",
+        "why": "RedditやAI系集約サイトで、独立研究者がGPT-6 AstraをTIP（Task-in-Prompt）と複数手法の組み合わせでjailbreakし、詳細をOpenAIへ非公開報告したとの情報が拡散している。ただし9月7日朝時点でOpenAI公式、査読論文、再現可能な攻撃詳細など一次確認できる公開情報を確認できないためWatchlist扱い。",
+        "sources": [
+          {
+            "label": "Reddit discussion: GPT-6 reportedly jailbroken within 24 hours",
+            "url": "https://www.reddit.com/r/OpenAI/comments/1w8okha/gpt6_reportedly_jailbroken_within_24_hours_using/"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026年9月6日JSTは週末で大手各社の大型developer/API発表は少なく、短縮版。OpenAIの研究組織におけるcoding agent実運用データが最重要。",
+      "agent活用の競争軸は単一モデル性能から、複数sessionの並列運用、受入条件、推論コスト、介入率、再現性へ移っている。",
+      "Microsoft APMのようにskills・prompts・plugins・MCPをmanifest/lockfile/policyで管理する発想は、agent contextをsoftware supply chainとして扱う流れを象徴している。",
+      "PRやCIにagentを入れる際は、exit codeやagentの自己申告ではなく、成果物・test・schema・artifactなどtask-specific post-conditionをrequired checkにすることが重要。",
+      "GitHub Copilotについて9月6日JST付の新規GitHub Changelogは確認できず、前日までの公式更新を再掲していない。Google DeepMind、Meta AI、NVIDIA、Anthropic Newsroomでも対象日に優先度の高い新規公式発表は確認できなかった。"
+    ]
+  }
+}
