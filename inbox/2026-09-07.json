@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-07",
+  "generated_at_jst": "2026-09-08T07:58:17+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Codeの『探索税』をコード知識グラフで削減する実践例――毎セッションのgrep/読込をMCPで再利用可能な構造理解へ",
+        "why": "9月7日のZenn記事では、Claude CodeやCursorがセッション開始時にコードベース構造を毎回grep・ファイル読込で再探索するコストを『exploration tax』として整理し、CodeGraphとMCPを使ってコード構造を知識グラフ化する運用を紹介した。記事が引用する作者計測では、本題着手前に60回のtool call、157,800 tokens、約2分を使ったケースがあり、長期運用ではモデル性能だけでなく『既知のコード構造を再利用できるか』がagentコストと待ち時間を左右するという実務的な示唆がある。数値は個別環境の観測であり一般化はできないが、repository-scale agentのcontext engineeringとして有用。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot、Copilot Chat、coding agent、GitHub開発ワークフローに間接的に有用",
+        "copilot_tip": "大規模repositoryでCopilot coding agentやClaude Codeを使う場合、毎回同じ依存関係や呼出し構造を探索させない。コード索引、architecture map、symbol graph、生成済みdependency summaryなどをCIで更新し、agent skill/MCPからread-only参照させる。効果測定はtask完了時間だけでなく、tool call数、context token、初回有効編集までの時間で比較する。",
+        "deadline": "",
+        "community": "AI agentの性能差が縮まるほど、repository理解を毎回ゼロから作るか、持続可能な構造情報として再利用するかが開発体験の差になりやすい。",
+        "sources": [
+          {
+            "label": "Zenn: AIエージェントの『探索税』を払うのをやめる — コード知識グラフ CodeGraph 実践ガイド",
+            "url": "https://zenn.dev/7788/articles/49475bcf07c66f"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "Claude CodeのSkill一覧にはcontext上限があるとの実測――skillを増やしても説明がsystem promptから落ちるケース",
+        "why": "9月7日のQiita記事2本では、Claude Code 2.1.260環境でSkillを大量追加した際のsystem prompt消費を実測している。80本のダミーSkillを追加しても入力token増加が185に留まった一方、別検証ではGitHub上のSkill集37本を追加すると既存Skill 2本の説明が一覧から消えたと報告された。著者はSkill名・説明を毎turn載せる一覧に上限があると分析しており、『Skillは多いほど良い』ではなく、発見可能性とcontext budgetを管理する必要性を示す。これはコミュニティ実測であり、Anthropic公式仕様として上限値が保証されたものではない。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot、Copilot Chat、coding agent、GitHub開発ワークフローに間接的に有用",
+        "copilot_tip": "agent skillを共通配布する際は、数を増やす前に利用頻度と発火率を計測する。未使用skillは削除・階層化し、常時載せる説明を短くする。Copilot/Claude Code横断でskillを管理する場合も、manifestに存在することとmodelから発見可能であることを別々にテストする。",
+        "deadline": "",
+        "community": "直前にClaude Codeへ/skill-doctorが追加されたこともあり、skillの利用状況・context占有量を観測して棚卸しする運用が現実的になっている。",
+        "sources": [
+          {
+            "label": "Qiita: Claude Code にスキルを80本足しても、増えたトークンは185だった",
+            "url": "https://qiita.com/suwa_nobu/items/e02595193c2ec2e733a3"
+          },
+          {
+            "label": "Qiita: GitHubトレンドのスキル集を入れたら、自分のスキル2本の説明が消えた",
+            "url": "https://qiita.com/suwa_nobu/items/0424c506333a31da0d04"
+          }
+        ]
+      },
+      {
+        "num": "B3",
+        "headline": "旧Claude CodeをCIで固定するリスクを実機確認――repository設定からCLAUDE_CONFIG_DIRを書き換えられる可能性を検証",
+        "why": "9月7日のZenn記事では、Claude Code 2.1.251のchangelogでproject settingsのenvからCLAUDE_CONFIG_DIR、CLAUDE_CODE_TMPDIR、TMPDIRなどを読まないよう変更された点を手掛かりに、旧2.1.248を固定したCI環境で信頼していないrepositoryの.claude/settings.jsonがClaude自身の設定先へ影響できるかを検証した。記事は検証中にログイン状態へ影響する挙動も報告しており、agent CLIをuntrusted repositoryへ向けて自動実行する場合、repository-controlled configurationとrunner-side credentials/configurationを分離する必要性を示している。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub開発ワークフロー、CI/CDに直接有用",
+        "copilot_tip": "agent CLIをActions/self-hosted runnerで動かす場合、古いversionを長期間pinしない。runnerの認証情報・config directory・temp directoryをrepository設定から変更できないよう分離し、untrusted PRでは権限をさらに落とす。version update時はsecurity-related changelogを差分確認し、過去versionへbackportされない修正を優先して追従する。",
+        "deadline": "",
+        "community": "agent toolはrepository内設定を積極的に読むため、従来のbuild tool以上に『repoが制御できる設定』と『runnerが守るべきcredential/config』の境界設計が重要。",
+        "sources": [
+          {
+            "label": "Zenn: Claude Code 2.1.248でCLAUDE_CONFIG_DIR上書きを試したらログインごと壊れた話",
+            "url": "https://zenn.dev/clopy/articles/claude-configdir-override-memory-path-gate"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "CodexでGPT-5.5 / GPT-5.6 Sol / GPT-6 Astraが『at capacity』になる報告が複数発生",
+        "why": "9月7日、openai/codexのissueで『Selected model is at capacity』が複数モデルで発生する報告があり、関連issueからGitHub Actions上の再現記録も確認できる。ただしOpenAI statusや公式告知で同時間帯の全体障害・原因を確定できていないためWatchlist扱い。CIや自動agent workflowでは単一model固定時の一時的capacity failureを考慮し、retry/fallbackと明示的failure reportingを設計しておく価値がある。",
+        "sources": [
+          {
+            "label": "openai/codex issue: Selected model is at capacity",
+            "url": "https://github.com/openai/codex/issues/43322"
+          },
+          {
+            "label": "openai/codex Actions reproduction",
+            "url": "https://github.com/openai/codex/actions/runs/34106419104"
+          }
+        ]
+      },
+      {
+        "headline": "Codex Proのweekly limitが70%から0%へ急落したとの報告",
+        "why": "openai/codex issueで、Codex CLI 0.153.4 / Pro 20x利用者からweekly limit表示が突然70%から0%へ低下したとの報告が出ている。公式の料金・quota変更告知やstatus確認が取れておらず、個別account・表示bug・backend issueの切り分けができないためWatchlist。",
+        "sources": [
+          {
+            "label": "openai/codex issue: Sudden drop of weekly limit from 70% to 0%",
+            "url": "https://github.com/openai/codex/issues/43574"
+          }
+        ]
+      },
+      {
+        "headline": "Windows版Claude DesktopのCodeタブでnative binary起動失敗とのissue",
+        "why": "9月7日にanthropics/claude-codeへ、Windows MSIX環境でClaude DesktopのCodeタブがnative binaryをENOENTで起動できないというissueが投稿された。MSIX AppData virtualizationとの関連が推測されているが、Anthropic側の原因確定・修正版告知は確認できていないためWatchlist扱い。",
+        "sources": [
+          {
+            "label": "anthropics/claude-code issue #92647",
+            "url": "https://github.com/anthropics/claude-code/issues/92647"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026年9月7日JSTは日曜日で、OpenAI、Anthropic Newsroom、Google DeepMind、Meta AI、Microsoft、GitHub Changelog、NVIDIAの対象日付の大型公式発表は確認できず、短縮版とした。GitHub Changelogの直近更新は9月4日で、GitHub Copilot関連の9月7日付新規公式発表は確認できなかった。",
+      "今回の実務テーマは『agentに何を覚えさせ、何を毎回再探索させるか』。コード知識グラフやskill棚卸しなど、context engineeringの運用技術が重要になっている。",
+      "Claude Codeのcommunity実測からは、skill数を増やしすぎるとcontext上限・発見可能性の問題が起こり得るため、利用頻度を観測しながら削る運用が必要。",
+      "CI/CDでagent CLIを使う場合、repository-controlled settingsとrunner-side credentials/configurationの分離、version追従、post-condition検証がセキュリティ上の基本になる。",
+      "OpenAI Codexのcapacity・quota関連報告は複数あるが、一次の公式status/告知で全体事象を確認できないため、確定ニュースではなくWatchlistに留めた。"
+    ]
+  }
+}
