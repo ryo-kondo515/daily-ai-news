@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-08",
+  "generated_at_jst": "2026-09-09T08:01:36+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "OpenAI、ChatGPT Images 2.5を公開――高速化・編集精度向上に加え、APIへGPT-Image-2.5 Flare / Sunburstを追加",
+        "why": "OpenAIは9月8日、ChatGPT Images 2.5を公開した。画像生成の高速化、自然さ・忠実度の改善、複数回編集での一貫性向上、コメントベース編集を掲げ、ChatGPT / ChatGPT Work / Codexへ展開する。APIではGPT-Image-2.5 FlareとGPT-Image-2.5 Sunburstを追加。Flareは速度と品質のバランス、Sunburstは詳細なクリエイティブ作業向けの高精度モデルとして位置付けられている。開発者視点では、画像生成も単一モデル固定ではなく、レイテンシ・品質・用途でモデルを使い分ける設計が必要になる。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しない",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "ChatGPT側にはSketch、Templates、コメント編集など人間が意図を伝えるための入力UIも追加されており、生成モデル単体の性能向上だけでなく『指示の曖昧さをUIで減らす』方向が強まっている。",
+        "sources": [
+          {
+            "label": "OpenAI: Introducing ChatGPT Images 2.5",
+            "url": "https://openai.com/index/introducing-chatgpt-images-2-5/"
+          },
+          {
+            "label": "OpenAI Help: ChatGPT Release Notes — September 8, 2026",
+            "url": "https://help.openai.com/en/articles/6825453"
+          }
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "Google DeepMind、AlphaGenome Atlasを公開――ヒトゲノム約90億の一塩基変異を予測した研究基盤",
+        "why": "Google DeepMindは9月8日、ヒトゲノムで起こり得る約90億のsingle-nucleotide variantについて分子レベルの影響予測を収録したAlphaGenome Atlasを発表した。学術研究向けに無料Webポータルとして提供し、遺伝変異が遺伝子発現などへどう影響するかを大規模に探索できる。生成AIの開発ワークフロー直接更新ではないが、AIが『個別質問へ回答するモデル』から『事前計算済みの巨大な科学知識基盤』を形成する方向を示す重要な研究発表。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しない",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "AI for Scienceでは、モデルAPIだけでなく、モデルが生成した大規模予測結果を検索・検証可能なデータプロダクトとして配布する形が増えている。",
+        "sources": [
+          {
+            "label": "Google DeepMind: AlphaGenome Atlas",
+            "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/"
+          }
+        ]
+      },
+      {
+        "num": "3",
+        "headline": "GitHub、Dependabotからprivate GitHub PackagesへPATなしでアクセス可能に――GITHUB_TOKENでpackages:readを利用",
+        "why": "GitHubは9月8日、Dependabotがprivate GitHub Packages registryを読む際、個別PATを用意せずGITHUB_TOKENのpackages:readを使えるようにした。package側のManage Actions accessで対象repositoryへRead権限を付与すれば、ghcr.ioや*.pkg.github.comへの取得で同じgrantを再利用する。Dependabot用PATの作成・rotation・secret管理を減らせるため、CI/CDとsoftware supply chain securityの実務改善として重要。6月23日の初回導入後、npm update jobがpublic packageをGitHub Packages経由で解決する競合を理由に一度rollbackされ、今回fallback authenticationへ修正して再有効化された。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub開発ワークフロー、PR、CI/CDに直接有用",
+        "copilot_tip": "Copilot coding agentを含むGitHub中心の開発環境では、agent用credentialだけでなくDependabot・Actions・package registryのcredentialも最小化する。GitHub Packagesを使うrepositoryは不要なPAT registry設定を棚卸しし、repository access grantとGITHUB_TOKENへ寄せるとrotation対象を減らせる。",
+        "deadline": "",
+        "community": "AI agentがPRを作る工程が増えるほど、依存更新botやCIも含めたmachine identityの権限管理が重要になる。今回の変更はagent機能そのものではないが、その周辺のsecret surfaceを減らす更新。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Automatic Dependabot access to GitHub-hosted registries",
+            "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Claude Codeの設定10件を再検証――1か月で文書化6件・挙動変更2件・依然不一致2件との実測",
+        "why": "9月8日のQiita記事では、Claude Codeについて過去1か月に検証した設定10件を再測定し、当時未文書だった環境変数4件を含む6件が公式ドキュメントへ反映、2件は挙動自体が変化、2件は今もドキュメントと実挙動が一致しないと報告している。コミュニティ実測でありAnthropic公式発表ではないが、agent CLIは更新速度が高く、数週間前の記事・社内手順・固定化したプロンプトがすぐ陳腐化することを示す実務例。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot、Copilot Chat、coding agent、GitHub開発ワークフローにも間接的に有用",
+        "copilot_tip": "Claude Code/Copilot CLIなどを標準開発環境にする場合、設定値の存在確認だけでなく期待挙動を小さなsmoke testで定期検証する。社内Wikiへversion・検証日を付け、CLI update時にpermissions、non-interactive mode、environment variable、MCP周辺を再実行できるようにする。",
+        "deadline": "",
+        "community": "AI coding toolでは『公式ドキュメントを一度読んで固定』ではなく、versioned documentationと実機testの組み合わせが必要になっている。",
+        "sources": [
+          {
+            "label": "Qiita: Claude Code の設定10件を測り直したら、2件は挙動が変わっていた",
+            "url": "https://qiita.com/suwa_nobu/items/e42b66ded61c85d02f1c"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "OpenAIがAstra後の事業方針を説明――高度なcomputer use・software engineeringを既存製品へ直接届けるfull-stack戦略を強調",
+        "why": "OpenAIは9月8日の会社ブログで、GPT-6 Astraのcomputer use、browsing、software engineering、cybersecurity、scienceなどの能力を、ChatGPTや企業向け製品を通じて広く提供する戦略を改めて説明した。新APIや料金変更の発表ではないが、frontier modelの性能向上だけではなく、consumer・enterprise distributionとcompute stackを一体運用することを競争力として明示している。agent市場ではmodel単体だけでなく、配布面・実行環境・compute capacityを握る事業者が優位になるという示唆がある。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しないが、coding agent市場の競争構造に関係",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "モデル比較だけでなく、どのsurfaceから利用でき、どのidentity・data・toolへ接続できるかがagent製品の実用価値を左右する。",
+        "sources": [
+          {
+            "label": "OpenAI: The Work Now Within Reach",
+            "url": "https://openai.com/index/the-work-now-within-reach/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "GPT-6 AstraのChatGPT Plus利用枠不足やClaude Fable 5.1との使い分けに関するX上の報告",
+        "why": "9月8日の日本語Xトレンド集約では、GPT-6 Astraが長時間タスクで高評価を得る一方、ChatGPT Plusで短時間に利用上限へ達したという投稿や、Claude Codeで下書き・Codex/Astraで点検するといった使い分けが紹介されている。ただし個々の投稿、account条件、公式quota仕様を一次確認できておらず、一般化できないためWatchlist扱い。料金・利用枠判断にはOpenAI公式のplan/usage documentationを優先する。",
+        "sources": [
+          {
+            "label": "株式会社実務経営サービス: XのAIトレンド 2026年9月8日",
+            "url": "https://www.jkeiei.co.jp/m/x-ai-trend-archive/"
+          }
+        ]
+      },
+      {
+        "headline": "9月8日JST内のClaude Code新releaseは確認できず――v2.1.265は翌9月9日05:37 JST公開",
+        "why": "anthropics/claude-codeのGitHub Releasesではv2.1.265が2026-09-08 20:37 UTC、すなわち9月9日05:37 JSTに公開されており、今回の対象期間外。日付境界をUTCで扱うと9月8日ニュースへ誤混入するため注意。対象日のClaude Code公式大型更新としては採用しなかった。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code GitHub Releases",
+            "url": "https://github.com/anthropics/claude-code/releases"
+          }
+        ]
+      }
+    ],
+    "themes": [
+      "2026年9月8日JSTは、GitHub CopilotやClaude Codeの対象時間内の大型公式更新は少なく、OpenAI Images 2.5、DeepMind AlphaGenome Atlas、GitHub Dependabotの3件を中心とする短縮版とした。",
+      "GitHubのDependabot更新は、PATをGITHUB_TOKENへ置き換えることでCI/CD周辺のsecret surfaceを減らす。AI coding agent導入時も、agent本体だけでなくbot・package registry・Actionsを含めたmachine identity設計が重要。",
+      "Claude Codeの日本語コミュニティ実測では、1か月程度でも設定挙動や文書化状況が変わっており、AI coding toolの社内標準化にはversioned documentationとsmoke testが必要。",
+      "OpenAI Images 2.5ではモデル性能向上と同時にSketch・Templates・コメント編集など意図入力UIが拡充され、AI製品の差別化が『モデルの賢さ』だけでなくhuman-to-agent interfaceへ広がっている。",
+      "Hacker News、Reddit、Zenn、はてなブックマーク、日本語メディアも確認したが、9月8日公開かつ一次ソースで裏取りでき、今回の重点領域において上記より重要な新規話題は確認できなかった。一次未確認の利用枠報告はWatchlistへ分離した。"
+    ]
+  }
+}
