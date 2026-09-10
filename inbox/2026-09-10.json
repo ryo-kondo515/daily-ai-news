@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-10",
+  "generated_at_jst": "2026-09-11T08:02:59+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "OpenAI、ChatGPT Work / CodexにData plugin――接続済み業務データを分析しダッシュボードやレポートまで生成",
+        "why": "OpenAIは9月10日、ChatGPT WorkとCodex向けにData pluginを公開した。接続済みの業務データに対して質問し、変化の調査、インタラクティブなダッシュボードやレポート作成まで行える。組織固有のmetric定義やbusiness contextを分析へ持ち込め、Enterprise / Eduでは管理者がWorkspace settings > Pluginsからインストールpolicyとrole/group別accessを管理できる。接続先側のaccount permissionとworkspace access controlも引き継ぐ。coding agentを単なるコード生成から、業務データを確認しながら調査・実装・報告まで進めるworkflowへ広げる更新として重要。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しない。CodexとChatGPT Workの開発・分析workflowに直接有用",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "agentが業務データへアクセスする場合、モデル性能よりも接続先権限・workspace role・監査境界の設計が重要になる。分析結果をそのままactionへつなげる前に、readとwriteの権限を分離して運用するのが安全。",
+        "sources": [
+          {
+            "label": "OpenAI: ChatGPT Release Notes — Data plugin in ChatGPT Work and Codex",
+            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+          },
+          {
+            "label": "OpenAI: ChatGPT Enterprise & Edu Release Notes",
+            "url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes"
+          }
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "Claude Code v2.1.267――effort上限制御、prompt snapshot切替、managed設定のfail-closed化など大規模修正",
+        "why": "Claude Code v2.1.267は9月10日04:58 JSTに公開された。新しいmaxEffortLevelでBedrock、Vertex、Foundryを含むprovider横断のreasoning effort上限を設定でき、--system-prompt-snapshot offでrequestごとにsystem promptを再生成可能になった。加えて、長時間sessionやresume時のprompt cache再利用、remote-control、MCP再接続、plugin/marketplace path containmentなど多数の不具合を修正。特にmanaged settingsのallowlistを読み込めない場合に従来のfail-openではなくfail-closedへ変更する修正は、組織管理下のagent securityとして重要。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しないが、Claude Codeのagent workflow、MCP、CI/CD、enterprise governanceに直接有用",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "今回の更新は新機能よりも、prompt cache、session resume、managed policyなど長時間agent運用で効く基盤部分が中心。企業利用ではmodel能力だけでなく、設定読込失敗時に安全側へ倒れるかまでversion更新時の受入項目に含めたい。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code release v2.1.267",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267"
+          },
+          {
+            "label": "Anthropic Claude Code CHANGELOG",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+          }
+        ]
+      },
+      {
+        "num": "3",
+        "headline": "NVIDIA NemoClaw v0.0.122――local inference、sandbox復旧、remote dashboard、安全な失敗処理を強化",
+        "why": "NVIDIAは9月10日、agent実行基盤NemoClaw v0.0.122を公開した。Docker / DGX Station / N1x WSLのhost detectionとlocal inference選択を改善し、CUDA対応N1x WSLではmanaged Qwen llama.cpp profileを選択するよう変更。途中で中断したonboardingのlockやinference-route予約を適切に解放し、sandbox identityを復旧可能な形で保持する。config exportではprovider evidenceが不整合なら書き出しを停止し、uninstallもgateway registration削除に失敗した場合はnonzeroで終了する。remote dashboard公開時にはAPI ingressを保護するよう明示している。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しないが、AIエージェント、local inference、sandbox、MCP、security運用に有用",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "agent platformが『動けばよい』段階から、途中失敗・再開・設定不整合・部分cleanupを正しく検出する運用基盤へ進んでいる。CI/CDでも同様に、agentが途中失敗した状態をsuccess扱いしない設計が重要。",
+        "sources": [
+          {
+            "label": "NVIDIA NemoClaw Release Notes — September 10, 2026",
+            "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/deepagents/release-notes/2026/9/10"
+          }
+        ]
+      },
+      {
+        "num": "4",
+        "headline": "NVIDIAとPalantir、重要サプライチェーン向けsovereign AI――Nemotronを企業固有データでpost-trainし継続学習ループへ",
+        "why": "NVIDIAとPalantirは9月10日、重要サプライチェーン向けのsovereign AI stackを発表し、まずNVIDIA自身の供給網で利用するとした。NVIDIA Nemotron open modelsをPalantir Foundry / AIPとOntologyへ統合し、企業固有データでpost-trainingして制約発見、trade-off評価、材料配分などを支援する。専門家が最終判断を保持しつつ、実際のrecommendation、planner action、production outcomeをNeMo AutoModel / NeMo RLとPalantir Autopilotへ戻して継続改善するgoverned learning loopを構築する。on-prem、co-lo、cloudへ展開でき、model・data・deployment environmentのcontrolを企業側に残す点を強調している。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しない。AIエージェントのガバナンス、閉域運用、継続学習設計の参考になる",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "汎用model単体ではなく、企業ontology、独自data、human final decision、outcome feedbackまでを一体化して価値を出す構成。業務agentでも、単発promptより『実行結果を測定し、次のmodel/harness改善へ戻すloop』が差別化要素になりやすい。",
+        "sources": [
+          {
+            "label": "NVIDIA: NVIDIA and Palantir Bring Sovereign Intelligence to Critical Supply Chains",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "num": "B1",
+        "headline": "Skild AI S1、1本の動画から未知の長時間ロボット作業をin-context learning――task-specific retraining不要を狙う",
+        "why": "NVIDIAは9月10日、Skild AIのS1 robot foundation modelを紹介した。operatorが目的作業を動画で1回実演すると、S1が意図・object・sequenceを読み取り、weight updateやtask-specific post-trainingなしでrobot actionへ変換する。未知のmultistep taskを最大10分実行し、Skildの試験では各step成功率約66%に対し比較systemは9%だったとしている。NVIDIA Cosmos、Omniverse、Isaac Sim / Lab、TensorRTなどをdata生成からsimulation、training、deploymentまで利用している。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しない。Physical AIと現場学習workflowの参考",
+        "copilot_tip": "",
+        "deadline": "",
+        "community": "現場ごとのfine-tuningを減らし、video demonstrationをruntime contextとして新作業へ適応する方向は、Physical AI導入時の追加学習コストを下げる可能性がある。ただし成功率などはSkild側試験値であり、現場ごとの安全validationは別途必要。",
+        "sources": [
+          {
+            "label": "NVIDIA Blog: Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+            "url": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/"
+          }
+        ]
+      },
+      {
+        "num": "B2",
+        "headline": "日本語コミュニティ実測――Claude Codeへ『他は何も変えないで』と指示しても変更範囲を十分には固定できず",
+        "why": "9月10日のQiita記事は、Claude Code 2.1.263 / Claude Opus 5を使い、限定的なUI変更で『他は何も変えないで』という追加指示の効果を複数回検証した。単純な静的サイトでは変更範囲が安定した一方、testや規約を含むprojectでは1〜4 filesへ変更が広がり、追加指示が効いたのは3回中1回だったと報告している。単一記事による小規模実測で一般化はできないが、自然言語だけでagentのchange scopeを強制する限界を示す事例。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot、Copilot Chat、coding agent、PR workflowにも間接的に有用",
+        "copilot_tip": "変更範囲を厳密に制限したい場合、promptだけでなくallowed paths、diff size、test、CODEOWNERS、PR rulesetなど機械的な制約を併用する。",
+        "deadline": "",
+        "community": "Hacker Newsでは『小変更を頼んでもagentが周辺まで触る』という体験談が大きく話題化。一次ベンダー評価は確認できないため、実務では自社repositoryでchange-scope逸脱率を計測したい。",
+        "sources": [
+          {
+            "label": "Qiita: 『他は何も変えないで』と書き足しても、Claude Code は3回に2回それを無視した",
+            "url": "https://qiita.com/suwa_nobu/items/2f02f97d40afb4b5db6c"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "Claude Codeの小変更scope逸脱がHacker Newsで大きく話題",
+        "why": "『Add to Cartボタンを青にするだけ』のような小変更でもagentが周辺コードへ手を広げるという風刺的デモがHacker Newsで大きく注目された。日本語Qiitaでは独自の小規模追試も公開されたが、Anthropicによる一次検証や公式benchmarkは確認できていない。モデル固有の欠陥と断定せず、agentic coding全般のchange-scope管理課題として継続確認する。",
+        "sources": [
+          {
+            "label": "Qiita independent test",
+            "url": "https://qiita.com/suwa_nobu/items/2f02f97d40afb4b5db6c"
+          }
+        ]
+      }
+    ]
+  }
+}
