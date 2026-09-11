@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-11",
+  "generated_at_jst": "2026-09-12T08:00:00+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "Claude Code v2.1.268――公開gateway警告、untrusted agent file継承修正、MCP後の空応答などを改善",
+        "why": "Claude Code v2.1.268は9月11日05:30 JSTに公開された。gatewayのaccess_control.allow_cidrsが空の場合にstartup warningを出し、public addressから最初のrequestを受けた際にも一度だけ警告する。さらに、respawnされたin-process teammateが未trusted directory内の同名agent fileからtoolsやsystem promptを継承してしまう問題を修正し、意図しないtool injection経路を塞いだ。長時間idle sessionの高CPU、MCP tool call後にClaudeが『message came through empty』と返す不具合、third-party Anthropic-compatible endpointでHTTP 400を起こすArtifact regexなども修正されている。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しないが、Claude Code、AIエージェント、MCP、gateway、enterprise security運用に直接有用",
+        "copilot_tip": "GitHub Copilot coding agentでも、repository由来のagent設定・tool定義と組織側のtrusted configurationを分離し、同名設定のshadowingや継承を受入テストに含める。",
+        "deadline": "",
+        "community": "今回の修正は、agent設定を『便利な設定ファイル』ではなく実行権限を変えるsupply-chain inputとして扱う必要性を示す。外部repositoryを開く前にagent/MCP/plugin設定を静的検査し、gatewayはpublic exposureを前提にCIDR制限と監査を設計したい。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code release v2.1.268",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268"
+          },
+          {
+            "label": "Claude Code CHANGELOG v2.1.268",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21268"
+          }
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "Anthropic、Claude悪用のThreat Intelligence Report――監視・サイバー・詐欺・兵器・蒸留まで実例を公開",
+        "why": "Anthropicは最新Threat Intelligence Reportで、2025年12月〜2026年8月に検知・遮断したClaude悪用を、cyber operations、surveillance、influence operations、scams and fraud、biological misuse、conventional weapons、illicit distillationの7分野で整理した。中国系の監視・世論分析、Maliの大規模通信監視基盤、Iran系actorによるOSINT profilingやmalware開発など、AIが単発生成ではなく継続的なengineering workforceとして使われた事例を示している。特に、露骨な悪意あるrequestを拒否できても、作業を細分化し複数sessionへ分散すると防御が弱くなるケースを認めている点が重要。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しないが、coding agent、AIエージェント、セキュリティ、ガバナンス、監査設計に重要",
+        "copilot_tip": "Copilot/Claude Codeを社内導入する際は1 request単位のpolicy判定だけでなく、session横断の行動・tool利用・artifact生成・外部送信を監査し、累積的なriskを検知する仕組みを持つ。",
+        "deadline": "",
+        "community": "日本語ではITmediaが9月11日08:13 JSTに報道。Anthropic公式ページは米国日付で9月10日表記のため、JST対象日の境界は二次報道時刻も併記して判断した。実務上の示唆は、agent abuse detectionをprompt単位からworkflow単位へ移す必要があること。",
+        "sources": [
+          {
+            "label": "Anthropic: Detecting and countering misuse of AI: September 2026",
+            "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+          },
+          {
+            "label": "ITmedia NEWS: Anthropic、AI悪用レポートを公開",
+            "url": "https://www.itmedia.co.jp/news/article/2609/11/2000001390/"
+          }
+        ]
+      },
+      {
+        "num": "3",
+        "headline": "OpenAI、10億超ChatGPTユーザーを支えるstorage基盤Habitatのスケーリング設計を公開",
+        "why": "OpenAIは9月11日、ChatGPTの10億超ユーザー規模を支えるapplication storage platform『Habitat』の設計・運用知見を公開した。Python/asyncioでのtail latency、feature flag lookup、connection pool、downstream flooding対策を扱い、サービスが担う責務を意図的に絞る設計やRustへの移行、Azure Cosmos DB層の最適化にも触れている。AIモデルそのものではないが、agentやAIサービスを大規模提供する際に、推論以外のstate・session・metadata storageが主要な信頼性ボトルネックになることを示す一次資料。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot関連には直接該当しない。大規模AIサービス、agent state、workflow reliability、platform engineeringの参考",
+        "copilot_tip": "coding agent基盤でもmodel latencyだけでなく、session state、artifact、tool result、permission metadataを保存するstorage pathのtail latencyとbackpressureをSLO対象にする。",
+        "deadline": "",
+        "community": "長時間agentではmodel呼び出しより周辺state管理が障害源になりやすい。agent platformを作る場合、storage serviceが過剰なbusiness logicを持たず、downstreamを保護するrate/backpressure制御を持つ設計が参考になる。",
+        "sources": [
+          {
+            "label": "OpenAI Engineering: Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+            "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [],
+    "watchlist": [
+      {
+        "headline": "Codex DesktopでGPT-6 Astraの『Selected model is at capacity』報告が再浮上",
+        "why": "OpenAI Developer Communityで9月11日、Codex Desktop利用中にGPT-6 Astraがcapacity errorで中断されるというユーザー報告が投稿された。別投稿ではweekly usage reset日時が約1日後ろへ動いたとの報告もある。いずれもユーザー報告であり、今回の調査時点でOpenAI公式の原因説明・恒久対策は確認できていないためWatchlist扱い。業務利用では特定model固定を避け、fallback modelとtask state再開手順を準備しておく価値がある。",
+        "sources": [
+          {
+            "label": "OpenAI Developer Community: Codex Desktop — Selected model is at capacity",
+            "url": "https://community.openai.com/t/codex-desktop-selected-model-is-at-capacity-again-on-gpt-6-astra-sept-2026/1396564"
+          },
+          {
+            "label": "OpenAI Developer Community: weekly reset date moved",
+            "url": "https://community.openai.com/t/my-end-of-week-date-got-moved/1396556"
+          }
+        ]
+      }
+    ]
+  }
+}
