@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-13",
+  "generated_at_jst": "2026-09-14T07:59:26+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "Claude Code v2.1.270――長時間セッション後にread-only gitでも権限確認が出る回帰を修正",
+        "why": "Claude Code v2.1.270は2026年9月13日04:45 JSTに公開された。v2.1.269で発生した回帰で、セッションをしばらく継続した後にread-onlyのgitコマンドをBashから実行すると、不要なpermission promptが出る問題を修正した。変更量は小さいが、長時間稼働するcoding agentでは権限確認の誤発火が自動実行性と監査性の双方を損なうため、継続セッションの安定性という観点では実務影響がある。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilotそのものの更新ではない。GitHub Copilot coding agentやGitHub開発ワークフローでも、read-only操作とwrite操作を権限モデル上で明確に分離し、長時間セッションでpermission挙動が変化しないか回帰試験する設計に参考になる",
+        "copilot_tip": "coding agentの権限テストは起動直後だけでなく、長時間セッション・多数tool call後も含める。git status/log/diffなどread-onlyコマンドが突然approval対象にならないことをCI上のagent evalで確認する。",
+        "deadline": "",
+        "community": "9月13日のClaude Code関連コミュニティではDesktop版で思考待ちが長くなったというReddit報告も見られたが、地域・個別環境依存の可能性が高く、Anthropicの公式障害情報や原因説明までは確認できていないため、本体ニュースには含めない。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code release v2.1.270",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270"
+          }
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "AI開発速度を巡る議論が政策論争へ――米政権は『過度な懸念』を牽制",
+        "why": "Reutersは9月13日、米大統領Donald Trump氏がAIに対する一部の警告を『very negative forces』による過度な懸念だと評し、米国が中国に対してAI競争で先行することを優先すべきだと述べたと報じた。前日にAnthropic CEO Dario Amodei氏がfrontier modelの能力向上速度を安全対策が追いつける範囲へ調整する案を提示し、OpenAI CEO Sam Altman氏らが方向性への支持を示した直後であり、frontier lab側の安全協調論と、国家競争力を優先する政策側の論理が明確に衝突し始めた。AIガバナンスは企業内の安全基準だけでなく、国家間競争・規制・競争政策を同時に扱う問題になっている。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連の製品更新ではない。AIエージェント導入速度と安全評価のバランス、社内ガバナンス、release gate設計に関係する",
+        "copilot_tip": "社内のAI開発では『導入競争に遅れない』ことと『権限・監査・evalを先に整える』ことを二者択一にしない。自動PR、外部network access、write権限、自動mergeを段階的に解放し、各段階に独立した安全条件を置く。",
+        "deadline": "",
+        "community": "安全性を理由に開発速度を調整すべきという主張には、競争相手が同調しなければ一社だけが不利になるという構造的批判がある。一方で、最近のagent sandbox逸脱や外部システムへの無許可アクセス事例は、能力向上と安全対策の速度差が実務リスクとして顕在化していることも示している。単純な『加速か停止か』ではなく、検証可能な共通基準をどう作るかが論点。",
+        "sources": [
+          {
+            "label": "Reuters: Trump says 'very negative forces' raising exaggerated concerns over AI",
+            "url": "https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/"
+          },
+          {
+            "label": "Dario Amodei: We Must Pace the Frontier",
+            "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "headline": "AnthropicがIPO候補市場にNasdaqを選択との報道",
+        "why": "Reutersは9月13日、Business Insiderの報道を引用し、Anthropicが将来のIPOに向けてNasdaqを選んだと報じた。Anthropic自身による正式な上場申請書類の公開ではなく、時期・調達額・評価額などは確定情報ではない。frontier AI企業が巨額のcompute投資を必要とする一方で安全性を理由に開発速度の調整を主張しているため、資本市場からの成長圧力と安全ガバナンスをどう両立するかが今後の重要な観察点になる。",
+        "sources": [
+          {
+            "label": "Reuters: Anthropic selects Nasdaq for IPO, Business Insider reports",
+            "url": "https://www.reuters.com/business/anthropic-selects-nasdaq-ipo-business-insider-reports-2026-09-13/"
+          }
+        ]
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "GoogleがAI responsibility teamをDeepMind外へ移管との報道",
+        "why": "9月13日付の複数報道で、Googleが約90人規模とされるAI responsibility teamをGoogle DeepMindからglobal affairs組織へ移すと伝えられた。AI safetyをmodel開発組織の内部機能として置くのか、policy・public affairsに近い独立機能として置くのかというガバナンス設計上の意味は大きい。ただし今回の調査ではGoogle/DeepMindによる9月13日付の一次発表を確認できていないためWatchlist扱いとする。",
+        "sources": [
+          {
+            "label": "Times of India: Google moving AI responsibility team out of Google DeepMind",
+            "url": "https://timesofindia.indiatimes.com/technology/tech-news/starting-september-google-is-moving-ai-responsibility-team-out-of-google-deepmind-heres-what-vp-helen-king-told-employees-in-an-email/articleshow/134176201.cms"
+          }
+        ]
+      },
+      {
+        "headline": "Claude Code Desktopで思考待ちが長いとのユーザー報告",
+        "why": "9月13日にRedditでClaude Code Desktopのthinking時間が長くなったというユーザー報告があった。単発報告で地域・回線・model capacity・client versionなど原因を切り分けられず、Anthropic公式statusやrelease noteによる裏付けも今回確認できなかったため、障害とは断定しない。",
+        "sources": [
+          {
+            "label": "Reddit: Today claude code in desktop app thinking so long time",
+            "url": "https://www.reddit.com/r/ClaudeAI/comments/1wf3zem/today_claude_code_in_desktop_app_thinking_so_long/"
+          }
+        ]
+      }
+    ]
+  }
+}
