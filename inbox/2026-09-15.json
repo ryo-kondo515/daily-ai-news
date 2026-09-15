@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-15",
+  "generated_at_jst": "2026-09-16T08:00:50+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "OpenAI・Anthropic・Google DeepMind、frontier AI safetyで数週間協議――競合3社が安全基準の協調へ",
+        "why": "Reutersが9月15日14:50 UTC（JST 23:50）に報道。OpenAIのGlobal Affairs責任者Chris Lehane氏によると、OpenAIはAnthropic、Google DeepMindとAI safetyについて数週間協議している。Lehane氏は安全を優先するため協力する方がよいと述べ、壊滅的AIリスクを軽減する超党派法案を支持する意向も示した。各社が個別の安全宣言を出す段階から、frontier lab間でmonitoring、evaluation、人間による制御、開発速度の基準を揃える段階へ移る可能性がある。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilotそのものの更新ではないが、長時間動作するcoding agentを企業導入する際の評価・監視・停止条件を業界横断で標準化する流れにつながる。agentの能力だけでなく、誰が監視し、どの条件で止め、インシデントをどう共有するかが調達要件になり得る。",
+        "copilot_tip": "coding agentのPoCでは成功率だけでなく、外部アクセス、権限昇格、想定外操作、human intervention回数、停止命令への応答をログ化する。モデル更新時に同じ安全評価を再実行できる回帰テストとして残す。",
+        "deadline": null,
+        "community": "Anthropic CEO Dario Amodei氏のfrontier開発ペース調整論やOpenAI側の安全政策表明に続く動きとして海外で注目。ReutersはOpenAI、Anthropic、Googleへ確認を求めたが、記事公開時点では各社から回答を得ておらず、協議内容の詳細は今後の一次発表待ち。",
+        "sources": [
+          {
+            "label": "Reuters: OpenAI is working with Anthropic, Google on AI safety",
+            "url": "https://www.reuters.com/technology/openai-is-working-with-anthropic-google-ai-safety-bloomberg-news-reports-2026-09-15/"
+          }
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "GitHub Copilot、repository custom propertiesの候補値をAI提案――ruleset向けガバナンスmetadata整備を支援",
+        "why": "GitHubは9月15日、Copilot Business / Enterprise向けpublic previewとして、enterprise・organization管理者がrepository custom propertyを作成する際にallowed valuesをCopilotが提案する機能を公開した。FedRAMPやinternet-facingなどのpropertyに対して候補値を提示し、組織内repositoryの分類体系を揃えやすくする。custom propertiesはrulesetの適用対象を絞るために使えるため、AIがコードを書く機能ではなく、AIを含む開発環境を統制するmetadata layerへのCopilot拡張として重要。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilotの公式更新。大量repositoryでsecurity tier、internet-facing、regulated-data、AI-agent-enabledなどのpropertyを標準化し、rulesetやセキュリティポリシーを一貫して適用する用途に向く。",
+        "copilot_tip": "候補値はそのまま採用せず、組織の既存分類と整合するtaxonomyを先に決める。特にagent利用repositoryでは、external-network、write-permission、production-accessなどをcustom property化し、rulesetの対象条件へ利用すると管理しやすい。",
+        "deadline": null,
+        "community": "公開直後で大規模なコミュニティ反応はまだ限定的。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: GitHub Copilot suggests custom properties definitions",
+            "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions/"
+          }
+        ]
+      },
+      {
+        "num": "3",
+        "headline": "GitHub Advanced Security、enterprise設定をorganization ownerにも強制可能に――中央統制を強化",
+        "why": "GitHubは9月15日、enterprise administratorがGitHub Advanced Security configurationをorganizationおよびrepository administratorに対して強制できる機能を公開した。従来はrepository ownerによる変更のみ防止できたが、今後はenterprise levelで定義したsecurity/compliance設定をorganization側でもoverrideできないようにできる。AI coding agentで変更量が増える環境ほど、repository単位の自主運用ではなく中央ポリシーによる最低安全基準が重要になる。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot専用機能ではないためCopilot関連フィールドとしては開発ワークフローのガバナンスに限定。coding agentや自動PRを展開するenterpriseで、security scanning等の設定が局所的に弱められることを防ぐ基盤になる。",
+        "copilot_tip": "agent導入repositoryをcustom propertyで分類し、Advanced Security configurationとrulesetをenterprise側から強制する設計を検討する。agentの生成品質とは独立した強制層をGitHub側に持たせる。",
+        "deadline": null,
+        "community": "GitHub公式Changelogで公開。",
+        "sources": [
+          {
+            "label": "GitHub Changelog: Enforce GitHub Advanced Security configurations",
+            "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations/"
+          }
+        ]
+      },
+      {
+        "num": "4",
+        "headline": "Microsoft 365 G7発表、Agent 365を政府クラウドのAI agent control planeへ――発見・登録・block・削除を統合",
+        "why": "Microsoftは9月15日、米政府向けGovernment Community CloudにMicrosoft 365 G7を投入すると発表した。Agent 365をAI agentのcontrol planeとして位置付け、組織内agentの発見、識別、登録、管理に加え、deploy・block・removeなどのgovernance actionを提供する。AI導入が個別アプリから多数agentの運用へ移るにつれ、『どのagentが存在し、誰が所有し、何へアクセスできるか』を中央管理する製品層が明確になっている。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot関連ではないため直接適用なし。ただし企業agent基盤の設計としてinventory、owner、permission、lifecycleをcontrol planeで管理する考え方はcoding agentにも共通する。",
+        "copilot_tip": "GitHub上でもagent利用repository、owner、許可tool/network、credential範囲、廃止状態をinventory化し、個々のdeveloper設定だけに依存しない運用を設計する。",
+        "deadline": "Microsoft 365 G7とAgent 365はGCC顧客向けに2026-10-01から購入可能予定",
+        "community": "政府向け製品のため一般developerコミュニティでの反応は限定的。",
+        "sources": [
+          {
+            "label": "Microsoft: Introducing Microsoft 365 G7: Intelligence + Trust for the mission ahead",
+            "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2026/09/15/introducing-microsoft-365-g7-intelligence-trust-for-the-mission-ahead/"
+          }
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "headline": "AI agent governanceは『モデル設定』から『資産台帳＋強制ポリシー』へ",
+        "why": "9月15日はGitHubのenterprise security enforcement、repository governance metadataへのCopilot支援、Microsoft Agent 365のagent inventory/control planeが同日に並んだ。企業導入ではagentそのものの性能差より、agent・repository・permission・security policyを中央で識別し強制する管理面が製品カテゴリとして立ち上がっている。"
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "Claude Code v2.1.272公開――bug fixes and reliability improvementsのみ",
+        "why": "AnthropicのClaude Code v2.1.272は2026-09-15T00:42:25Z（JST 09:42）公開と確認でき、対象期間内。ただしrelease noteは『Bug fixes and reliability improvements』のみで具体的変更が公開されていないため、Topニュースには採用せずWatchlistとする。",
+        "sources": [
+          {
+            "label": "Anthropic Claude Code GitHub release v2.1.272",
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.272"
+          }
+        ]
+      },
+      {
+        "headline": "Claude Mythos 5.1 / Fable 5.1で一時的なerror spike――約1時間26分で解消",
+        "why": "Anthropic statusでは9月15日09:48 UTCから11:14 UTCにClaude Mythos 5.1とClaude Fable 5.1のelevated errorsを調査し、修正を展開して解消した。Claude API、Claude Code等に影響した可能性がある。製品機能の発表ではないためWatchlist扱い。",
+        "sources": [
+          {
+            "label": "Claude Status",
+            "url": "https://status.claude.com/"
+          }
+        ]
+      },
+      {
+        "headline": "AI security agentがSnowflake公開repositoryからJira credentialへの経路を発見した事例、日本語圏で再注目",
+        "why": "＠ITが9月15日08:00 JSTに、Wiz Red AgentがSnowflakeの公開GitHub repositoryで脆弱性を発見し、Jira credential accessへ至った8月の事例を紹介。Copilotが共著者として関与したコード変更も論点だが、事案自体の一次発表日は対象日前のためWatchlistとする。AI生成コードにも通常のreview・secret scanning・security testを独立して適用すべきことを示す事例。",
+        "sources": [
+          {
+            "label": "＠IT: 人間介入ゼロでJiraの認証情報が流出 Copilotが見逃した1行の改修",
+            "url": "https://atmarkit.itmedia.co.jp/ait/articles/2609/15/news046.html"
+          }
+        ]
+      }
+    ]
+  }
+}
