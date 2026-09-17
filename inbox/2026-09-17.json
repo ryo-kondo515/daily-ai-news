@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-17",
+  "generated_at_jst": "2026-09-18T08:02:01+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "Claude Code Projectsを再設計――1つの会話から並列threadへ委譲し、長時間の開発作業を継続実行",
+        "why": "Anthropicは9月17日、Claude Code Projectsの新体験をbeta公開した。ユーザーが目標を伝えるとClaudeがscopeを決め、作業を複数threadへ委譲・並列実行し、結果をreviewして統合する。PCを離れても作業を継続でき、スマートフォンから進捗をsteerできる。API・Web・mobileなど複数repositoryをまたぐ目標や、複数endpointのprofiling・最適化・PR作成を並行させる例が示されている。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilotそのものの更新ではない。coding agentが単一sessionの補助から、project単位で複数threadを管理する継続的な開発主体へ進む競争として重要。",
+        "copilot_tip": "agentへ個別taskを都度渡す運用だけでなく、project goalを与えて複数PRまで並列生成する前提で、repository権限、PR粒度、同時変更の衝突、CI実行量、review責任者を設計する。",
+        "deadline": null,
+        "community": "Redditでも複数Claude Code sessionをleader agentからorchestrateする利用例が投稿されており、multi-agent coordinationへの関心が高い。一方、公式Projectsの実運用コストやthread間競合は今後の検証が必要。",
+        "sources": [{"label":"Anthropic: Projects redesigned: from folder to conversation","url":"https://claude.com/blog/projects-redesigned"}]
+      },
+      {
+        "num": "2",
+        "headline": "GitHub Actions workflow execution protectionsがGA――誰が・どのeventで・どのworkflowを起動できるかを強制制御",
+        "why": "GitHubは9月17日、Actionsのworkflow execution protectionsをGA。actorとeventのallowlistに加え、特定workflow file単位のtargeting、policy評価結果のInsights、enterprise・organization・repositoryレベルで管理できるREST APIを追加した。さらにpublic repositoryではpull_request_targetを既定で制限するruleをevaluate modeで展開し、対象repositoryでは11月2日から自動enforceする。pull_request_targetはbase repositoryのsecretへアクセスできるため、fork由来のuntrusted code実行によるsecret流出対策として重要。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot機能ではないが、coding agentがPRやworkflowを生成・変更するGitHub開発ワークフローの安全境界に直接関係する。",
+        "copilot_tip": "deploy.ymlなど高権限workflowはactor/event/file単位でexecution protectionを設定し、まずevaluate modeで影響を観測する。coding agentが変更可能なworkflowと、本番deployを起動可能な主体を分離する。",
+        "deadline": "2026-11-02",
+        "community": "GitHubはpull_request_targetをActionsで頻繁に悪用される脆弱性パターンとして明示。AI生成PRが増えるほど、PR内容のreviewだけでなくworkflow起動条件そのものの強制制御が重要になる。",
+        "sources": [{"label":"GitHub Changelog: Workflow execution protections in GitHub Actions generally available","url":"https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available/"}]
+      },
+      {
+        "num": "3",
+        "headline": "GitHub Copilot impact dashboard、Code Review・cloud agent・CLIなど機能別の28日engagementを可視化",
+        "why": "GitHubは9月17日、Copilot impact dashboardとusage metrics APIへfeature engagementを追加した。28日間で2日以上利用したactive userを、code completion、agent edit、passive/active Copilot Code Review、Copilot cloud agent、CLI、app別に集計できる。AI adoption phaseも、その日のactive userだけでなく28日rolling populationを取得可能になった。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot、Copilot Code Review、cloud coding agent、GitHub開発ワークフローの導入効果測定に直接関係する。",
+        "copilot_tip": "ライセンス付与数や総利用回数だけで導入を評価せず、Code Review・cloud agent・CLIなどworkflow別の継続利用率を追う。利用が低い機能はtraining不足か、実際に価値がないかを分けて検証する。",
+        "deadline": null,
+        "community": "user-levelではなくaggregate reportingで、同一ユーザーが複数featureへ重複計上される。生産性との因果を直接示す指標ではないため、PR lead timeやdefectなど実成果指標と組み合わせる必要がある。",
+        "sources": [{"label":"GitHub Changelog: Copilot impact dashboard now shows feature engagement","url":"https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement"}]
+      },
+      {
+        "num": "4",
+        "headline": "Claude Code v2.1.274、MCP startup待機時間の上限設定とmanaged settingsのOpenTelemetry観測を追加",
+        "why": "Anthropicは9月17日00:12 UTCにClaude Code v2.1.274を公開。memory usageがcriticalな際の警告、非interactive turnでMCP server接続を待つ時間を制御するCLAUDE_CODE_MCP_STARTUP_WAIT_MS、LLM request traceへのeffort属性、managed settingsのsourceやpolicy helper状態を記録するclaude_code.managed_settings_resolved OpenTelemetry eventなどを追加した。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連ではない。Claude CodeをMCP・enterprise policy・CIなど非interactive環境で運用する際の起動遅延とpolicy observabilityに関係する。",
+        "copilot_tip": "CIや自動agentでMCP server障害が全jobを長時間blockしないようstartup waitを明示設定する。managed policyの適用状態はOTelへ出し、agentの実行ログとpolicy versionを後から対応付けられるようにする。",
+        "deadline": null,
+        "community": "前日のgateway observability強化に続き、managed settings自体の観測も追加された。企業agent運用で『何をしたか』だけでなく『どのpolicy下で動いたか』を記録する方向が強まっている。",
+        "sources": [{"label":"Anthropic Claude Code releases v2.1.274","url":"https://github.com/anthropics/claude-code/releases/tag/v2.1.274"}]
+      },
+      {
+        "num": "5",
+        "headline": "OpenAI、Custom GPTsをPluginsへ移行する方針――Enterpriseは12月11日retirement予定",
+        "why": "OpenAI Help Centerは9月17日更新で、Custom GPTsをretireし、reusable instructionsとconnected appsを組み合わせるPluginsへworkflowを移行する方針を案内した。対象Enterprise workspaceでは2026年12月11日のretirementを予定し、既存GPTはそれまで利用可能。migration flowは9月17日から段階展開予定としている。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連ではない。社内AI workflowをCustom GPTへ依存している企業では移行計画、plugin権限、接続appの再審査が必要になる。",
+        "copilot_tip": "Custom GPTを業務利用している場合は一覧化し、instructions・knowledge・Actions/連携先を棚卸しする。Plugin移行後に権限範囲やtool accessが変わらないかを本番切替前に再テストする。",
+        "deadline": "2026-12-11",
+        "community": "Help Center上で移行案内を確認できる一方、workspaceごとにmigration UIの展開時期が異なる可能性がある。個別accountの表示だけで判断せず公式noticeを継続確認したい。",
+        "sources": [{"label":"OpenAI Help Center: Creating and editing GPTs","url":"https://help.openai.com/en/articles/8554397-creating-and-editing-gpts-with-actions"}]
+      }
+    ],
+    "business_picks": [
+      {
+        "headline": "coding agentは『1人1session』から『project単位の並列agent＋policy/metrics基盤』へ",
+        "why": "Claude Code Projectsは目標から複数threadへ作業を委譲する方向へ進み、GitHubはActions起動権限をworkflow単位で強制し、Copilotではagent・Code Review・CLIごとの継続利用を計測可能にした。agentの価値を出すにはモデル性能だけでなく、並列実行を安全に許可するpolicy、PR/CIの衝突管理、利用と成果を結ぶmetricsがセットで必要になる。"
+      },
+      {
+        "headline": "Microsoftの社内AI導入実績は『tool配布』よりworkflow再設計を重視",
+        "why": "Microsoftは9月17日の公式blogで、20万人超へのtool license提供だけでは変革にならず、business outcome起点のworkflow redesignが重要だったと総括。cloud supply chainでは100超のpurpose-built agentsを展開し、9人のCopilot Cowork teamはAI前提で役割を再設計して35日でinitial releaseを出したと報告した。AI導入KPIをseat数・利用率だけに置くことへの反証として実務的に重要。"
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "OpenAI『Astra for Law』は9月17日米国時間発表だがJSTでは9月18日公開の可能性",
+        "why": "OpenAIが法律業界向けAstra for Lawを9月17日に発表したとの公式・Reuters情報を確認したが、今回のJST 00:00〜23:59の公開時刻を厳密に確定できないため本編から除外した。次回対象日の一次情報として再確認する。",
+        "sources": [{"label":"OpenAI: Introducing Astra for Law","url":"https://openai.com/index/astra-for-law/"}]
+      },
+      {
+        "headline": "ChatGPTで全modelがcapacityになるとのcommunity報告",
+        "why": "OpenAI Developer Communityで9月17日、Pro利用者から複数modelでcapacity errorが継続するとの報告を確認。公式statusでは同日ChatGPT Work modeのelevated errorsも掲示されたが、community報告との因果関係や全体影響範囲は一次情報で確認できないためWatchlist扱い。",
+        "sources": [{"label":"OpenAI Developer Community: Selected model is at capacity","url":"https://community.openai.com/t/selected-model-is-at-capacity-error-persists-on-pro-account/1398372"}]
+      }
+    ]
+  }
+}
