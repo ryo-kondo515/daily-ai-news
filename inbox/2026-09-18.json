@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-18",
+  "generated_at_jst": "2026-09-19T08:00:45+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "Plugin4Shell公開――Claude Code・Codex・GitHub Copilot・Gemini CLIのplugin SHA pinningを迂回する供給網RCE",
+        "why": "AIR SecurityはPlugin4Shellを公開した。pluginをreview済みcommit SHAへpinしていても、agent側がcheckout後の実commitを再検証しない設計を悪用し、対応するGit host上でSHAに見えるrefへ別コードを解決させ得る。pluginはagent実行ユーザーと同等の権限を持つため、成立時は開発端末・credential・接続先へ到達し得る。AIRによればClaude Codeは2.1.179、Codexは0.146.0で修正済み。一方GitHub CopilotについてAIRは未修正と主張している。GitHubはSHA風branch/tag名を拒否するためGitHub-hosted pluginでは当該branch-name variantが成立しないとの反論もあり、外部/self-hosted marketplace利用時のリスクを分けて評価すべき。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilotのplugin/marketplace利用に直接関係する。ただしGitHub-hosted repositoryだけを使う場合と、Bitbucketやself-hosted Git等を許可する場合で攻撃成立条件が異なる。",
+        "copilot_tip": "AI coding agentのpluginを通常のIDE拡張より強い実行主体として扱い、許可marketplaceとGit hostを絞る。Claude Code/Codexは修正版以上へ更新する。Copilotはvendor側の正式な修正・advisoryを継続確認し、それまでは外部host由来pluginを避け、agent credentialとnetwork権限を最小化する。",
+        "deadline": null,
+        "community": "一次研究者AIRの公開後、The Register、The Hacker News、Help Net Securityなど複数媒体が報道。『主要agentすべてが同じtrust-boundary設計ミスを持った』点が注目されている一方、GitHub-hosted pluginまで一律に危険と表現するのは過大で、攻撃成立条件の切り分けが必要。",
+        "sources": [
+          {"label":"AIR Security: Plugin4Shell","url":"https://www.air.security/blog-posts/plugin4shell"},
+          {"label":"The Hacker News: Plugin4Shell","url":"https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html"}
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "GitHub Copilot Code Reviewが改善――再reviewで解決済み指摘を自動整理し、batch修正時にcommit messageを生成",
+        "why": "GitHubは9月18日、Copilot Code Reviewの改善をGAした。後続reviewで既に対処されたsuggestionをより賢くauto-resolveし、未解決feedbackへ集中しやすくしたほか、eligibleなsuggestionをbatch適用すると内容に沿ったcommit messageを生成する。週次releaseではreviewがshell toolsを使って変更を検証できること、Lite reviewが複数agentのfindingを統合することも案内された。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot Code ReviewとPR workflowに直接関係する。",
+        "copilot_tip": "Copilot reviewを一度きりの静的コメントではなく、修正→再review→未解決findingだけ残す反復loopとして運用する。AIがauto-resolveした指摘も、人間のrequired reviewやCI gateの代替にはせず、merge条件は独立して維持する。",
+        "deadline": null,
+        "community": "agentic reviewの利便性は上がるが、AI自身が自分の指摘を解決済みと判断するため、false negativeや誤ったresolveを監査できるようPR履歴を残す運用が重要。",
+        "sources": [
+          {"label":"GitHub Changelog: Copilot code review improved review experience","url":"https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/"},
+          {"label":"GitHub Changelog: Copilot weekly releases September 14","url":"https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/"}
+        ]
+      },
+      {
+        "num": "3",
+        "headline": "Claude Code v2.1.275/276――claude.ai skills/plugins同期、npm install script無効化、gateway回帰修正",
+        "why": "Claude Code v2.1.275は9月18日07:33 JST相当で公開され、claude.ai accountで有効化したskills/pluginsのterminal同期、OpenTelemetry header helper失敗警告、plugin URL内token/passwordの表示漏れ修正などを追加した。特にnpm source pluginをnpm pack --ignore-scriptsで取得しintegrity verificationする変更はplugin供給網対策として重要。同日11:12 JST相当のv2.1.276では、2.1.275でANTHROPIC_BASE_URLをproxy/gatewayへ向けた環境の全requestが400になる回帰を修正した。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連ではない。Claude Codeをenterprise gateway、plugin、skills、CI/headless環境で使う組織に直接関係する。",
+        "copilot_tip": "2.1.275単体ではgateway利用環境に重大な回帰があるため、更新するなら2.1.276以上を基準にする。accountから自動同期されるskills/pluginsは便利だが、端末側の許可list・監査対象が暗黙に増えないようsync設定とenterprise policyを確認する。",
+        "deadline": null,
+        "community": "Plugin4Shell公開と同時期にplugin取得・integrity・secret表示周辺のhardeningが続いている。2.1.275直後にgateway回帰が出た点は、enterprise環境でagent CLI更新を段階rolloutすべき理由にもなる。",
+        "sources": [{"label":"Anthropic Claude Code releases","url":"https://github.com/anthropics/claude-code/releases"}]
+      },
+      {
+        "num": "4",
+        "headline": "OpenAI『Astra for Law』――法律専用indexとtoolsを組み合わせ、ChatGPT/Codex/APIへ垂直特化AIを展開",
+        "why": "OpenAIは法律業務向けAstra for Lawを発表した。GPT-6 Astraを法律専用search indexや業務向けinstructions/toolsと組み合わせ、判例・法令調査、文書分析、argument検討、legal application構築を支援する。初期提供は選定されたlaw firm等へのTrusted Access中心で、Codexからも利用できる。汎用frontier modelに業界固有data/tool/policyを重ねるvertical agentの製品化として重要。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot関連ではない。Codexを含む専門職workflowへのagent展開という観点で関連する。",
+        "copilot_tip": "社内agentを作る際もmodel fine-tuningだけを差別化にせず、専門index、tool access、domain-specific eval、人間review、access controlを一体で設計する。高リスク業務では一般公開よりTrusted Access型の段階展開が参考になる。",
+        "deadline": null,
+        "community": "日本語圏でも9月18日に紹介が広がった。法律特化benchmarkの改善は注目される一方、法的正確性や責任主体の問題は残るため、弁護士の最終確認を外せることを意味しない。",
+        "sources": [{"label":"OpenAI: Introducing Astra for Law","url":"https://openai.com/index/astra-for-law/"}]
+      },
+      {
+        "num": "5",
+        "headline": "GitHub、npmにstage-only token――CIからpackageをstageできるがpublishはできない最小権限を追加",
+        "why": "GitHubは9月18日、npm granular access tokenへRead and write (stage only)を追加した。自動workflowはpackage versionをreview用にstageできる一方、新versionをregistryへ直接publishする権限は持たない。CI/CDやcoding agentがpackage release workflowへ関与するほど、生成・検証と本番publishのcredentialを分離できる価値が高い。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilotそのものではないが、coding agentが変更・PR・release準備を行うGitHub開発ワークフローとCI/CDの権限制御に関係する。",
+        "copilot_tip": "agent/CIにはstage-only tokenを与え、人間承認または別protected workflowだけがpublish credentialを持つ二段階releaseへ寄せる。長寿命tokenの共有ではなく、可能な箇所はOIDC等の短命credentialも併用する。",
+        "deadline": null,
+        "community": "AI agentにrelease作業を任せる際のblast radius縮小に相性がよい。『agentがPRを作れる』ことと『agentがproduction artifactをpublishできる』ことを同じ権限にしない設計が重要。",
+        "sources": [{"label":"GitHub Changelog: Stage-only npm tokens for safer automation","url":"https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation/"}]
+      }
+    ],
+    "business_picks": [
+      {
+        "headline": "AI agentの供給網は『SHAをpinしたから安全』ではなく、実行直前のartifact verificationまで必要",
+        "why": "Plugin4Shellはmarketplace reviewやcommit pinningがあっても、agent側が最終的に展開したcode identityを検証しなければtrust chainが切れることを示した。同時にClaude Codeはnpm install script無効化・integrity verificationを強化し、GitHubはrelease tokenをstage/publishで分離した。agent運用の防御はmodel guardrailだけでなく、artifact provenance、credential最小権限、network isolation、publish gateを組み合わせる必要がある。"
+      },
+      {
+        "headline": "AI coding workflowは『生成→review→CI→release』の各段階をagent化しつつ、権限境界は逆に細分化",
+        "why": "Copilot Code Reviewは反復reviewを自動整理し、Claude Codeはaccount skills/pluginsをterminalへ同期、GitHubはstage-only npm tokenを追加した。自動化範囲は広がる一方、各agentへproduction相当の権限を一括付与するのではなく、段階ごとに実行権限と承認主体を分ける設計が主流になりつつある。"
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "Claudeを使ったwhite-hat teamがOpenAI employee accountと接続済みCodex/GitHub環境へ侵入したとの報道",
+        "why": "TechCrunchなどは、OpenAI bug bountyの範囲でHacktron AIの3人チームがClaude Opus 5を使って複数脆弱性をchainし、OpenAI employeeのChatGPT/Codex accountへ到達したと報道。OpenAIは問題を修正し$6,500を支払ったとされる。ただし今回確認できた範囲ではOpenAI自身の詳細なincident write-upを確認できず、攻撃chainの細部は二次報道依存のためWatchlistとする。",
+        "sources": [{"label":"TechCrunch: Researchers used Anthropic's Claude to hack into OpenAI","url":"https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/"}]
+      },
+      {
+        "headline": "AnthropicのAI R&D自動化率26%、同時稼働agent約3万という数字が日本語圏で拡散",
+        "why": "Anthropic一次資料ではAugust 2026時点でClaudeがAI R&Dの26%をAL4『leads』水準で担当し、主要internal platform上で約30,000 agentsが同時稼働するとしている。ただし一次記事自体は9月17日公開で今回の対象日前日のため本編には再掲せず、9月18日の日本語圏での反響のみWatchlistとして記録する。",
+        "sources": [{"label":"Anthropic Institute: Measurements for understanding the pace of AI development inside frontier labs","url":"https://www.anthropic.com/institute/measuring-pace-of-ai-development"}]
+      }
+    ]
+  }
+}
