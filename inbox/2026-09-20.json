@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-20",
+  "generated_at_jst": "2026-09-21T08:02:23+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "Anthropic、frontier labのAI開発速度を外部から測る3指標を提案――Claudeが社内AI R&Dの26%を主導、約3万agentを常時監視",
+        "why": "Anthropic Instituteは、frontier AI開発の進行速度を社会が把握するため、(1) AI自身がAI R&Dをどこまで担っているか、(2) AI agentの行動をどこまで監視・介入できているか、(3) computeをcapability開発とsafetyへどう配分しているか、の3指標を公開した。2026年8月時点の社内スナップショットでは、ClaudeがAI R&D作業の26%をAutomation Level 4（高レベル指示から大半をend-to-endで実施し人間が監督）で主導し、90%以上がLevel 3以上。一方、完全自律のLevel 5に達した測定対象はない。主要な社内研究・engineering基盤では約3万agentが同時稼働し、全actionがonline monitorを通過、8月の10億超のdecisionのうち約0.002%（約1/47,000）がblockされたとしている。offline monitorも全actionを取り込み、週約10万transcriptをclassifierで絞り、最高優先度の約50件/週をhuman reviewへ上げる。さらに7月13〜20日の計測ではAI R&D computeの約6%、AI-driven AI R&D computeの約12%をsafetyへ配分したと報告した。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot固有の更新ではない。ただしcoding agentを組織展開する際、導入席数や生成量だけでなく、agent actionのmonitor coverage、review latency、block/escalation rateを運用KPIにする考え方はGitHub開発ワークフローにも直接応用できる。",
+        "copilot_tip": "coding agentを本番開発へ広げる場合、PR数やacceptance rateだけでなく、①agent actionの何%をpolicy/monitorが観測しているか、②危険actionを実行前に止めるonline controlの割合、③flagからhuman reviewまでの時間、④block/escalation率を計測する。低いblock率を安全性の証明とはみなさず、monitorの検出性能を独立evalで検証する。",
+        "deadline": null,
+        "community": "9月20日付の複数のAIニュース集約・分析サイトでも、ClaudeがAI R&Dの26%を主導、90%以上がAI協働以上、約3万agent、online block率0.002%という数値が注目された。今回確認したZenn、Qiita、Hacker News、Reddit、はてなブックマークでは、Anthropic一次資料を上回る確度の高い追加事実や、日本語圏で大きく定着した独自論点は確認できなかった。なお『26%』はAnthropic全社の仕事・人員・computeの26%ではなく、同社が定義したAI R&D task basketをperson-timeで重み付けしたAutomation Index上の値である点に注意が必要。",
+        "sources": [
+          {"label":"Anthropic Institute: Measurements for understanding the pace of AI development inside frontier labs","url":"https://www.anthropic.com/institute/measuring-pace-of-ai-development"},
+          {"label":"The Frontier: Anthropic publishes an R&D Automation Index: 26% AL4, 90%+ AL3","url":"https://www.thefrontier.dev/articles/anthropic-rd-automation-index-dispatch"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "headline": "agent運用のKPIが『利用率』から『監視可能性』へ広がる",
+        "why": "Anthropicの公開で重要なのは26%という自動化率そのものより、agent fleetのcoverage・review latency・escalation rateを外部比較可能な指標として提案した点。企業がcoding agentを大量導入する局面では、何人が使ったかだけでなく、全actionを観測できるか、不可逆なactionを実行前に止められるか、flagを人間がどの速度で処理できるかがgovernanceの実務指標になり得る。"
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "Metaのpersonal AI agent『Muse』が一般消費者向けTV広告で露出拡大",
+        "why": "Business Insider系記事で、Metaがメール送信やオンライン購入などを代行するpersonal AI agent『Muse』のTV広告を展開したと報じられた。ただし記事公開は2026年9月20日17:11 UTCで、日本時間では9月21日02:11となり今回の対象期間外。Meta一次発表の対象日内公開も今回の調査では確認できなかったため、次回確認対象としてWatchlistに置く。",
+        "sources": [
+          {"label":"Business Insider/Yahoo: Meta’s Muse TV ad is the latest sign that AI agents are going mainstream","url":"https://tech.yahoo.com/ai/meta-ai/articles/meta-muse-tv-ad-latest-171109008.html"}
+        ]
+      }
+    ]
+  }
+}
