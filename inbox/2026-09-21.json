@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-21",
+  "generated_at_jst": "2026-09-22T08:01:45+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest",
+  "sections": {
+    "top5": [
+      {
+        "num": "1",
+        "headline": "OpenAI、frontier AIと自動AI研究の国際標準を提言――RSIは『安全に実施できるまで追求すべきでない』",
+        "why": "OpenAIは、AIが次世代AIの研究開発を担うrecursive self-improvement（RSI）を見据え、frontier AIの国際技術標準を提言した。完全自律RSIは現時点では起きておらず、安全に実施できるまで追求すべきでないと明記。共通標準として、AI企業内の自律研究量の測定、人間による監督と即時review条件、alignment/自動AI研究incidentのseverity・報告threshold・対応protocolを挙げる。AI safety institutes、CAISI、ISO、Frontier Model Forum、Agentic AI Foundation、Open Secure AI Allianceなどを接続する構想も示した。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot固有の更新ではないが、coding agentの自律度が上がるほど、組織内でagentが担う開発量、human review trigger、incident分類と報告基準を定義する必要がある。",
+        "copilot_tip": "coding agent導入では、agentが変更できる範囲とhuman approvalが必須な操作を明文化し、PR・CI・deployなど不可逆性が高い境界で強制gateを置く。incidentはモデル名だけでなくtool call、権限、network destination、review有無まで記録する。",
+        "deadline": null,
+        "community": "今回確認したHacker News、Reddit、Zenn、Qiita、はてなブックマーク等では、OpenAI一次資料を上回る確度の高い追加事実は確認できなかった。",
+        "sources": [
+          {"label":"OpenAI: Building standards for the next phase of AI","url":"https://openai.com/index/building-standards-next-phase-ai/"}
+        ]
+      },
+      {
+        "num": "2",
+        "headline": "GitHub Copilot、Grok 4.7を追加――cloud agentを含む主要開発面で利用可能、usage-based billing対象",
+        "why": "GitHubはxAIのGrok 4.7をGitHub Copilotへ段階的に展開すると発表した。VS Code、Visual Studio、Copilot CLI、GitHub Copilot cloud agent、Copilot app、JetBrains、Xcode、Eclipseのmodel pickerから選択可能。Pro、Pro+、Max、Business、Enterpriseが対象で、provider list pricingに基づくusage-based billingとなる。Business/Enterpriseではmodel policyで管理でき、新モデルのdefault enablementを有効にしている組織では明示的に無効化しない限り自動的に有効になる。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot、Copilot Chat、cloud agent、GitHub開発ワークフローに直接関係する。モデル追加時の自動enableと従量課金が同時に関わるため、企業管理者はpolicyとbudgetをセットで確認すべき。",
+        "copilot_tip": "Business/Enterpriseでは新モデルを自動enableするpolicyを確認し、Grok 4.7を許可する場合もcoding agent用途の品質・security evalとusage budgetを先に設定する。モデル選択を開発者任せにする場合は、PR品質・修正率・cost/taskをモデル別に比較する。",
+        "deadline": null,
+        "community": "対象日内の公式GitHub Changelogを一次情報として採用。コミュニティ側で公式情報を覆す重要な追加事実は確認できなかった。",
+        "sources": [
+          {"label":"GitHub Changelog: Grok 4.7 is now available in GitHub Copilot","url":"https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/"}
+        ]
+      },
+      {
+        "num": "3",
+        "headline": "NVIDIA、AI agent securityを『full-stack engineering problem』として整理――network policy・保護ログ・継続testを要求",
+        "why": "NVIDIAはAI agentのsecurityをモデル単体の問題ではなく、model、harness、context/tool、runtime、identity、networkを含むstack全体のengineering問題として整理した。悪意ある文書指示をagentが読み、顧客データを外部送信しようとする例では、モデルが判断を誤ってもnetwork policyが転送をblockし、保護されたlogにtool call・authorization decision・destination・結果を残すべきとする。security requirement、enforceable control、owner、継続testingを重視している。",
+        "business_importance": "High",
+        "copilot_applicability": "GitHub Copilot固有ではないが、coding agentやMCP/toolを社内導入する際の設計原則に直結する。prompt injection対策をモデル任せにせず、network・credential・runtime側で強制する考え方。",
+        "copilot_tip": "coding agent/MCP環境では、egress allowlist、短命credential、tool単位authorization、sandbox、改ざん耐性のあるaudit logを組み合わせる。agentが誤判断してもrepository外や本番環境への影響をruntime側で止められる構成にする。",
+        "deadline": null,
+        "community": "Plugin4Shellなど直近のcoding-agent supply-chain問題とも整合する論点だが、本項目は9月21日公開のNVIDIA公式記事に限定して整理した。",
+        "sources": [
+          {"label":"NVIDIA: AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack","url":"https://blogs.nvidia.com/blog/ai-security-agent-stack/"}
+        ]
+      },
+      {
+        "num": "4",
+        "headline": "OpenAI事例：V7、Context Graph＋MCPで長期agentに組織記憶――Responses API移行でPDF-heavy workflowのtoken使用量も約5%削減",
+        "why": "OpenAIはV7のagentic platform事例を公開。企業文書からentity・relationship・evidenceをContext Graphへ整理し、長期agentが古いcontextを再取得できる構成を紹介した。V7はContext GraphをMCP server経由でChatGPT等へ公開し、CodexからMCPでworkflow作成も可能。V7の測定ではChat Completions APIからResponses APIへの移行で一部PDF-heavy workflowのtoken使用量が約5%減り、caching reliabilityも改善した。GPT-5.6 Solでは旧モデル比でtool-call error rateが2.7%から0.2%になったとしている。数値はいずれもV7自身の評価。",
+        "business_importance": "Medium",
+        "copilot_applicability": "GitHub Copilot固有ではない。MCPを使うagentで、毎回long contextを詰め込むより、source-linkedな組織memoryを外部context layerとして管理する実装例として参考になる。",
+        "copilot_tip": "社内coding agentに設計資料・仕様・過去incidentを与える場合、単純な巨大promptより、source citation付きのretrieval/context graphをMCPで提供し、更新時刻・権限・出典を保持する。benchmarkは正答率だけでなくtool-call error、citation、latency、costも測る。",
+        "deadline": null,
+        "community": "OpenAIのcustomer storyであり、性能値は第三者benchmarkではなくV7の内部評価である点に注意。",
+        "sources": [
+          {"label":"OpenAI: How V7 gives AI agents institutional memory","url":"https://openai.com/index/v7/"}
+        ]
+      }
+    ],
+    "business_picks": [
+      {
+        "headline": "agent governanceの実装単位が『モデル』から『stack＋incident protocol』へ移る",
+        "why": "OpenAIは自律AI研究について共通measurement・human review trigger・incident reporting標準を提言し、NVIDIAはmodel/harness/runtime/networkをまたぐenforceable controlを要求した。両者を合わせると、企業のagent governanceは『安全なモデルを選ぶ』だけでは足りず、actionを観測し、危険操作を外部controlで止め、incidentを共通形式で残すcontrol planeへ向かっている。"
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "Meta Muse、Amazon.comからagent accessをblockされたとの報道",
+        "why": "TechCrunchは9月21日、Metaのpersonal AI agent MuseでAmazonの商品購入を試みたユーザーに、unauthorized AI agentによる継続accessはAmazonの利用条件に反する旨のerrorが表示されたと報道した。agentic commerceでは技術的にbrowser操作できることと、対象serviceがagent accessを許可することが別問題になる重要例。ただし今回確認できた範囲ではMeta/Amazon双方の対象日内の詳細な一次発表を確認できないためWatchlistとする。",
+        "sources": [
+          {"label":"TechCrunch: Meta’s AI agent has been blocked from using Amazon.com","url":"https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/"}
+        ]
+      },
+      {
+        "headline": "Museの初動がChatGPT mobile launchを上回るとの第三者推計",
+        "why": "TechCrunchがApptopia推計として、米加iOSのlaunch後12日比較でMuse 180万download、ChatGPT 130万download、米国iOS DAUでもMuse 35.9万が当時のChatGPTを上回ると報道した。ただしMetaの内部実数ではなく第三者推計で、launch条件も完全には同一でないためWatchlist扱い。",
+        "sources": [
+          {"label":"TechCrunch: Meta’s Muse is outpacing ChatGPT’s early mobile launch","url":"https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/"}
+        ]
+      }
+    ]
+  }
+}
