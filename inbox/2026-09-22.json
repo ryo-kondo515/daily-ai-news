@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-22",
+  "generated_at_jst": "2026-09-23T08:00:24+09:00",
+  "edition": "Japan Edition",
+  "title": "Daily Digest — Short Edition",
+  "sections": {
+    "top5": [],
+    "business_picks": [
+      {
+        "headline": "大型モデル発表はJSTでは9月23日扱い――日付境界を厳密適用し、9月22日版は短縮",
+        "why": "9月22日（JST）に公開時刻まで確認でき、指定重点領域に該当する大手7社の新規一次発表は今回の調査では十分に確認できなかった。一方、Claude Opus 5.5は9月22日16:31 UTC前後（JST 9月23日01:31前後）、OpenAI GPT-6 Sol/Lunaも米国太平洋時間9月22日午後の公開でJST 9月23日に入るため、本号のTop5から除外した。GitHub Copilotへの両モデル追加も同じリリース波であり、JST日付の厳密性を優先して次号対象とする。"
+      }
+    ],
+    "watchlist": [
+      {
+        "headline": "Claude Opus 5.5公開――agentic coding強化、API単価20%低下、典型workloadで40%低コストをAnthropicが主張",
+        "why": "AnthropicはClaude Opus 5.5を公開。入力$4/100万token、出力$20/100万token、cache read $0.20/100万tokenで、Opus 5より出力が30%以上高速、典型workloadの総コストは40%低いとしている。Claude Code/Platformでfast modeも提供。Reuters等の時刻情報から公開は9月22日16:31〜16:33 UTC前後＝JST 9月23日01:31〜01:33で、本号の対象期間外。次号で一次資料を中心に正式採用する。",
+        "sources": [
+          {"label":"Anthropic: Introducing Claude Opus 5.5","url":"https://www.anthropic.com/claude-opus-5-5"},
+          {"label":"Reuters: Anthropic unveils Claude Opus 5.5","url":"https://www.reuters.com/technology/artificial-intelligence/anthropic-unveils-claude-opus-55-2026-09-22/"}
+        ]
+      },
+      {
+        "headline": "OpenAI GPT-6 Sol/Luna公開――API価格をGPT-5.6世代比50%引き下げ",
+        "why": "OpenAIはGPT-6 Solを入力$2/100万token・出力$10、GPT-6 Lunaを入力$0.10・出力$0.50で公開し、GPT-5.6の同tier比で50%のAPI価格低下を発表。coding/agent用途のcost-performanceを強く訴求している。ただし公開を報じた米国メディアの時刻は9月22日13:58 PDTなどで、JSTでは9月23日早朝となるため本号から除外し次号対象とする。",
+        "sources": [
+          {"label":"OpenAI: Introducing GPT-6 Sol and Luna","url":"https://openai.com/index/introducing-gpt-6-sol-and-luna/"}
+        ]
+      },
+      {
+        "headline": "GitHub Copilot、Claude Opus 5.5とGPT-6 Sol/Lunaを追加",
+        "why": "GitHub Changelogは9月22日付でClaude Opus 5.5とOpenAI GPT-6 Sol/LunaのCopilot追加を掲載。Opus 5.5はagentic coding、長時間agent task、knowledge work向けで、GitHubのearly testingではOpus 5相当のtask解決をより少ないstep/tokenで実現したとしている。Sol/Lunaは日常的agentic codingと高速・低コスト支援の選択肢として追加。ただし基盤モデルの公開自体がJST 9月23日であり、Changelogの厳密な公開時刻を一次ページから確認できなかったため、本号ではWatchlistに留める。",
+        "sources": [
+          {"label":"GitHub Changelog: Claude Opus 5.5 is now available in GitHub Copilot","url":"https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/"},
+          {"label":"GitHub Changelog: OpenAI’s GPT-6 Sol and GPT-6 Luna now available","url":"https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/"}
+        ]
+      },
+      {
+        "headline": "GPT-6 Sol/Lunaの事前staging痕跡――Azure設定変更はJST 9月22日07:43だが正式発表前",
+        "why": "第三者の追跡ではMicrosoft Azure AI Playgroundのlive configurationが9月21日22:43 UTC＝JST 9月22日07:43に更新され、GPT-6 Sol/Lunaのmodel IDが複数箇所に追加されたとされる。正式公開前のstagingを示す興味深いsignalだが、当時OpenAIの公式model catalog・docs・pricingで公開確認できなかったため、一次発表未確認の話題としてWatchlist扱いとする。",
+        "sources": [
+          {"label":"Third-party tracking summary of Azure configuration change","url":"https://zamantika.com/profile/adenshepard"}
+        ]
+      }
+    ]
+  }
+}
