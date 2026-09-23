@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "target_date_jst": "2026-09-23",
+  "generated_at_jst": "2026-09-24T08:02:25+09:00",
+  "edition": "full",
+  "language": "ja-JP",
+  "summary": "9月23日は、長時間稼働するコーディングエージェントのコスト最適化と、ローカル実行時の強制的な安全境界が同時に前進した日。OpenAIはGPT-6のprompt cachingを強化し、GitHubはCopilot appにfilesystem/network/credentialsを制限するlocal sandboxを追加。Copilot Code Reviewの設定・依頼方法も拡充された。前日深夜JSTに入ったClaude Opus 5.5/GPT-6 Sol・Lunaの余波も開発者コミュニティで大きい。",
+  "top_stories": [
+    {
+      "title": "OpenAI、GPT-6のprompt cachingを強化―長時間エージェントの再利用コンテキストを90%割引",
+      "category": ["API", "AIエージェント", "料金", "開発ワークフロー"],
+      "source_type": "official",
+      "publisher": "OpenAI",
+      "published_date_jst": "2026-09-23",
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6/",
+      "summary_ja": "GPT-6向けprompt cachingのhit率を標準で改善。30分以内に再利用されるeligible shared prefixへcache discountを適用し、cached input tokenは最大90%割引。Prompt Caching Dashboard、cache miss診断、明示的breakpointも提供する。reasoning effortや利用toolを途中で変更しても、それ以前のcontext cacheを維持できる。",
+      "why_it_matters_ja": "数時間動くcoding/research agentでは同じsystem instruction、tool definition、repository contextを繰り返し送るため、モデル単価だけでなくcache hit率が実コストを左右する。OpenAIはGitHubで過去数か月、OpenAIモデルへの数十億requestにおいてfresh processingが必要なprompt token比率を50%以上削減したとしており、persistent agentのTCO最適化がAPI機能として明示的に扱われ始めた。"
+    },
+    {
+      "title": "GitHub Copilot appにlocal sandbox―ファイル・ネットワーク・credentialをプロジェクト単位で制限",
+      "category": ["GitHub Copilot", "AIエージェント", "セキュリティ", "開発ワークフロー"],
+      "source_type": "official",
+      "publisher": "GitHub",
+      "published_date_jst": "2026-09-23",
+      "url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/",
+      "summary_ja": "Copilot appのlocal repository/working tree sessionにsandboxを追加。filesystemの追加read/write・read-only・deny、outbound internet/local network、Git credentialとGitHub CLI credentialへのアクセスを制御できる。enterprise-managed settingsがより厳しい場合はそちらが優先される。既定ではoffで、新規sessionごとに有効化でき、実行中sessionでは /sandbox on も利用可能。",
+      "why_it_matters_ja": "coding agentの安全性をpermission promptだけに依存せず、OS側に近い実行境界で強制できる。特にprompt injectionや誤コマンドが発生しても、repository外ファイル、外部network、GitHub credentialへの到達範囲を事前に狭められるため、企業でのローカルagent導入に重要。"
+    },
+    {
+      "title": "GitHub Copilot Code Review、review依頼と設定方法を拡充",
+      "category": ["GitHub Copilot", "Code Review", "PR", "開発ワークフロー"],
+      "source_type": "official",
+      "publisher": "GitHub",
+      "published_date_jst": "2026-09-23",
+      "url": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews",
+      "summary_ja": "Copilot Code Reviewで個人向けreview設定の対象プランを拡大し、enterprise-levelのdefault review effort設定をGA化。組織・個人双方でAI reviewの深さや運用方法を調整しやすくなった。",
+      "why_it_matters_ja": "AI code reviewをPR運用へ標準組み込みする際、開発者ごとの選択だけでなくenterprise policyとしてreview effortを揃えられる。coding agentがPRを大量生成する環境では、生成側だけでなくreview側の品質・コスト設定を中央管理できることが重要になる。"
+    }
+  ],
+  "github_copilot": {
+    "items": [
+      {
+        "topic": "GitHub Copilot app local sandboxing",
+        "status": "official",
+        "impact": "high"
+      },
+      {
+        "topic": "Copilot Code Review configuration and request improvements",
+        "status": "official",
+        "impact": "medium"
+      }
+    ],
+    "note": "このフィールドはGitHub Copilot、Copilot Chat、Code Review、coding agent、GitHub開発ワークフローに限定。"
+  },
+  "watchlist": [
+    {
+      "title": "Claude Code v2.1.280 / Opus 5.5 default化の反響",
+      "reason": "v2.1.280自体のrelease timestampは9月22日22:39 UTCとの追跡情報がありJSTでは9月23日07:39に相当する一方、検索で取得できたAnthropic公式GitHub release表示が不安定で、対象日の一次ソース時刻を十分に再検証できなかったためWatchlist扱い。内容としてはOpus 5.5をdefault Opusへ変更し、MCP description長上限の設定やsymlink経由writeのpermission判定修正などが報告されている。",
+      "sources": [
+        "https://github.com/anthropics/claude-code/releases"
+      ]
+    },
+    {
+      "title": "Claude Max利用者でConsole API creditへ誤ってroutingされたとの報告",
+      "reason": "Redditで、subscription OAuth sessionをresumeした際にConsole API creditsが消費されたとのユーザー報告があるが、Anthropic一次情報で障害・仕様変更を確認できていない。再現性や影響範囲が不明なためWatchlist。",
+      "sources": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1wo2afv/claude_code_on_my_max_20x_plan_billed_150_to_my/"
+      ]
+    }
+  ],
+  "context_from_boundary": {
+    "note": "Claude Opus 5.5とOpenAI GPT-6 Sol/Lunaは米国時間9月22日公開だがJSTでは9月23日未明にかかる。前号では厳密なJST境界のためWatchlistへ回したため、本号では背景として扱う。Opus 5.5はagentic codingとtoken効率、GPT-6 Sol/Lunaは価格性能とpersistent agent向けcache改善が主眼。GitHub Copilotにも両モデルが追加されたがGitHub Changelogの日付表記は9月22日で厳密なJST公開時刻が確認できないため、本号のCopilot主要項目には算入していない。"
+  },
+  "daily_takeaway_ja": "9月23日の実務上のポイントは、coding agentの競争軸がモデル性能だけでなく『長時間実行の単価をcacheで下げる』ことと『filesystem/network/credentialをsandboxで物理的に狭める』ことへ広がった点。今後の企業向けagent基盤では、model routing・prompt cache・sandbox・credential policy・PR reviewを一続きのcontrol planeとして設計する価値が高い。",
+  "source_policy": "OpenAI・GitHub等の一次ソースを優先。一次ソースで対象日または内容を十分確認できないコミュニティ話題はWatchlistへ分離。X、はてなブックマーク、Zenn、Qiita、Hacker News、Reddit、日本語メディアも検索対象としたが、対象日で一次情報を上回る確度・重要度の話題は主要項目へ採用していない。",
+  "secrets_check": "No email addresses, API keys, SMTP credentials, or other secrets included."
+}
